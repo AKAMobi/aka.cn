@@ -142,7 +142,7 @@ function agent_pay_ok( $v_oid, $v_pmode )
 	if ( $amount > 0.1 ){
 		$poundage = $amount*$poundage_rate - 2*$amount*$poundage_rate;
 	}else{
-		$poundage = 0.01;
+		$poundage = -0.01;
 	}
 
 	if( !user_add_money( $userautoid, $poundage, $currency, "代收费业务30%手续费", Poundage ) ){
