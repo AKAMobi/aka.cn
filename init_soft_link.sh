@@ -14,8 +14,6 @@ fi
 
 echo "Linking..."
 
-cd ..
-
 
 # ?? pay.aka.cn ?????? vhost
 cd pay
@@ -40,4 +38,4 @@ cd ..
 
 cd cgi-bin
 chmod +x Count.cgi order/idl order/vpn contact/post
-
+cd ..
