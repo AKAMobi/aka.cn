@@ -71,7 +71,7 @@ function testKey_TransferTargetName(){
 function testKey_Money(){
 
 	if ( IsEnter() ) {
-		document.all.oTransferMoney.click();
+		document.all.oCurrency.focus();
 	}
 }
 -->
@@ -92,8 +92,16 @@ function testKey_Money(){
       <td><input type="textfield" id="oTransferTargetName" name="TransferTargetName" size="20" onkeypress="testKey_TransferTargetName();" ></td>
     </tr>
     <tr>
-      <td>划账金额(RMB单位)：</td>
+      <td>划账金额：</td>
       <td><input type="textfield" id="oMoney" name="Money" size="20" onkeypress="testKey_Money();" ></td>
+    </tr>
+    <tr>
+      <td>货币种类</td>
+      <td><select name="Currency" id="oCurrenect" size="1">
+	<option selected value="RMB">人民币</option>
+	<option value="USD">美元</option>
+	</select>
+	</td>
     </tr>
 </table>
   </div>

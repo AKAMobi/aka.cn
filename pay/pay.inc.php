@@ -46,13 +46,14 @@ function transfer_ok( $v_oid )
 function pay_ok( $v_oid, $v_pmode )
 {
 	//检查是否已经支付成功
-	$result=mysql_query( "select EndDate from NetPay_TB where PayNO='$v_oid'" );
+	$result=mysql_query( "select EndDate, Category from NetPay_TB where PayNO='$v_oid'" );
 	if( !$result ){
 		paylog( "payback.php: mysql_query error" . "select EndDate from NetPay_TB where PayNO='$v_oid'" );
 		return false;
 	}
 	if( $row=mysql_fetch_array($result) ){
 		$enddate=$row['EndDate'];
+		$category=$row['Category'];
 	}else{
 		paylog( "payback.php: mysql_fetch_array error" );
 		return false;
@@ -78,12 +79,49 @@ function pay_ok( $v_oid, $v_pmode )
 		return false;
 	}
 
-	return add_money( $row['UserAutoID'], $row['Money'], $row['Currency'], "网上支付划帐" );
+	if ( 'Sale'==$category ){
+		return add_money( $row['UserAutoID'], $row['Money'], $row['Currency'], "网上支付划帐" );
+	}else if ( 'Agent'==$category ){
+		return add_agent_money( $row['UserAutoID'], $row['Money'], $row['Currency'], "阿卡代收费" );
+	}
+}
+
+function add_agent_money( $userautoid, $amount, $currency, $msg )
+{
+	// 手续费 30%
+	$poundage_rate = 0.3;
+
+	if( !mysql_query("begin") ) {
+		paylog( "mysql begin error" );
+		return false;
+	}
+
+	if( !user_add_money( $userautoid, $amount, $currency, $msg, Agent ) ){
+		mysql_query("rollback");
+		paylog( "agent_pay_ok: user_add_money($userautoid, $amount, $currency $msg, Agent) error" );
+		return false;
+	}
+
+	if ( $amount > 0.1 ){
+		$poundage = $amount*$poundage_rate - 2*$amount*$poundage_rate;
+	}else{
+		$poundage = -0.01;
+	}
+
+	if( !user_add_money( $userautoid, $poundage, $currency, "代收费业务30%手续费", Poundage ) ){
+		mysql_query("rollback");
+		paylog( "agent_pay_ok: user_add_money($userautoid, $poundage, $currency, 30%手续费, Agent) error" );
+		return false;
+	}
+	mysql_query( "commit" );
+	
+	return true;
 }
 
 /*
  * 代收费网上支付成功
  */
+/* XXX 作废
 function agent_pay_ok( $v_oid, $v_pmode )
 {
 	//检查是否已经支付成功
@@ -154,6 +192,7 @@ function agent_pay_ok( $v_oid, $v_pmode )
 	return true;
 
 }
+*/
 
 function paylog( $msg )
 {
@@ -232,14 +271,15 @@ function add_money( $userautoid, $amount, $currency, $msg )
  */
 function user_add_money( $userautoid, $amount, $currency, $msg, $type )
 {
+	paylog( "user_add_money( $userautoid, $amount, $currency, $msg, $type )" );
+
 	$amount = floatval ( $amount );
 	
-	if ( 0.01>$amount ){
+	if ( 0.01>abs($amount) ){
 		return true;
 	}
 
-	paylog( "user_add_money( $userautoid, $amount, $currency, $msg )" );
-	if( ! (is_numeric($userautoid) && is_numeric($amount) && round($amount,2)>=0) ){ //XXX round($amount,2)判断这个有什么用？
+	if( ! (is_numeric($userautoid) && is_numeric($amount) && round(abs($amount),2)>=0) ){ //XXX round($amount,2)判断这个有什么用？
 		paylog( "user_add_money($userautoid,$amount,$currency,$msg,$type)参数错误" );
 		return false;
 	}
@@ -316,7 +356,7 @@ function user_add_money( $userautoid, $amount, $currency, $msg, $type )
  * $type 币种,0为人民币,1为美元
  * $url 是支付完毕后的返回地址
  */
-function doPrepare( $userautoid, $money, $type, $url )
+function doPrepare( $userautoid, $money, $type, $url, $category )
 {
 	global $v_mid;
 
@@ -342,7 +382,7 @@ function doPrepare( $userautoid, $money, $type, $url )
 		return false;
 	}
 
-	if( !mysql_query("insert into NetPay_TB ( UserAutoID, StartDate, Money, Currency ) values ( $userautoid, now(), $money, '$currency')") ){
+	if( !mysql_query("insert into NetPay_TB ( UserAutoID, StartDate, Money, Currency, Category ) values ( $userautoid, now(), $money, '$currency', '$category')") ){
 		mysql_query( "rollback" );
 		return false;
 	}

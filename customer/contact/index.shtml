@@ -54,9 +54,8 @@
             <p>网页：<a href="mailto:webmaster@aka.com.cn" class="a6">webmaster@aka.com.cn</a></p>
             <p>其他：<a href="mailto:general@aka.com.cn" class="a6">general@aka.com.cn</a></p>
             <p class="newssubtitle">电话方式</p>
-            <!-- p >办公电话：(010)62200680</p -->
-		<p><font color=red>目前非典时期，公司采取Home Office，请用Email联系，由此带来之不便深感歉意。</font></p>
-            <!-- p >客服专员：13911179457</p -->
+            <p >办公电话：(010)62200680</p >
+            <!--p >客服专员：13911179457</p -->
             <p >&nbsp;</p>
             </td>
         </tr>

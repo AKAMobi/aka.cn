@@ -140,7 +140,7 @@ if( 1==$v_pstatus ){ //已提交，对不支持实时的银行
  	 */
 	//TODO finish pay_ok
 	mysql_query( "begin" );
-	if( !agent_pay_ok( $v_oid, $v_pmode ) ){
+	if( !pay_ok( $v_oid, $v_pmode ) ){
 		mysql_query( "rollback" );
 		paylog( "payback.php: agent_pay_ok($v_oid, $v_pmode)失败" );
 		err_msg( "加钱操作失败，请记下当前时间并联系管理员" );

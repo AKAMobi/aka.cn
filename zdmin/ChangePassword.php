@@ -35,7 +35,7 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
 if ( (!isset($_SESSION['AdminID']) ) ) {
 ?>
 您尚未登陆。<br>
-请首先<A HREF="<? echo $ADMINROOT; ?>/index.php">登陆</a>。
+请首先<A HREF="<? echo $ADMINURLROOT; ?>/index.php">登陆</a>。
 <?
 }else {
 ?>

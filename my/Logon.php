@@ -97,7 +97,6 @@ exit();
 }
 if ( !strcmp($row['Status'],"RegisterFailed")) {
 $HTTP_SESSION_VARS['ModifyRegister']=$HTTP_POST_VARS['Name'];
-//echo "<h1>" . $HTTP_POST_VARS['Name'] . "</h1>";
 header("Refresh: 0;URL=ModifyProfile.php");
 exit();
 }
@@ -125,27 +124,9 @@ require_once( "header.inc.php" );
 <?
 } else {
 if ( !strcmp($row['Status'],"ProfileNotProved")) {
-require_once( "header.inc.php" );
-	?>
-<br>
-<br>
-<br>
-<br>
-<br>
-<table width="760" border="0" cellspacing="0" cellpadding="0">
-  <tr> 
-  <td align="center" >
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	您的注册单尚未被处理<br>
-	请耐心等待。
-	<br>
-<input type="button" value="返回" onclick="history.back();">
-	<br>
-<?
+$_SESSION['ValidateID']==$HTTP_POST_VARS['Name'];
+header("Refresh: 0;URL=UserValidate.php");
+exit(0);
 } else {
 
 

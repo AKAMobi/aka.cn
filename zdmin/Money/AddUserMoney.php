@@ -93,7 +93,15 @@ function testKey_AddMoneyAmount(){
     </tr>
     <tr>
       <td>加钱数额</td>
-      <td><input type="textfield" id="oAddMoneyAmount" name="Amount" size="20" onkeypress="return testKey_AddMoneyAmount();" ></td>
+      <td><input type="textfield" id="oAddMoneyAmount" name="Amount" size="20"  ></td>
+    </tr>
+    <tr>
+      <td>货币种类</td>
+      <td><select name="Currency" id="oCurrenect" size="1">
+	<option selected value="RMB">人民币</option>
+	<option value="USD">美元</option>
+	</select>
+	</td>
     </tr>
     <tr>
       <td>加钱理由</td>

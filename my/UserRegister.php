@@ -95,7 +95,7 @@ $query[]="begin";
 $query[]="insert into User_TB(AutoID,ID,Password,UserName,IdentifierNum,Company,TelephoneNumber,MobilePhone,EMail,Address,ZipCode,Status,UserFunc,UserFuncStatus,SuperiorUserAutoID) Values (NULL,'{$HTTP_POST_VARS['ID']}','$enPassword','{$HTTP_POST_VARS['UserName']}'," .
  "'{$HTTP_POST_VARS['IdNum']}','{$HTTP_POST_VARS['Company']}','{$HTTP_POST_VARS['Tel']}','{$HTTP_POST_VARS['Mobile']}'," .
  "'{$HTTP_POST_VARS['EMail']}','{$HTTP_POST_VARS['Address']}','{$HTTP_POST_VARS['ZipCode']}','ProfileNotProved','','',{$SuperUserID})";
-
+/*
 $ContinueUse=($HTTP_POST_VARS['Question1']=="Yes")?"Yes":"No";
 $LikeMonthFeeType=(isset($HTTP_POST_VARS['MonthFee']))?"Yes":"No";
 $LikeMinFeeType=(isset($HTTP_POST_VARS['MinFee']))?"Yes":"No";
@@ -110,6 +110,7 @@ $Known=($HTTP_POST_VARS['Question5']=="Yes")?"Yes":"No";
 $Will=($HTTP_POST_VARS['Question6']=="Yes")?"Yes":"No";
 
 $query[]="insert into PersonalVPN_Investigate(AutoID, UserID, ContinueUse, LikeMonthFeeType, LikeMinFeeType, OtherFeeType , MaxMonthFee, MaxMinFee, MaxOtherFee, FavoriteMonthFee, FavoriteMinFee, FavoriteOtherFee, Known, Will) Values(NULL,'{$HTTP_POST_VARS['ID']}', '{$ContinueUse}', '$LikeMonthFeeType', '$LikeMinFeeType', '$OtherFeeType', $MaxMonthFee, $MaxMinFee, $MaxOtherFee, $FavoriteMonthFee,  $FavoriteMinFee, $FavoriteOtherFee, '$Known', '$Will' )";
+*/
 $query[]="commit";
 
 $success=true;
@@ -135,6 +136,7 @@ if (!$success){
 	<br>
 <?
 } else {
+$_SESSION['ValidateID']=$_REQUEST['ID'];
 ?>
 	<br>
 	<br>
@@ -142,6 +144,7 @@ if (!$success){
 	<br>
 	<br>
 您的注册单已成功提交。<BR>
+如果您希望能直接用手机或e-mail注册，请到<a class="a6" href="UserValidate.php">下一步</a>。
 <!--我们将在两个工作日内与您联系。请您耐心等待:)--><br>
 请您仔细阅读<a href="usage.shtml" class="a5">使用说明</a>，然后<p>
 <font size=+1 color=red>

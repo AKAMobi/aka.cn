@@ -91,7 +91,7 @@ if( is_numeric($money) && round($money,2)>0 ){
 
 
 			//XXX 成功，转交银行
-			if( doPrepare($row["AutoID"], $money, $moneytype, $backurl) ){
+			if( doPrepare($row["AutoID"], $money, $moneytype, $backurl, "Agent") ){
 				//提交支付请求成功
 				$isSuccess=true;
 

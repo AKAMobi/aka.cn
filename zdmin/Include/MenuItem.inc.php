@@ -7,6 +7,9 @@ ItemURL,ItemName
 <? if (isset($_SESSION['UserAccountAdmin'])) { ?>
 <? echo $ADMINURLROOT; ?>/UserAccount/ApproveUser.php,审批用户注册
 <? } ?>
+<? if (isset($_SESSION['UserAccountAdmin'])) { ?>
+<? echo $ADMINURLROOT; ?>/UserAccount/ApproveUserValidate.php,审批用户手机认证
+<? } ?>
 <? if (isset($_SESSION['NewsAdmin'])) { ?>
 <? echo $ADMINURLROOT; ?>/News/NewsAdmin.php,新闻管理
 <? } ?>
@@ -32,6 +35,7 @@ ItemURL,ItemName
 <? echo $ADMINURLROOT; ?>/AdminUser/AdminUserControl.php,管理员账号管理
 <? } ?>
 <? echo $ADMINURLROOT; ?>/ChangePassword.php,更换密码
+<? echo $ADMINURLROOT; ?>/sms/SendSMS.php, 发送短信
 <? echo $ADMINURLROOT; ?>/Logout.php,退出登录
 <? 
 }

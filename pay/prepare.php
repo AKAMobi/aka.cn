@@ -90,7 +90,7 @@ if( is_numeric($money) && round($money,2)>0 ){
 	if( $userid ){
 		$result=mysql_query("select * from User_TB where ID='$userid'");
 		if( $row=mysql_fetch_array($result) ){
-			if( doPrepare($row["AutoID"], $money, $moneytype, $backurl) ){
+			if( doPrepare($row["AutoID"], $money, $moneytype, $backurl, "Sale" ) ){
 				//提交支付请求成功
 				$isSuccess=true;
 			}else{
