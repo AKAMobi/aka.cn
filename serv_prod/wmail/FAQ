@@ -18,3 +18,6 @@ A 这主要是vpopmail版本太低的缘故，可以更新vpopmail的版本，或者手动在
   ~vpopmail/etc目录下生成这两个文件
         echo "-I/home/vpopmail/include" > inc_deps
         echo "-L/home/vpopmail/lib -lvpopmail -lz" > lib_deps
+
+Q 安装的时候报告找不到AC_PROG_SYSCONFTOOL函数
+A 这是aclocal.m4文件被改动以后出现的问题，建议重新解包然后安装

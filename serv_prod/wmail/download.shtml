@@ -24,8 +24,9 @@
             <li><a href="ucspi-tcp-0.88.tar.gz" class=a4>ucspi-tcp-0.88</a><br> 
 			<li><a href="vpopmail-5.2.1.tar.gz" class=a4>vpopmail-5.2.1</a><br> 
             <li><a href="maildrop-1.5.2.20030423.tar.gz" class=a4>maildrop-1.5.2.20030423</a> （提供邮件过滤支持）<br> 
-            <li><a href="wmail-0.99d.20030613.tar.gz" class=a4>wmail-0.99d</a>（2003.06.13 release）<a href="ChangeLog" class=a4>更新记录</a><br> 
-	    <li><a href="FAQ" class=a4>FAQ</a>
+            <li><a href="wmail-1.00rc1.20030724.tar.gz" class=a4>wmail-1.00rc1</a>（2003.07.24 release）<a href="ChangeLog" class=a4>更新记录</a><br> 
+	    <li><a href="FAQ" class=a4>FAQ</a><br>
+	    <li><a href="TODO" class=a4>TODO</a><br>
             </ul>
             <br>
            </td>

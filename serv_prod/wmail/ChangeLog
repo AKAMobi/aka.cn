@@ -1,4 +1,11 @@
-2003-06-13	Fan Lin <lfan@lfan.net>
+2003-07-23	Fan Lin <lfan@lfan.net>
+	install		改进安装脚本
+
+2003-06-19	Fan Lin <lfan@lfan.net>
+	pref.c		修改设置转发的小bug
+	rfc2045reply.c	更改Re: Re:的bug
+
+2003-06-15	Fan Lin <lfan@lfan.net>
 	folder.c maildir.c folder.html
 			在浏览邮件时增加附件标识
 	folder.c	更改显示邮箱容量不准确的问题（感谢网友wait）
