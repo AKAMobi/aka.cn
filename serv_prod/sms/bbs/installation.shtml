@@ -1,0 +1,73 @@
+<!--#include virtual="/header.html" -->
+
+<table width="760" cellspacing="0" cellpadding="0">
+
+  <tr> 
+
+    <td width="550" valign="top"> 
+
+      <table width="500" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+          <td valign="top"> <p><br>
+              <b><font color="#3366CC">当前位置:</font> </b><a href="/index.shtml" class="a5">阿卡首页</a> 
+              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">产品与服务</a><font color="#458DE4">&gt;
+          <a href="index.shtml" class="a5">BBS手机短信接入平台</a> &gt;</font> <font color="#458DE4">安装说明</font></p>
+            <table width="475" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">安装说明
+                （Linux版）</td>
+              </tr>
+            </table> 
+                    <p>首先请先与我们联系，分配测试id和密码。然后从<a href="download.shtml" class="a6">运行库下载</a>网页上下载最新的运行库压缩包。解开压缩包，将libbbssms.a和libbbssms.h文件拷贝到适当的目录下。之后即可仿照示例程序调用运行库收发短信。</p>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+              </p>
+           </td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+    <td width="210" bgcolor="#F0FAFF" valign="top"> 
+
+      <table width="210" border="0" cellspacing="8" cellpadding="3">
+
+        <tr> 
+
+          <td colspan="2">　</td>
+
+        </tr>
+
+        <tr> 
+
+          <td bgcolor="C3D4F4" colspan="2"> 
+
+            <div align="left"><font color="032B7A"><b><font face="Arial"> 相关链接</font></b></font></div>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td> 
+
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+
+          </td>
+
+          <td><a href="/serv_prod/index.shtml" class="a6">产品与服务</a></td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<!--#include virtual="/footer.html" -->

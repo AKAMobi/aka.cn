@@ -1,0 +1,275 @@
+<!--#include virtual="/header.html" -->
+
+
+
+<table width="760" cellspacing="0" cellpadding="0">
+
+  <tr> 
+
+    <td width="550" rowspan="3"> 
+
+      <div align="right"> 
+
+        <p>　</p>
+
+      </div>
+
+      <table width="500" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td> <b><font color="#3366CC">当前位置：</font> </b><a href="/index.shtml" class="a5">阿卡首页</a> 
+            <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">产品与服务</a><font color="#458DE4"> &gt; 
+          BBS手机短信接入平台</font></td>
+
+        </tr>
+       <tr> 
+
+          <td align="center"> 
+		  <table width="95%" cellspacing="0" cellpadding="0">
+		  <tr><td>
+                     <p>　</p>
+
+                      <table width="475" cellspacing="0" cellpadding="0">
+
+                        <tr> 
+
+                          
+                      <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">
+                      BBS手机短信接入平台</td>
+
+                        </tr>
+
+                      </table>
+
+                      
+                  <p> <br>
+                    AKA BBS手机短信接入平台专为各种形式的BBS站点提供手机短信接入服务。 
+				  </p>
+   
+                  <p><font color="#FF0000">版权声明</font><br>
+                      BBS手机短信接入平台、演示代码及链接库的版权归北京阿卡信息技术有限公司所有。严禁任何形式的反向工程及协议分析。 下载代码即视为自动接收本声明。
+                  </p>
+		  <br>
+                                   </td>
+              </tr>
+			  <tr><td>
+			  <table width="100%">
+			  <tr>
+			  <td width="50%" valign="top"><table width="100%" cellspacing="0" cellpadding="0" bordercolor="639A63" class="redefinetable">
+
+                        <tr> 
+
+                          <td bgcolor="639A63" height="11">&nbsp;<b><font color="#FFFFFF"> 
+
+                            介绍</font></b></td>
+
+                        </tr>
+
+                        <tr> 
+
+                          <td height="27"> 
+
+                            <center>
+
+                              <table width="95%" cellspacing="4" cellpadding="0">
+
+                                <tr> 
+
+                                    <td> 
+										
+                                      <p> <b><span class="a4"><a href="installation.shtml" class=a4>安装说明</a></span></b><br>
+                                        手机接入平台的安装说明。 </p>
+	
+	                                      
+                                      <p> <span class="a4"><b>
+                                      <a href="application.shtml" class=a4>申请测试</a></b></span><br>
+                                        有意测试使用该平台的用户看过来~~ <br>
+　</p>
+	
+	                                      
+                                      </td>
+
+                                </tr>
+								
+								
+
+                              </table>
+
+                            </center>
+
+                          </td>
+
+                        </tr>
+
+                      </table>
+					  <BR>
+					  <table width="100%" cellspacing="0" cellpadding="0" bordercolor="639A63" class="redefinetable">
+
+                        <tr> 
+
+                            <td bgcolor="639A63" height="11">&nbsp;<b><font color="#FFFFFF"> 
+                              下载</font></b></td>
+
+                        </tr>
+
+                        <tr> 
+
+                          <td height="27"> 
+
+                            <center>
+
+                              <table width="95%" cellspacing="4" cellpadding="0">
+
+                                <tr> 
+
+                                    <td> <p><b><span class="a4">
+                                    <a href="download.shtml" class="a4">运行库及演示代码下载</a></span></b><br><br>
+                                        手机接入平台的<b>运行库</b>及<b>演示代码</b>的源代码下载。
+                                      </p>
+										
+               
+	                                      </td>
+
+                                </tr>
+								
+								
+
+                              </table>
+
+                            </center>
+
+                          </td>
+
+                        </tr>
+
+                      </table>
+					  <BR>
+					</td>
+			          <td width="50%" valign="top">
+					  <table width="100%" cellspacing="0" cellpadding="0" bordercolor="639A63" class="redefinetable">
+
+                        <tr> 
+
+                            <td bgcolor="639A63" height="11">&nbsp;<b><font color="#FFFFFF"> 
+                              演示与讨论 </font></b></td>
+
+                        </tr>
+
+                        <tr> 
+
+                          <td height="27"> 
+
+                            <center>
+
+                              <table width="95%" cellspacing="4" cellpadding="0">
+
+                                <tr> 
+
+                                    <td height=237 valign="top"> 
+										
+                                      <p> <span class="a4">
+                                      <a href="demo.shtml" class="a4"><b>演示代码</b></a></span><br>
+                                        短信平台的演示代码说明。</p>
+										
+                                      <p> <b><span class="a4"><a href="http://sms.wforum.zixia.net/" target="_blank" class=a4>讨论区</a></span></b><br>
+                                        用户可以在此讨论有关问题。</p>
+				      <p> 　</p>
+
+                                    </td>
+
+                                </tr>
+								
+								
+
+                              </table>
+
+                            </center>
+
+                          </td>
+
+                        </tr>
+
+                      </table>
+		
+                      </td>
+			  </tr>
+			  </table>
+			  </td></tr>
+			</table>
+            </td>
+
+        </tr>
+      </table>
+
+    </td>
+
+    <td width="210" bgcolor="#F0FAFF" valign="top"> </td>
+
+    <br>
+
+  </tr>
+
+  <tr> 
+
+    <td width="210" bgcolor="#F0FAFF" valign="top"> 
+
+      <p>　</p>
+
+
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td width="210" bgcolor="#F0FAFF" valign="top">
+
+      <table width="210" cellspacing="0" cellpadding="0">
+
+        <tr> 
+
+          <td height="45">　</td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <table width="210" border="0" cellspacing="8" cellpadding="3">
+              <tr> 
+                <td colspan="2">　</td>
+              </tr>
+              <tr> 
+                <td bgcolor="C3D4F4" colspan="2"> <div align="left"><font color="032B7A"><b><font face="Arial"> 
+                    相关链接</font></b></font></div></td>
+              </tr>
+              <tr> 
+                <td> <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div></td>
+                <td><a href="/customer/contact/index.shtml" class="a6">联系我们</a></td>
+              </tr>
+              <tr> 
+                <td> <div align="right"></div></td>
+                <td>　</td>
+              </tr>
+              <tr> 
+                <td> <div align="right"></div></td>
+                <td>　</td>
+              </tr>
+            </table>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<!--#include virtual="/footer.html" -->
