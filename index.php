@@ -130,13 +130,13 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                       <td colspan="2"> 
                         <table width="100%" border="0" cellspacing="1" cellpadding="2">
                           <tr> 
-                            <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("news/index.shtml");'  
+                            <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("/news/");'  
   class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;最新消息</td>
                           </tr>
                         </table>
                         <table width="100%" border="0" cellspacing="1" cellpadding="2">
                           <tr>
-                            <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("company/about/companymilestones.shtml");'  
+                            <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("/company/about/companymilestones.shtml");'  
   class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;阿卡历程</td>
                           </tr>
                           <tr> 
@@ -166,8 +166,8 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                       <td> 
                         <table width="100%" border="0" cellspacing="1" cellpadding="2">
                           <tr> 
-                            <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("serv_prod/browser/");'  
-  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;HTML/WAP浏览器&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("/serv_prod/wmail/");'  
+  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;WMAIL企业邮件系统</td>
                           </tr>
                         </table>
                       </td>
@@ -188,27 +188,11 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                       </td>
                     </tr>
 -->
-                  </table>
-
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-<tr>
-                      <td bgcolor="FFFFFF"><img src="image/htsplit.gif"></td>
-                    </tr>
-</table>
-                <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="BFBFBF" dwcopytype="CopyTableRow">
-
-<tr> 
-                            
-                      <td height="18" width="132" bgcolor="737373"><b><font color="#FFFFFF">解决方案</font></b></td>
-                      <td height="18" width="44"><img src="image/rmenubdr.gif" width="15" height="17"></td>
-                    </tr>
-                  </table>
-                  <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="BFBFBF">
                     <tr> 
                       <td> 
                         <table width="100%" border="0" cellspacing="1" cellpadding="2">
                           <tr> 
-   <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("solution/vpn/");'  
+   <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("/serv_prod/vpn/");'  
   class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;VPN</td>                          </tr>
                         </table>
                       </td>
@@ -217,20 +201,24 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                       <td> 
                         <table width="100%" border="0" cellspacing="1" cellpadding="2">
                           <tr> 
-                            <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("solution/zixialinux/");'  
-  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;zixia Linux</td>
+                            <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("/serv_prod/nas/");'  
+  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;NAS网络存储服务器</td>
                           </tr>
                         </table>
                       </td>
                     </tr>
-                    <tr> 
-                      <td> 
-                        <table width="100%" border="0" cellspacing="1" cellpadding="2">
                           <tr> 
                             <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("javascript://");'  
-  class=rmenu>&nbsp;</td>
+  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;</td>
                           </tr>
-                        </table>
+                  </table>
+
+
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="BFBFBF">
+
+
+                    <tr> 
+                      <td> 
                         <table width="100%" border="0" cellspacing=0 cellpadding="0" bgcolor="BFBFBF">
                           <tr> 
                             <td bgcolor="FFFFFF"><img src="image/htsplit.gif"></td>
@@ -250,19 +238,19 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                             <td> 
                               <table width="100%" border="0" cellspacing="1" cellpadding="2">
                                 <tr> 
-                                  <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("customer/downloads/index.shtml");'  
+                                  <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("/customer/downloads/index.shtml");'  
   class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;下载专区</td>
                                 </tr>
                               </table>
                               <table width="100%" border="0" cellspacing="1" cellpadding="2">
                                 <tr> 
-                                  <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("customer/support/index.shtml");'  
+                                  <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("/customer/support/index.shtml");'  
   class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;技术支持</td>
                                 </tr>
                               </table>
                               <table width="100%" border="0" cellspacing="1" cellpadding="2">
                                 <tr> 
-                                  <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("customer/contact/index.shtml");'  
+                                  <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("/customer/contact/index.shtml");'  
   class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;联系我们</td>
                                 </tr>
                               </table>

@@ -10,7 +10,7 @@
         <table width="500" border="0" cellspacing="0" cellpadding="0">
           <tr> 
             <td> <br>
-              <b><font color="#3366CC">当前位置：</font> </b><a href="/index.shtml" class="a5">阿卡首页</a> 
+              <b><font color="#3366CC">当前位置：</font> </b><a href="/" class="a5">阿卡首页</a> 
               <font color="#458DE4">&gt;</font> <a href="/company" class=a5>公司事务</a> <font color="#458DE4">&gt; 
               阿卡历程</font> 
               <p><span class="newstitle">阿卡历程</span></p>
@@ -59,13 +59,6 @@
             </div>
           </td>
           <td width="159"><a href="index.shtml" class="a6">关于我们</a></td>
-        </tr>
-        <tr> 
-          <td width="27"> 
-            <div align="right"><img src="../../image/leadarrow.gif" width="5" height="10"> 
-            </div>
-          </td>
-          <td width="159"><a href="companymilestones.shtml" class="a6">阿卡历程</a></td>
         </tr>
         <tr> 
           <td bgcolor="C3D4F4" colspan="2"> 
