@@ -1,7 +1,7 @@
 <HTML><HEAD></HEAD>
 <BODY><table width="760" border="0" cellspacing="0" cellpadding="0">
   <tr> 
-    <td width="550" height="224" valign="top"> 
+    <td width="550" height="224"> 
       <center>
       <table width="500" cellspacing="0" cellpadding="0">
         <tr>
@@ -16,7 +16,8 @@
       </table>
       </center>
 
-<script language="JScript">
+      <p> 
+        <script language="JScript">
 <!--
 function register(){
 	if (document.all.oID.value=="") {
@@ -153,74 +154,97 @@ function knownTypeChange(){
 
 -->
 </script>
-<div align="center">
-<p>
-所有信息必须正确而详细的填写，加*号的请用中文填写，否则将无法通过注册审批，谢谢合作。<br>
-注：国外用户可以用英文详细填写。
-</p>
-<form id="oForm" name="RegisterForm" method="post" action="UserRegister.php">
-
-    <table width="80%" border="0">
-      <tr> 
-        <td width="17%">用户ID</td>
-        <td width="83%"><input type="text" id="oID" name="ID" onkeypress="testKey_ID();"></td>
-      </tr>
-      <tr> 
-        <td>密码</td>
-        <td><input type="password" id="oPassword" name="Password" onkeypress="testKey_Password();" ></td>
-      </tr>
-      <tr> 
-        <td>验证密码</td>
-        <td><input type="password" id="oPassword1" name="Password1" onkeypress="testKey_Password1();"></td>
-      </tr>
-      <tr> 
-        <td>姓名</td>
-        <td><input type="text" id="oUserName" name="UserName" onkeypress="testKey_UserName();"> * </td>
-      </tr>
-      <tr> 
-        <td>中国身份证号</td>
-        <td><input type="text" id="oIdNum" name="IdNum" onkeypress="testKey_IdNum();" ></td>
-      </tr>
-      <tr> 
-        <td>单位名称</td>
-        <td><input type="text" id="oCompany" name="Company" onkeypress="testKey_Company();"> * </td>
-      </tr>
-      <tr> 
-        <td>联系电话</td>
-        <td><input type="text" id="oTel" name="Tel" onkeypress="testKey_Tel();"></td>
-      </tr>
-      <tr> 
-        <td>手机</td>
-        <td><input type="text" id="oMobile" name="Mobile" onkeypress="testKey_Mobile();"></td>
-      </tr>
-      <tr> 
-        <td>电子邮箱</td>
-        <td><input type="text" id="oEMail" name="EMail" onkeypress="testKey_EMail();"></td>
-      </tr>
-    <tr>
-    <td>地址</td>
-    <td><input type="text" id="oAddress" name="Address" onkeypress="testKey_Address();"> * </td>
-	</tr>
-    <tr>
-    <td>邮编</td>
-    <td><input type="text" id="oZipCode" name="ZipCode" onkeypress="testKey_ZipCode();"></td>
-	</tr>
-        <tr>
-          <td colspan="2">您是如何得知VPN服务的？</td>
-		</tr>
-        <tr>
-          <td ></td>
-          <td><select id="oKnownType" size=1 onchange="knownTypeChange();">
-			<option value="BBS" selected>从BBS上听说的
-            <option value="HTML">从网站上知道的
-            <option value="Person">别人介绍的
-          </select></td>
-		</tr>
-      <tr style="VISIBILITY: hidden" id="oTrSuperUser"> 
-        <td>介绍人</td>
-        <td><input type="text" id="oSuperiorUser" name="SuperiorUser" onkeypress="testKey_SuperiorUser();"></td>
-      </tr>
-<!--//
+        声明：阿卡直通车服务是有偿服务，请您在注册前确认已认真阅读了“<a href="/serv_prod/vpn/edu/personal/usage.shtml" class="a5">阿卡直通车服务使用说明</a>”和“<a href="/serv_prod/vpn/edu/personal/faq.shtml" class="a5">阿卡直通车常见问题解答</a>”。</p>
+      <p> 所有信息必须正确而详细的填写，加*号的请用中文填写，否则将无法通过注册审批，谢谢合作。</p>
+      <p> 注：国外用户可以用英文详细填写。 </p>
+      <form id="oForm" name="RegisterForm" method="post" action="UserRegister.php">
+        <table width="80%" border="0" align="center">
+          <tr> 
+            <td width="17%">用户ID</td>
+            <td width="83%">
+              <input type="text" id="oID" name="ID" onkeypress="testKey_ID();">
+            </td>
+          </tr>
+          <tr> 
+            <td>密码</td>
+            <td>
+              <input type="password" id="oPassword" name="Password" onkeypress="testKey_Password();" >
+            </td>
+          </tr>
+          <tr> 
+            <td>验证密码</td>
+            <td>
+              <input type="password" id="oPassword1" name="Password1" onkeypress="testKey_Password1();">
+            </td>
+          </tr>
+          <tr> 
+            <td>姓名</td>
+            <td>
+              <input type="text" id="oUserName" name="UserName" onkeypress="testKey_UserName();">
+              * </td>
+          </tr>
+          <tr> 
+            <td>中国身份证号</td>
+            <td>
+              <input type="text" id="oIdNum" name="IdNum" onkeypress="testKey_IdNum();" >
+            </td>
+          </tr>
+          <tr> 
+            <td>单位名称</td>
+            <td>
+              <input type="text" id="oCompany" name="Company" onkeypress="testKey_Company();">
+              * </td>
+          </tr>
+          <tr> 
+            <td>联系电话</td>
+            <td>
+              <input type="text" id="oTel" name="Tel" onkeypress="testKey_Tel();">
+            </td>
+          </tr>
+          <tr> 
+            <td>手机</td>
+            <td>
+              <input type="text" id="oMobile" name="Mobile" onkeypress="testKey_Mobile();">
+            </td>
+          </tr>
+          <tr> 
+            <td>电子邮箱</td>
+            <td>
+              <input type="text" id="oEMail" name="EMail" onkeypress="testKey_EMail();">
+            </td>
+          </tr>
+          <tr> 
+            <td>地址</td>
+            <td>
+              <input type="text" id="oAddress" name="Address" onkeypress="testKey_Address();">
+              * </td>
+          </tr>
+          <tr> 
+            <td>邮编</td>
+            <td>
+              <input type="text" id="oZipCode" name="ZipCode" onkeypress="testKey_ZipCode();">
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="2">您是如何得知VPN服务的？</td>
+          </tr>
+          <tr> 
+            <td ></td>
+            <td>
+              <select id="oKnownType" size=1 onchange="knownTypeChange();">
+                <option value="BBS" selected>从BBS上听说的 
+                <option value="HTML">从网站上知道的 
+                <option value="Person">别人介绍的 
+              </select>
+            </td>
+          </tr>
+          <tr style="VISIBILITY: hidden" id="oTrSuperUser"> 
+            <td>介绍人</td>
+            <td>
+              <input type="text" id="oSuperiorUser" name="SuperiorUser" onkeypress="testKey_SuperiorUser();">
+            </td>
+          </tr>
+          <!--//
 	  <tr>
 	  <td colspan="2">
 	  <b>下面是一些关于VPN服务的调查，请您认真填写：</b><br>
@@ -307,18 +331,20 @@ function knownTypeChange(){
 	  </td>
 	  </tr>
 //-->
-    </table>
-      <br>
-      说明：本公司用户注册采用电话确认方式，请您如实填写以上各项资料。我们将在资料提交后两个工作日内用电话与您联系，以确认您的注册资料正确无误。谢谢您的合作！<br>
-	  <br>
-      <input type="button" id="oSubmit" name="Submit" value="提交" onclick="register();"> 
-	  <br>
-	  <br>
-  </form>
+        </table>
+        <div align="center">
+          <p align="left"><br>
+            说明：本公司用户注册采用电话确认方式，请您如实填写以上各项资料。我们将在资料提交后两个工作日内用电话与您联系，以确认您的注册资料正确无误。谢谢您的合作！<br>
+          </p>
+          <p> 
+            <input type="button" id="oSubmit" name="Submit" value="提交" onclick="register();">
+            <br>
+            <br>
+          </p>
+        </div>
+      </form>
 
-</div>
-
-    </td>
+</td>
     <td width="210" height="224" bgcolor="#f0faff" valign="top">&nbsp;
       <table width="210" cellspacing="0" cellpadding="0">
         <tr> 
