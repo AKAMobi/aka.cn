@@ -86,13 +86,13 @@
                 <td width="27"> 
                   <div align="right"><img src="../../../../solution/vpn/edu/image/leadarrow.gif" width="5" height="10"></div>
                 </td>
-                <td><a href="../../../../solution/vpn/edu/serv_prod/index.shtml" class="a6">产品与服务</a></td>
+                <td><a href="/serv_prod/index.shtml" class="a6">产品与服务</a></td>
               </tr>
               <tr> 
                 <td width="27"> 
                   <div align="right"><img src="../../../../solution/vpn/edu/image/leadarrow.gif" width="5" height="10"></div>
                 </td>
-                <td><a href="../../../../solution/vpn/edu/customer/index.shtml" class="a6">客户服务</a></td>
+                <td><a href="/customer/index.shtml" class="a6">客户服务</a></td>
               </tr>
             </table>
           </td>
