@@ -73,13 +73,13 @@
           <td> 
             <div align="right"><img src="../../image/leadarrow.gif" width="5" height="10"></div>
           </td>
-          <td><a href="executive.shtml" class="a6">管理执行</a></td>
+          <td><a href="executivemgmt.shtml" class="a6">管理执行</a></td>
         </tr>
         <tr> 
           <td> 
             <div align="right"><img src="../../image/leadarrow.gif" width="5" height="10"></div>
           </td>
-          <td><a href="board.shtml.htm" class="a6">董事会</a></td>
+          <td><a href="board.shtml" class="a6">董事会</a></td>
         </tr>
       </table>
       <br>
