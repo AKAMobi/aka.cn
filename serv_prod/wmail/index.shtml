@@ -52,7 +52,7 @@
                      </tr>
                    </table>
 				  </div>
-				  </p>
+				  <p></p>
    
                   <p><font color="#FF0000">版权声明</font><br>
                     WMail的版权归北京阿卡信息技术有限公司所有，开发遵循 GPL 许可。大家可以免费使用、复制、修改本软件。但修改的版本也必须遵循GPL规范。 
@@ -212,7 +212,8 @@
                                         Wmail电子邮件系统的操作界面截图。 </p>
 
                                       <p> <b><span class="a4"><a href="http://demo.wmail.aka.cn" target="_blank" class=a4>WMail系统演示</a></span></b><br>
-                                        Wmail电子邮件系统的系统演示，请用账号<strong>demo</strong>,密码<strong>demo</strong>登录。 
+                                        Wmail电子邮件系统的系统演示<br>
+                                        请用账号<strong>demo@demo.wmail.aka.cn</strong>,密码<strong>demo</strong>登录。 
                                       </p>
 										
                                       <p> <b><span class="a4"><a href="http://wmail.wforum.zixia.net/" target="_blank" class=a4>WMail讨论区</a></span></b><br>
