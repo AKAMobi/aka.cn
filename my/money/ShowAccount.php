@@ -33,7 +33,7 @@ if ( (!isset($HTTP_SESSION_VARS['UserID'])) ){
 <?
 }else {
 
-$result=mysql_query("select A.UserAccount as UserAccount from UserAccount_TB as A, User_TB as B where A.UserAutoID=B.AutoID and B.ID='{$HTTP_SESSION_VARS['UserID']}'");
+$result=mysql_query("select A.UserAccount as UserAccount, A.UserAccountUSD from UserAccount_TB as A, User_TB as B where A.UserAutoID=B.AutoID and B.ID='{$HTTP_SESSION_VARS['UserID']}'");
 if (!($row=mysql_fetch_array($result)) ){
 ?>
 	数据库操作失败。请与管理员联系。
@@ -41,10 +41,11 @@ if (!($row=mysql_fetch_array($result)) ){
 } else {
 ?>
 用户<? echo $HTTP_SESSION_VARS['UserID'] ?>的账户余额为：<br>
-<? echo (intval($row['UserAccount'])==-1?0.00:$row['UserAccount']); ?><br>
+人民币：<? echo "￥" . (intval($row['UserAccount'])==-1?0.00:$row['UserAccount']); ?><br>
+美元：<? echo "$" . (intval($row['UserAccountUSD'])==-1?0.00:$row['UserAccountUSD']); ?><br>
 <br>
 <div align="Center">
-<strong><font size="+1">最近一个月内账户资金流动情况</font></strong><br>
+<strong><font size="+1">最近两个月内账户资金流动情况</font></strong><br>
 <br> 
 </div>
 <table id="oTable" width="500">

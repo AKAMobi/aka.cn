@@ -90,12 +90,7 @@ if ( mysql_num_rows($result)==0) {
 				}
 				
 				// by zixia: 增加双币种支持
-				if (!mysql_query("insert into UserAccount_TB(UserAutoID, UserAccount,AccountEnable,Currency) values ({$row['AutoID']},0,'N','RMB')", $conn)) {
-//					echo "用户{$row['ID']}账户建立失败";
-// by zixia for 2002.11.1 用户从新注册					mysql_query("rollback",$conn);
-// 同上					continue;
-				}
-				if (!mysql_query("insert into UserAccount_TB(UserAutoID, UserAccount,AccountEnable,Currency) values ({$row['AutoID']},0,'N','USD')", $conn)) {
+				if (!mysql_query("insert into UserAccount_TB(UserAutoID, UserAccount,UserAccountUSD,AccountEnable) values ({$row['AutoID']},0,0,'N')", $conn)) {
 //					echo "用户{$row['ID']}账户建立失败";
 // by zixia for 2002.11.1 用户从新注册					mysql_query("rollback",$conn);
 // 同上					continue;

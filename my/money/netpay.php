@@ -36,6 +36,9 @@ if ( (!isset($HTTP_SESSION_VARS['UserID']) ) ) {
 
 <p align=center>您可以用几乎所有的支持网上支付的储蓄卡/信用卡进行支付，包括国际信用卡。</p>
 <center>
+<!-- XXX
+系统维护中...
+-->
 <form action="http://pay.aka.com.cn/prepare.php" name=form method=post>
 在下面输入希望转入“我的阿卡帐户”的钱数：<p>
 <input type=text name=MoneyCount size=4>元人民币<p>

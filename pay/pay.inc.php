@@ -147,7 +147,7 @@ function agent_pay_ok( $v_oid, $v_pmode )
 
 	if( !user_add_money( $userautoid, $poundage, $currency, "代收费业务30%手续费", Poundage ) ){
 		mysql_query("rollback");
-		paylog( "agent_pay_ok: user_add_money($userautoid, $poundage, $currency $msg, Agent) error" );
+		paylog( "agent_pay_ok: user_add_money($userautoid, $poundage, $currency, 30%手续费, Agent) error" );
 		return false;
 	}
 	mysql_query( "commit" );
@@ -176,6 +176,8 @@ function paylog( $msg )
  */
 function add_money( $userautoid, $amount, $currency, $msg )
 {
+	$amount = floatval( $amount );
+
 	if( !mysql_query("begin") ){
 		paylog( "mysql begin error" );
 		return false;
@@ -196,7 +198,7 @@ function add_money( $userautoid, $amount, $currency, $msg )
 	if ($row=mysql_fetch_array($result)){
 		$superuserid=$row['SuperUserAutoID'];
 		$userid=$row['ID'];
-		if( !user_add_money($superuserid,$amount*$srate,$currency,"下线 $userid 向账户加钱给您的奖励", Bonus) ){
+		if( !user_add_money($superuserid,floatval($amount*$srate),$currency,"下线 $userid 向账户加钱给您的奖励", Bonus) ){
 			mysql_query("rollback");
 			paylog( "add_money: user_add_money($superuserid, $amount*$srate,$currency,下线 $userid 向账户加钱给您的奖励, Bonus) error" );
 			return false;
@@ -208,7 +210,7 @@ function add_money( $userautoid, $amount, $currency, $msg )
 		if( $row=mysql_fetch_array($result) ){
 			$userid=$row['ID'];
 			$ssuserid=$row['SuperUserAutoID'];
-			if( !user_add_money($ssuserid,$amount*$ssrate,$currency,"下线 $userid 的下线向账户加钱给您的奖励", Bonus) ){
+			if( !user_add_money($ssuserid,floatval($amount*$ssrate),$currency,"下线 $userid 的下线向账户加钱给您的奖励", Bonus) ){
 				mysql_query("rollback");
 				paylog( "add_money: user_add_money($superuserid, $amount*$srate,$currency,下线$userid的下线向账户加钱给您的奖励,Bonus) error" );
 				return false;
@@ -230,23 +232,41 @@ function add_money( $userautoid, $amount, $currency, $msg )
  */
 function user_add_money( $userautoid, $amount, $currency, $msg, $type )
 {
+	$amount = floatval ( $amount );
+	
+	if ( 0.01>$amount ){
+		return true;
+	}
+
 	paylog( "user_add_money( $userautoid, $amount, $currency, $msg )" );
-	if( ! (is_numeric($userautoid) && is_numeric($amount) && round($amount,2)!=0) ){ //XXX round($amount,2)判断这个有什么用？
+	if( ! (is_numeric($userautoid) && is_numeric($amount) && round($amount,2)>=0) ){ //XXX round($amount,2)判断这个有什么用？
 		paylog( "user_add_money($userautoid,$amount,$currency,$msg,$type)参数错误" );
 		return false;
 	}
 
 	//给用户帐户加钱
-	if( !mysql_query("update UserAccount_TB set UserAccount=UserAccount+$amount,AccountEnable='Y' where UserAutoID=$userautoid and Currency='$currency'") ){
-		paylog( "sql query error: update UserAccount_TB set UserAccount=UserAccount+$amount where UserAutoID=$userautoid and Currency='$currency'" );
-		mysql_query( "rollback" );
+	// 美元
+	if ( "USD"==$currency ){
+		if( !mysql_query("update UserAccount_TB set UserAccountUSD=UserAccountUSD+$amount,AccountEnable='Y' where UserAutoID=$userautoid") ){
+			paylog ( "XXX1 sql query error: update UserAccount_TB set UserAccountUSD=UserAccountUSD+$amount,AccountEnable='Y' where UserAutoID=$userautoid" );
+			mysql_query( "rollback" );
+			return false;
+		}
+	}else if( "RMB"==$currency ){
+		if( !mysql_query("update UserAccount_TB set UserAccount=UserAccount+$amount,AccountEnable='Y' where UserAutoID=$userautoid") ){
+			paylog( "XXX2 sql query error: update UserAccount_TB set UserAccount=UserAccount+$amount,AccountEnable='Y'  where UserAutoID=$userautoid" );
+			mysql_query( "rollback" );
+			return false;
+		}
+	}else{
+		paylog ( "currency is neither USD nor RMB! currency is [$currency] !" );
 		return false;
 	}
 
 	//选出用户账上金额
-	$result = mysql_query( "select UserAccount from UserAccount_TB where UserAutoID=$userautoid and Currency='$currency'" );
-	if( !result ){
-		paylog( "sql query error: select UserAccount from UserAccount_TB where UserAutoID=$userautoid and Currency='$currency'" );
+	$result = mysql_query( "select UserAccount,UserAccountUSD from UserAccount_TB where UserAutoID=$userautoid" );
+	if( !$result ){
+		paylog( "sql query error: select UserAccount,UserAccountUSD from UserAccount_TB where UserAutoID=$userautoid and Currency='$currency'" );
 		mysql_query( "rollback" );
 		return false;
 	}
@@ -255,7 +275,12 @@ function user_add_money( $userautoid, $amount, $currency, $msg, $type )
 		mysql_query( "rollback" );
 		return false;
 	}
-	$UserAccount=$row['UserAccount'];
+
+	if ( "RMB"==$currency ){
+		$UserAccount=$row['UserAccount'];
+	}else if ( "USD"==$currency ){
+		$UserAccount=$row['UserAccountUSD'];
+	}
 		
 	if( NetPay==$type ){
 		$Reason = 'NetPay';

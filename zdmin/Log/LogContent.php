@@ -1,5 +1,4 @@
-<? session_start(); ?>
-<?
+<? session_start(); 
 require_once("zdmin.inc.php");
 
 
@@ -26,8 +25,7 @@ if ( (!isset($_SESSION['LogAdmin'])) ) exit(0);
 if (!isParamExist()) exit(0);
 
 require "{$ADMINROOT}/Include/InitDB.php"; 
-?>
-adminID,logContent,logSource,logType,logTime
+?>adminID,logContent,logSource,logType,logTime
 <?
 $startTime=sprintf("%4d-%02d-%02d",$_REQUEST['startYear'],$_REQUEST['startMonth'],$_REQUEST['startDay']); 
 $endTime=sprintf("%4d-%02d-%02d",$_REQUEST['endYear'],$_REQUEST['endMonth'],$_REQUEST['endDay']); 
