@@ -45,6 +45,9 @@ if ( (!isset($_SESSION['PersonalVPNAdmin'])) ) {
 } else {
 
 require "{$ADMINROOT}/Include/InitDB.php"; 
+if ( $_POST["CleanDB"] ){
+	mysql_query("delete from PersonalVPN_UserOnLine_TB");
+}
 $result=mysql_query("select DATE_FORMAT(A.LogOnTime,'%Y-%m-%d %H:%i:%s') as LogOnTime, B.ID as ID, B.UserName as UserName, B.Company as Company, B.TelephoneNumber as TelephoneNumber, B.MobilePhone as MobilePhone, B.EMail as EMail, B.Address as Address , B.Status as Status , B.UserFunc as UserFunc , B.UserFuncStatus as UserFuncStatus, B.AutoID as AutoID from PersonalVPN_UserOnLine_TB as A, User_TB as B where A.UserAutoID=B.AutoID order by B.ID", $conn);
  
 if ( mysql_num_rows($result)==0) {
@@ -130,6 +133,7 @@ if ( mysql_num_rows($result)==0) {
 ?>
 </td></tr></table>
 <br>
+<center><form method=post><input type=submit value="Çå¿Õ¼ÇÂ¼" name="CleanDB"></form></center>
 <?
 require("{$ADMINROOT}/Include/Part2.php");
 IncludeHTML("{$AKAROOT}/footer.html");
