@@ -164,14 +164,17 @@ coreSearch海量中文检索系统的SDK代码演示。</p>
                               <p> <b><span class="a4"> coreSearch论区</span></b><br>
 coreSearch用户可以在此讨论有关问题。 <br>
                               </p>
-                              <p> <b><span class="a4">客户案例</span></b><br>
-coreSearch海量中文检索系统的典型客户案例 </p></td>
+                              <p> <b><span class="a4">用户案例</span></b><br>
+coreSearch海量中文检索系统的典型客户案例 </p>
+				<a href="http://www.smth.org/bbsxsearch.php" class="a6" target=_blank>水木清华BBS精华区搜索</a><br>
+				</td>
                         </tr>
                       </table>
                   </center></td>
                 </tr>
               </table>
-					  <table width="100%" cellspacing="0" cellpadding="0" bordercolor="639A63" class="redefinetable" id="table1">
+					    <br>
+                        <table width="100%" cellspacing="0" cellpadding="0" bordercolor="639A63" class="redefinetable" id="table1">
                         <tr>
                           <td bgcolor="639A63" height="11">&nbsp;<b><font color="#FFFFFF"> 费用 </font></b></td>
                         </tr>
