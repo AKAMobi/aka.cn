@@ -32,13 +32,13 @@ print <<_HTML_;
             <p>
 _HTML_
 
-$ENV{'HOSTNAME'} = 'aka.com.cn';
+$ENV{'HOSTNAME'} = 'aka.cn';
 $ENV{'USER'} = 'sales';
 
 my %userpost;
 
 
-#open( FD, "|mail -s \"VPN客户订单\" sales\@aka.com.cn" );
+#open( FD, "|mail -s \"VPN客户订单\" sales\@aka.cn" );
 my $maildata = '';
 foreach $key ( $q->param() ){
 	$value = $q->param($key);
@@ -53,11 +53,11 @@ foreach $key ( $q->param() ){
 my $smtp;
 $smtp = Net::SMTP->new('localhost');
 $smtp->mail( $userpost{'E-Mail'} );
-$smtp->to('sales@aka.com.cn');
+$smtp->to('sales@aka.cn');
 
 $smtp->data();
 $smtp->datasend("From: \"" . $userpost{'联系人'} . "\" <" . $userpost{'E-Mail'} . ">\n");
-$smtp->datasend("To: sales\@aka.com.cn\n");
+$smtp->datasend("To: sales\@aka.cn\n");
 $smtp->datasend("Subject: VPN订单\n");
 $smtp->datasend("Date: " . `date` . "\n");
 $smtp->datasend("\n");

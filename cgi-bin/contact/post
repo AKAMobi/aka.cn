@@ -32,11 +32,11 @@ print <<_HTML_;
             <p>
 _HTML_
 
-$ENV{'HOSTNAME'} = 'aka.com.cn';
+$ENV{'HOSTNAME'} = 'aka.cn';
 $ENV{'USER'} = 'sales';
 
 my %userpost;
-#open( FD, "|mail -s \"客户意见\" sales\@aka.com.cn" );
+#open( FD, "|mail -s \"客户意见\" sales\@aka.cn" );
 foreach $key ( $q->param() ){
 	$value = $q->param($key);
 	next if( $key eq 'Submit' );
@@ -48,11 +48,11 @@ foreach $key ( $q->param() ){
 my $smtp;
 $smtp = Net::SMTP->new('localhost');
 $smtp->mail($userpost{'E-Mail'});
-$smtp->to('service@aka.com.cn');
+$smtp->to('service@aka.cn');
 
 $smtp->data();
 $smtp->datasend("From: \"" . $userpost{'姓名'} . "\" <" . $userpost{'E-Mail'} . ">\n");
-$smtp->datasend("To: service\@aka.com.cn\n");
+$smtp->datasend("To: service\@aka.cn\n");
 $smtp->datasend("Subject: 客户意见\n");
 $smtp->datasend("Date: " . `date` . "\n");
 $smtp->datasend("\n");

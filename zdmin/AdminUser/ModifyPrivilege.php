@@ -43,7 +43,7 @@ function ModifyPrivilege(){
     </tr>
     <tr>
       <td>姓名：</td>
-      <td><input type="text" id="oAdminName" name="AdminName" size="20" value="<? echo $_REQUEST['FullName']; ?>"></td>
+      <td><input type="text" id="oAdminName" name="AdminName" size="20" value="<? echo $row['FullName']; ?>"></td>
     </tr>
     <tr>
       <td valign="top">权限：</td>
@@ -55,6 +55,8 @@ function ModifyPrivilege(){
       <tr><td><INPUT type="checkbox" <? echo in_array('Money',$privileges)?'Checked':'' ;?> name="Money">用户资金管理</td></td>
       <tr><td><INPUT type="checkbox" <? echo in_array('Admin',$privileges)?'Checked':'' ;?> name="Admin">管理员账号管理</td></td>
       <tr><td><INPUT type="checkbox" <? echo in_array('Log',$privileges)?'Checked':'' ;?> name="Log">日志管理</td></td>
+      <tr><td><INPUT type="checkbox" <? echo in_array('SMSChild',$privileges)?'Checked':'' ;?> name="SMSChild">短信客户管理</td></td>
+      <tr><td><INPUT type="checkbox" <? echo in_array('SMSLog',$privileges)?'Checked':'' ;?> name="SMSLog">短信日志管理</td></td>
       </table> 
       </td>
     </tr>

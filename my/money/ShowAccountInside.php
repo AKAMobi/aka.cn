@@ -1,4 +1,4 @@
-<? session_set_cookie_params( time()+60*60*24*365, "/", "aka.com.cn" ); ?>
+<? session_set_cookie_params( time()+60*60*24*365, "/", "aka.cn" ); ?>
 <? session_start(); ?>
 <html>
 <head>

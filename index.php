@@ -12,10 +12,12 @@ require_once( "header.inc.php" );
 /*弹出新闻窗口 */
 if ($isPopupNews){
 ?>
+<!--
 <script language="JScript">
 window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menubar=no,location=no,resizable=no,scrollbars=no")
 ;
 </script>
+-->
 <?
 }
 ?>

@@ -57,6 +57,12 @@ if (isset($_REQUEST['Log'])){
 if (isset($_REQUEST['Admin'])){
 	$privilege[]="Admin";
 }
+if (isset($_REQUEST['SMSLog'])){
+	$privilege[]="SMSLog";
+}
+if (isset($_REQUEST['SMSChild'])){
+	$privilege[]="SMSChild";
+}
 $privileges=join(',',$privilege);
 if (mysql_query("Update AdminUser_TB set Privilege='{$privileges}', FullName='{$AdminName}' where ID='{$_REQUEST['AdminID']}'")) {
 	$temp=join("¡¢",$privilege);

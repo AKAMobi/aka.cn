@@ -45,6 +45,16 @@
                   <p>wForum，基于高性能的水木清华BBS源码（一万五千人同时在线）的高性能论坛系统 <br>
                   </p>
 		  <p>版权归属北京阿卡信息技术有限公司所有，遵循GPL，任何人都可以免费下载、安装，但是未经阿卡公司书面许可，不得应用于商业领域。</p>
+			水木清华BBS开发站：<br />
+			<a href="http://dev.smth.org/" target=_blank class="a6">http://dev.smth.org/</a><br />
+			<p>
+                      wForum 每日打包版本 : <br />
+                      <a href="ftp://dev.smth.org/src/wForum-snapshot.tar.gz" class="a6">wForum-snapshot.tar.gz</a> <br>
+                      <a href="ftp://dev.smth.org/src/smthbbs-snapshot.tar.gz" class="a6">smthbbs-snapshot.tar.gz</a> <br>
+			<p>
+
+			wForum 讨论区：<br />
+			<a href="http://wforum.wforum.zixia.net/" class="a6" target=_blank>http://wforum.wforum.zixia.net/</a><br />
                   <p></p>
                   </td>
               </tr>
@@ -72,8 +82,17 @@
                                 <tr> 
 
 					<br>
-					演示站点：<a href="http://wforum.zixia.net" target=_blank class=a4>http://wforum.zixia.net</a> 大话西游论坛
+					成功案例：<br>
 					<br>
+					平均在线 < 100 人：<br>
+					<ol>
+						<li><a href="http://bbs.bfa.edu.cn" target=_blank class=a4>http://bbs.bfa.edu.cn</a> 北京电影学院</li>
+					</ol>
+					<br>
+					平均在线 1000 人
+					<ol>
+						<li><a href="http://wforum.zixia.net" target=_blank class=a4>http://wforum.zixia.net</a> 大话西游论坛</li>
+					</ol>
 					<br>
 <!--
                                     <td> <p><b><span class="a4"><a href="area.shtml" class=a4>应用领域</a></span></b><br>

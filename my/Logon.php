@@ -1,5 +1,5 @@
 <? 
-session_set_cookie_params( time()+60*60*24*365, "/", "aka.com.cn" );
+session_set_cookie_params( time()+60*60*24*365, "/", "aka.cn" );
 session_start();
 if ((!isset($HTTP_POST_VARS['Name'])) || (!isset($HTTP_POST_VARS['Password'])) ){
 require_once( "header.inc.php" );

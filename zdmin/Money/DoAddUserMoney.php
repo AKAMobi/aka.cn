@@ -76,12 +76,23 @@ $reason=preg_replace("/,/","，",$_REQUEST['Reason']);
 $query=array();
 $NewAccount=floatval($row['UserAccount'])+floatval($_REQUEST['Amount']);
 $query[]="Update UserAccount_TB Set {$accountType}={$NewAccount} where UserAutoID='{$row['UserAutoID']}'";
-$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason,Currency) values (NULL,{$row['UserAutoID']},now(),{$_REQUEST['Amount']},0,$NewAccount,'因为 {$reason} 给您加 {$_REQUEST['Amount']} 元','Bonus','{$currencyType}')";
-$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} 给 {$row['UserID']}  的个人账户上加钱 {$_REQUEST['Amount']} 元{$currencyType}，理由是：{$reason}', '{$_SERVER['REMOTE_ADDR']}','Money', NOW()) ";
+
+if ( floatval($_REQUEST['Amount']) > 0 ){
+	$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason,Currency) values (NULL,{$row['UserAutoID']},now(),{$_REQUEST['Amount']},0,$NewAccount,'因为 {$reason} 给您加 {$_REQUEST['Amount']} 元','Bonus','{$currencyType}')";
+	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} 给 {$row['UserID']}  的个人账户上加钱 {$_REQUEST['Amount']} 元{$currencyType}，理由是：{$reason}', '{$_SERVER['REMOTE_ADDR']}','Money', NOW()) ";
+}else{
+	$Amount = abs( $_REQUEST['Amount'] );
+	$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason,Currency) values (NULL,{$row['UserAutoID']},now(),0,{$Amount},$NewAccount,'因为 {$reason} 给您减 {$Amount} 元','Bonus','{$currencyType}')";
+	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} 给 {$row['UserID']}  的个人账户上减钱 {$Amount} 元{$currencyType}，理由是：{$reason}', '{$_SERVER['REMOTE_ADDR']}','Money', NOW()) ";
+}
+
 $query[]="commit";
 
 $success=true;
 for ($i=0;$i<count($query);++$i){
+	#echo $query[$i];
+	#echo "<br>";
+	#$continue;
 	if (!mysql_query($query[$i])){
 		$success=false;
 		mysql_query('rollback');

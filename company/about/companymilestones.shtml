@@ -1,86 +1,122 @@
-<!--#include virtual="../../header.html" -->
-<table width="760" border="0" cellspacing="0" cellpadding="0">
-  <tr> 
-    <td width="210"><img src="../images/aboutinfo.jpg" width="550" height="89"></td>
-    <td bgcolor="#F0FAFF">&nbsp;</td>
-  </tr>
-  <tr> 
-    <td width="550" valign="top" rowspan="2"> 
-      <center>
-        <table width="500" border="0" cellspacing="0" cellpadding="0">
-          <tr> 
-            <td> <br>
-              <b><font color="#3366CC">当前位置：</font> </b><a href="/" class="a5">阿卡首页</a> 
-              <font color="#458DE4">&gt;</font> <a href="/company" class=a5>公司事务</a> <font color="#458DE4">&gt; 
-              阿卡历程</font> 
-              <p><span class="newstitle">阿卡历程</span></p>
-              <center>
-                <table width="450" border="0" cellspacing="0" cellpadding="0">
-                  <tr> 
-                    <td width="120" valign="top"><b><font color="#CC6600">2001年9月</font></b></td>
-                    <td>提供代办国际驾驶执照服务。
-<p>&nbsp;</p>
-                    </td>
-                  </tr>
-                  <tr> 
-                    <td width="120" valign="top"><b><font color="#CC6600">2001年8月</font></b></td>
-                    <td>阿卡自主研发的VPN技术正式投入市场， 开始为教育网用户提供出国&nbsp;VPN技术解决方案。 
-                      <p>&nbsp;</p>
-                    </td>
-                  </tr>
-                  <tr> 
-                    <td width="120" valign="top"><b><font color="#CC6600">2001年6月</font></b></td>
-                    <td>北京阿卡信息技术有限公司（ Beijing AKA Information Technology Co., 
-                      Ltd.）于26日正式成立。 
-                      <p>&nbsp;</p>
-                    </td>
-                  </tr>
-                </table>
-              </center>
-              <p>&nbsp;</p>
-            </td>
-          </tr>
-        </table>
-      </center>
-    </td>
-    <td width="210" valign="top" bgcolor="#F0FAFF" height="226"> 
-      <table width="210" border="0" cellspacing="8" cellpadding="3">
-        <tr> 
-          <td colspan="2">&nbsp;</td>
-        </tr>
-        <tr> 
-          <td bgcolor="C3D4F4" colspan="2"> 
-            <div align="left"><b><font color="032B7A" face="Arial"> 公司事务</font></b></div>
-          </td>
-        </tr>
-        <tr> 
-          <td width="27"> 
-            <div align="right"><img src="../../image/leadarrow.gif" width="5" height="10"> 
-            </div>
-          </td>
-          <td width="159"><a href="index.shtml" class="a6">关于我们</a></td>
-        </tr>
-        <tr> 
-          <td bgcolor="C3D4F4" colspan="2"> 
-            <div align="left"><font color="032B7A"><b><font face="Arial"> </font></b></font></div>
-          </td>
-        </tr>
-        <tr> 
-          <td>&nbsp; </td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr> 
-          <td> 
-            <div align="right"></div>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-      </table>
-      <br>
-    </td>
-  </tr>
-  <tr> 
-    <td width="210" valign="bottom" bgcolor="#F0FAFF">&nbsp; </td>
-  </tr>
-</table>
+<!--#include virtual="../../header.html" -->
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="210"><img src="../images/aboutinfo.jpg" width="550" height="89"></td>
+    <td bgcolor="#F0FAFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="550" valign="top" rowspan="2"> 
+      <center>
+        <table width="500" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td> <br>
+              <b><font color="#3366CC">当前位置：</font> </b><a href="/" class="a5">阿卡首页</a> 
+              <font color="#458DE4">&gt;</font> <a href="/company" class=a5>公司事务</a> <font color="#458DE4">&gt; 
+              阿卡历程</font> 
+              <p><span class="newstitle">阿卡历程</span></p>
+              <center>
+                <table width="450" border="0" cellspacing="0" cellpadding="0">
+                  <tr> 
+                    <td width="120" valign="top"><b><font color="#CC6600">2003年8月</font></b></td>
+                    <td>
+推出基于水木清华BBS系统底层的高性能Web论坛系统
+<a href="http://wforum.aka.cn/" class=a6>wForum</a>，可以支持上万人同时在线。
+<p>&nbsp;</p>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td width="120" valign="top"><b><font color="#CC6600">2003年6月</font></b></td>
+                    <td>
+自主研发的 <a href="http://nas.aka.cn/" class=a6>NAS(Network Attached Storage)</a> 产品推向市场，容量最大可达 2TB。
+<p>&nbsp;</p>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td width="120" valign="top"><b><font color="#CC6600">2003年5月</font></b></td>
+                    <td>推出千元以下万级用户的企业电子邮局系统：<a href="http://wmail.aka.cn/" class=a6>WMail</a>。
+<p>&nbsp;</p>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td width="120" valign="top"><b><font color="#CC6600">2002年10月</font></b></td>
+                    <td>
+阿卡公司正式通过高新技术企业认证。
+<p>&nbsp;</p>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td width="120" valign="top"><b><font color="#CC6600">2002年7月</font></b></td>
+                    <td>
+将自主研发的个人VPN产品：
+<a href="http://personal.vpn.aka.cn/" class=a6>阿卡直通车</a>推向市场，为教育网用户出国和国外的用户回国创造了极大的方便。
+<p>&nbsp;</p>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td width="120" valign="top"><b><font color="#CC6600">2001年9月</font></b></td>
+                    <td>提供代办国际驾驶执照服务。
+<p>&nbsp;</p>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td width="120" valign="top"><b><font color="#CC6600">2001年8月</font></b></td>
+                    <td>阿卡自主研发的VPN技术正式投入市场， 开始为教育网用户提供出国&nbsp;VPN技术解决方案。 
+                      <p>&nbsp;</p>
+                    </td>
+                  </tr>
+                  <tr> 
+                    <td width="120" valign="top"><b><font color="#CC6600">2001年6月</font></b></td>
+                    <td>北京阿卡信息技术有限公司（ Beijing AKA Information Technology Co., 
+                      Ltd.）于26日正式成立。 
+                      <p>&nbsp;</p>
+                    </td>
+                  </tr>
+                </table>
+              </center>
+              <p>&nbsp;</p>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+    <td width="210" valign="top" bgcolor="#F0FAFF" height="226"> 
+      <table width="210" border="0" cellspacing="8" cellpadding="3">
+        <tr> 
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td bgcolor="C3D4F4" colspan="2"> 
+            <div align="left"><b><font color="032B7A" face="Arial"> 公司事务</font></b></div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="27"> 
+            <div align="right"><img src="../../image/leadarrow.gif" width="5" height="10"> 
+            </div>
+          </td>
+          <td width="159"><a href="index.shtml" class="a6">关于我们</a></td>
+        </tr>
+        <tr> 
+          <td bgcolor="C3D4F4" colspan="2"> 
+            <div align="left"><font color="032B7A"><b><font face="Arial"> </font></b></font></div>
+          </td>
+        </tr>
+        <tr> 
+          <td>&nbsp; </td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"></div>
+          </td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td width="210" valign="bottom" bgcolor="#F0FAFF">&nbsp; </td>
+  </tr>
+</table>
 <!--#include virtual="../../footer.html" -->

@@ -34,6 +34,12 @@ ItemURL,ItemName
 <? if (isset($_SESSION['AdminAdmin'])) { ?>
 <? echo $ADMINURLROOT; ?>/AdminUser/AdminUserControl.php,管理员账号管理
 <? } ?>
+<? if (isset($_SESSION['SMSChildAdmin'])) { ?>
+<? echo $ADMINURLROOT; ?>/SMSChild/SMSChildControl.php,短信客户管理
+<? } ?>
+<? if (isset($_SESSION['SMSLogAdmin'])) { ?>
+<? echo $ADMINURLROOT; ?>/SMSLog/SMSLogControl.php,短信日志管理
+<? } ?>
 <? echo $ADMINURLROOT; ?>/ChangePassword.php,更换密码
 <? echo $ADMINURLROOT; ?>/sms/SendSMS.php, 发送短信
 <? echo $ADMINURLROOT; ?>/Logout.php,退出登录

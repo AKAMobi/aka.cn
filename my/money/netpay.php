@@ -39,7 +39,7 @@ if ( (!isset($HTTP_SESSION_VARS['UserID']) ) ) {
 <!-- XXX
 系统维护中...
 -->
-<form action="http://pay.aka.com.cn/prepare.php" name=form method=post>
+<form action="http://pay.aka.cn/prepare.php" name=form method=post>
 在下面输入希望转入“我的阿卡帐户”的钱数：<p>
 <input type=text name=MoneyCount size=4>元人民币<p>
 <input type=hidden name=MoneyType value=0>

@@ -42,6 +42,8 @@ unset($_SESSION['PersonalVPNAdmin']);
 unset($_SESSION['LogAdmin']);
 unset($_SESSION['AdminAdmin']);
 unset($_SESSION['MoneyAdmin']);
+unset($_SESSION['SMSLogAdmin']);
+unset($_SESSION['SMSChildAdmin']);
 
 
 session_unset();

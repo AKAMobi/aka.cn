@@ -30,7 +30,6 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
   <tr> 
   <td align="center">
 <?
-
 if ( (!isset($_SESSION['AdminID']))  ){//Î´Õý³£µÇÂ¼
 ?>
 ÄúÉÐÎ´µÇÂ¼¡£<BR>

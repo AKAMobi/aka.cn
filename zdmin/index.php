@@ -1,6 +1,6 @@
 <? 
 
-session_set_cookie_params( 0, "/", "aka.com.cn" );
+session_set_cookie_params( 0, "/", "aka.cn" );
 
 session_start(); 
 

@@ -69,7 +69,14 @@ $query=array();
 $query[]="begin";
 $NewAccount=floatval($row['UserAccount'])+floatval($_REQUEST['Amount']);
 $query[]="Update UserAccount_TB Set {$accountType}={$NewAccount} where UserAutoID='{$row['UserAutoID']}'";
-$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason,Currency) values (NULL,{$row['UserAutoID']},now(),{$_REQUEST['Amount']},0,$NewAccount,'因为 {$reason} 给您加 {$_REQUEST['Amount']} 元','Bonus','{$currencyType}')";
+
+if ( floatval($_REQUEST['Amount']) > 0 ){
+	$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason,Currency) values (NULL,{$row['UserAutoID']},now(),{$_REQUEST['Amount']},0,$NewAccount,'因为 {$reason} 给您加 {$_REQUEST['Amount']} 元','Bonus','{$currencyType}')";
+}else{
+	$Amount = abs( $_REQUEST['Amount'] );
+	$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason,Currency) values (NULL,{$row['UserAutoID']},now(),0,{$Amount},$NewAccount,'因为 {$reason} 给您减 {$_REQUEST['Amount']} 元','Bonus','{$currencyType}')";
+}
+	
 $query[]="commit";
 
 for ($i=0;$i<count($query);++$i){

@@ -93,24 +93,13 @@ if ($_REQUEST['Name']==$SYSOPID) {
 	$_SESSION['LogAdmin']=true;
 	$_SESSION['AdminAdmin']=true;
 	$_SESSION['MoneyAdmin']=true;
+	$_SESSION['SMSLogAdmin']=true;
+	$_SESSION['SMSChildAdmin']=true;
+
 } else {
-if (strstr($row['Privilege'],'News')) {
-	$_SESSION['NewsAdmin']=true;
-}
-if (strstr($row['Privilege'],'PersonalVPN')) {
-	$_SESSION['PersonalVPNAdmin']=true;
-}
-if (strstr($row['Privilege'],'UserAccount')) {
-	$_SESSION['UserAccountAdmin']=true;
-}
-if (strstr($row['Privilege'],'Log')) {
-	$_SESSION['LogAdmin']=true;
-}
-if (strstr($row['Privilege'],'Admin')) {
-	$_SESSION['AdminAdmin']=true;
-}
-if (strstr($row['Privilege'],'Money')) {
-	$_SESSION['MoneyAdmin']=true;
+$privileges=explode(",",$row['Privilege']);
+foreach ($privileges as $privilege){
+	$_SESSION[$privilege.'Admin']=true;
 }
 }
 

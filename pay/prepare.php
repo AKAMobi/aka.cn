@@ -98,6 +98,7 @@ if( is_numeric($money) && round($money,2)>0 ){
 			}
 		}else{
 			//无此用户
+			echo "<h1>$userid</h1>";
 			err_msg( "错误：请您正常登陆" );
 		}
 		mysql_free_result($result);
