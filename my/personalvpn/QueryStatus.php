@@ -102,7 +102,8 @@ if ( "zixia" == $ID ){
 	echo "202.205.10.7\n";
 }else{
 	if( $APCTYPE==APCBACK ){ //回国
-			echo "211.157.100.8\n";
+			//echo "211.157.100.8\n";
+			echo "61.135.129.99\n";
 
 	}else{	//出国
 			echo "202.205.10.7\n";

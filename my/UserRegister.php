@@ -144,7 +144,9 @@ $_SESSION['ValidateID']=$_REQUEST['ID'];
 	<br>
 	<br>
 您的注册单已成功提交。<BR>
-如果您希望能直接用手机或e-mail注册，请到<a class="a6" href="UserValidate.php">下一步</a>。
+<br>
+<h1>强烈推荐直接用手机注册，可以立即通过注册：(目前只对中国移动手机用户开放)</h1>
+<font size=+3>请到<a class="a6" href="UserValidate.php" class=a6><font size=+3>下一步。</font></a></font><br><br>
 <!--我们将在两个工作日内与您联系。请您耐心等待:)--><br>
 请您仔细阅读<a href="usage.shtml" class="a5">使用说明</a>，然后<p>
 <font size=+1 color=red>

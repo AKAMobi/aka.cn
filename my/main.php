@@ -1,5 +1,14 @@
 <?php
+session_set_cookie_params( 0, "/", "aka.com.cn" );
+session_start();
+
+if ( 0==strlen($HTTP_SESSION_VARS['UserID']) ){
+	Header( "Location: http://my.aka.cn/" );
+}
+
 require_once( "header.inc.php" );
+
+
 ?>
 
 <table width="760" cellspacing="0" cellpadding="0">
