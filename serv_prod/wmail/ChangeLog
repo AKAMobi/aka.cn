@@ -1,3 +1,18 @@
+2003-06-13	Fan Lin <lfan@lfan.net>
+	folder.c maildir.c folder.html
+			在浏览邮件时增加附件标识
+	folder.c	更改显示邮箱容量不准确的问题（感谢网友wait）
+	attachment.c	解决中文附件在OE下乱码的错误
+	
+2003-06-10	Fan Lin <lfan@lfan.net>
+	attachment.html	修正上一版本添加附件时不能返回的bug
+	install		修改安装脚本，支持指定安装目录
+	maildirfilter2.c pref.c mailfilter.c
+			调整.qmail文件位置，增强转发功能
+	cginocache.c	禁止浏览器cache邮件内容
+	sqwebmail.c	调整session，将其存储到cookie中
+	rfc2045reply.c	多次回复时不会出现多个Re: Re:...的现象
+
 2003-06-05	Fan Lin <lfan@lfan.net>
 	sqwebmail.c	修正注销后仍能通过URL访问信箱的安全问题
 

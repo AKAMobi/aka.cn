@@ -25,7 +25,7 @@
             lfan.net /home/vpopmail/bin/vchkpw /bin/true 2&gt;&amp;1 \<br>
             | /var/qmail/bin/splogger smtpd 3 &amp; <br>
             <br>
-            安装wmail时，推荐用./install安装，安装目录是/home/wmail 你也可以根据需要修改install文件，让它安装到指定目录。<br> <br>
+            安装wmail时，推荐用./install安装，安装目录是/home/wmail 你也可以 ./install 目录名，将wmail安装到其它目录<br> <br>
             安装完毕后修改httpd.conf，加上以下内容，注意替换必要的内容：<br>
             <br> &lt;VirtualHost *:80&gt;<br>
             SetEnv SQWEBMAIL_TEMPLATEDIR /home/wmail/html<br>
