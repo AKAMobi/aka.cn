@@ -18,13 +18,14 @@
                 <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">客户案例</td>
               </tr>
             </table> 
-	    大客户(>1000人)<br>
+	    大客户(&gt;1000人)<br>
             <ul>
-              <li><strong>北京电影学院</strong> &nbsp;&nbsp;<a href="http://mail.bfa.edu.cn" target="_blank" class=a4>http://mail.bfa.edu.cn</a></li>
+              <!--li><strong>北京电影学院</strong> &nbsp;&nbsp;<a href="http://mail.bfa.edu.cn" target="_blank" class=a4>http://mail.bfa.edu.cn</a></li-->
 	      <li><strong>紫光集团</strong> &nbsp;&nbsp;<a href="http://mail.thunis.com" target="_blank" class=a4>http://mail.thunis.com</a></li>
 	    </ul>
-	    小客户(<=1000人)<br>
+	    小客户(&lt;=1000人)<br>
 	    <ul>
+	      <li><strong>松下电器(机电)天津有限公司</strong> &nbsp;&nbsp;<a href="http://211.99.22.180/" target="_blank" class=a4>http://mail.panasonic.com.cn</a></li>
 	      <li><strong>北京师范大学京师大厦</strong> &nbsp;&nbsp;<a href="http://mail.ciae.bnu.edu.cn" target="_blank" class=a4>http://mail.ciae.bnu.edu.cn</a></li>
             </ul>
 	  </td>
