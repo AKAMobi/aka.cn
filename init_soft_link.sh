@@ -39,3 +39,5 @@ cd ..
 cd cgi-bin
 chmod +x Count.cgi order/idl order/vpn contact/post
 cd ..
+
+echo "Done."
