@@ -51,7 +51,7 @@
             </td>
             <td valign="top"> 
               <p><br>
-				<a href="coreSearch/index.shtml">coreSearch海量中文检索系统
+				<a href="coreSearch/index.shtml" class="a6">coreSearch海量中文检索系统
 
 </a></p>
               <p>阿卡信息技术提供针对教育行业、中小型企业、有全文检索二次开发需求等机构的高速稳定的中文检索系统。</p>
@@ -59,8 +59,6 @@
           </tr>
           <tr> 
             <td valign="top" height="117"> 
-              <p><a href="coreSearch/index.shtml"><br>
-　</a></p>
             </td>
             <td valign="top" height="117">　</td>
           </tr>
