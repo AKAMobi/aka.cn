@@ -1,3 +1,10 @@
+2003-05-26	Fan Lin <lfan@lfan.net>
+	newmsg_create.c 解决发件人重复编码的问题
+	sqwebmail.c	支持默认域名，修正登录过期的bug
+	folder.c	解决读取邮件时删除后cache没有刷新的问题
+	readmsg.html newmsg.html
+			增加少量中文翻译
+
 2003-05-18	Fan Lin <lfan@lfan.net>
 	folder.c	优化文本信件的显示
 	sqwebmail.c	支持quota设置为20M，1000K这样的形式

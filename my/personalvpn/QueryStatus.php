@@ -32,7 +32,7 @@ VPN·þÎñÆ÷IP list
 */
 
 define( "APCLASTVERSIONA", 3 );
-define( "APCLASTVERSIONB", 0 );
+define( "APCLASTVERSIONB", 1 );
 define( "APCOUT", 0 );
 define( "APCBACK", 1 );
 

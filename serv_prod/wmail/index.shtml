@@ -205,7 +205,7 @@
 
                                 <tr> 
 
-                                    <td> 
+                                    <td height=370> 
 										
                                       <p> <b><span class="a4"><a href="snapshot.shtml" class=a4>WMail界面截图</a></span></b><br>
                                         Wmail电子邮件系统的操作界面截图。 </p>
@@ -216,14 +216,9 @@
 										
                                       <p> <b><span class="a4"><a href="http://bbs.zixia.net/WMail.jsp" target="_blank" class=a4>WMail讨论区</a></span></b><br>
                                         WMail用户可以在此讨论有关问题。 <br>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <br>
-                                        <br><br>
-
+				      </p>
+				      <p> <b><span class="a4"><a href="system.shtml" class=a4>客户案例</a></span></b><br>
+					Wmail电子邮件系统的典型客户案例
                                       </p>
 
                                     </td>
