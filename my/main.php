@@ -19,21 +19,15 @@ require_once( "header.inc.php" );
 <p><a href="news/2002-10-26.shtml" class=a6><font size=+2>阿卡直通车2002年11月1日正式收费通知</font></a></p>
 你好，<?= $HTTP_SESSION_VARS['UserID'] ?>，
 <?php
-$result=mysql_query("select A.UserAccount as UserAccount from UserAccount_TB as A, User_TB as B where A.UserAutoID=B.AutoID and B.ID='{$HTTP_SESSION_VARS['UserID']}' and A.Currency='RMB' ");
+$result=mysql_query("select A.UserAccount as UserAccount, A.UserAccountUSD as UserAccountUSD from UserAccount_TB as A, User_TB as B where A.UserAutoID=B.AutoID and B.ID='{$HTTP_SESSION_VARS['UserID']}'");
 if (!($row=mysql_fetch_array($result)) ){
 ?>
 	数据库操作失败。请与管理员联系。
 <?php
 } else {
 ?>
-您当前的帐户余额：RMB ￥<?=intval($row['UserAccount'])==-1?0.00:$row['UserAccount'] ?> ，USD$<?
-	$result=mysql_query("select A.UserAccount as UserAccount from UserAccount_TB as A, User_TB as B where A.UserAutoID=B.AutoID and B.ID='{$HTTP_SESSION_VARS['UserID']}' and A.Currency='USD' ");
-	if (!($row=mysql_fetch_array($result)) ){
-		echo 0;
-	} else {
-		echo $row['UserAccount'];
-	}
-?>.
+您当前的帐户余额：￥<?=intval($row['UserAccount'])==-1?0.00:$row['UserAccount'] ?> ，
+$<?=intval($row['UserAccountUSD'])==-1?0.00:$row['UserAccountUSD'] ?>.
 <?php
 }
 ?>
