@@ -1,0 +1,92 @@
+<!--#include virtual="../../header.html" -->
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><img src="../images/aboutinfo.jpg" width="550" height="89"></td>
+    <td width="210" bgcolor="#F0FAFF">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td width="550" rowspan="2"> 
+      <center>
+        <table width="500" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td> 
+              <p><br>
+                <b><font color="#3366CC">当前位置：</font> </b><a href="/index.shtml" class="a5">阿卡首页</a> 
+                <font color="#458DE4">&gt;</font> <font class=a5>公司事务</font> <font color="#458DE4">&gt; 
+                关于我们</font></p>
+              <p><span class="newstitle">关于我们</span></p>
+              <p><span class="newssubtitle">公司信息</span></p>
+              <p>阿卡公司是一家从事互联网技术开发与服务的高科技公司，阿卡致力于为客户提供最为贴身的各种互联网服务与技术支持。</p>
+              <p>阿卡公司由3名清华大学的学生创立于 2001 年 6 月，公司凭借独到的眼光，优秀的人才，过硬的技术和不懈的努力，在短短的半年时间内得到了长足的发展。阿卡公司拥有一批顶尖的技术开发人员，优秀的服务支持人员，这些是公司最宝贵的财富。公司还拥有自主产权的核心技术，丰富的软硬件，网络资源，这些是公司能够提供一流服务的支柱。客户的需要就是阿卡公司的需要，这也是阿卡公司能够在短时间内建立良好的信誉，赢得客户信任的重要原因。</p>
+              <p>目前，阿卡公司正专注于为客户开发和提供高速，安全，方便，廉价的新型互联网接入服务，其中主推我们灵活多样的阿卡VPN解决方案。阿卡VPN系列解决方案一经推出，凭借其过硬的性能，优秀的技术服务和支持以及超高的性价比获得了市场的肯定和商业上的成功。作为国内仅有的几家有实力提供VPN技术的服务商之一，我们有信心说：&quot;阿卡是最好的&quot;。</p>
+              <p>公司地址：北京市新街口外大街19号<br>
+                电话：(010)62200680<br>
+                传真：(010)62200680<p>
+              <p>公司开户行：招商银行北京分行西三环支行<br>
+                户名：北京阿卡信息技术有限公司<br>
+                账号：2081481710001<br>
+              </p>
+              <p><span class="newssubtitle">公司理念</span></p>
+              <ul>
+                <li>基于互联网络，为客户提供最为贴身的各种互联网服务与技术支持。</li>
+              </ul>
+              <p class="newssubtitle">&nbsp;</p>
+		<img src="image/gxjsqyrdzs.jpg" alt="高新技术企业认定证书" width=500>
+		<img src="image/gxjsqypzzs.jpg" alt="高新技术企业批准证书" width=500>
+              </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+    <td width="210" valign="top" bgcolor="#F0FAFF"> 
+      <table width="210" border="0" cellspacing="8" cellpadding="3">
+        <tr> 
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr bgcolor="C3D4F4"> 
+          <td colspan="2"> 
+            <div align="left"><b><font color="032B7A" face="Arial"> 公司信息</font></b></div>
+          </td>
+        </tr>
+        <tr> 
+          <td width="27"> 
+            <div align="right"><img src="../../image/leadarrow.gif" width="5" height="10"> 
+            </div>
+          </td>
+          <td width="159"> 
+            <p><a href="index.shtml" class="a6">关于阿卡</a><a href="index.shtml" class="a6"></a></p>
+          </td>
+        </tr>
+        <tr> 
+          <td width="27"> 
+            <div align="right"><img src="../../image/leadarrow.gif" width="5" height="10"> 
+            </div>
+          </td>
+          <td width="159"><a href="companymilestones.shtml" class="a6">阿卡历程</a></td>
+        </tr>
+        <tr> 
+          <td bgcolor="C3D4F4" colspan="2"> 
+            <div align="left"><font color="032B7A"><b><font face="Arial"> 管理团队</font></b></font></div>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"><img src="../../image/leadarrow.gif" width="5" height="10"></div>
+          </td>
+          <td><a href="/company/mgmt/executivemgmt.shtml" class="a6">管理执行</a></td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"><img src="../../image/leadarrow.gif" width="5" height="10"></div>
+          </td>
+          <td><a href="/company/mgmt/board.shtml" class="a6">董事会</a></td>
+        </tr>
+      </table>
+      <br>
+    </td>
+  </tr>
+  <tr> 
+    <td width="210" valign="bottom" bgcolor="#F0FAFF">&nbsp; </td>
+  </tr>
+</table>
+<!--#include virtual="../../footer.html" -->

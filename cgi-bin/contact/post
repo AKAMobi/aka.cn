@@ -1,0 +1,102 @@
+#!/usr/bin/perl
+
+use strict;
+use CGI 'param','header';
+use Net::SMTP;
+
+my %rate = ( 1=>'从不', 2=> '偶尔', 3=>'经常', 4=>'频繁' );
+
+my $q;
+my ( $key, $value );
+
+$q = new CGI;
+print $q->header( -type=>'text/html',
+                -charset=>'gb2312' );
+
+open( FD, "<../../header.html" );
+print <FD>;
+close( FD );
+print <<_HTML_;
+<table width="760" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="550" valign="top" rowspan="2"> 
+      <table width="500" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td valign="top"> 
+            <p><br>
+              <b><font color="#3366CC">您的位置：</font></b><a href="/" class="a5">阿卡首页</a> 
+              <font color="#458DE4">&gt;</font> <a href="../index.shtml" class="a5">客户服务</a> 
+              <font color="#458DE4">&gt;</font> <span class="a5">联系我们</span></p>
+            <p class="newstitle">联系我们</p>
+            <p>您的信息已经成功转达，谢谢您。</p>
+            <p>
+_HTML_
+
+$ENV{'HOSTNAME'} = 'aka.com.cn';
+$ENV{'USER'} = 'sales';
+
+my %userpost;
+#open( FD, "|mail -s \"客户意见\" sales\@aka.com.cn" );
+foreach $key ( $q->param() ){
+	$value = $q->param($key);
+	next if( $key eq 'Submit' );
+	$userpost{$key} = $value;
+	print "$key : $value<br>";
+	#print FD "$key : $value\n"
+}
+#close( FD );
+my $smtp;
+$smtp = Net::SMTP->new('localhost');
+$smtp->mail($userpost{'E-Mail'});
+$smtp->to('service@aka.com.cn');
+
+$smtp->data();
+$smtp->datasend("From: \"" . $userpost{'姓名'} . "\" <" . $userpost{'E-Mail'} . ">\n");
+$smtp->datasend("To: service\@aka.com.cn\n");
+$smtp->datasend("Subject: 客户意见\n");
+$smtp->datasend("Date: " . `date` . "\n");
+$smtp->datasend("\n");
+$smtp->datasend($userpost{'所说的话'} . "\n");
+$smtp->dataend();
+
+$smtp->quit;
+
+print <<_HTML_;
+            </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+    </td>
+    <td width="210" bgcolor="#F0FAFF" valign="top"> 
+      <table width="210" border="0" cellspacing="8" cellpadding="3">
+        <tr> 
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td bgcolor="C3D4F4" colspan="2"> 
+            <div align="left"><font color="032B7A"><b><font face="Arial"> 相关链接</font></b></font></div>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"><img src="../../image/leadarrow.gif" width="5" height="10"></div>
+          </td>
+          <td><a href="../../serv_prod/index.shtml" class="a6">产品与服务</a></td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"><img src="../../image/leadarrow.gif" width="5" height="10"></div>
+          </td>
+          <td><a href="../../solution/index.shtml" class="a6">解决方案</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="210" bgcolor="#F0FAFF" valign="bottom">&nbsp;</td>
+  </tr>
+</table>
+_HTML_
+open( FD, "<../../footer.html" );
+print <FD>;
+close( FD );

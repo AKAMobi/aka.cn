@@ -1,0 +1,34 @@
+2003-05-18	Fan Lin <lfan@lfan.net>
+	folder.c	优化文本信件的显示
+	sqwebmail.c	支持quota设置为20M，1000K这样的形式
+			更改帐号多登录的一个bug
+	*.html		美观错误显示，修改部分JavaScript错误
+	cgi.c		更改提示
+
+2003-05-15	Fan Lin <lfan@lfan.net>
+	newmsg.c sqwebmail.c sendok.html sendok*.gif
+			添加发信成功界面
+	newmsg.c newmsg.html
+			修改添加附件
+	sqwebmail.c	添加版权信息显示
+	maildirquota.c sqwebmail.c
+			每次登录重新计算quota，解决pop3收件
+			以后quota计算的错误
+	sqwebmail.c	支持帐号的多个窗口登录
+			去掉了未使用的日历模块
+
+
+2003-05-08      Fan Lin <lfan@lfan.net>
+	rfc2646create.c folder.c
+			发信中文乱码得bug和显示标题得半个字符问题
+	mailfilter.c	生成过滤文件的bug
+
+2003-05-07	Fan Lin <lfan@lfan.net>
+	folder.c	解决邮箱刚创建时没有Quota信息的问题
+	Makefile.in configure
+			安装bug的修改
+
+2003-05-04	Fan Lin <lfan@lfan.net>
+	newmsg.html newmsg.c 没有收件人不会报错
+	folder.c	附件中文名不能正常显示
+			MIME解码时不能识别boundary

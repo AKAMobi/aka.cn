@@ -1,0 +1,132 @@
+<!--#include virtual="../../../header.html" -->
+
+<table width="760" cellspacing="0" cellpadding="0">
+
+  <tr> 
+
+    <td width="550" valign="top"> 
+
+      <table width="500" cellspacing="0" cellpadding="0" align="center">
+
+        <tr>
+
+          <td valign="top"> <p><br>
+              <b><font color="#3366CC">当前位置：</font></b><a href="/" class="a5">阿卡首页</a> 
+              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">产品与服务</a> 
+              <font color="#458DE4">&gt; <a href="../index.shtml" class=a5>VPN</a> 
+              &gt;</font> <a href="index.shtml" class="a5">出国VPN</a><font class=a5> 
+              &gt; 费用分析</font></p>
+
+            <table width="475" cellspacing="0" cellpadding="0">
+
+              <tr> 
+
+                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">费用分析</td>
+
+              </tr>
+
+            </table>
+
+            <p>&nbsp;</p>
+
+            <p><span
+
+style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+
+mso-hansi-font-family:"Times New Roman"'>VPN服务的价格究竟如何，让我们来看看实际使用中的价格对比，按照通常的使用情况给您算一笔经济账 
+
+              ：</span></p>
+
+            <p><span
+
+style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+
+mso-hansi-font-family:"Times New Roman"'>如果按照最低要求，仅仅进行少量的出国访问，例如每台机器每天浏览10页国际网页，每天一封Email，每周只下载一篇论文或一个小软件，那么平均一天出国流量为2M，VPN服务和直接通过教育网出国访问的费用对比如下：<br>
+
+              </span></p>
+
+            <p><img width=551 height=298
+
+src="/serv_prod/vpn/edu/images/vpn-calc1.gif" v:shapes="_x0000_i1025"> <span
+
+style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+
+mso-hansi-font-family:"Times New Roman"'>如果对出国的限制放宽松一下，例如每台机器每天浏览25页国际网页，每天几封Email，每周下载几篇论文或软件，那么平均一天出国流量为5M，费用对比如下：<br>
+
+              </span><br>
+
+              <span lang=EN-US><img width=543 height=278
+
+src="/serv_prod/vpn/edu/images/vpn-calc2.gif" v:shapes="_x0000_i1026"></span> <span
+
+style='font-size:12.0pt;font-family:宋体;mso-ascii-font-family:"Times New Roman";
+
+mso-hansi-font-family:"Times New Roman"'>如果您需要经常出国浏览交流、查阅文献或下载论文，可以想象，费用对比会更为惊人。选择我们的VPN服务，能让您不必担心高昂的出国网费，尽情享用互联网给您带来的方便与快捷。<br>
+
+              </span></p>
+
+            <p>&nbsp;</p>
+
+            <p>&nbsp; </p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+    <td width="210" bgcolor="#F0FAFF" valign="top"> 
+
+      <table width="210" border="0" cellspacing="8" cellpadding="3">
+
+        <tr> 
+
+          <td colspan="2">&nbsp;</td>
+
+        </tr>
+
+        <tr> 
+
+          <td bgcolor="C3D4F4" colspan="2"> 
+
+            <div align="left"><font color="032B7A"><b><font face="Arial"> 相关链接</font></b></font></div>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td> 
+
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+
+          </td>
+
+          <td><a href="/serv_prod/index.shtml" class="a6">技术与服务</a></td>
+
+        </tr>
+
+        <tr> 
+
+          <td> 
+
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+
+          </td>
+
+          <td><a href="feature.shtml" class="a6">VPN的特点</a></td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<!--#include virtual="../../../footer.html" -->

@@ -1,0 +1,139 @@
+<!--#include virtual="../../header.html" -->
+
+
+
+<table width="760" cellspacing="0" cellpadding="0">
+
+  <tr> 
+
+    <td width="550" rowspan="3"> 
+
+      <div align="right"> 
+
+        <p>&nbsp;</p>
+
+      </div>
+
+      <table width="500" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td> <p><b><font color="#3366CC">当前位置：</font> </b><a href="/index.shtml" class="a5">阿卡首页</a> 
+              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">产品与服务</a><font color="#458DE4">&gt; 
+              <a href="./index.shtml" class=a5>WML浏览器</a></font></p>
+
+            <p class="newstitle">WMLBrowser</p>
+
+            <p>WML支持：<br>
+
+              符合W3C组织制定的WML 1.3标准，支持UNICODE和中文显示，支持WML文本编码。</p>
+
+            <p></p>
+
+            <p>WMLScript支持：<br>
+
+              符合W3C组织制定的WMLScript 1.2标准，实现规范WAP-193-WMLScript Language Specification, 
+
+              June-2000与规范WAP-194-WMLScript Standard Libraries Specification, 
+
+              June-2000中对于WMLScript的描述，支持目前可以找到的几乎所有WMLScript程序。</p>
+
+            <p>其他：<br>
+
+              对象式程序结构；<br>
+
+              支持保存文件的功能；<br>
+
+            </p>
+
+            <p>&nbsp; </p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+    <td width="210" bgcolor="#F0FAFF" valign="top"> </td>
+
+    <br>
+
+  </tr>
+
+  <tr> 
+
+    <td width="210" bgcolor="#F0FAFF" valign="top"> 
+
+      <p>&nbsp;</p>
+
+
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td width="210" bgcolor="#F0FAFF" valign="top">
+
+      <table width="210" cellspacing="0" cellpadding="0">
+
+        <tr> 
+
+          <td height="45">&nbsp;</td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <table width="210" border="0" cellspacing="8" cellpadding="3">
+              <tr> 
+                <td colspan="2">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td bgcolor="C3D4F4" colspan="2"> <div align="left"><font color="032B7A"><b><font face="Arial"> 
+                    相关链接</font></b></font></div></td>
+              </tr>
+              <tr> 
+                <td> <div align="right"><img src="/image/leadarrow.gif"></div></td>
+                <td><a href="/serv_prod/index.shtml" class="a6">技术支持</a></td>
+              </tr>
+              <tr> 
+                <td> <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div></td>
+                <td><a href="/customer/contact/index.shtml" class="a6">联系我们</a></td>
+              </tr>
+              <tr> 
+                <td> <div align="right"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr> 
+                <td> <div align="right"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr> 
+                <td> <div align="right"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr> 
+                <td> <div align="right"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<!--#include virtual="../../footer.html" -->

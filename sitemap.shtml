@@ -1,0 +1,213 @@
+<!--#include virtual="header.html" -->
+
+
+
+<table width="760" cellspacing="0" cellpadding="0">
+
+  <tr> 
+
+    <td width="550">
+
+      <table width="501" border="0" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td valign="top"> 
+
+            <p><br>
+
+              <b><font color="#3366CC">当前位置：</font> </b><a href="/index.shtml" class="a5">阿卡首页</a> 
+
+              <font color="#458DE4">&gt;</font> <a href="company/index.shtml" class="a5">站点地图</a></p>
+
+            <table width="475" cellspacing="0" cellpadding="0">
+
+              <tr> 
+
+                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">站点地图</td>
+
+              </tr>
+
+            </table>
+
+            <blockquote>&nbsp;</blockquote>
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+
+              <tr> 
+
+                <td valign="top" width=50%> 
+
+                  <table border=0  cellspacing="0" cellpadding="0" width=230><tr><td background="image/gradident_s.gif"><span class="newssubtitle">阿卡主页</span></td><tr></table><p>
+
+                  <blockquote> 
+
+                    <p><a href="/" class=a6>首页 &gt; </a></p>
+
+                  </blockquote>
+
+                  <p><table border=0  cellspacing="0" cellpadding="0" width=230><tr><td background="image/gradident_s.gif"><span class="newssubtitle">公司事务</span></td></tr></table><p>
+
+                  <blockquote> 
+
+                    <p><a href="company/about/index.shtml" class=a6>关于我们 &gt;</a></p>
+
+                    <p><a href="company/mgmt/index.shtml" class=a6>管理团队 &gt;</a></p>
+
+                    <p><a href="company/about/companymilestones.shtml" class=a6>阿卡历程 
+
+                      &gt;</a></p>
+
+                    <p><a href="news/index.shtml" class=a6>阿卡新闻 &gt;</a></p>
+
+                    <p><a href="company/hr/career.shtml" class=a6>阿卡招聘 &gt;</a></p>
+
+                    <p><a href="company/hr/workataka.shtml" class=a6>在阿卡工作 &gt;</a></p>
+
+                  </blockquote>
+
+                  <p><table border=0  cellspacing="0" cellpadding="0" width=230><tr><td background="image/gradident_s.gif"><span class="newssubtitle">我的AKA</span></td></tr></table><p>
+
+                  <p><table border=0  cellspacing="0" cellpadding="0" width=230><tr><td background="image/gradident_s.gif"><span class="newssubtitle">客户服务</span></td></tr></table><p>
+
+                  <blockquote> 
+
+                    <p><a href="customer/contact/index.shtml" class=a6> 联系我们 &gt;</a></p>
+
+                    <p><a href="customer/support/index.shtml" class=a6>技术支持 &gt;</a></p>
+
+                    <p><a href="customer/downloads/index.shtml" class=a6>下载专区 
+
+                      &gt;</a></p>
+
+                    <p>&nbsp;</p>
+
+                  </blockquote>
+
+                  <p><span class="newssubtitle"><br>
+
+                    <br>
+
+                    </span></p>
+
+            </td>
+
+                <td valign="top"> 
+
+                  <p><table border=0  cellspacing="0" cellpadding="0" width=230><tr><td background="image/gradident_s.gif"><span class="newssubtitle">产品与服务</span></td></tr></table><p>
+
+                  <blockquote> 
+
+                    <p><a href="javascript://" class=a6>HTML/WAP浏览器 &gt; </a></p>
+
+                    <p><a href="serv_prod/idl/index.shtml" class=a6>国际驾驶执照 &gt; 
+
+                      </a></p>
+
+                  </blockquote>
+
+                  <p><table border=0  cellspacing="0" cellpadding="0" width=230><tr><td background="image/gradident_s.gif"><span class="newssubtitle">解决方案</span></td></tr></table><p>
+
+                  <blockquote> 
+
+                    <p><a href="serv_prod/vpn/index.shtml" class=a6> VPN(Virtual 
+
+                      Private Network) &gt;</a> </p>
+
+                    <blockquote> 
+
+                      <p><a href="serv_prod/vpn/edu/index.shtml" class=a6>教育网出国VPN 
+
+                        &gt; </a> </p>
+
+                      <p><a href="serv_prod/vpn/security/index.shtml" class=a6>企业办公网VPN 
+
+                        &gt; </a></p>
+
+                    </blockquote>
+
+                    <p><a href="serv_prod/idl/index.shtml" class=a6>服务器专用操作系统 
+
+                      zixia linux&gt; </a></p>
+
+                    <blockquote> 
+
+                      <p><a href="solution/zixialinux/index.shtml" class=a6>硬件 
+
+                        &gt; </a></p>
+
+                      <p><a href="solution/zixialinux/index.shtml" class=a6>软件 
+
+                        &gt; </a></p>
+
+                      <p><a href="solution/zixialinux/index.shtml" class=a6>管理&amp;维护&gt; 
+
+                        </a></p>
+
+                    </blockquote>
+
+                  </blockquote>
+
+                  <p><table border=0  cellspacing="0" cellpadding="0" width=230><tr><td background="image/gradident_s.gif"><span class="newssubtitle">定购</span></td></tr></table><p>
+
+                  <blockquote> 
+
+                    <p><a href="serv_prod/vpn/index.shtml" class=a6> </a><a href="customer/order/vpn/index.shtml" class=a6>出国VPN服务 
+
+                      &gt; </a></p>
+
+                    <p><a href="solution/zixialinux/index.shtml" class=a6></a><a href="customer/order/index.shtml" class=a6>办理国际驾照 
+
+                      &gt; </a></p>
+
+                    <blockquote>
+
+                      <blockquote> 
+
+                        <p><a href="solution/zixialinux/index.shtml" class=a6></a></p>
+
+                      </blockquote>
+
+                    </blockquote>
+
+                    <blockquote>&nbsp;</blockquote>
+
+                  </blockquote>
+
+                  <blockquote> 
+
+                    <blockquote> 
+
+                      <p>&nbsp;</p>
+
+                    </blockquote>
+
+                  </blockquote>
+
+                  <p><span class="newssubtitle"></span></p>
+
+                  <p>&nbsp;</p>
+
+                </td>
+
+              </tr>
+
+            </table>
+
+            <p>&nbsp;</p>
+
+            </td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+    <td width="210" bgcolor="#F0FAFF">&nbsp;</td>
+
+  </tr>
+
+</table>
+
+<!--#include virtual="footer.html" -->

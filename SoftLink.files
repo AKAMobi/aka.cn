@@ -1,0 +1,17 @@
+lrwx------    1 roy      root           23 Apr  3 13:52 AKA_APC42kxp-en.zip -> AKA_APC42kxp-3.0-en.zip
+lrwx------    1 roy      root           20 Apr  3 13:52 AKA_APC42kxp.zip -> AKA_APC42kxp-3.0.zip
+lrwx------    1 roy      root           23 Apr  3 13:52 AKA_APC498me-en.zip -> AKA_APC498me-3.0-en.zip
+lrwx------    1 roy      root           20 Apr  3 13:52 AKA_APC498me.zip -> AKA_APC498me-3.0.zip
+lrwxrwxrwx    1 roy      root           45 Nov 15 01:21 proxyback.pac -> ../../solution/vpn/edu/personal/proxyback.pac
+lrwxrwxrwx    1 roy      root           44 Nov 15 01:21 proxyout.pac -> ../../solution/vpn/edu/personal/proxyout.pac
+lrwxr-xr-x    1 roy      root           45 Sep 18  2002 proxyback.pac -> ../../solution/vpn/edu/personal/proxyback.pac
+lrwxr-xr-x    1 roy      root           44 Sep 18  2002 proxyout.pac -> ../../solution/vpn/edu/personal/proxyout.pac
+lrwxr-xr-x    1 roy      root            6 Sep 17  2002 css -> ../css
+lrwxrwxrwx    1 roy      root           13 Sep  8  2002 db.inc.php -> ../db.inc.php
+lrwxr-xr-x    1 roy      root           14 Oct  2  2002 favicon.ico -> ../favicon.ico
+lrwxrwxrwx    1 roy      root           14 Sep  8  2002 footer.html -> ../footer.html
+lrwxrwxrwx    1 roy      root           17 Sep  8  2002 footer.inc.php -> ../footer.inc.php
+lrwxrwxrwx    1 roy      root           14 Sep  8  2002 header.html -> ../header.html
+lrwxrwxrwx    1 roy      root           17 Sep  8  2002 header.inc.php -> ../header.inc.php
+lrwxr-xr-x    1 roy      root            8 Sep 17  2002 image -> ../image
+lrwxr-xr-x    1 roy      root            5 Sep 17  2002 js -> ../js

@@ -1,0 +1,64 @@
+a:hover {  color: #FFFFFF; text-decoration: none}
+
+body {  font-family: "Tahoma", "Geneva", "Arial", "Helvetica", "san-serif"; font-size: 8pt}
+
+pre {  font-family: "Tahoma", "Geneva", "Arial", "Helvetica", "san-serif"; font-size: 8pt}
+
+input {  font-family: "Tahoma", "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 8pt; color: #000066; border: 1px outset; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; border-color: #666666 #CCCCCC; background-image:   url(../image/inputgrad.gif)}
+
+select {  font-family: "Tahoma", "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 8pt; color: #000066; border: 1px outset; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; border-color: #666666 #CCCCCC; background-image:   url(../image/inputgrad.gif)}
+
+.newsearch {  font-family: "Tahoma", "Geneva", "Arial", "Helvetica", "san-serif"; font-size: 8pt}
+
+td {  font-family: "Tahoma", "Geneva", "Arial", "Helvetica", "san-serif"; font-size: 8pt}
+
+th {  font-family: "Tahoma", "Geneva", "Arial", "Helvetica", "san-serif"; font-size: 8pt ; color: #ffffff ; background-color: #000000}
+
+a {  font-family: "Tahoma", "Geneva", "Arial", "Helvetica", "san-serif"; font-size: 8pt; text-decoration: none}
+
+.a3 {  color: #000000; font-weight: bold; text-decoration: none}
+
+.a3:hover {color:#FFFFFF; text-decoration: none; font-weight: bold}
+
+.coolmenu {  background-color: #D6DBEF; backgroundcolor: #D6DBEF;  border: 1px #D6DBEF solid; cursor: default; font-family: "Tahoma", "Helvetica", "Geneva", "Arial", "san-serif"; font-size: 8pt; }
+
+.rmenu {  background-color: #BFBFBF; backgroundcolor: #BFBFBF; border: 1px #BFBFBF solid; cursor: hand; font-family: "Tahoma", "Helvetica", "Geneva", "Arial", "san-serif"; font-size: 8pt}
+
+.tableborder {  border-color: #FFFFFF 5A6DA5 5A6DA5 #FFFFFF; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+
+.a2 {  font-weight: bold; color: #FFFFFF; text-decoration: none}
+
+.a2:hover {  font-weight: bold; color: #CCCCCC; text-decoration: none}
+
+.demolink {  color: 003399; text-decoration: none}
+
+.demolink:hover {  color: 0033FF; text-decoration: none}
+
+form {  font-size: 8pt; height: 20px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px}
+
+.inputoveride {  text-decoration: none; border-style: none; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px}
+
+.a4 { color: 004477; text-decoration: none}
+
+.a4:hover {color: #3B3B3B; text-decoration: underline}.a5 {  font-family: "Tahoma", "Verdana"; text-decoration: none; color: #458DE4}
+
+.a5:hover {  font-family: "Tahoma", "Verdana"; color: #FF1717; text-decoration: underline}
+
+.newstitle {  font-family: "Geneva", "Arial", "Helvetica", "san-serif"; font-size: 18px; color: #004D71}
+
+.newssubtitle {  font-family: "Tahoma", "Verdana"; font-size: 14px; color: #8C8C2F; font-weight: bold}
+
+.content {  font-family: "Tahoma", "Geneva", "Arial", "Helvetica", "san-serif"; font-size: 8pt; }
+
+.a6 {  font-family: "Tahoma", "verdana"; color: #0057AE; text-decoration: none}
+
+.a6:hover {  font-family: "Tahoma", "Verdana"; color: #FF2424; text-decoration: none}
+
+hr {  color: #999999; height: 1px}
+
+.nomodify { background-image: none; border: 0px #CCCCCC inset; margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px}
+
+.redefinetable {  margin-top: 1px; margin-right: 1px; margin-bottom: 1px; margin-left: 1px; border: 1px outset}
+
+ .a10 {text-decoration:underline; font-family: "Tahoma", "Verdana"; color: #FF2424;}
+ .a11 {text-decoration:none; font-family: "Tahoma", "verdana"; color: #0057AE; }

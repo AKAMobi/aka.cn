@@ -1,0 +1,88 @@
+<!--#include virtual="../../header.html" -->
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="550" height="224">
+<center>
+      <table width="500" cellspacing="0" cellpadding="0">
+        <tr>
+            <td> 
+              <p><b><font color="#3366CC"><br>
+                </font></b><b><font color="#3366CC">当前位置：</font> </b><a href="/index.shtml" class="a5">阿卡首页</a> 
+                <font color="#458DE4">&gt;</font> 阿卡直通车通知<br>
+                <br>
+              </p>
+            </td>
+        </tr>
+      </table>
+      </center>
+      <div align="left">
+        <table width="550" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="358">&nbsp;</td>
+            <td width="192">&nbsp;</td>
+          </tr>
+        </table>
+        <p>&nbsp;
+        <table width="500" cellspacing="0" cellpadding="0" align="center">
+          <tr>
+            <td height="14" bgcolor="#3366CC">&nbsp; <b><font color=white>阿卡直通车将于11月1日正式运行，结束Beta测试
+</font></b></td>
+  </tr>
+</table>
+        <table width="500" cellspacing="15" cellpadding="0" align="center">
+          <tr> 
+            <td width="100%" valign="top">
+              <p><br>
+
+经过长达半年时间的Beta测试，阿卡直通车终于将要在2002年11月1日正式收费了。在此阿卡公司
+向所有热切关注阿卡直通车的用户表示感谢。<p>
+
+阿卡直通车正式开通之后，将会为用户提供更为稳定更为方便快捷的服务，希望用户能够一如既往的支持我们。<p>
+
+正式收费之后敬请亲爱的用户注意以下事项：<p>
+
+<ol>
+<li>11月1日之前，网上支付系统继续实行“加一赠一”的优惠政策，11月1日凌晨零点零分优惠政策截止。</li>
+<li>在接下来的几天，阿卡公司将会对已经网上支付的用户进行提前的电话确认工作。</li>
+<li>11月1日，所有的用户都需要从新登陆“<a href="http://my.aka.com.cn/" class=a6>我的阿卡自助服务系统</a>”验证个人信息，从新提交后由阿卡公司电话确认后方能继续使用，这个过程不会影响用户帐户上已有的资金，也不会影响用户之间的上下线关系。</li>
+</ol>
+
+<br><br>
+<p align=right>2002年10月28日 北京阿卡信息技术有限公司</p>
+              <p>&nbsp;</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </td>
+    <td width="210" height="224" bgcolor="F0FAFF" valign="top">&nbsp;
+      <table width="210" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td height="120">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td>
+            <table width="210" cellspacing="8" cellpadding="3">
+              <tr> 
+                <td bgcolor="C3D4F4" colspan="2"><b><font color="032B7A" face="Arial, Helvetica, sans-serif">相关链接</font></b></td>
+              </tr>
+              <tr> 
+                <td width="27"> 
+                  <div align="right"><img src="../image/leadarrow.gif" width="5" height="10"></div>
+                </td>
+                <td><a href="../customer/index.shtml" class="a6">客户服务</a></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+</td>
+  </tr>
+</table>
+<!--#include virtual="../../footer.html" -->

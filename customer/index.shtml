@@ -1,0 +1,287 @@
+<!--#include virtual="../header.html" -->
+
+
+
+<table width="760" cellspacing="0" cellpadding="0">
+
+  <tr> 
+
+    <td width="550" rowspan="3"> 
+
+      <div align="right"> 
+
+        <p><img src="images/customer.jpg" width="500" height="120"></p>
+
+      </div>
+
+      <table width="500" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td> 
+
+            <p><b><font color="#3366CC">当前位置：</font> </b><a href="/" class="a5">阿卡首页</a><font color="#458DE4">&gt;</font> 
+
+              <font color="#458DE4">客户服务</font></p>
+
+            <p class="newstitle">客户服务</p>
+
+            <p >阿卡信息技术有限公司为用户提供高质量、高效率的服务，尽最大努力使您满意。</p>
+
+            <p>&nbsp;</p>
+
+            <table width="500" border="0" cellspacing="0" cellpadding="0">
+
+              <tr> 
+
+                <td width="50%" valign="top"> 
+
+                  <center>
+
+                    <table width="220" cellspacing="0" cellpadding="0" bordercolor="#9999CC" class="redefinetable">
+
+                      <tr> 
+
+                        <td bgcolor="#9999CC"><b><font color="#FFFFFF">&nbsp;下载专区</font></b></td>
+
+                      </tr>
+
+                      <tr> 
+
+                        <td bgcolor="#F5F5FA"> 
+
+                          <table width="200" cellspacing="4" cellpadding="0" align="center">
+
+                            <tr> 
+
+                              <td> 
+
+                                <p><b><span class="a4"><a href="downloads/index.shtml" class="a4">下载专区</a></span></b><br>
+
+                                  下载表格，说明书等。</p>
+
+                              </td>
+
+                            </tr>
+
+                          </table>
+
+                        </td>
+
+                      </tr>
+
+                    </table>
+
+                    <br>
+
+                    <table width="220" cellspacing="0" cellpadding="0" bordercolor="#9999CC" class="redefinetable">
+
+                      <tr> 
+
+                        <td bgcolor="#9999CC"><b><font color="#FFFFFF">&nbsp;联系我们</font></b></td>
+
+                      </tr>
+
+                      <tr> 
+
+                        <td bgcolor="#F5F5FA"> 
+
+                          <table width="200" cellspacing="4" cellpadding="0" align="center">
+
+                            <tr> 
+
+                              <td> 
+
+                                <p><b><a href="contact/index.shtml" class=a4>联系信息</a></b><br>
+
+                                  我们提供三种联系方式</p>
+
+                              </td>
+
+                            </tr>
+
+                          </table>
+
+                        </td>
+
+                      </tr>
+
+                    </table>
+
+                  </center>
+
+                </td>
+
+                <td width="0%" valign="top"> 
+
+                  <center>
+
+                  </center>
+
+                </td>
+
+                <td width="50%" valign="top"> 
+
+                  <center>
+
+                    <table width="220" cellspacing="0" cellpadding="0" bordercolor="#9999CC" class="redefinetable">
+
+                      <tr> 
+
+                        <td bgcolor="#9999CC"><b><font color="#FFFFFF">&nbsp;售后支持</font></b></td>
+
+                      </tr>
+
+                      <tr> 
+
+                        <td bgcolor="#F5F5FA"> 
+
+                          <table width="200" cellspacing="4" cellpadding="0" align="center">
+
+                            <tr> 
+
+                              <td> 
+
+                                <p><b><span class="a4"><a href="support/index.shtml" class="a4">技术支持</a></span></b><br>
+
+                                  我们提供全天候的技术支持。</p>
+
+                                <p>&nbsp;</p>
+
+                                <p align="right"><br>
+
+                                  <a href="support/index.shtml" class="a6">- 更多 
+
+                                  -</a> <br>
+
+                                </p>
+
+                              </td>
+
+                            </tr>
+
+                          </table>
+
+                        </td>
+
+                      </tr>
+
+                    </table>
+
+                  </center>
+
+                </td>
+
+              </tr>
+
+            </table>
+
+            <p>&nbsp; </p>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+    <td width="210" bgcolor="#F0FAFF" valign="top"> </td>
+
+    <br>
+
+  </tr>
+
+  <tr> 
+
+    <td width="210" bgcolor="#F0FAFF" valign="top"> 
+
+      <p>&nbsp;</p>
+
+
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td width="210" bgcolor="#F0FAFF" valign="top">
+
+      <table width="210" cellspacing="0" cellpadding="0">
+
+        <tr> 
+
+          <td height="45">&nbsp;</td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <table width="210" border="0" cellspacing="8" cellpadding="3">
+
+              <tr> 
+
+                <td colspan="2">&nbsp;</td>
+
+              </tr>
+
+              <tr> 
+
+                <td bgcolor="C3D4F4" colspan="2"> <b><font face="Arial" color="032B7A">客户服务</font></b></td>
+
+              </tr>
+
+              <tr> 
+
+                <td> 
+
+                  <div align="right"><img src="../image/leadarrow.gif" width="5" height="10"></div>
+
+                </td>
+
+                <td><a href="downloads/index.shtml" class="a6">下载专区</a></td>
+
+              </tr>
+
+              <tr> 
+
+                <td> 
+
+                  <div align="right"><img src="../image/leadarrow.gif" width="5" height="10"></div>
+
+                </td>
+
+                <td><a href="support/index.shtml" class="a6">技术支持</a></td>
+
+              </tr>
+
+              <tr> 
+
+                <td> 
+
+                  <div align="right"><img src="../image/leadarrow.gif" width="5" height="10"></div>
+
+                </td>
+
+                <td><a href="contact/index.shtml" class="a6">联系我们</a></td>
+
+              </tr>
+
+            </table>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<!--#include virtual="../footer.html" -->

@@ -1,0 +1,63 @@
+<HTML>
+<HEAD>
+
+</HEAD>
+<BODY>
+<script language="JScript">
+<!--
+function register(){
+	
+	RegisterForm.submit();						
+}
+
+
+
+-->
+</script>
+
+<form id="oForm" name="RegisterForm" method="post" action="http://www.aka.com.cn/my/UserRegister_ForEmuch.php">
+        <!-- 用户ID -->
+		<input type="hidden" id="oID" name="ID" value="roytest2">
+        <!-- 密码 -->
+        <input type="hidden" id="oPassword" name="Password" value="123" >
+        <!-- 姓名 -->
+        <input type="hidden" id="oUserName" name="UserName" value="区划">
+        <!-- 中国身份证号 -->
+        <input type="hidden" id="oIdNum" name="IdNum" value="10000000">
+        <!-- 单位名称 -->
+        <input type="hidden" id="oCompany" name="Company" value="清风小木虫">
+        <!-- 联系电话 -->
+        <input type="hidden" id="oTel" name="Tel" value="234234">
+        <!-- 手机 -->
+        <input type="hidden" id="oMobile" name="Mobile" value="111111">
+        <!-- 电子邮箱  -->
+        <input type="hidden" id="oEMail" name="EMail" value="test@kaka.com">
+		<!-- 地址 -->
+		<input type="hidden" id="oAddress" name="Address" value="北师大">
+		<!-- 邮编 -->
+		<input type="hidden" id="oZipCode" name="ZipCode" value="100083">
+		<!-- 推荐人(您在我方注册的id,请勿改动 -->
+        <input type="hidden" id="oSuperiorUser" name="SuperiorUser" value="emuch" > 
+		<!-- 注册成功后返回的地址 -->
+		<input type="hidden" name="SuccessAddress" value="http://www.google.com/index.html" >
+		<!-- 注册失败返回的地址 -->
+		<input type="hidden" name="FailAddress" value="http://www.yahoo.com/index.html" >
+
+		<input type="button" value="注册" onclick="register();">
+
+<!--
+注册失败时我方程序会用GET方式调用您在failAddress中指定的CGI网页处理，
+格式是http://CGI网页?error=错误代码&id=注册用户的ID
+错误代码定义：
+1  --  用户ID与已有的用户重复(建议：您可以在您的用户ID前加前缀，这样可以防止你的用户
+与我们已有的用户ID重复）
+2  --  数据库操作失败（出现此错误请与我们联系）
+3 -- 推荐人错误.请速与我方联系!
+
+
+注册成功时我方程序会用GET方式调用您在SuccessAddress中指定的CGI网页。
+格式是：http://CGI网页?id=成功注册的用户ID
+-->
+  </form>
+
+</BODY></HTML>

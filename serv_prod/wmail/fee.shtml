@@ -1,0 +1,230 @@
+<!--#include virtual="../../header.html" -->
+
+<table width="760" cellspacing="0" cellpadding="0">
+
+  <tr> 
+
+    <td width="550" valign="top"> 
+
+      <table width="500" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+          <td valign="top"> <p><br>
+              <b><font color="#3366CC">当前位置:</font> </b><a href="/index.shtml" class="a5">阿卡首页</a> 
+              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">产品与服务</a><font color="#458DE4">&gt; 
+              <a href="index.shtml" class=a5>WMail</a> &gt;</font> <font color="#458DE4">价格及付费方式</font></p>
+            <table width="475" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">价格及付费方式</td>
+              </tr>
+            </table> 
+
+              <table align=center>
+<tr>
+	<td bgcolor=#333333 height=2></td>
+</tr>
+<tr>
+	<td align="center" valign=top>
+		<div class="smallhead">邮件系统远程安装</div>
+	</td>
+</tr>
+<tr>
+	<td align=left valign=top>
+	<table cellpadding=5 cellspacing=2 border=0 width=100%>
+	<tr>
+		              <td bgcolor=#333333 class="txt" style="color:#ffffff;" align="center" valign=top>基本系统 
+                        399.00 </td>
+		              <td bgcolor=#333333 class="txt" style="color:#ffffff;" align="center" valign=top>多域名系统 
+                        449.00 </td>
+	</tr>
+	<tr>
+		<td align=left valign=top>
+		<div class="txt">
+		qmail<br>
+		pop3<br>
+		ucspi-tcp<br>
+		checkpassword<br><br>
+		</div></td>
+
+		<td align=left valign=top>
+		<div class="txt">
+		基本系统<br>
+		vpopmail<br>
+		EZMLM<br><br>
+		</div></td>
+	</tr>
+	<tr>
+		<td bgcolor=#333333 class="txt" style="color:#ffffff;" align="center" valign=top>Webmail系统 499.00
+		</td>
+		<td bgcolor=#333333 class="txt" style="color:#ffffff;" align="center" valign=top>增强系统 999.00
+		</td>
+	</tr>
+	<tr>
+		<td align=left valign=top>
+		<div class="txt">
+		多域名系统<br>
+		wmail<br><br>
+		</div></td>
+
+		<td align=left valign=top>
+		<div class="txt">
+		Webmail系统<br>
+		maildrop<br>
+		wmail管理界面<br><br>
+		</div></td>
+	</tr>
+	</table>
+	<div >
+		<ul>
+		<li>远程安装包括免费系统软件的设置，比如mysql/perl等
+		<li>基本系统和多域名系统包括1个月的免费Email支持
+		<li>Webmail系统和增强系统包括1个月的免费电话/Email支持
+		            <li>我们会在您付款以后3日内完成安装，如果需要在24小时内完成，加收300.00 
+                  </ul>
+	</td>
+</tr>
+<tr>
+	<td bgcolor=#333333 height=2></td>
+</tr>
+<tr>
+	<td align="center" valign=top>
+		<div class="smallhead">钟点支持（远程）</div>
+	</td>
+</tr>
+<tr>
+	<td align=left valign=top>
+	<table cellpadding=5 cellspacing=2 border=0 width=100%>
+	<tr>
+		<td bgcolor=#333333 width=50% class="txt" style="color:#ffffff;" align="center" valign=top>工作时段 99.00
+		</td>
+		<td bgcolor=#333333 width=50% class="txt" style="color:#ffffff;" align="center" valign=top>非工作时段 299.00
+		</td>
+	</tr>
+	<tr>
+		<td align=left valign=top>
+		<div class="txt">
+		周一至周五，上午9:00--下午6:00
+		</div></td>
+
+		<td align=left valign=top>
+		<div class="txt">
+		周一至周五其它时段，周末、节假日
+		</div></td>
+	</tr>
+	</table>
+	<div class="crumbs">
+		<li>接到申请后按照指定时间开始远程维护
+		<li>我们最后将服务的内容和时间分配附在帐单上
+		<li>最小工作时间为1小时，单位以小时计
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td align="center" valign=top>
+		<div class="smallhead">钟点支持（上门服务）</div>
+	</td>
+</tr>
+<tr>
+	<td align=left valign=top>
+	<table cellpadding=5 cellspacing=2 border=0 width=100%>
+	<tr>
+		<td bgcolor=#333333 width=50% class="txt" style="color:#ffffff;" align="center" valign=top>工作时段 299.00
+		</td>
+		<td bgcolor=#333333 width=50% class="txt" style="color:#ffffff;" align="center" valign=top>非工作时段 699.00
+		</td>
+	</tr>
+	<tr>
+		<td align=left valign=top>
+		<div class="txt">
+		周一至周五，上午9:00--下午6:00
+		</div></td>
+
+		<td align=left valign=top>
+		<div class="txt">
+		周一至周五其它时段，周末、节假日
+		</div></td>
+	</tr>
+	</table>
+	<div class="crumbs">
+		<li>接到申请后按照指定时间上门服务（限北京市四环以内）
+		<li>路费与伙食费用由客户承担
+		<li>最小工作时间为2小时，单位以小时计
+		</ul>
+	</td>
+</tr>
+<tr>
+	<td bgcolor=#333333 height=2></td>
+</tr>
+<tr>
+	<td align="center" valign=top>
+		<div class="smallhead">长期支持</div>
+	</td>
+</tr>
+<tr>
+	<td align=left valign=top>
+		<div>
+		软件升级费用：
+		<ul>
+		<li>安装3个月内：免费
+		              <li>安装3个月以后：249.00 
+                    </ul>
+		</div>
+		<div>
+		一年软件维护 2999.00
+		<ul>
+		<li>工作时段技术支持、远程维护
+		<li>服务期间免费升级软件、安全维护
+		</ul>
+		</div>
+	</td>
+</tr>
+</table>
+</td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+    <td width="210" bgcolor="#F0FAFF" valign="top"> 
+
+      <table width="210" border="0" cellspacing="8" cellpadding="3">
+
+        <tr> 
+
+          <td colspan="2">&nbsp;</td>
+
+        </tr>
+
+        <tr> 
+
+          <td bgcolor="C3D4F4" colspan="2"> 
+
+            <div align="left"><font color="032B7A"><b><font face="Arial"> 相关链接</font></b></font></div>
+
+          </td>
+
+        </tr>
+
+        <tr> 
+
+          <td> 
+
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+
+          </td>
+
+          <td><a href="/serv_prod/index.shtml" class="a6">产品与服务</a></td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<!--#include virtual="../../footer.html" -->

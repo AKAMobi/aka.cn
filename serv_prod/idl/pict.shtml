@@ -1,0 +1,87 @@
+<!--#include virtual="../../header.html" -->
+<table width="760" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="550" valign="top"> 
+      <table width="500" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+          <td valign="top"> 
+            <p><br>
+              <b><font color="#3366CC">当前位置:</font> </b><a href="/" class="a5">阿卡首页</a> 
+              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">产品与服务</a> 
+              <font color="#458DE4">&gt;</font> <a href="/serv_prod/idl/index.shtml" class="a5">国际驾照</a><font color="#458DE4"> 
+              &gt;</font> <font class=a5>样本照片</font></p>
+            <table width="475" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">国际驾驶执照照片</td>
+              </tr>
+            </table>
+            <br>
+            <p align="center"><img src="image/idl-cover.gif" width="218" height="282" alt="国际驾驶执照封面"><br>
+              <font color="006666">国际驾驶执照封面</font></p>
+            <p align="left">国际驾照宽103毫米，高134毫米，外壳封面底色为紫色，采用烫金立体凹凸印刷，封面上部有明确INTERNATIONAL 
+              DRIVING DOCUMENT字样。</p>
+            <p align="center"><img src="image/idl-inside.gif" width="518" height="322" alt="国际驾驶执照内页"><br>
+              <font color="006666">国际驾驶执照内页</font></p>
+            <p align="left">国际驾照内页全部采用国际驾驶联合会的防伪纸张，内容为驾照拥有者信息以及八种语言的详尽描述。页二印有美国前总统HARRYS 
+              TRUMAN的签名。第十三页为驾照拥有者个人信息，由上至下依次为：防伪二维条码、英文个人信息、有效年限、驾驶权限、驾驶员彩色扫描照片、驾驶员手写印鉴、国际驾照登录编号，并加盖钢印。<br>
+            </p>
+            <p align="center">&nbsp;</p>
+            <p align="center"><img src="image/idl-ic.gif" width="307" height="202" alt="国际驾驶执照防伪IC卡"><br>
+              <font color="006666">国际驾驶执照IC卡</font></p>
+            <p align="left">IC卡存储有驾照拥有者的个人信息，便于检验真伪，必须与驾照配套使用。</p>
+            <p align="left">&nbsp;</p>
+            </td>
+        </tr>
+      </table>
+    </td>
+    <td width="210" bgcolor="#F0FAFF" valign="top"> 
+      <table width="210" border="0" cellspacing="8" cellpadding="3">
+        <tr> 
+          <td colspan="2">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td bgcolor="C3D4F4" colspan="2"> 
+            <div align="left"><font color="032B7A"><b><font face="Arial"> 相关链接</font></b></font></div>
+          </td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"><img src="/image/leadarrow.gif"></div>
+          </td>
+          <td><a href="countries-e.shtml" class="a6">适用国家</a></td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+          </td>
+          <td><a href="usage.shtml" class="a6">用途与权益</a></td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+          </td>
+          <td><a href="faq.shtml" class="a6">问题解答</a></td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+          </td>
+          <td><a href="../../customer/index.shtml" class="a6">联系我们</a></td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"></div>
+          </td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+          </td>
+          <td><a href="apply.shtml" class="a6">国际驾照申请办理</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--#include virtual="../../footer.html" -->

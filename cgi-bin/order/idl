@@ -1,0 +1,121 @@
+#!/usr/bin/perl
+
+use strict;
+use CGI 'param','header';
+use Net::SMTP;
+
+
+my $q;
+my ( $key, $value );
+
+$q = new CGI;
+print $q->header( -type=>'text/html',
+                -charset=>'gb2312' );
+
+open( FD, "<../../header.html" );
+print <FD>;
+close( FD );
+print <<_HTML_;
+<table width="760" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="550" valign="top" rowspan="2"> 
+      <table width="500" cellspacing="0" cellpadding="0" align="center">
+        <tr> 
+          <td valign="top"> 
+            <p><br>
+              <b><font color="#3366CC">您的位置：</font></b><a href="/" class="a5">阿卡首页</a> 
+              <font color="#458DE4">&gt;</font> <a href="/customer/order/index.shtml" class="a5">定购</a> 
+              <font color="#458DE4">&gt;</font> <span class="a5">办理国际架照</span></p>
+            <p class="newstitle">办理国际驾驶执照</p>
+            <p> 您已经填写并提交了如下信息，我们会在48小时之内联系您。</p>
+            <p>
+_HTML_
+
+$ENV{'HOSTNAME'} = 'aka.com.cn';
+$ENV{'USER'} = 'sales';
+my %userpost;
+#open( FD, "|mail -s \"国际架照客户订单\" sales\@aka.com.cn" );
+my $maildata = '';
+foreach $key ( $q->param() ){
+	$value = $q->param($key);
+	next if( $key eq 'Submit' );
+	print "$key : $value<br>";
+	$userpost{$key} = $value;
+	$maildata .= "$key : $value\n"
+}
+close( FD );
+my $smtp;
+$smtp = Net::SMTP->new('localhost');
+$smtp->mail( $userpost{'E-Mail'} );
+$smtp->to('sales@aka.com.cn');
+
+$smtp->data();
+$smtp->datasend("From: \"" . $userpost{'姓名'} . "\" <" . $userpost{'E-Mail'} . ">\n");
+$smtp->datasend("To: sales\@aka.com.cn\n");
+$smtp->datasend("Subject: 国际架照订单\n");
+$smtp->datasend("Date: " . `date` . "\n");
+$smtp->datasend("\n");
+$smtp->datasend( $maildata );
+$smtp->dataend();
+$smtp->quit;
+
+
+print <<_HTML_;
+            </td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+    </td>
+    <td width="210" bgcolor="#F0FAFF" valign="top"> 
+      <table width="210" border="0" cellspacing="8" cellpadding="3">
+        <tr> 
+          <td colspan="2">&nbsp;</td>
+        </tr>
+<tr> 
+          <td> 
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+          </td>
+          <td><a href="/serv_prod/idl/faq.shtml" class="a6">国际架照常见问题</a></td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+          </td>
+          <td><a href="/serv_prod/idl/usage.shtml" class="a6">国际架照用途与权益</a></td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+          </td>
+          <td><a href="/serv_prod/idl/countries-e.shtml" class="a6">适用国家列表</a></td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+          </td>
+          <td><a href="/serv_prod/idl/pict.shtml" class="a6">国际架照样本照片</a></td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"></div>
+          </td>
+          <td>&nbsp;</td>
+        </tr>
+        <tr> 
+          <td> 
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+          </td>
+          <td><a href="/customer/contact/index.shtml" class="a6">联系我们</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td width="210" bgcolor="#F0FAFF" valign="bottom">&nbsp; </td>
+  </tr>
+</table>
+_HTML_
+open( FD, "<../../footer.html" );
+print <FD>;
+close( FD );
+

@@ -1,0 +1,186 @@
+<!--#include virtual="../../header.html" -->
+
+
+
+<table width="760" cellspacing="0" cellpadding="0">
+
+  <tr> 
+
+    <td width="550" rowspan="3"> 
+
+      <div align="right"> 
+
+        <p>&nbsp;</p>
+
+      </div>
+
+      <table width="500" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+
+          <td> <b><font color="#3366CC">当前位置：</font> </b><a href="/index.shtml" class="a5">阿卡首页</a> 
+            <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">产品与服务</a><font color="#458DE4">&gt; 
+            <a href="index.shtml" class=a5>NAS</a></font></td>
+
+        </tr>
+       <tr> 
+
+          <td align="center"> 
+		  <table width="95%" cellspacing="0" cellpadding="0">
+		  <tr><td>
+                     <p>&nbsp;</p>
+
+                      <table width="475" cellspacing="0" cellpadding="0">
+
+                        <tr> 
+
+                          
+                      <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">网络存储服务器NAS</td>
+
+                        </tr>
+
+                      </table>
+
+                      
+                  <p> 阿卡信息技术的Roc系列网络存储服务器NAS（Nework Attached Storage）系统和设备是专用为提供高性能，低拥有成本和高可靠性的数据保存和传送而设计的产品。Roc系列NAS产品提供安全、稳固的文件和数据保存功能，并且容易使用和管理。</p>
+                  <p> NAS是集成IP技术及RAID技术于一身的直连网络存储系统，也就是通过网络接口和以太网络直接相连的存储服务器系统，各种文件服务器及网络工作站都可透过网络直接存取NAS上的数据，由于它不需要通过文件服务器，明显缩短了响应时间，充分发挥网络的带宽。Roc系列NAS产品采用先进的嵌入式NAS技术，使安装、管理、维护和容量扩充变得极其容易，其集成优化的软件及硬件平台为WINDOWS、UNIX、Novell、LINUX和Macintosh等应用提供了跨平台、更加安全的文件共享。</p>
+                  <p> NAS实施以数据为中心的模式，与传统的“服务器中心”模式相比有着较大的优越性。Roc系列NAS产品可在几分钟内增加到现有网络上，可提供高可用性及高可靠性的磁盘阵列存储系统，还能提高文件服务速度，减轻网络主机的负担，降低购买及维护成本，以及在不间断网络运行环境下增加或设置存储系统。Roc系列NAS产品为教育机构、电子图书馆、政府机关、中小企业提供了新一代最具经济效益和功能强大的网络存储解决方案。<br>
+                  </p>
+                  <p></p>
+                  </td>
+              </tr>
+			  <tr><td>
+			  <table width="100%">
+			  <tr>
+			  <td width="50%" valign="top"><table width="100%" cellspacing="0" cellpadding="0" bordercolor="639A63" class="redefinetable">
+
+                        <tr> 
+
+                          <td bgcolor="639A63" height="11">&nbsp;<b><font color="#FFFFFF"> 
+
+                            介绍</font></b></td>
+
+                        </tr>
+
+                        <tr> 
+
+                          <td height="27"> 
+
+                            <center>
+
+                              <table width="95%" cellspacing="4" cellpadding="0">
+
+                                <tr> 
+
+                                    <td> <p><b><span class="a4"><a href="area.shtml" class=a4>应用领域</a></span></b><br>
+                                        Roc NAS系列产品的主要应用领域。 </p>
+										
+                                      <p> <b><span class="a4"><a href="advantages.shtml" class=a4>产品优势</a></span></b><br>
+                                        Roc NAS系列产品与其他同类解决方案相比的优点。 </p>
+										
+                                      <p> <b><span class="a4"><a href="faq.shtml" class=a4>FAQ</a></span></b><br>
+                                        关于NAS的概念和功能的常见问题解答。 </p>
+                                      <p><br>
+                                      </p>
+
+
+                                    </td>
+
+                                </tr>
+								
+								
+
+                              </table>
+
+                            </center>
+
+                          </td>
+
+                        </tr>
+
+                      </table></td>
+			          <td width="50%" valign="top">&nbsp;</td>
+			  </tr>
+			  </table>
+			  </td></tr>
+			</table>
+            </td>
+
+        </tr>
+      </table>
+
+    </td>
+
+    <td width="210" bgcolor="#F0FAFF" valign="top"> </td>
+
+    <br>
+
+  </tr>
+
+  <tr> 
+
+    <td width="210" bgcolor="#F0FAFF" valign="top"> 
+
+      <p>&nbsp;</p>
+
+
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td width="210" bgcolor="#F0FAFF" valign="top">
+
+      <table width="210" cellspacing="0" cellpadding="0">
+
+        <tr> 
+
+          <td height="45">&nbsp;</td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <table width="210" border="0" cellspacing="8" cellpadding="3">
+              <tr> 
+                <td colspan="2">&nbsp;</td>
+              </tr>
+              <tr> 
+                <td bgcolor="C3D4F4" colspan="2"> <div align="left"><font color="032B7A"><b><font face="Arial"> 
+                    相关链接</font></b></font></div></td>
+              </tr>
+              <tr> 
+                <td> <div align="right"><img src="/image/leadarrow.gif"></div></td>
+                <td><a href="/serv_prod/index.shtml" class="a6">技术支持</a></td>
+              </tr>
+              <tr> 
+                <td> <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div></td>
+                <td><a href="/customer/contact/index.shtml" class="a6">联系我们</a></td>
+              </tr>
+              <tr> 
+                <td> <div align="right"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+              <tr> 
+                <td> <div align="right"></div></td>
+                <td>&nbsp;</td>
+              </tr>
+            </table>
+
+          </td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+</table>
+
+<!--#include virtual="../../footer.html" -->

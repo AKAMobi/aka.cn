@@ -1,0 +1,78 @@
+<script language="javascript">
+<!--
+function MonthChanged(){
+	var nYear=parseInt(document.all.oYear.value);
+	var nMonth=document.all.oMonth.selectedIndex;
+	if ((nYear<2000) || (nYear>2100) || (nYear!=nYear)) {
+		alert("年份输入错误。请重新输入");
+		document.all.oYear.select();
+		document.all.oYear.focus();
+	}
+	var d=new Date(nYear,nMonth,1);
+	var nd =new Date(nYear,nMonth,1);
+	nd.setMonth(nMonth+1);
+	var nDays=(nd.valueOf()-d.valueOf())/(24*60*60*1000);
+	var len=document.all.oDay.options.length;
+	for (var i=0;i<len;i++){
+		document.all.oDay.options.remove(0);
+	}
+	for (i=0;i<nDays;i++){
+		var oOption=document.createElement("OPTION");
+		oOption.text=i+1;
+		oOption.value=i+1;
+		document.all.oDay.options.add(oOption);
+	}
+	
+
+}
+-->
+</script>
+<div align="center">
+<table width="480" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+  <td>
+<form id="MainForm"method="post" action="ViewAnalysis.php">
+  <fieldset>
+  <legend align="left">请选择统计类型</legend>
+  <input type="radio" value="1" checked name="AnalysisType">年VPN流量统计<br>
+  <input type="radio" name="AnalysisType" value="2">月VPN流量统计<br>
+  <input type="radio" name="AnalysisType" value="3">周VPN流量统计<br>
+  <input type="radio" name="AnalysisType" value="4">日VPN流量统计</fieldset><p align="left">
+  &nbsp; 请选择统计截止日期</p>
+  <blockquote>
+    <p align="left">
+  <input type="text" name="YEAR" id="oYear" size="4" maxlength=4> 年 
+  <select size="1" name="MONTH" id="oMonth" onchange="MonthChanged()">
+  <option value=1>1</option>
+  <option value=2>2</option>
+  <option value=3>3</option>
+  <option value=4>4</option>
+  <option value=5>5</option>
+  <option value=6>6</option>
+  <option value=7>7</option>
+  <option value=8>8</option>
+  <option value=9>9</option>
+  <option value=10>10</option>
+  <option value=11>11</option>
+  <option value=12>12</option>
+  </select> 月 <select size="1" name="DAY" id="oDay">
+  <option selected> 1</option>
+  </select> 日 </p>
+  <script language="javascript">
+  <!--
+	var da= new Date();
+
+	document.all.oYear.value=da.getFullYear();
+	document.all.oMonth.options(da.getMonth()).selected=true;
+	MonthChanged();
+	document.all.oDay.options(da.getDate()-1).selected=true;
+  -->
+  </script>
+  </blockquote>
+  <p align="center"><input type="submit" value="察看分析结果" name="submit"></p>
+</form>
+</td>
+</tr>
+</table>
+<br>
+</div>
