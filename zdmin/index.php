@@ -4,11 +4,6 @@ session_set_cookie_params( 0, "/", "aka.com.cn" );
 
 session_start(); 
 
-?>
-
-<?
-
-
 require_once("zdmin.inc.php");
 
 
