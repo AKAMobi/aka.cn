@@ -31,7 +31,7 @@ VPN·þÎñÆ÷IP list
 1111	½áÊø
 */
 
-define( "APCLASTVERSIONA", 3 );
+define( "APCLASTVERSIONA", 4 );
 define( "APCLASTVERSIONB", 1 );
 define( "APCOUT", 0 );
 define( "APCBACK", 1 );

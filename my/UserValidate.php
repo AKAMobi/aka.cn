@@ -61,7 +61,7 @@ if (!($row=mysql_fetch_array($result))){ //不存在验证数据
 }
 
 if (isset($_REQUEST['Mobile'])){
-	dl('libsms.so');
+	//@dl('libsms.so');
 	if (sendsms("localhost","4000",$UserAutoID,$MobilePhone,"您的认证码: {$validationCode}")==0) {
 		echo "手机认证短信已发送到您的手机 {$MobilePhone} ，请您注意查收！<br>";
 	} else {

@@ -38,10 +38,13 @@ ItemURL,ItemName
 <? echo $ADMINURLROOT; ?>/SMSChild/SMSChildControl.php,短信客户管理
 <? } ?>
 <? if (isset($_SESSION['SMSLogAdmin'])) { ?>
-<? echo $ADMINURLROOT; ?>/SMSLog/SMSLogControl.php,短信日志管理
+<? echo $ADMINURLROOT; ?>/SMSLog/ViewLog.php,短信记录查询
+<? } ?>
+<? if (isset($_SESSION['SMSLogAdmin'])) { ?>
+<? echo $ADMINURLROOT; ?>/SMSLog/ViewStatistics.php,短信记录统计
 <? } ?>
 <? echo $ADMINURLROOT; ?>/ChangePassword.php,更换密码
-<? echo $ADMINURLROOT; ?>/sms/SendSMS.php, 发送短信
+<? echo $ADMINURLROOT; ?>/sms/SendSMS.php,发送短信
 <? echo $ADMINURLROOT; ?>/Logout.php,退出登录
 <? 
 }
