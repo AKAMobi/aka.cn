@@ -77,7 +77,7 @@ $money=$HTTP_POST_VARS['MoneyCount'];
 $moneytype=$HTTP_POST_VARS['MoneyType'];
 //$backurl=$HTTP_POST_VARS['BackURL'];
 //不允许更改返回地址
-$backurl="http://pay.aka.com.cn/payback.php";
+$backurl="http://pay.aka.cn/payback.php";
 
 /*
 echo "user:";

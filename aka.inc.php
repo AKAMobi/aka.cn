@@ -1,4 +1,4 @@
 <?
-	$AKAROOT="/opt/vhost/aka.com.cn";
+	$AKAROOT="/opt/vhost/aka.cn";
 	$AKAURLROOT="";
 ?>

@@ -48,7 +48,7 @@ hideAllMenus();
 	}
 }
   
- var baseURL="http://www.aka.com.cn";
+ var baseURL="http://www.aka.cn";
 
 function naVigateto(url)
 {

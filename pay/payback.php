@@ -127,7 +127,7 @@ if( 1==$v_pstatus ){ //已提交，对不支持实时的银行
 			"只有在银行划帐操作完毕后<br>" .
 			"您的AKA帐户中才会出现相应金额，<br>" .
 			"请耐心等待(应该不超过24小时）" );
-	ok_msg( "<a href='http://personal.vpn.aka.com.cn/' class='a4'>返回</a>" );
+	ok_msg( "<a href='http://personal.vpn.aka.cn/' class='a4'>返回</a>" );
 }else if( 20==$v_pstatus ){//支付成功，对支持实时的银行
 	/*
  	 * 用户加钱
@@ -141,7 +141,7 @@ if( 1==$v_pstatus ){ //已提交，对不支持实时的银行
 	}else{
 		mysql_query( "commit" );
 		ok_msg( "转帐成功！" );
-		ok_msg( "<a href='http://www.aka.com.cn/my/' class='a4'>返回</a>" );
+		ok_msg( "<a href='http://www.aka.cn/my/' class='a4'>返回</a>" );
 
 	}
 }else if( 30==$v_pstatus ){//支付失败，对支持实时的银行

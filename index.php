@@ -114,7 +114,7 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                   <table width="100%" border="0" cellspacing="3" cellpadding="0">
                     <tr>
                       <td height="2"> 
-                        <div align="center"><img src="image/smallarrow.gif" width="6" height="10"> <img src="/cgi-bin/Count.cgi?ft=0&tr=Y&md=5&dd=D&df=aka.com.cn" border=0 align=absmiddle width=54 height=13></div>
+                        <div align="center"><img src="image/smallarrow.gif" width="6" height="10"> <img src="/cgi-bin/Count.cgi?ft=0&tr=Y&md=5&dd=D&df=aka.cn" border=0 align=absmiddle width=54 height=13></div>
                       </td>
                     </tr>
                   </table>
