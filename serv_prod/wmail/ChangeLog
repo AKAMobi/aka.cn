@@ -1,3 +1,13 @@
+2003-06-05	Fan Lin <lfan@lfan.net>
+	sqwebmail.c	修正注销后仍能通过URL访问信箱的安全问题
+
+2003-05-30	Fan Lin <lfan@lfan.net>
+	makemime.c attachment.c
+			解决附件中文名在某些邮件系统下无法识别的问题
+	attachment.c folder.c newmsg.c attachment.html newmsg.html
+			支持邮件预览
+	folder.c	修正存储草稿时出现的发送成功
+
 2003-05-26	Fan Lin <lfan@lfan.net>
 	newmsg_create.c 解决发件人重复编码的问题
 	sqwebmail.c	支持默认域名，修正登录过期的bug

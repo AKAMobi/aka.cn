@@ -35,7 +35,10 @@
             Options +Includes<br> &lt;/Directory&gt;<br>
             ServerAdmin lfan@lfan.net<br>
             DocumentRoot /home/wmail/www<br>
-            ServerName mail.xxx.com<br> &lt;/VirtualHost&gt;
+            ServerName mail.xxx.com<br> &lt;/VirtualHost&gt;<br><br>
+	    最后修改 /home/wmail/html/zh-cn下的index.html和invalid.html，将<br>
+	    &lt;input type="hidden" name="domain" value="lfan.net"&gt;<br>
+	    修改为自己的域名就可以了。
 <p></p>
               </p>
            </td>

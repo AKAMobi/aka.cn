@@ -24,11 +24,11 @@
               <li> 高效、快速：直接在文件系统操作邮件，并对解码、目录采取缓冲。 </li>
               <li> 方便的地址簿：一个昵称支持一个或多个联系人 </li>
               <li> 支持扩展MIME解码 </li>
-              <li> 支持邮件过滤、转发和拒收 <br>
-                <br>
-                <br>
-              </li>
-            </ul></td>
+              <li> 支持邮件过滤、转发和拒收 </li>
+	      <li> 支持RBL垃圾邮件过滤 </li>
+	      <br><br><a href="WMail_Spec.doc" class="a5" target=_blank>Wmail系统详细指标</a><br><br>
+            </ul>
+	  </td>
 
         </tr>
 
