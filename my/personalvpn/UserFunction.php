@@ -109,7 +109,7 @@ $functionStatus=explode(",",$row['UserFuncStatus']);
 	<td>
 	<input type="checkbox" id="oPersonalHourVPN" name="PersonalHourVPN" <? echo in_array("PersonalHourVPN",$functions)?'checked':''; ?> onclick="oPersonalVPN.checked=false;oBackPersonalHourVPN.checked=false;oBackPersonalVPN.checked=false;">
 	</td>
-	<td>阿卡出国直通车(计时版) 0.04RMB/分钟，至2003年12月六折</td>
+	<td>阿卡出国直通车(计时版) 0.04RMB/分钟，至2004年6月六折</td>
 	</tr>
 	<tr>
 	<td>
@@ -124,13 +124,13 @@ onclick="oBackPersonalHourVPN.checked=false;oPersonalVPN.checked=false;oPersonal
    }
 ?>
 
-阿卡回国直通车(包月版) 88RMB/月，至2003年12月六折</td>
+阿卡回国直通车(包月版) 88RMB/月，至2004年6月六折</td>
 	</tr>
 	<tr>
 	<td>
 	<input type="checkbox" id="oBackPersonalHourVPN" name="BackPersonalHourVPN" <? echo in_array("BackHourVPNPersonal",$functions)?'checked':''; ?> onclick="oBackPersonalVPN.checked=false;oPersonalHourVPN.checked=false;oPersonalVPN.checked=false;">
 	</td>
-	<td>阿卡回国直通车(计时版) 0.04RMB/分钟，至2003年12月六折</td>
+	<td>阿卡回国直通车(计时版) 0.04RMB/分钟，至2004年6月六折</td>
 	</tr>
 	<tr>
 	<td>
@@ -142,7 +142,7 @@ onclick="oBackPersonalHourVPN.checked=false;oPersonalVPN.checked=false;oPersonal
  	echo in_array("PersonalProxy",$functionStatus)?'<font color=green>正常</font> ':'<font color=red>费用不足，失效中...</font>'; 
    }
 ?>
-阿卡直通车(Proxy版) 55RMB/月，至2003年12月六折</td>
+阿卡直通车(Proxy版) 55RMB/月，至2004年6月六折</td>
 	</tr>
 	</table>
 	<br>
