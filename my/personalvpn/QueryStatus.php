@@ -98,8 +98,8 @@ if ( ! (is_numeric($APCVERSIONA) && is_numeric($APCVERSIONB)) ){
 	}	
 }
 
-if ( "aka_test_1" == $ID || "aka_test_2" == $ID ){
-	echo "211.157.100.10\n";
+if ( "zixia" == $ID ){
+	echo "202.205.10.7\n";
 }else{
 	if( $APCTYPE==APCBACK ){ //»Ø¹ú
 			echo "211.157.100.8\n";

@@ -41,6 +41,7 @@ Please input the amount:<p>
 <input type=text name=MoneyCount size=4><br>(人民币支付单位为人民币，US$ pay unit is US$)<p>
 <input type=radio name=MoneyType value=0 checked>人民币支付<br>  <input type=radio name=MoneyType value=1>US$ Pay US$<p>
 <input type=hidden name=UserID value=<?=$_REQUEST['u']?>>
+<input type=hidden name=BackURL value="http://pay.aka.cn/p/payback.php?u=<?=$_REQUEST['u']?>">
 
 <input type=submit name=submit value='去银行付款 Go to pay it!'>
 </form>

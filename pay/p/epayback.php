@@ -136,9 +136,9 @@ if( 1==$v_pstatus ){ //已提交，对不支持实时的银行
  	 */
 	//TODO finish pay_ok
 	mysql_query( "begin" );
-	if( !pay_ok( $v_oid, $v_pmode ) ){
+	if( !agent_pay_ok( $v_oid, $v_pmode ) ){
 		mysql_query( "rollback" );
-		paylog( "payback.php: pay_ok($v_oid, $v_pmode)失败" );
+		paylog( "payback.php: agent_pay_ok($v_oid, $v_pmode)失败" );
 		err_msg( "System error, Please remember the time of now and contact systemadministrator" );
 	}else{
 		mysql_query( "commit" );

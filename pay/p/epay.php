@@ -17,11 +17,12 @@ Please specify user ID<br>
 <br><br><br>
 
 <center>
-<form action="eprepare.php" name=form method=post>
+<form action="prepare.php" name=form method=post>
 Please input the amount:<p>
 $<input type=text name=MoneyCount size=4><br><p>
 <input type=hidden name=MoneyType value=1>
 <input type=hidden name=UserID value=<?=$_REQUEST['u']?>>
+<input type=hidden name=BackURL value="http://pay.aka.cn/p/epayback.php?u=<?=$_REQUEST['u']?>">
 
 <input type=submit name=submit value='Go to pay it!'>
 </form>
