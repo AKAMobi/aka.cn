@@ -25,7 +25,7 @@ function Login(){
 
 	if (document.all.oName.value=="") {
 
-		alert("ÇëÊäÈëÄúµÄÓÃ»§ÕÊºÅ");
+		alert("è¯·è¾“å…¥æ‚¨çš„ç”¨æˆ·å¸å·");
 
 		document.all.oName.focus();
 
@@ -94,15 +94,15 @@ function testKey_Password(){
 
               <p><b><font color="#3366CC"><br>
 
-                µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
+                å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
 
-                </font><a href="<? echo $ADMINURLROOT; ?>" class="a5">ÍøÕ¾¹ÜÀíÔ±</a><br>
+                </font><a href="<? echo $ADMINURLROOT; ?>" class="a5">ç½‘ç«™ç®¡ç†å‘˜</a><br>
 
                 <br>
 
-                <span class="newstitle"> ÍøÕ¾¹ÜÀíÔ±</span></p>
+                <span class="newstitle"> ç½‘ç«™ç®¡ç†å‘˜</span></p>
 
-              <p>Í¨¹ıÓÃ»§×¢²á£¬²é¿´ÏµÍ³×´Ì¬µÈ</p>
+              <p>é€šè¿‡ç”¨æˆ·æ³¨å†Œï¼ŒæŸ¥çœ‹ç³»ç»ŸçŠ¶æ€ç­‰</p>
 
               <p>&nbsp;</p>
 
@@ -120,7 +120,7 @@ function testKey_Password(){
 
           <tr> 
 
-            <td bgcolor="#006699" height="14"><b><font color="#FFFFFF">µÇÂ¼ÓÃ»§¹ÜÀíÏµÍ³</font></b> 
+            <td bgcolor="#006699" height="14"><b><font color="#FFFFFF">ç™»å½•ç”¨æˆ·ç®¡ç†ç³»ç»Ÿ</font></b> 
 
               <table width="500" cellspacing="0" cellpadding="0" align="center">
 
@@ -138,7 +138,7 @@ function testKey_Password(){
 
     <tr>
 
-      <td>¹ÜÀíÔ±ÕÊºÅ£º</td>
+      <td>ç®¡ç†å‘˜å¸å·ï¼š</td>
 
       <td><input type="text" id="oName" name="Name" size="20" onkeypress="testKey_Name();" ></td>
 
@@ -146,7 +146,7 @@ function testKey_Password(){
 
     <tr>
 
-      <td>¹ÜÀíÔ±ÃÜÂë£º</td>
+      <td>ç®¡ç†å‘˜å¯†ç ï¼š</td>
 
       <td><input type="password" id="oPassword" name="Password" size="20" onkeypress="testKey_Password();" ></td>
 
@@ -158,7 +158,7 @@ function testKey_Password(){
 
   <br>
 
-                      <p align="center"> <img src="/customer/images/enter.gif" width="74" height="22" id="oLogOn" value="µÇÂ½" onclick="Login();"> 
+                      <p align="center"> <img src="/customer/images/enter.gif" width="74" height="22" id="oLogOn" value="ç™»é™†" onclick="Login();"> 
 
                       </p>
 
@@ -204,7 +204,7 @@ function testKey_Password(){
 
               <tr> 
 
-                <td bgcolor="C3D4F4" colspan="2"><b><font face="Arial, Helvetica, sans-serif" color="032B7A">Ïà¹ØÁ´½Ó</font></b></td>
+                <td bgcolor="C3D4F4" colspan="2"><b><font face="Arial, Helvetica, sans-serif" color="032B7A">ç›¸å…³é“¾æ¥</font></b></td>
 
               </tr>
 
@@ -216,7 +216,7 @@ function testKey_Password(){
 
                 </td>
 
-                <td><a href="/serv_prod/index.shtml" class="a6">²úÆ·Óë·şÎñ</a></td>
+                <td><a href="/serv_prod/index.shtml" class="a6">äº§å“ä¸æœåŠ¡</a></td>
 
               </tr>
 
@@ -228,7 +228,7 @@ function testKey_Password(){
 
                 </td>
 
-                <td><a href="/customer/index.shtml" class="a6">¿Í»§·şÎñ</a></td>
+                <td><a href="/customer/index.shtml" class="a6">å®¢æˆ·æœåŠ¡</a></td>
 
               </tr>
 

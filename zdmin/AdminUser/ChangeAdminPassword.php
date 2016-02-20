@@ -1,29 +1,29 @@
 <? session_start() ?>
 <link rel="stylesheet" href="/css/aka.css" type="text/css"> 
 <DIV align="center">
-ÐÞ¸Ä¹ÜÀíÔ±ÃÜÂë
+ä¿®æ”¹ç®¡ç†å‘˜å¯†ç 
 <?
 require_once("zdmin.inc.php");
 
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
-ÄúÉÐÎ´µÇÂ½¡£<br>
+æ‚¨å°šæœªç™»é™†ã€‚<br>
 <?
 }else {
 
 if ( (!isset($_SESSION['AdminAdmin'])) ) {
 ?>
  <td align="center" >
-ÄãÃ»ÓÐ¹ÜÀíÆäËû¹ÜÀíÔ±µÄÈ¨ÏÞ<br>
+ä½ æ²¡æœ‰ç®¡ç†å…¶ä»–ç®¡ç†å‘˜çš„æƒé™<br>
 <?
 } else {
 
 require "{$ADMINROOT}/Include/InitDB.php"; 
 $result=mysql_query("select ID from AdminUser_TB where ID='{$_REQUEST['AdminID']}'");
 
-if (!($row=mysql_fetch_array($result))){//´Ë¹ÜÀíÔ±²»´æÔÚ
+if (!($row=mysql_fetch_array($result))){//æ­¤ç®¡ç†å‘˜ä¸å­˜åœ¨
 ?>
-¹ÜÀíÔ±ÕËºÅ <? echo $_REQUEST['AdminID'] ; ?> ²»´æÔÚ£¡
+ç®¡ç†å‘˜è´¦å· <? echo $_REQUEST['AdminID'] ; ?> ä¸å­˜åœ¨ï¼
 <?
 }else {
 ?>
@@ -31,12 +31,12 @@ if (!($row=mysql_fetch_array($result))){//´Ë¹ÜÀíÔ±²»´æÔÚ
 <!--
 function ChangeAdminPassword(){
 	if (document.all.oNewPassword1.value=="") {
-		alert("ÇëÊäÈëÐÂ¹ÜÀíÔ±µÄÃÜÂë");
+		alert("è¯·è¾“å…¥æ–°ç®¡ç†å‘˜çš„å¯†ç ");
 		document.all.oNewPassword1.focus();
 		return ;
 	}
 	if (document.all.oNewPassword2.value!=document.all.oNewPassword1.value) {
-		alert("Á½´ÎÊäÈëµÄÃÜÂë²»Ò»ÖÂ");
+		alert("ä¸¤æ¬¡è¾“å…¥çš„å¯†ç ä¸ä¸€è‡´");
 		document.all.oNewPassword2.focus();
 		return ;
 	}
@@ -65,22 +65,22 @@ function testKey_NewPassword2(){
                       <br>
   <div align="center"><table border="0" >
     <tr>
-      <td>¹ÜÀíÔ±£º</td>
+      <td>ç®¡ç†å‘˜ï¼š</td>
       <td><? echo $_REQUEST['AdminID']; ?></td>
     </tr>
     <tr>
-      <td>ÐÂÃÜÂë£º</td>
+      <td>æ–°å¯†ç ï¼š</td>
       <td><input type="password" id="oNewPassword1" name="NewPassword1" size="20" onkeypress="testKey_NewPassword1();" ></td>
     </tr>
     <tr>
-      <td>ÔÙ´ÎÊäÈëÐÂÃÜÂë£º</td>
+      <td>å†æ¬¡è¾“å…¥æ–°å¯†ç ï¼š</td>
       <td><input type="password" id="oNewPassword2" name="NewPassword2" size="20" onkeypress="testKey_NewPassword2();" ></td>
     </tr>
 </table>
   </div>
   <br>
   <p align="center">
-  <input type="button" id="oChangeAdminPassword" value="ÐÞ¸Ä¹ÜÀíÔ±ÃÜÂë" onclick="ChangeAdminPassword();"> 
+  <input type="button" id="oChangeAdminPassword" value="ä¿®æ”¹ç®¡ç†å‘˜å¯†ç " onclick="ChangeAdminPassword();"> 
    </p>
 </form>
 

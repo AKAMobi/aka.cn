@@ -18,10 +18,10 @@
 
         <tr> 
 
-          <td> <b><font color="#3366CC">��ǰλ�ã�</font> </b><a href="/index.shtml" class="a5">������ҳ</a> 
-              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">��Ʒ�����</a><font color="#458DE4">&gt; 
+          <td> <b><font color="#3366CC">当前位置：</font> </b><a href="/index.shtml" class="a5">阿卡首页</a> 
+              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">产品与服务</a><font color="#458DE4">&gt; 
               <a href="../index.shtml" class=a5>VPN</a> &gt;</font><font color="#458DE4"> 
-              <a href="index.shtml" class=a6>��ҵ��ȫ����VPN</a> </font> 
+              <a href="index.shtml" class=a6>企业安全互联VPN</a> </font> 
 
             </td>
 
@@ -38,21 +38,21 @@
                         <tr> 
 
                           
-                      <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">��ҵ��ȫ����VPN����</td>
+                      <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">企业安全互联VPN服务</td>
 
                         </tr>
 
                       </table>
 
                       
-                  <p> ��ҵVPN��ȫ����������һ���Ź�˾�ֹ�˾֮�䡢�ֹ�˾���ܲ�֮���INTRANATͨ������ר����������ȫ�ġ�͸���ġ�����ġ����ٵ�������һ�𣬴ﵽ�����ֹ�˾INTRANET������ʵİ�ȫ��Ҫ��ͷ�����Ҫ��</p>
-                  <p> �����������ṩ��<br>
+                  <p> 企业VPN安全互联方案将一集团公司分公司之间、分公司与总部之间的INTRANAT通过虚拟专用网技术安全的、透明的、方便的、快速的连接在一起，达到各个分公司INTRANET互相访问的安全性要求和方便性要求。</p>
+                  <p> 本方案可以提供：<br>
 				  <OL>
-                    <LI>�����ֹ�˾��INTRANET��ӵ���Լ����ڲ�����IP��ÿ���ֹ�˾INTRANET�ĵ��Զ�����ͨ���ڲ�����IP������ʣ��������зֹ�˾�ĵ������߶�����ͬһ����������һ����<br>
-                    <LI>���������ķֹ�˾��INTRANET֮���ͨѶ�ǻ���INTERNET�ϵ�VPN���䣬VPN��ȡĿǰ�ȫ�ļ��ܰ�ȫ��ʽ�����Ա�֤���Ź�˾INTRANET֮�䴫������ݲ��ᱻ����ĵ�������ȡ��<br>
-                    <LI>��ʹ��ɢ�ĳ����Ա��������Ȩ��Ҳ��ͨ�����β��ţ����빫˾��INTRANET���ʹ�˾���ڲ����硣<br>
-                    <LI>Ϊ��˾�ڲ������ṩ����ǽ���ܣ���ֹδ��Ȩ�ķ�����ͼ����⹥����<br>
-                    <LI>�ṩ�򵥵���ƹ��ܡ�
+                    <LI>各个分公司的INTRANET都拥有自己的内部网络IP，每个分公司INTRANET的电脑都可以通过内部网络IP互相访问，就像所有分公司的电脑网线都插在同一个交换机上一样；<br>
+                    <LI>各个地区的分公司的INTRANET之间的通讯是基于INTERNET上的VPN传输，VPN采取目前最安全的加密安全方式，用以保证集团公司INTRANET之间传输的数据不会被恶意的第三者窃取；<br>
+                    <LI>可使分散的出差的员工经过授权，也能通过二次拨号，进入公司的INTRANET访问公司的内部网络。<br>
+                    <LI>为公司内部网络提供防火墙功能，阻止未授权的访问企图与恶意攻击；<br>
+                    <LI>提供简单的审计功能。
 				</OL>
 					 </p>
                   </td>
@@ -66,7 +66,7 @@
 
                           <td bgcolor="639A63" height="11">&nbsp;<b><font color="#FFFFFF"> 
 
-                            ����</font></b></td>
+                            介绍</font></b></td>
 
                         </tr>
 
@@ -80,16 +80,16 @@
 
                                 <tr> 
 
-                                    <td> <p><b><span class="a4"><a href="/serv_prod/vpn/security/intro.shtml" class=a4>����</a></span></b><br>
-                                        VPN�����ļ�Ҫ���� ��
+                                    <td> <p><b><span class="a4"><a href="/serv_prod/vpn/security/intro.shtml" class=a4>概述</a></span></b><br>
+                                        VPN互连的简要介绍 。
                                         </p>
 										
-                                      <p> <b><span class="a4"><a href="/serv_prod/vpn/security/intro.shtml#funtions" class=a4>����</a></span></b><br>
-                                        VPN�������ṩ�����ľ��幦�ܡ�
+                                      <p> <b><span class="a4"><a href="/serv_prod/vpn/security/intro.shtml#funtions" class=a4>功能</a></span></b><br>
+                                        VPN互连能提供给您的具体功能。
                                         </p>
 										
-                                      <p> <b><span class="a4"><a href="/serv_prod/vpn/security/intro.shtml#advantages" class=a4>����</a></span></b><br>
-                                        ������������ʽ��ȣ�VPN������ʽ�����ơ� </p>
+                                      <p> <b><span class="a4"><a href="/serv_prod/vpn/security/intro.shtml#advantages" class=a4>优势</a></span></b><br>
+                                        与其他互连方式相比，VPN互连方式的优势。 </p>
                                       <p><br>
                                       </p>
 
@@ -101,7 +101,7 @@
 								<td align="right">
 								<br>
                                       <a href="/serv_prod/vpn/security/intro.shtml" class="a6">- 
-                                      �˽���� -</a> </td>
+                                      了解更多 -</a> </td>
                                   </tr>
 								
 
@@ -117,28 +117,28 @@
 			          <td width="50%" valign="top"><table width="100%" cellspacing="0" cellpadding="0" bordercolor="639A63" class="redefinetable">
                           <tr> 
                             <td bgcolor="639A63" height="11">&nbsp;<b><font color="#FFFFFF"> 
-                              ���� </font></b></td>
+                              技术 </font></b></td>
                           </tr>
                           <tr> 
                             <td height="27"> <center>
                                 <table width="95%" cellspacing="4" cellpadding="0">
                                   <tr> 
-                                    <td> <p><b><span class="a4"><a href="/serv_prod/vpn/security/tech.shtml#1" class="a4">��������</a></span></b><br>
-                                        ʲô��VPN��<br>
+                                    <td> <p><b><span class="a4"><a href="/serv_prod/vpn/security/tech.shtml#1" class="a4">基本概念</a></span></b><br>
+                                        什么是VPN？<br>
                                         <br>
-                                        <b><span class="a4"><a href="/serv_prod/vpn/security/tech.shtml#2" class="a4">��������</a></span></b><br>
-                                        VPN��ʵ�ַ�ʽ����GRE��IPSec��PPTP��IPIP�ȡ�</p>
-                                      <p><b><span class="a4"><a href="/serv_prod/vpn/security/tech.shtml#3" class="a4">��ȫ��</a></span></b><br>
-                                        VPN������޶ȵı�֤���ݰ�ȫ�� </p>
-                                      <p><b><span class="a4"><a href="/serv_prod/vpn/security/tech.shtml#3" class="a4">��Ӳ��֧��</a></span></b><br>
-                                        VPN֧�־�������ĵ�ϵͳ��ƽ̨��</p>
+                                        <b><span class="a4"><a href="/serv_prod/vpn/security/tech.shtml#2" class="a4">基本技术</a></span></b><br>
+                                        VPN的实现方式包括GRE、IPSec、PPTP、IPIP等。</p>
+                                      <p><b><span class="a4"><a href="/serv_prod/vpn/security/tech.shtml#3" class="a4">安全性</a></span></b><br>
+                                        VPN可最大限度的保证数据安全。 </p>
+                                      <p><b><span class="a4"><a href="/serv_prod/vpn/security/tech.shtml#3" class="a4">软硬件支持</a></span></b><br>
+                                        VPN支持绝大多数的的系统与平台。</p>
 
                                   </td>
                                   </tr>
                                   <tr> 
                                     <td align="right"> <br>
                                       <a href="/serv_prod/vpn/security/tech.shtml" class="a6">- 
-                                      �˽���� -</a> </td>
+                                      了解更多 -</a> </td>
                                   </tr>
                                 </table>
                               </center></td>
@@ -195,15 +195,15 @@
               </tr>
               <tr> 
                 <td bgcolor="C3D4F4" colspan="2"> <div align="left"><font color="032B7A"><b><font face="Arial"> 
-                    �������</font></b></font></div></td>
+                    相关链接</font></b></font></div></td>
               </tr>
               <tr> 
                 <td> <div align="right"><img src="/image/leadarrow.gif"></div></td>
-                <td><a href="/serv_prod/index.shtml" class="a6">����֧��</a></td>
+                <td><a href="/serv_prod/index.shtml" class="a6">技术支持</a></td>
               </tr>
               <tr> 
                 <td> <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div></td>
-                <td><a href="/customer/contact/index.shtml" class="a6">��ϵ����</a></td>
+                <td><a href="/customer/contact/index.shtml" class="a6">联系我们</a></td>
               </tr>
               <tr> 
                 <td> <div align="right"></div></td>

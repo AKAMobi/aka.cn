@@ -18,8 +18,8 @@
 
         <tr> 
 
-          <td> <b><font color="#3366CC">��ǰλ�ã�</font> </b><a href="/index.shtml" class="a5">������ҳ</a> 
-            <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">��Ʒ�����</a><font color="#458DE4">&gt;WMail</font></td>
+          <td> <b><font color="#3366CC">当前位置：</font> </b><a href="/index.shtml" class="a5">阿卡首页</a> 
+            <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">产品与服务</a><font color="#458DE4">&gt;WMail</font></td>
 
         </tr>
        <tr> 
@@ -34,7 +34,7 @@
                         <tr> 
 
                           
-                      <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">��ҵ�����ʼ�ϵͳWMail</td>
+                      <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">企业电子邮件系统WMail</td>
 
                         </tr>
 
@@ -42,8 +42,8 @@
 
                       
                   <p> <br>
-                    ������˾��ҵ����ȫ�����ʾ�ϵͳ���ڼ����Ƚ�,��ȫ�ɿ��ĵ����ʼ� �ں�,����ʮ���Ѻ����۵��û�����,���߱�ǿ��ȫ��ĺ�̨��������. 
-                    ֧�ְ�ȫ��½,�Զ����������ʼ��ȸ߼�����, ��ȫ�ܹ������ʮ���˵ĳɳ��й�˾����ǧ�˵Ĵ��ͼ��Ź�˾����ҵ�����ʼ�ϵͳ������ 
+                    阿卡公司企业级安全电子邮局系统基于技术先进,安全可靠的电子邮件 内核,具有十分友好美观的用户界面,并具备强大全面的后台管理功能. 
+                    支持安全登陆,自动清理垃圾邮件等高级功能, 完全能够满足从十几人的成长中公司到几千人的大型集团公司对企业电子邮件系统的需求。 
                   <div align="center">
                   <table width="100%" border="0" >
                     <tr>
@@ -54,8 +54,8 @@
 				  </div>
 				  <p></p>
    
-                  <p><font color="#FF0000">��Ȩ����</font><br>
-                    WMail�İ�Ȩ�鱱��������Ϣ�������޹�˾���У�������ѭ GPL ���ɡ���ҿ������ʹ�á����ơ��޸ı����������޸ĵİ汾Ҳ������ѭGPL�淶�� 
+                  <p><font color="#FF0000">版权声明</font><br>
+                    WMail的版权归北京阿卡信息技术有限公司所有，开发遵循 GPL 许可。大家可以免费使用、复制、修改本软件。但修改的版本也必须遵循GPL规范。 
                   </p>
 		  <br>
                                    </td>
@@ -69,7 +69,7 @@
 
                           <td bgcolor="639A63" height="11">&nbsp;<b><font color="#FFFFFF"> 
 
-                            ����</font></b></td>
+                            介绍</font></b></td>
 
                         </tr>
 
@@ -83,11 +83,11 @@
 
                                 <tr> 
 
-                                    <td> <p><b><span class="a4"><a href="functions.shtml" class=a4>�����ص�</a></span></b><br>
-                                        WMail�����ʼ�ϵͳ�Ĺ����ص㡣 </p>
+                                    <td> <p><b><span class="a4"><a href="functions.shtml" class=a4>功能特点</a></span></b><br>
+                                        WMail电子邮件系统的功能特点。 </p>
 										
-                                      <p> <b><span class="a4"><a href="installation.shtml" class=a4>��װ˵��</a></span></b><br>
-                                        Wmail�����ʼ�ϵͳ�İ�װ˵���� </p>
+                                      <p> <b><span class="a4"><a href="installation.shtml" class=a4>安装说明</a></span></b><br>
+                                        Wmail电子邮件系统的安装说明。 </p>
 	
 	                                      
                                       </td>
@@ -111,7 +111,7 @@
                         <tr> 
 
                             <td bgcolor="639A63" height="11">&nbsp;<b><font color="#FFFFFF"> 
-                              ����</font></b></td>
+                              下载</font></b></td>
 
                         </tr>
 
@@ -125,8 +125,8 @@
 
                                 <tr> 
 
-                                    <td> <p><b><span class="a4"><a href="download.shtml" class=a4>Դ��������</a></span></b><br>
-                                        WMail�����ʼ�ϵͳ��Դ�������ء�
+                                    <td> <p><b><span class="a4"><a href="download.shtml" class=a4>源代码下载</a></span></b><br>
+                                        WMail电子邮件系统的源代码下载。
                                       </p>
 										
                
@@ -151,7 +151,7 @@
                         <tr> 
 
                             <td bgcolor="639A63" height="11">&nbsp;<b><font color="#FFFFFF"> 
-                              ���� </font></b></td>
+                              费用 </font></b></td>
 
                         </tr>
 
@@ -167,8 +167,8 @@
 
                                     <td> 
 
-                                      <p> <b><span class="a4"><a href="fee.shtml" class=a4>�۸񼰸��ѷ�ʽ</a></span></b><br>
-                                        WMail�����ʼ�ϵͳ�ṩ���ļ۸���Լ����ѷ�ʽ����������������Ļ���������޶ȵ�Ϊ����Լ������ 
+                                      <p> <b><span class="a4"><a href="fee.shtml" class=a4>价格及付费方式</a></span></b><br>
+                                        WMail电子邮件系统提供灵活的价格策略及付费方式，能在满足您需求的基础上最大限度的为您节约花销。 
                                       </p>
 
                                     </td>
@@ -192,7 +192,7 @@
                         <tr> 
 
                             <td bgcolor="639A63" height="11">&nbsp;<b><font color="#FFFFFF"> 
-                              ��ʾ������ </font></b></td>
+                              演示与讨论 </font></b></td>
 
                         </tr>
 
@@ -208,19 +208,19 @@
 
                                     <td height=237 valign="top"> 
 										
-                                      <p> <b><span class="a4"><a href="snapshot.shtml" class=a4>WMail�����ͼ</a></span></b><br>
-                                        Wmail�����ʼ�ϵͳ�Ĳ��������ͼ�� </p>
+                                      <p> <b><span class="a4"><a href="snapshot.shtml" class=a4>WMail界面截图</a></span></b><br>
+                                        Wmail电子邮件系统的操作界面截图。 </p>
 
-                                      <p> <b><span class="a4"><a href="http://demo.wmail.aka.cn" target="_blank" class=a4>WMailϵͳ��ʾ</a></span></b><br>
-                                        Wmail�����ʼ�ϵͳ��ϵͳ��ʾ<br>
-                                        �����˺�<strong>demo@demo.wmail.aka.cn</strong>,����<strong>demo</strong>��¼�� 
+                                      <p> <b><span class="a4"><a href="http://demo.wmail.aka.cn" target="_blank" class=a4>WMail系统演示</a></span></b><br>
+                                        Wmail电子邮件系统的系统演示<br>
+                                        请用账号<strong>demo@demo.wmail.aka.cn</strong>,密码<strong>demo</strong>登录。 
                                       </p>
 										
-                                      <p> <b><span class="a4"><a href="http://wmail.wforum.zixia.net/" target="_blank" class=a4>WMail������</a></span></b><br>
-                                        WMail�û������ڴ������й����⡣ <br>
+                                      <p> <b><span class="a4"><a href="http://wmail.wforum.zixia.net/" target="_blank" class=a4>WMail讨论区</a></span></b><br>
+                                        WMail用户可以在此讨论有关问题。 <br>
 				      </p>
-				      <p> <b><span class="a4"><a href="system.shtml" class=a4>�ͻ�����</a></span></b><br>
-					Wmail�����ʼ�ϵͳ�ĵ��Ϳͻ�����
+				      <p> <b><span class="a4"><a href="system.shtml" class=a4>客户案例</a></span></b><br>
+					Wmail电子邮件系统的典型客户案例
                                       </p>
 
                                     </td>
@@ -291,11 +291,11 @@
               </tr>
               <tr> 
                 <td bgcolor="C3D4F4" colspan="2"> <div align="left"><font color="032B7A"><b><font face="Arial"> 
-                    �������</font></b></font></div></td>
+                    相关链接</font></b></font></div></td>
               </tr>
               <tr> 
                 <td> <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div></td>
-                <td><a href="/customer/contact/index.shtml" class="a6">��ϵ����</a></td>
+                <td><a href="/customer/contact/index.shtml" class="a6">联系我们</a></td>
               </tr>
               <tr> 
                 <td> <div align="right"></div></td>

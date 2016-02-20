@@ -8,8 +8,8 @@ readfile( "header.html", 1 );
 require_once( "db.inc.php" );
 
 
-$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("ÎŞ·¨Á¬½ÓDBM.");
-mysql_select_db( DB_NAME, $conn) or die("ÎŞ·¨´ò¿ªÊı¾İ¿â.");
+$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("æ— æ³•è¿æ¥DBM.");
+mysql_select_db( DB_NAME, $conn) or die("æ— æ³•æ‰“å¼€æ•°æ®åº“.");
 
 function err_msg( $msg )
 {

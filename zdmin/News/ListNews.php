@@ -6,14 +6,14 @@ require_once("zdmin.inc.php");
 
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
-ÄúÉĞÎ´µÇÂ½¡£<br>
+æ‚¨å°šæœªç™»é™†ã€‚<br>
 <?
 }else {
 
 if ( (!isset($_SESSION['NewsAdmin'])) ) {
 ?>
  <td align="center" >
-ÄãÃ»ÓĞĞÂÎÅ¹ÜÀíµÄÈ¨ÏŞ<br>
+ä½ æ²¡æœ‰æ–°é—»ç®¡ç†çš„æƒé™<br>
 <?
 } else {
 
@@ -33,15 +33,15 @@ if ( ! isset( $_REQUEST['date_day'] )) {
 } else {
 	$date_day= $_REQUEST['date_day'];
 }
-echo "ÈÕÆÚ£º{$date_year}-{$date_month}-{$date_day}<br>";
+echo "æ—¥æœŸï¼š{$date_year}-{$date_month}-{$date_day}<br>";
 
-echo "·ÖÀà£º";
+echo "åˆ†ç±»ï¼š";
 if ((isset($_REQUEST['area'])) && ($_REQUEST['area']!='0')){
 	$condition=" and Class='".$_REQUEST['area']."'";
 	echo $_REQUEST['area'];
 }else{
 	$condition='';
-	echo "ÎŞ";
+	echo "æ— ";
 }
 
 echo "<br>";
@@ -56,7 +56,7 @@ $ca = mysql_fetch_array($result );
 ?>
 <br><br><br>
 <?
-echo "±¾ÈÕ¹²ÓĞĞÂÎÅ " . $ca[0] . " Ìõ¡£<br>";
+echo "æœ¬æ—¥å…±æœ‰æ–°é—» " . $ca[0] . " æ¡ã€‚<br>";
 ?>
 <br><br>
 <?

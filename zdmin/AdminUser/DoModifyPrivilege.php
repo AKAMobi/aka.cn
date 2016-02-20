@@ -7,35 +7,35 @@ require_once("zdmin.inc.php");
 function isParamAllExist(){
 	Global $AdminName;
 	if (!isset($_REQUEST['AdminName'])) return false;
-	$AdminName=preg_replace("/,/","��",$_REQUEST['AdminName']);
+	$AdminName=preg_replace("/,/","，",$_REQUEST['AdminName']);
 	$AdminName=htmlspecialchars($AdminName);
 	return true;
 }
 
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
-����δ��½��<br>
+您尚未登陆。<br>
 <?
 }else {
 
 if ( (!isset($_SESSION['AdminAdmin'])) ) {
 ?>
  <td align="center" >
-��û�й�����������Ա��Ȩ��<br>
+你没有管理其他管理员的权限<br>
 <?
 } else {
 
 if (!isParamAllExist()){
 ?>
-����ȱ�ٱ�Ҫ�Ĳ�����ִ�д˲�������ȷ���������롣
+错误！缺少必要的参数以执行此操作。请确认您的输入。
 <?
 } else {
 require "{$ADMINROOT}/Include/InitDB.php"; 
 $result=mysql_query("select ID from AdminUser_TB where ID='{$_REQUEST['AdminID']}'");
 
-if (!($row=mysql_fetch_array($result))){//�˹���Ա�Ѵ���
+if (!($row=mysql_fetch_array($result))){//此管理员已存在
 ?>
-�˹���Ա�����ڣ�<BR>
+此管理员不存在！<BR>
 <?
 } else{
 $privilege=array();
@@ -65,14 +65,14 @@ if (isset($_REQUEST['SMSChild'])){
 }
 $privileges=join(',',$privilege);
 if (mysql_query("Update AdminUser_TB set Privilege='{$privileges}', FullName='{$AdminName}' where ID='{$_REQUEST['AdminID']}'")) {
-	$temp=join("��",$privilege);
-	mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} ������Ա {$_REQUEST['AdminID']} ��Ȩ���޸�Ϊ{$temp}', '{$_SERVER['REMOTE_ADDR']}','Admin', NOW()) ", $conn);
+	$temp=join("、",$privilege);
+	mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} 将管理员 {$_REQUEST['AdminID']} 的权限修改为{$temp}', '{$_SERVER['REMOTE_ADDR']}','Admin', NOW()) ", $conn);
 ?>
-	����Ա <? echo $_REQUEST['AdminID']; ?> ��Ȩ���޸ĳɹ��� <br>
+	管理员 <? echo $_REQUEST['AdminID']; ?> 的权限修改成功！ <br>
 <?
 } else {
 ?>
-	���ݿ����ʧ�ܣ����������Ա��<br>
+	数据库操作失败！请联络管理员。<br>
 <?
 }
 

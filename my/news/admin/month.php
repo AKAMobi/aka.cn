@@ -8,24 +8,24 @@ if ( ! isset( $month )) $month = date( "n" );
 ?>
 <link rel="stylesheet" href="../font.css" type="text/css">
 <?
-echo 'µ±Ç°Ä¬ÈÏÀà±ð£º';
+echo 'å½“å‰é»˜è®¤ç±»åˆ«ï¼š';
 $area = $_REQUEST['area'];
 $result = mysql_query("select Class from News_TB where Class='$area'" );
 $cr = mysql_fetch_array( $result );
-if ( $cr[0] != '' ) echo $cr[0]; else echo 'ÎÞ';
+if ( $cr[0] != '' ) echo $cr[0]; else echo 'æ— ';
 echo '<br>';
 
-echo "²Ù×÷Ô±:".$AdminName."<br><div align=center>".$year. "Äê" . $month. "ÔÂ" . "</div><br>";
+echo "æ“ä½œå‘˜:".$AdminName."<br><div align=center>".$year. "å¹´" . $month. "æœˆ" . "</div><br>";
 ?>
 <table border=1 bordercolor=#c0c0c0 bordercolordark=#c0c0c0 bordercoloclight=#c0c0c0 cellpadding=3 cellspacing=1>
 <tr bgcolor=#c0c0c0>
-	<td bgcolor=#ffc0c0 align=center>ÈÕ</td>
-	<td  align=center>Ò»</td>
-	<td  align=center>¶þ</td>
-	<td  align=center>Èý</td>
-	<td  align=center>ËÄ</td>
-	<td  align=center>Îå</td>
-	<td  align=center>Áù</td>
+	<td bgcolor=#ffc0c0 align=center>æ—¥</td>
+	<td  align=center>ä¸€</td>
+	<td  align=center>äºŒ</td>
+	<td  align=center>ä¸‰</td>
+	<td  align=center>å››</td>
+	<td  align=center>äº”</td>
+	<td  align=center>å…­</td>
 </tr>
 
 <tr>	
@@ -46,9 +46,9 @@ for ( $i = 1 ; $i <32 ; $i++)
 </tr>
 </table>
 <br>
-<a href="nlm.php?month=<? echo $month ?>&area=<? echo $area; ?>" target="mainFrame">ÁÐ³ö´ËÔÂ·ÝËùÓÐ´ËÀàÐÂÎÅ</a><br>
+<a href="nlm.php?month=<? echo $month ?>&area=<? echo $area; ?>" target="mainFrame">åˆ—å‡ºæ­¤æœˆä»½æ‰€æœ‰æ­¤ç±»æ–°é—»</a><br>
 <br>
-Ìø×ªµ½£º<br>
+è·³è½¬åˆ°ï¼š<br>
 <form method=post action="month.php">
 <input type=hidden name="area" value="<? echo $area; ?>">
 <select name=year size=1>
@@ -62,7 +62,7 @@ for ( $i = 1 ; $i <32 ; $i++)
 	<option value=2008>2008</option>
 	<option value=2009>2009</option>
 </select>
-Äê
+å¹´
 <select name=month size=1>
 <?
 	for ( $i = 1 ; $i <13 ; $i ++ )
@@ -73,13 +73,13 @@ for ( $i = 1 ; $i <32 ; $i++)
 	}
 ?>
 </select>
-ÔÂ<input type=submit name="gotomonth" value=" Go ">
+æœˆ<input type=submit name="gotomonth" value=" Go ">
 </form>
 
 <br>
-<a href="news_add.php" target="mainFrame">Ìí¼ÓÐÂÎÅ</a><br>
+<a href="news_add.php" target="mainFrame">æ·»åŠ æ–°é—»</a><br>
 <br>
-ÐÂÎÅ·ÖÀà
+æ–°é—»åˆ†ç±»
 <hr>
 <?
 
@@ -88,8 +88,8 @@ while ( $cr = mysql_fetch_array( $result ))
 {
 	echo '<a href="month.php?area=' . $cr[0] . '&year=' . $year . '&month=' . $month . '" target="leftFrame">' . $cr[0] . '</a><br>';
 }
-echo '<br><a href="month.php?area=0&year=' . $year . '&month=' . $month . '" target="leftFrame">È¡Ïû·ÖÀà</a><br>';
-echo '<a href="logout.php">ÍË³ö</a>';
+echo '<br><a href="month.php?area=0&year=' . $year . '&month=' . $month . '" target="leftFrame">å–æ¶ˆåˆ†ç±»</a><br>';
+echo '<a href="logout.php">é€€å‡º</a>';
 require_once( "../footer.inc.php" );
 ?>
 

@@ -15,12 +15,12 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
             
       <td> 
         <p><b><font color="#3366CC"><br>
-          ��ǰλ�ã�</font> </b><a href="/" class="a5">������ҳ</a> <font color="#458DE4">&gt; 
-          </font><a href="<? echo $ADMINURLROOT; ?>" class="a5">��վ����Ա</a><font color="#458DE4">&gt; 
-          </font><a href="<? echo $ADMINURLROOT; ?>/AdminMenu.php" class="a5">�����˵�</a><br>
+          当前位置：</font> </b><a href="/" class="a5">阿卡首页</a> <font color="#458DE4">&gt; 
+          </font><a href="<? echo $ADMINURLROOT; ?>" class="a5">网站管理员</a><font color="#458DE4">&gt; 
+          </font><a href="<? echo $ADMINURLROOT; ?>/AdminMenu.php" class="a5">管理菜单</a><br>
           <br>
-          <span class="newstitle">�����˵�</span></p>
-              <p>�����ǰ�����˾�ͻ���Ϣ����ϵͳ�����˵�����ѡ������ʹ�õķ���</p>
+          <span class="newstitle">管理菜单</span></p>
+              <p>这里是阿卡公司客户信息服务系统的主菜单。请选择您想使用的服务。</p>
               <p>&nbsp;</p>
             </td>
         </tr>
@@ -30,10 +30,10 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
   <tr> 
   <td align="center">
 <?
-if ( (!isset($_SESSION['AdminID']))  ){//δ������¼
+if ( (!isset($_SESSION['AdminID']))  ){//未正常登录
 ?>
-����δ��¼��<BR>
-������<A HREF="<? echo $ADMINURLROOT; ?>/index.php">��¼</a>��
+您尚未登录。<BR>
+请首先<A HREF="<? echo $ADMINURLROOT; ?>/index.php">登录</a>。
 <?
 }else {
 ?>

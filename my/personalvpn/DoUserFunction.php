@@ -11,9 +11,9 @@ require_once( "header.inc.php" );
             
       <td> 
         <p><b><font color="#3366CC"><br>
-          ��ǰλ�ã�</font> </b><a href="/" class="a5">������ҳ</a> <font color="#458DE4">&gt; 
-          </font><font color="#458DE4"><a href="/my/" class="a5">�ҵİ���</a><font color="#458DE4">&gt; 
-          </font></font><a href="/my/personalvpn/UserFunction.php" class="a5">����/�ر��û�����</a> 
+          当前位置：</font> </b><a href="/" class="a5">阿卡首页</a> <font color="#458DE4">&gt; 
+          </font><font color="#458DE4"><a href="/my/" class="a5">我的阿卡</a><font color="#458DE4">&gt; 
+          </font></font><a href="/my/personalvpn/UserFunction.php" class="a5">开启/关闭用户功能</a> 
           <br>
           <br>
         <p>&nbsp;</p>
@@ -31,7 +31,7 @@ require_once( "header.inc.php" );
 <?
 if ( (!isset($HTTP_SESSION_VARS['UserID'])) ){
 ?>
-	<p>������<A HREF="index.php">��¼</a>��</p>
+	<p>请首先<A HREF="index.php">登录</a>！</p>
 	<br>
 	<br>
 	<br>
@@ -44,12 +44,12 @@ if ( (!isset($HTTP_SESSION_VARS['UserID'])) ){
 
 $result=mysql_query("select A.UserFunc as UserFunc,A.UserFuncStatus as UserFuncStatus , A.AutoID as UserAutoID ,B.UserAccount as UserAccount from User_TB as A, UserAccount_TB as B  where A.ID='{$HTTP_SESSION_VARS['UserID']}' and A.AutoID=B.UserAutoID");
 
-if (!($row=mysql_fetch_array($result))){//�޴��û�
+if (!($row=mysql_fetch_array($result))){//无此用户
 ?>
-�޴��û���<BR>
-�����µ�¼<br>
+无此用户！<BR>
+请重新登录<br>
 <br>
-<input type="button" value="����" onclick="history.back()">
+<input type="button" value="返回" onclick="history.back()">
 <br>
 <?
 }
@@ -71,7 +71,7 @@ if  (isset($_REQUEST['BackPersonalHourVPN']) ) {
 
 if ($i>1) {
 ?>
-�������¡�������ʱ���ع����ºͻع���ʱ����ֱͨ����������ֻ��ͬʱѡ��һ�֣�
+出国包月、出国计时、回国包月和回国计时四种直通车功能中您只能同时选择一种！
 <?
 } else {
 $strFunc=$row['UserFunc'];
@@ -87,7 +87,7 @@ if  (!isset($_REQUEST['PersonalVPN']) ){
 	$query[]="Update User_TB Set UserFunc='$strFunc' where ID='{$_REQUEST['UserID']}'";
 	$query[]="delete from PersonalVPN_UserChargeTime_TB where UserAutoID={$UserAutoID} and FeeType='PerMonth'";
 if ((isset($_SESSION['AdminID'])) ){
-	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} �ر��� {$_SESSION['UserID']} �ĸ���VPN�������·���', '{$_SERVER['REMOTE_ADDR']}','UserAccount', NOW()) ";
+	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} 关闭了 {$_SESSION['UserID']} 的个人VPN出国包月服务', '{$_SERVER['REMOTE_ADDR']}','UserAccount', NOW()) ";
 }
 } else {
 	$haveOpen=strstr($strFunc,"PersonalVPN");
@@ -98,7 +98,7 @@ if ((isset($_SESSION['AdminID'])) ){
 		$query[]="replace into PersonalVPN_UserChargeTime_TB(UserAutoID,FeeType,UserChargeTime) values({$UserAutoID},'PerMonth','1999-01-01')";
 	}
 if ((isset($_SESSION['AdminID'])) ){
-	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} ���� {$_SESSION['UserID']} �ĸ���VPN�������·���', '{$_SERVER['REMOTE_ADDR']}','UserAccount', NOW()) ";
+	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} 打开了 {$_SESSION['UserID']} 的个人VPN出国包月服务', '{$_SERVER['REMOTE_ADDR']}','UserAccount', NOW()) ";
 }
 }
 $query[]="commit";
@@ -114,20 +114,20 @@ for ($i=0;$i<count($query);++$i){
 if ($success) {
 if (isset($HTTP_POST_VARS['PersonalVPN']) ) {
 ?>
-	���ĳ���ֱͨ�����°������ã�<br>
+	您的出国直通车包月版已启用！<br>
 <?
 include 'Include/MonthFee.php';
 } else {
 ?>
-	���ĳ���ֱͨ�����°湦���ѹرա�<br>
+	您的出国直通车包月版功能已关闭。<br>
 <?
 }
 } else {
 ?>
-	���ݿ����ʧ�ܣ����������Ա��<br>
-	�����û����ܿ���/�ر�ҳ��<br>
+	数据库操作失败！请联络管理员。<br>
+	返回用户功能开启/关闭页面<br>
 <br>
-<input type="button" value="����" onclick="history.back()">
+<input type="button" value="返回" onclick="history.back()">
 <br>
 <?
 }
@@ -138,14 +138,14 @@ if  (!isset($HTTP_POST_VARS['PersonalHourVPN']) ){
 	$strFunc=str_replace('PersonalHourVPN','',$strFunc);
 	$query[]="Update User_TB Set UserFunc='$strFunc' where ID='{$HTTP_SESSION_VARS['UserID']}'";
 if ((isset($_SESSION['AdminID'])) ){
-	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} �ر��� {$_SESSION['UserID']} �ĸ���VPN������ʱ����', '{$_SERVER['REMOTE_ADDR']}', 'UserAccount', NOW()) ";
+	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} 关闭了 {$_SESSION['UserID']} 的个人VPN出国计时服务', '{$_SERVER['REMOTE_ADDR']}', 'UserAccount', NOW()) ";
 }
 } else {
 	$strFunc.=",PersonalHourVPN";
 	$query[]="Update User_TB Set UserFunc='$strFunc' where ID='{$HTTP_SESSION_VARS['UserID']}'";
-/*	$query[]="Insert into UserAccountLog_TB values (null,{$row[2]},now(),0,0,{$row[3]},'��ʼ���ɸ��˼�ʱVPNʹ�÷�')"; */
+/*	$query[]="Insert into UserAccountLog_TB values (null,{$row[2]},now(),0,0,{$row[3]},'开始缴纳个人计时VPN使用费')"; */
 if ((isset($_SESSION['AdminID'])) ){
-	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} ���� {$_SESSION['UserID']} �ĸ���VPN������ʱ����', '{$_SERVER['REMOTE_ADDR']}', 'UserAccount', NOW()) ";
+	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} 打开了 {$_SESSION['UserID']} 的个人VPN出国计时服务', '{$_SERVER['REMOTE_ADDR']}', 'UserAccount', NOW()) ";
 }
 }
 $query[]="commit";
@@ -161,19 +161,19 @@ for ($i=0;$i<count($query);++$i){
 if ($success) {
 if (isset($HTTP_POST_VARS['PersonalHourVPN'])) {
 ?>
-	���ĳ���ֱͨ����ʱ�������ã�<br>
+	您的出国直通车计时版已启用！<br>
 <?
 } else {
 ?>
-	���ĳ���ֱͨ����ʱ�湦���ѹرա�<br>
+	您的出国直通车计时版功能已关闭。<br>
 <?
 }
 } else {
 ?>
-	���ݿ����ʧ�ܣ����������Ա��<br>
-	�����û����ܿ���/�ر�ҳ��<br>
+	数据库操作失败！请联络管理员。<br>
+	返回用户功能开启/关闭页面<br>
 <br>
-<input type="button" value="����" onclick="history.back()">
+<input type="button" value="返回" onclick="history.back()">
 <br>
 <?
 }
@@ -187,7 +187,7 @@ if  (!isset($_REQUEST['BackPersonalVPN']) ){
 	$query[]="Update User_TB Set UserFunc='$strFunc' where ID='{$_REQUEST['UserID']}'";
 	$query[]="delete from PersonalVPN_UserChargeTime_TB where UserAutoID={$UserAutoID} and FeeType='BackPerMonth'";
 if ((isset($_SESSION['AdminID'])) ){
-	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} �ر��� {$_SESSION['UserID']} �ĸ���VPN�ع����·���', '{$_SERVER['REMOTE_ADDR']}','UserAccount', NOW()) ";
+	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} 关闭了 {$_SESSION['UserID']} 的个人VPN回国包月服务', '{$_SERVER['REMOTE_ADDR']}','UserAccount', NOW()) ";
 }
 } else {
 	$haveOpen=strstr($strFunc,"BackVPNPersonal");
@@ -198,7 +198,7 @@ if ((isset($_SESSION['AdminID'])) ){
 		$query[]="replace into PersonalVPN_UserChargeTime_TB(UserAutoID,FeeType,UserChargeTime) values({$UserAutoID},'BackPerMonth','1999-01-01')";
 	}
 if ((isset($_SESSION['AdminID'])) ){
-	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} ���� {$_SESSION['UserID']} �ĸ���VPN�ع����·���', '{$_SERVER['REMOTE_ADDR']}','UserAccount', NOW()) ";
+	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} 打开了 {$_SESSION['UserID']} 的个人VPN回国包月服务', '{$_SERVER['REMOTE_ADDR']}','UserAccount', NOW()) ";
 }
 }
 $query[]="commit";
@@ -214,20 +214,20 @@ for ($i=0;$i<count($query);++$i){
 if ($success) {
 if (isset($HTTP_POST_VARS['BackPersonalVPN']) ) {
 ?>
-	���Ļع�ֱͨ�����°������ã�<br>
+	您的回国直通车包月版已启用！<br>
 <?
 include 'Include/BackMonthFee.php';
 } else {
 ?>
-	���Ļع�ֱͨ�����°湦���ѹرա�<br>
+	您的回国直通车包月版功能已关闭。<br>
 <?
 }
 } else {
 ?>
-	���ݿ����ʧ�ܣ����������Ա��<br>
-	�����û����ܿ���/�ر�ҳ��<br>
+	数据库操作失败！请联络管理员。<br>
+	返回用户功能开启/关闭页面<br>
 <br>
-<input type="button" value="����" onclick="history.back()">
+<input type="button" value="返回" onclick="history.back()">
 <br>
 <?
 }
@@ -238,13 +238,13 @@ if  (!isset($HTTP_POST_VARS['BackPersonalHourVPN']) ){
 	$strFunc=str_replace('BackHourVPNPersonal','',$strFunc);
 	$query[]="Update User_TB Set UserFunc='$strFunc' where ID='{$HTTP_SESSION_VARS['UserID']}'";
 if ((isset($_SESSION['AdminID'])) ){
-	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} �ر��� {$_SESSION['UserID']} �ĸ���VPN�ع���ʱ����', '{$_SERVER['REMOTE_ADDR']}', 'UserAccount', NOW()) ";
+	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} 关闭了 {$_SESSION['UserID']} 的个人VPN回国计时服务', '{$_SERVER['REMOTE_ADDR']}', 'UserAccount', NOW()) ";
 }
 } else {
 	$strFunc.=",BackHourVPNPersonal";
 	$query[]="Update User_TB Set UserFunc='$strFunc' where ID='{$HTTP_SESSION_VARS['UserID']}'";
 if ((isset($_SESSION['AdminID'])) ){
-	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} ���� {$_SESSION['UserID']} �ĸ��˻ع�VPN��ʱ����', '{$_SERVER['REMOTE_ADDR']}', 'UserAccount', NOW()) ";
+	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} 打开了 {$_SESSION['UserID']} 的个人回国VPN计时服务', '{$_SERVER['REMOTE_ADDR']}', 'UserAccount', NOW()) ";
 }
 }
 $query[]="commit";
@@ -260,19 +260,19 @@ for ($i=0;$i<count($query);++$i){
 if ($success) {
 if (isset($HTTP_POST_VARS['BackPersonalHourVPN'])) {
 ?>
-	���Ļع�ֱͨ����ʱ�������ã�<br>
+	您的回国直通车计时版已启用！<br>
 <?
 } else {
 ?>
-	���Ļع�ֱͨ����ʱ�湦���ѹرա�<br>
+	您的回国直通车计时版功能已关闭。<br>
 <?
 }
 } else {
 ?>
-	���ݿ����ʧ�ܣ����������Ա��<br>
-	�����û����ܿ���/�ر�ҳ��<br>
+	数据库操作失败！请联络管理员。<br>
+	返回用户功能开启/关闭页面<br>
 <br>
-<input type="button" value="����" onclick="history.back()">
+<input type="button" value="返回" onclick="history.back()">
 <br>
 <?
 }
@@ -284,7 +284,7 @@ if  (!isset($HTTP_POST_VARS['PersonalProxy']) ){
 	$strFunc=str_replace('PersonalProxy','',$strFunc);
 	$query[]="Update User_TB Set UserFunc='$strFunc' where ID='{$HTTP_SESSION_VARS['UserID']}'";
 if ((isset($_SESSION['AdminID'])) ){
-	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} �ر��� {$_SESSION['UserID']} �ĸ���VPN��������', '{$_SERVER['REMOTE_ADDR']}','UserAccount', NOW()) ";
+	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} 关闭了 {$_SESSION['UserID']} 的个人VPN代理服务', '{$_SERVER['REMOTE_ADDR']}','UserAccount', NOW()) ";
 }
 } else {
 
@@ -296,7 +296,7 @@ if ((isset($_SESSION['AdminID'])) ){
 		$query[]="replace into PersonalVPN_UserChargeTime_TB(UserAutoID,FeeType,UserChargeTime) values({$UserAutoID},'ProxyPerMonth','1999-01-01')";
 	}
 if ((isset($_SESSION['AdminID'])) ){
-	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} ���� {$_SESSION['UserID']} �ĸ���VPN��������', '{$_SERVER['REMOTE_ADDR']}','UserAccount',  NOW()) ";
+	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} 打开了 {$_SESSION['UserID']} 的个人VPN代理服务', '{$_SERVER['REMOTE_ADDR']}','UserAccount',  NOW()) ";
 }
 }
 $query[]="commit";
@@ -312,20 +312,20 @@ for ($i=0;$i<count($query);++$i){
 if ($success) {
 if (isset($HTTP_POST_VARS['PersonalProxy'])) {
 ?>
-	����ֱͨ�������������ã�<br>
+	您的直通车代理版已启用！<br>
 <?
 include 'Include/ProxyMonthFee.php';
 } else {
 ?>
-	����ֱͨ���������ѹرա�<br>
+	您的直通车代理版已关闭。<br>
 <?
 }
 } else {
 ?>
-	���ݿ����ʧ�ܣ����������Ա��<br>
-	�����û����ܿ���/�ر�ҳ��<br>
+	数据库操作失败！请联络管理员。<br>
+	返回用户功能开启/关闭页面<br>
 <br>
-<input type="button" value="����" onclick="history.back()">
+<input type="button" value="返回" onclick="history.back()">
 <br>
 <?
 }

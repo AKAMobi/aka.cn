@@ -17,18 +17,18 @@ if ( (!isset($HTTP_POST_VARS['ID'])) ||
 	){
 ?>
 
-	ȱ�ٱ�Ҫ����,�������ҷ���ϵ!
+	缺少必要数据,请速与我方联系!
 <?
 	exit(0);
 
 }
 
-$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("�޷�����DBM.");
-mysql_select_db( DB_NAME, $conn) or die("�޷������ݿ�.");
+$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("无法连接DBM.");
+mysql_select_db( DB_NAME, $conn) or die("无法打开数据库.");
 
 $result=mysql_query("select * from User_TB where ID='{$HTTP_POST_VARS['ID']}'");
 
-if (($row=mysql_fetch_array($result))){//��ID�Ѵ���
+if (($row=mysql_fetch_array($result))){//此ID已存在
 	header("Refresh: 0;URL={$_REQUEST['FailAddress']}?error=1&id={$_REQUEST['ID']}");
 	exit(0);
 }
@@ -42,7 +42,7 @@ if ($HTTP_POST_VARS['SuperiorUser']!="") {
 	else 
 	  $SuperUserID=$row['AutoID'];
 }
-if ( !$SuperUserRight ) { //��ϵ��ID�д���
+if ( !$SuperUserRight ) { //联系人ID有错误
 	header("Refresh: 0;URL={$_REQUEST['FailAddress']}?error=3&id={$_REQUEST['ID']}");
 	exit(0);
 } else {

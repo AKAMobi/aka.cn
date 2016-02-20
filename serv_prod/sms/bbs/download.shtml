@@ -10,19 +10,19 @@
 
         <tr> 
           <td valign="top"> <p><br>
-              <b><font color="#3366CC">��ǰλ��:</font> </b><a href="/index.shtml" class="a5">������ҳ</a> 
-              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">��Ʒ�����</a><font color="#458DE4"> &gt;
-          <a href="index.shtml" class="a5">BBS�ֻ����Ž���ƽ̨</a> &gt;</font> <font color="#458DE4">
-          ���п�����</font></p>
+              <b><font color="#3366CC">当前位置:</font> </b><a href="/index.shtml" class="a5">阿卡首页</a> 
+              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">产品与服务</a><font color="#458DE4"> &gt;
+          <a href="index.shtml" class="a5">BBS手机短信接入平台</a> &gt;</font> <font color="#458DE4">
+          运行库下载</font></p>
             <table width="475" cellspacing="0" cellpadding="0">
               <tr> 
-                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">Դ��������</td>
+                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">源代码下载</td>
               </tr>
             </table> 
             <br>
             <ul>
-            <li>SMS API��(Linuxϵͳƽ̨): <a href="libbbssms.tgz" class="a6">libbbssms.tgz</a><li>
-            Linuxϵͳ��ʾ���룺<a href="demo.tgz" class="a6">demo.tgz</a><br> 
+            <li>SMS API库(Linux系统平台): <a href="libbbssms.tgz" class="a6">libbbssms.tgz</a><li>
+            Linux系统演示代码：<a href="demo.tgz" class="a6">demo.tgz</a><br> 
             </ul>
             <p>
             <br>
@@ -40,7 +40,7 @@
 
         <tr> 
 
-          <td colspan="2">��</td>
+          <td colspan="2">　</td>
 
         </tr>
 
@@ -48,7 +48,7 @@
 
           <td bgcolor="C3D4F4" colspan="2"> 
 
-            <div align="left"><font color="032B7A"><b><font face="Arial"> �������</font></b></font></div>
+            <div align="left"><font color="032B7A"><b><font face="Arial"> 相关链接</font></b></font></div>
 
           </td>
 
@@ -62,7 +62,7 @@
 
           </td>
 
-          <td><a href="/serv_prod/index.shtml" class="a6">��Ʒ�����</a></td>
+          <td><a href="/serv_prod/index.shtml" class="a6">产品与服务</a></td>
 
         </tr>
 

@@ -16,47 +16,47 @@ function register(){
 </script>
 
 <form id="oForm" name="RegisterForm" method="post" action="http://www.aka.cn/my/UserRegister_ForEmuch.php">
-        <!-- ÓÃ»§ID -->
+        <!-- ç”¨æˆ·ID -->
 		<input type="hidden" id="oID" name="ID" value="roytest2">
-        <!-- ÃÜÂë -->
+        <!-- å¯†ç  -->
         <input type="hidden" id="oPassword" name="Password" value="123" >
-        <!-- ÐÕÃû -->
-        <input type="hidden" id="oUserName" name="UserName" value="Çø»®">
-        <!-- ÖÐ¹úÉí·ÝÖ¤ºÅ -->
+        <!-- å§“å -->
+        <input type="hidden" id="oUserName" name="UserName" value="åŒºåˆ’">
+        <!-- ä¸­å›½èº«ä»½è¯å· -->
         <input type="hidden" id="oIdNum" name="IdNum" value="10000000">
-        <!-- µ¥Î»Ãû³Æ -->
-        <input type="hidden" id="oCompany" name="Company" value="Çå·çÐ¡Ä¾³æ">
-        <!-- ÁªÏµµç»° -->
+        <!-- å•ä½åç§° -->
+        <input type="hidden" id="oCompany" name="Company" value="æ¸…é£Žå°æœ¨è™«">
+        <!-- è”ç³»ç”µè¯ -->
         <input type="hidden" id="oTel" name="Tel" value="234234">
-        <!-- ÊÖ»ú -->
+        <!-- æ‰‹æœº -->
         <input type="hidden" id="oMobile" name="Mobile" value="111111">
-        <!-- µç×ÓÓÊÏä  -->
+        <!-- ç”µå­é‚®ç®±  -->
         <input type="hidden" id="oEMail" name="EMail" value="test@kaka.com">
-		<!-- µØÖ· -->
-		<input type="hidden" id="oAddress" name="Address" value="±±Ê¦´ó">
-		<!-- ÓÊ±à -->
+		<!-- åœ°å€ -->
+		<input type="hidden" id="oAddress" name="Address" value="åŒ—å¸ˆå¤§">
+		<!-- é‚®ç¼– -->
 		<input type="hidden" id="oZipCode" name="ZipCode" value="100083">
-		<!-- ÍÆ¼öÈË(ÄúÔÚÎÒ·½×¢²áµÄid,ÇëÎð¸Ä¶¯ -->
+		<!-- æŽ¨èäºº(æ‚¨åœ¨æˆ‘æ–¹æ³¨å†Œçš„id,è¯·å‹¿æ”¹åŠ¨ -->
         <input type="hidden" id="oSuperiorUser" name="SuperiorUser" value="emuch" > 
-		<!-- ×¢²á³É¹¦ºó·µ»ØµÄµØÖ· -->
+		<!-- æ³¨å†ŒæˆåŠŸåŽè¿”å›žçš„åœ°å€ -->
 		<input type="hidden" name="SuccessAddress" value="http://www.google.com/index.html" >
-		<!-- ×¢²áÊ§°Ü·µ»ØµÄµØÖ· -->
+		<!-- æ³¨å†Œå¤±è´¥è¿”å›žçš„åœ°å€ -->
 		<input type="hidden" name="FailAddress" value="http://www.yahoo.com/index.html" >
 
-		<input type="button" value="×¢²á" onclick="register();">
+		<input type="button" value="æ³¨å†Œ" onclick="register();">
 
 <!--
-×¢²áÊ§°ÜÊ±ÎÒ·½³ÌÐò»áÓÃGET·½Ê½µ÷ÓÃÄúÔÚfailAddressÖÐÖ¸¶¨µÄCGIÍøÒ³´¦Àí£¬
-¸ñÊ½ÊÇhttp://CGIÍøÒ³?error=´íÎó´úÂë&id=×¢²áÓÃ»§µÄID
-´íÎó´úÂë¶¨Òå£º
-1  --  ÓÃ»§IDÓëÒÑÓÐµÄÓÃ»§ÖØ¸´(½¨Òé£ºÄú¿ÉÒÔÔÚÄúµÄÓÃ»§IDÇ°¼ÓÇ°×º£¬ÕâÑù¿ÉÒÔ·ÀÖ¹ÄãµÄÓÃ»§
-ÓëÎÒÃÇÒÑÓÐµÄÓÃ»§IDÖØ¸´£©
-2  --  Êý¾Ý¿â²Ù×÷Ê§°Ü£¨³öÏÖ´Ë´íÎóÇëÓëÎÒÃÇÁªÏµ£©
-3 -- ÍÆ¼öÈË´íÎó.ÇëËÙÓëÎÒ·½ÁªÏµ!
+æ³¨å†Œå¤±è´¥æ—¶æˆ‘æ–¹ç¨‹åºä¼šç”¨GETæ–¹å¼è°ƒç”¨æ‚¨åœ¨failAddressä¸­æŒ‡å®šçš„CGIç½‘é¡µå¤„ç†ï¼Œ
+æ ¼å¼æ˜¯http://CGIç½‘é¡µ?error=é”™è¯¯ä»£ç &id=æ³¨å†Œç”¨æˆ·çš„ID
+é”™è¯¯ä»£ç å®šä¹‰ï¼š
+1  --  ç”¨æˆ·IDä¸Žå·²æœ‰çš„ç”¨æˆ·é‡å¤(å»ºè®®ï¼šæ‚¨å¯ä»¥åœ¨æ‚¨çš„ç”¨æˆ·IDå‰åŠ å‰ç¼€ï¼Œè¿™æ ·å¯ä»¥é˜²æ­¢ä½ çš„ç”¨æˆ·
+ä¸Žæˆ‘ä»¬å·²æœ‰çš„ç”¨æˆ·IDé‡å¤ï¼‰
+2  --  æ•°æ®åº“æ“ä½œå¤±è´¥ï¼ˆå‡ºçŽ°æ­¤é”™è¯¯è¯·ä¸Žæˆ‘ä»¬è”ç³»ï¼‰
+3 -- æŽ¨èäººé”™è¯¯.è¯·é€Ÿä¸Žæˆ‘æ–¹è”ç³»!
 
 
-×¢²á³É¹¦Ê±ÎÒ·½³ÌÐò»áÓÃGET·½Ê½µ÷ÓÃÄúÔÚSuccessAddressÖÐÖ¸¶¨µÄCGIÍøÒ³¡£
-¸ñÊ½ÊÇ£ºhttp://CGIÍøÒ³?id=³É¹¦×¢²áµÄÓÃ»§ID
+æ³¨å†ŒæˆåŠŸæ—¶æˆ‘æ–¹ç¨‹åºä¼šç”¨GETæ–¹å¼è°ƒç”¨æ‚¨åœ¨SuccessAddressä¸­æŒ‡å®šçš„CGIç½‘é¡µã€‚
+æ ¼å¼æ˜¯ï¼šhttp://CGIç½‘é¡µ?id=æˆåŠŸæ³¨å†Œçš„ç”¨æˆ·ID
 -->
   </form>
 

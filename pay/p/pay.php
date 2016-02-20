@@ -11,9 +11,9 @@ require_once( "header.inc.php" );
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-                </font><a href="/my/" class="a5">ÎÒµÄ°¢¿¨</a><font color="#458DE4">&gt; 
-                </font><a href="/my/money/netpay.php" class="a5">ÍøÉÏÖ§¸¶</a>
+                å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+                </font><a href="/my/" class="a5">æˆ‘çš„é˜¿å¡</a><font color="#458DE4">&gt; 
+                </font><a href="/my/money/netpay.php" class="a5">ç½‘ä¸Šæ”¯ä»˜</a>
 				<br>
                 <br>
               <p>&nbsp;</p>
@@ -27,23 +27,23 @@ require_once( "header.inc.php" );
 <?
 if ( (!isset($_REQUEST['u']) ) ) {
 ?>
-ÇëÖ¸¶¨ÓÃ»§ID<br>
+è¯·æŒ‡å®šç”¨æˆ·ID<br>
 <?
 }else {
 ?>
 <br><br><br>
 
-<p align=center>Äú¿ÉÒÔÓÃ¼¸ºõËùÓÐµÄÖ§³ÖÍøÉÏÖ§¸¶µÄ´¢Ðî¿¨/ÐÅÓÃ¿¨½øÐÐÖ§¸¶£¬°üÀ¨¹ú¼ÊÐÅÓÃ¿¨¡£</p>
+<p align=center>æ‚¨å¯ä»¥ç”¨å‡ ä¹Žæ‰€æœ‰çš„æ”¯æŒç½‘ä¸Šæ”¯ä»˜çš„å‚¨è“„å¡/ä¿¡ç”¨å¡è¿›è¡Œæ”¯ä»˜ï¼ŒåŒ…æ‹¬å›½é™…ä¿¡ç”¨å¡ã€‚</p>
 <center>
 <form action="prepare.php" name=form method=post>
-ÇëÊäÈë½ð¶î£º<br>
+è¯·è¾“å…¥é‡‘é¢ï¼š<br>
 Please input the amount:<p>
-<input type=text name=MoneyCount size=4><br>(ÈËÃñ±ÒÖ§¸¶µ¥Î»ÎªÈËÃñ±Ò£¬US$ pay unit is US$)<p>
-<input type=radio name=MoneyType value=0 checked>ÈËÃñ±ÒÖ§¸¶<br>  <input type=radio name=MoneyType value=1>US$ Pay US$<p>
+<input type=text name=MoneyCount size=4><br>(äººæ°‘å¸æ”¯ä»˜å•ä½ä¸ºäººæ°‘å¸ï¼ŒUS$ pay unit is US$)<p>
+<input type=radio name=MoneyType value=0 checked>äººæ°‘å¸æ”¯ä»˜<br>  <input type=radio name=MoneyType value=1>US$ Pay US$<p>
 <input type=hidden name=UserID value=<?=$_REQUEST['u']?>>
 <input type=hidden name=BackURL value="http://pay.aka.cn/p/payback.php?u=<?=$_REQUEST['u']?>">
 
-<input type=submit name=submit value='È¥ÒøÐÐ¸¶¿î Go to pay it!'>
+<input type=submit name=submit value='åŽ»é“¶è¡Œä»˜æ¬¾ Go to pay it!'>
 </form>
 </center>
 <br><br><br>

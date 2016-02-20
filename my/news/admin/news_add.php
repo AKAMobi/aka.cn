@@ -3,14 +3,14 @@ session_start();
 require_once("../header.inc.php");
 echo '<link rel="stylesheet" href="../font.css" type="text/css">';
 $sub1=$HTTP_POST_VARS['sub1'];
-if($sub1=="Ìí¼Ó"){
+if($sub1=="æ·»åŠ "){
 $files=$HTTP_POST_FILES['files'];
 $ExistClass=$HTTP_POST_VARS['ExistClass'];
 $OldClass=$HTTP_POST_VARS['OldClass'];
 $NewClass=$HTTP_POST_VARS['NewClass'];
 $Body=$HTTP_POST_VARS['Body'];
 $Title=$HTTP_POST_VARS['Title'];
-//ÅĞ¶ÏÊÇ·ñÓĞÍ¼Æ¬ÉÏ´«£¬²¢½¨Á¢ÉÏ´«Í¼Æ¬ËùĞèÄ¿Â¼
+//åˆ¤æ–­æ˜¯å¦æœ‰å›¾ç‰‡ä¸Šä¼ ï¼Œå¹¶å»ºç«‹ä¸Šä¼ å›¾ç‰‡æ‰€éœ€ç›®å½•
 if($files){
 echo "<h1>" . $IMGROOT.date("Y") . "</h1>";
 echo "<h1>pic: " . $files['name'] . "</h1>";
@@ -21,9 +21,9 @@ if(!is_dir($IMGROOT.date("Y").'/'.date("m"))){
 	mkdir($IMGROOT.date("Y").'/'.date("m"),0777);
 }
 $thistime=date("dHis");
-//ÉÏ´«Í¼Æ¬
+//ä¸Šä¼ å›¾ç‰‡
 $ImagePath=$IMGROOT.date("Y").'/'.date("m").'/';
-foreach ($files['name'] as $key=>$name) { //ÕâÀï¿ÉÒÔ¼ì²éÉÏ´«ÎÄ¼şµÄ´óĞ¡ºÍÀ©Õ¹Ãû(jpg.gif.bmp.pngµÈ)
+foreach ($files['name'] as $key=>$name) { //è¿™é‡Œå¯ä»¥æ£€æŸ¥ä¸Šä¼ æ–‡ä»¶çš„å¤§å°å’Œæ‰©å±•å(jpg.gif.bmp.pngç­‰)
     if ($files['size'][$key]) { 
        $location=$ImagePath.$thistime.'-'.$name; 
 	   $ImagePath=$name;
@@ -33,35 +33,27 @@ foreach ($files['name'] as $key=>$name) { //ÕâÀï¿ÉÒÔ¼ì²éÉÏ´«ÎÄ¼şµÄ´óĞ¡ºÍÀ©Õ¹Ãû(j
 }
 //$ImagePath=$name;
 }else $ImagePath='';
-//¼ì²éÊÇ·ñÎªĞÂÔöĞÂÎÅÀàĞÍ
+//æ£€æŸ¥æ˜¯å¦ä¸ºæ–°å¢æ–°é—»ç±»å‹
 if($ExistClass=="yes"){$Class=$OldClass;}else{$Class=$NewClass;}
-//Ìæ»»µô»Ø³µºÍ¿Õ¸ñ£¬ÒÔ±ãÔÚhtmlÎÄ¼şÖĞÕı³£ÏÔÊ¾
+//æ›¿æ¢æ‰å›è½¦å’Œç©ºæ ¼ï¼Œä»¥ä¾¿åœ¨htmlæ–‡ä»¶ä¸­æ­£å¸¸æ˜¾ç¤º
 //$Body=ereg_replace(" ","&nbsp;",$Body);
 //$Body=ereg_replace("\n","<br>",$Body);
 $Body=htmlspecialchars( $Body );
-//Ìí¼Ó¼ÇÂ¼
+//æ·»åŠ è®°å½•
 $thistime=date("Y-m-d H:i:s");
 mysql_query("insert into News_TB (Class,PostDate,Important,Poster,Title,Body,ImagePath) values ('$Class','$thistime','$Important','$AdminName','$Title','$Body','$ImagePath')");
 
-echo '<script language="javascript">alert("ĞÂÎÅÌí¼ÓÍê±Ï!");top.location="update.php";</script>';
+echo '<script language="javascript">alert("æ–°é—»æ·»åŠ å®Œæ¯•!");top.location="update.php";</script>';
 
 }
 ?>
 <form name="form1" method="post" action="" enctype="multipart/form-data">
 <table border=1>
-<tr><td>ĞÂÎÅÀàĞÍ£ºÔ­ÓĞĞÂÎÅÀàĞÍ<input type="radio" name="ExistClass" value="yes" checked><select name="OldClass">
+<tr><td>æ–°é—»ç±»å‹ï¼šåŸæœ‰æ–°é—»ç±»å‹<input type="radio" name="ExistClass" value="yes" checked><select name="OldClass">
 	<?
 	$rst=mysql_query("select Class from News_TB group by Class");
 	while($row=mysql_fetch_row($rst)){
 	echo '<option value="'.$row[0].'">'.$row[0].'</option>';
     }
 	?>
-	</select><br>£ £ £ £ £ Ôö¼ÓĞÂÎÅÀàĞÍ<input type="radio" name="ExistClass" value="no"><input type="text" name="NewClass" size=20></td></tr>
-<tr><td>ÊÇ·ñÎªÖØÒªĞÂÎÅ£º<input type="radio" name="Important" value="N" checked>·ñ<input type="radio" name="Important" value="Y">ÊÇ</td></tr>
-<tr><td>Ñ¡ÔñÍ¼Æ¬ÉÏ´«£º<input type=file name=files[] size=20></td></tr>
-<tr><td>ĞÂÎÅÌâÄ¿<input type="text" name="Title" size=70></td></tr>
-<tr><td>ĞÂÎÅÄÚÈİ<textarea name="Body" wrap="VIRTUAL" cols="70" rows="20"></textarea></td></tr>
-<tr><td><input type="submit" name="sub1" value="Ìí¼Ó"></td></tr>
-</table>
-</form>
-<?require_once("../footer.inc.php");?>
+	</select><br>

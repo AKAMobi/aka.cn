@@ -6,14 +6,14 @@ require_once("zdmin.inc.php");
 
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
-ÄúÉÐÎ´µÇÂ½¡£<br>
+æ‚¨å°šæœªç™»é™†ã€‚<br>
 <?
 }else {
 
 if ( (!isset($_SESSION['AdminAdmin'])) ) {
 ?>
  <td align="center" >
-ÄãÃ»ÓÐ¹ÜÀíÆäËû¹ÜÀíÔ±µÄÈ¨ÏÞ<br>
+ä½ æ²¡æœ‰ç®¡ç†å…¶ä»–ç®¡ç†å‘˜çš„æƒé™<br>
 <?
 } else {
 ?>
@@ -53,21 +53,21 @@ function sortPrivilegeType(){
 </OBJECT>
 <TABLE border="0" width="530" datasrc="#AdminList">
 <thead>
-<th onclick="return sortOnAdminID();">¹ÜÀíÔ±</th>
-<th >ÐÕÃû</th>
-<th onclick="return sortOnLogTime();">È¨ÏÞ</th>
-<th >ÐÞ¸ÄÃÜÂë</th>
-<th >ÐÞ¸ÄÐÕÃû/È¨ÏÞ</th>
-<th >É¾³ý´ËÕËºÅ</th>
+<th onclick="return sortOnAdminID();">ç®¡ç†å‘˜</th>
+<th >å§“å</th>
+<th onclick="return sortOnLogTime();">æƒé™</th>
+<th >ä¿®æ”¹å¯†ç </th>
+<th >ä¿®æ”¹å§“å/æƒé™</th>
+<th >åˆ é™¤æ­¤è´¦å·</th>
 </thead>
 <tbody>
 <tr>
 <td align="center"><SPAN datafld="adminID"></span></td>
 <td align="center"><SPAN datafld="Name"></span></td>
 <td align="center"><SPAN datafld="Privilege"></span></td>
-<td align="center"><A datafld="modifyPasswordURL" class="a6">ÐÞ¸ÄÃÜÂë</a></td>
-<td align="center"><a datafld="modifyPrivilegeURL" class="a6">ÐÞ¸ÄÐÕÃû/È¨ÏÞ</a></td>
-<td align="center"><a datafld="deleteAdminURL" class="a6">É¾³ý´ËÕËºÅ</a></td>
+<td align="center"><A datafld="modifyPasswordURL" class="a6">ä¿®æ”¹å¯†ç </a></td>
+<td align="center"><a datafld="modifyPrivilegeURL" class="a6">ä¿®æ”¹å§“å/æƒé™</a></td>
+<td align="center"><a datafld="deleteAdminURL" class="a6">åˆ é™¤æ­¤è´¦å·</a></td>
 </tr>
 </tbody>
 </table>

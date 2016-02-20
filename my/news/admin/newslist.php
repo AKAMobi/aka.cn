@@ -3,7 +3,7 @@
 <?
 require_once("../header.inc.php");
 if (!isset($date_year)){
-	echo "½ñÌìÈÕÆÚ£º".date("Y-m-d")."<br>";
+	echo "ä»Šå¤©æ—¥æœŸï¼š".date("Y-m-d")."<br>";
 	exit;
 }
 if (!$area=='0'){
@@ -17,7 +17,7 @@ $news_date1=$date_year.'-'.$date_month.'-'.$date_day.' 0:0:0';
 $news_date2=$date_year.'-'.$date_month.'-'.$date_day.' 23:59:59';
 $result = mysql_query("select count(*) from News_TB where PostDate>='$news_date1' and PostDate<='$news_date2'".$condition);
 $ca = mysql_fetch_array($result );
-echo "±¾ÈÕ¹²ÓĞĞÂÎÅ " . $ca[0] . " Ìõ¡£<br>";
+echo "æœ¬æ—¥å…±æœ‰æ–°é—» " . $ca[0] . " æ¡ã€‚<br>";
 ?>
 <br><br>
 <?

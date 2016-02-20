@@ -6,39 +6,39 @@ require_once("zdmin.inc.php");
 
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
-ÄúÉÐÎ´µÇÂ½¡£<br>
+æ‚¨å°šæœªç™»é™†ã€‚<br>
 <?
 }else {
 
 if ( (!isset($_SESSION['AdminAdmin'])) ) {
 ?>
  <td align="center" >
-ÄãÃ»ÓÐ¹ÜÀíÆäËû¹ÜÀíÔ±µÄÈ¨ÏÞ<br>
+ä½ æ²¡æœ‰ç®¡ç†å…¶ä»–ç®¡ç†å‘˜çš„æƒé™<br>
 <?
 } else {
 
 if (!isset($_REQUEST['NewPassword1'])) {
 ?>
-ÄúÎ´ÕýÈ·ÊäÈëÐÂÃÜÂë!
+æ‚¨æœªæ­£ç¡®è¾“å…¥æ–°å¯†ç !
 <?
 }else {
 require "{$ADMINROOT}/Include/InitDB.php"; 
 $result=mysql_query("select ID from AdminUser_TB where ID='{$_REQUEST['AdminID']}'");
 
-if (!($row=mysql_fetch_array($result))){//´Ë¹ÜÀíÔ±ÒÑ´æÔÚ
+if (!($row=mysql_fetch_array($result))){//æ­¤ç®¡ç†å‘˜å·²å­˜åœ¨
 ?>
-´Ë¹ÜÀíÔ±²»´æÔÚ£¡<BR>
+æ­¤ç®¡ç†å‘˜ä¸å­˜åœ¨ï¼<BR>
 <?
 } else{
 $passwd=crypt($_REQUEST['NewPassword1']);
 if (mysql_query("Update AdminUser_TB set Password='{$passwd}' where ID='{$_REQUEST['AdminID']}'")) {
-	mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} ¸ü»»ÁË¹ÜÀíÔ± {$_REQUEST['AdminID']} µÄÃÜÂë', '{$_SERVER['REMOTE_ADDR']}','Admin', NOW()) ", $conn);
+	mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} æ›´æ¢äº†ç®¡ç†å‘˜ {$_REQUEST['AdminID']} çš„å¯†ç ', '{$_SERVER['REMOTE_ADDR']}','Admin', NOW()) ", $conn);
 ?>
-	¹ÜÀíÔ± <? echo $_REQUEST['AdminID']; ?> ÃÜÂëÐÞ¸Ä³É¹¦£¡<br>
+	ç®¡ç†å‘˜ <? echo $_REQUEST['AdminID']; ?> å¯†ç ä¿®æ”¹æˆåŠŸï¼<br>
 <?
 } else {
 ?>
-	Êý¾Ý¿â²Ù×÷Ê§°Ü£¡ÇëÁªÂç¹ÜÀíÔ±¡£<br>
+	æ•°æ®åº“æ“ä½œå¤±è´¥ï¼è¯·è”ç»œç®¡ç†å‘˜ã€‚<br>
 <?
 }
 

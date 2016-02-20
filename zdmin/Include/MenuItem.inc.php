@@ -5,47 +5,47 @@ if (isset($_SESSION['AdminID'])){
 ?>
 ItemURL,ItemName
 <? if (isset($_SESSION['UserAccountAdmin'])) { ?>
-<? echo $ADMINURLROOT; ?>/UserAccount/ApproveUser.php,ÉóÅúÓÃ»§×¢²á
+<? echo $ADMINURLROOT; ?>/UserAccount/ApproveUser.php,å®¡æ‰¹ç”¨æˆ·æ³¨å†Œ
 <? } ?>
 <? if (isset($_SESSION['UserAccountAdmin'])) { ?>
-<? echo $ADMINURLROOT; ?>/UserAccount/ApproveUserValidate.php,ÉóÅúÓÃ»§ÊÖ»úÈÏÖ¤
+<? echo $ADMINURLROOT; ?>/UserAccount/ApproveUserValidate.php,å®¡æ‰¹ç”¨æˆ·æ‰‹æœºè®¤è¯
 <? } ?>
 <? if (isset($_SESSION['NewsAdmin'])) { ?>
-<? echo $ADMINURLROOT; ?>/News/NewsAdmin.php,ĞÂÎÅ¹ÜÀí
+<? echo $ADMINURLROOT; ?>/News/NewsAdmin.php,æ–°é—»ç®¡ç†
 <? } ?>
 <? if (isset($_SESSION['PersonalVPNAdmin'])) { ?>
-<? echo $ADMINURLROOT; ?>/PersonalVPN/ViewUserOnLine.php,²ì¿´¸öÈËVPNÔÚÏßÓÃ»§ĞÅÏ¢
+<? echo $ADMINURLROOT; ?>/PersonalVPN/ViewUserOnLine.php,å¯Ÿçœ‹ä¸ªäººVPNåœ¨çº¿ç”¨æˆ·ä¿¡æ¯
 <? } ?>
 <? if (isset($_SESSION['UserAccountAdmin'])) { ?>
-<? echo $ADMINURLROOT; ?>/UserAccount/FindUser.php,²ì¿´¡¢ĞŞ¸ÄÓÃ»§ĞÅÏ¢
+<? echo $ADMINURLROOT; ?>/UserAccount/FindUser.php,å¯Ÿçœ‹ã€ä¿®æ”¹ç”¨æˆ·ä¿¡æ¯
 <? } ?>
 <? if (isset($_SESSION['UserAccountAdmin'])) { ?>
-<? echo $ADMINURLROOT; ?>/PersonalVPN/ViewInvestigateResult.php,²ì¿´¸öÈËVPNÓÃ»§µ÷²é½á¹û
+<? echo $ADMINURLROOT; ?>/PersonalVPN/ViewInvestigateResult.php,å¯Ÿçœ‹ä¸ªäººVPNç”¨æˆ·è°ƒæŸ¥ç»“æœ
 <? } ?>
 <? if (isset($_SESSION['LogAdmin'])) { ?>
-<? echo $ADMINURLROOT; ?>/Log/ViewLog.php,²ì¿´¹ÜÀíÈÕÖ¾
+<? echo $ADMINURLROOT; ?>/Log/ViewLog.php,å¯Ÿçœ‹ç®¡ç†æ—¥å¿—
 <? } ?>
 <? if (isset($_SESSION['MoneyAdmin'])) { ?>
-<? echo $ADMINURLROOT; ?>/Money/AddUserMoney.php,¸øÓÃ»§¼Ó£¨¼õ£©Ç®
+<? echo $ADMINURLROOT; ?>/Money/AddUserMoney.php,ç»™ç”¨æˆ·åŠ ï¼ˆå‡ï¼‰é’±
 <? } ?>
 <? if (isset($_SESSION['MoneyAdmin'])) { ?>
-<? echo $ADMINURLROOT; ?>/Money/AddAllUserMoney.php,¸øËùÓĞÓÃ»§¼Ó£¨¼õ£©Ç®
+<? echo $ADMINURLROOT; ?>/Money/AddAllUserMoney.php,ç»™æ‰€æœ‰ç”¨æˆ·åŠ ï¼ˆå‡ï¼‰é’±
 <? } ?>
 <? if (isset($_SESSION['AdminAdmin'])) { ?>
-<? echo $ADMINURLROOT; ?>/AdminUser/AdminUserControl.php,¹ÜÀíÔ±ÕËºÅ¹ÜÀí
+<? echo $ADMINURLROOT; ?>/AdminUser/AdminUserControl.php,ç®¡ç†å‘˜è´¦å·ç®¡ç†
 <? } ?>
 <? if (isset($_SESSION['SMSChildAdmin'])) { ?>
-<? echo $ADMINURLROOT; ?>/SMSChild/SMSChildControl.php,¶ÌĞÅ¿Í»§¹ÜÀí
+<? echo $ADMINURLROOT; ?>/SMSChild/SMSChildControl.php,çŸ­ä¿¡å®¢æˆ·ç®¡ç†
 <? } ?>
 <? if (isset($_SESSION['SMSLogAdmin'])) { ?>
-<? echo $ADMINURLROOT; ?>/SMSLog/ViewLog.php,¶ÌĞÅ¼ÇÂ¼²éÑ¯
+<? echo $ADMINURLROOT; ?>/SMSLog/ViewLog.php,çŸ­ä¿¡è®°å½•æŸ¥è¯¢
 <? } ?>
 <? if (isset($_SESSION['SMSLogAdmin'])) { ?>
-<? echo $ADMINURLROOT; ?>/SMSLog/ViewStatistics.php,¶ÌĞÅ¼ÇÂ¼Í³¼Æ
+<? echo $ADMINURLROOT; ?>/SMSLog/ViewStatistics.php,çŸ­ä¿¡è®°å½•ç»Ÿè®¡
 <? } ?>
-<? echo $ADMINURLROOT; ?>/ChangePassword.php,¸ü»»ÃÜÂë
-<? echo $ADMINURLROOT; ?>/sms/SendSMS.php,·¢ËÍ¶ÌĞÅ
-<? echo $ADMINURLROOT; ?>/Logout.php,ÍË³öµÇÂ¼
+<? echo $ADMINURLROOT; ?>/ChangePassword.php,æ›´æ¢å¯†ç 
+<? echo $ADMINURLROOT; ?>/sms/SendSMS.php,å‘é€çŸ­ä¿¡
+<? echo $ADMINURLROOT; ?>/Logout.php,é€€å‡ºç™»å½•
 <? 
 }
 ?>

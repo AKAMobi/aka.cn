@@ -6,14 +6,14 @@ require_once("zdmin.inc.php");
 
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
-ÄúÉÐÎ´µÇÂ½¡£<br>
+æ‚¨å°šæœªç™»é™†ã€‚<br>
 <?
 }else {
 
 if ( (!isset($_SESSION['NewsAdmin'])) ) {
 ?>
  <td align="center" >
-ÄãÃ»ÓÐÐÂÎÅ¹ÜÀíµÄÈ¨ÏÞ<br>
+ä½ æ²¡æœ‰æ–°é—»ç®¡ç†çš„æƒé™<br>
 <?
 } else {
 
@@ -35,15 +35,15 @@ $area = $_REQUEST['area'];
 $start_date = "{$year}-{$month}-01" ;
 $end_date = "{$year}-{$month}-31" ;
 
-echo "ÈÕÆÚ£º{$year}-{$month}<br>";
+echo "æ—¥æœŸï¼š{$year}-{$month}<br>";
 
-echo "·ÖÀà£º";
+echo "åˆ†ç±»ï¼š";
 if ((isset($_REQUEST['area'])) && ($_REQUEST['area']!='0')){
 	$condition=" and Class='".$_REQUEST['area']."'";
 	echo $_REQUEST['area'];
 }else{
 	$condition='';
-	echo "ÎÞ";
+	echo "æ— ";
 }
 
 ?>
@@ -52,7 +52,7 @@ if ((isset($_REQUEST['area'])) && ($_REQUEST['area']!='0')){
 
 $result = mysql_query("select count( * ) from News_TB where PostDate>='$start_date' and PostDate<='$end_date'" . $condition );
 $ca = mysql_fetch_array( $result );
-echo "<br><br><br>±¾ÔÂ¹²ÓÐ´ËÀàÐÂÎÅ " . $ca[0] . " Ìõ¡£<br>";
+echo "<br><br><br>æœ¬æœˆå…±æœ‰æ­¤ç±»æ–°é—» " . $ca[0] . " æ¡ã€‚<br>";
 ?>
 <br><br>
 <?

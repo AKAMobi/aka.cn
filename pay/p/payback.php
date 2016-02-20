@@ -1,10 +1,10 @@
 <?
 /*
-Ö§¸¶Íê³ÉºóÒ³Ãæ×ªµ½ÉÌ»§Ê±£¬´ÓÊ×¶¼µç×ÓÉÌ³Ç·µ»ØµÄÏûÏ¢¸ñÊ½(×¢Òâ£¬Óë¶¨Ê±·¢ËÍ·½Ê½Ê¹ÓÃµÄÏûÏ¢¸ñÊ½ÓĞÇø±ğ)Îª£º
-http://v_url?v_oid=19990720-*-000001234&v_pstatus=30&v_pstring=ÎŞĞ§¿¨ºÅ&v_pmode=Ö§¸¶·½Ê½(×Ö·û´®)&v_md5info=a1b2c3d4e5f6 a1b2c3d4e5f6 a1b2c3d4
-¸ÃÏûÏ¢¸ñÊ½ÏêÏ¸½âÊÍÈçÏÂ£º
-v_urlÎª¸Ã¶©µ¥Ìá½»Ê±´«ËÍÉÏÀ´µÄ²ÎÊı
-Capinfoµ½ÉÌ»§µÄ½Ó¿Ú
+æ”¯ä»˜å®Œæˆåé¡µé¢è½¬åˆ°å•†æˆ·æ—¶ï¼Œä»é¦–éƒ½ç”µå­å•†åŸè¿”å›çš„æ¶ˆæ¯æ ¼å¼(æ³¨æ„ï¼Œä¸å®šæ—¶å‘é€æ–¹å¼ä½¿ç”¨çš„æ¶ˆæ¯æ ¼å¼æœ‰åŒºåˆ«)ä¸ºï¼š
+http://v_url?v_oid=19990720-*-000001234&v_pstatus=30&v_pstring=æ— æ•ˆå¡å·&v_pmode=æ”¯ä»˜æ–¹å¼(å­—ç¬¦ä¸²)&v_md5info=a1b2c3d4e5f6 a1b2c3d4e5f6 a1b2c3d4
+è¯¥æ¶ˆæ¯æ ¼å¼è¯¦ç»†è§£é‡Šå¦‚ä¸‹ï¼š
+v_urlä¸ºè¯¥è®¢å•æäº¤æ—¶ä¼ é€ä¸Šæ¥çš„å‚æ•°
+Capinfoåˆ°å•†æˆ·çš„æ¥å£
 <form method=get action="*" target=_self> 
     <input type="hidden" name="v_oid" value="">
     <input type="hidden" name="v_pstatus" value=""> 
@@ -12,18 +12,18 @@ Capinfoµ½ÉÌ»§µÄ½Ó¿Ú
     <input type="hidden" name="v_pmode" value="">
     <input type="hidden" name="v_md5info" value=""> 
  </form> 
-ÆäÖĞ£¬ 
-*ÎªÉÌ»§·¢ËÍµÄv_url£» 
-v_oid = ÉÌ»§·¢ËÍµÄv_oid¶¨µ¥±àºÅ£»
-v_pmode = Ö§¸¶·½Ê½(×Ö·û´®); 
-v_pstatus = 1£¨ÒÑÌá½»£¬¶Ô²»Ö§³ÖÊµÊ±µÄÒøĞĞ£©
-        20£¨Ö§¸¶³É¹¦£¬¶ÔÖ§³ÖÊµÊ±µÄÒøĞĞ£©
-        30£¨Ö§¸¶Ê§°Ü£¬¶ÔÖ§³ÖÊµÊ±µÄÒøĞĞ£©£» 
-v_pstring Ö§¸¶½á¹ûËµÃ÷
+å…¶ä¸­ï¼Œ 
+*ä¸ºå•†æˆ·å‘é€çš„v_urlï¼› 
+v_oid = å•†æˆ·å‘é€çš„v_oidå®šå•ç¼–å·ï¼›
+v_pmode = æ”¯ä»˜æ–¹å¼(å­—ç¬¦ä¸²); 
+v_pstatus = 1ï¼ˆå·²æäº¤ï¼Œå¯¹ä¸æ”¯æŒå®æ—¶çš„é“¶è¡Œï¼‰
+        20ï¼ˆæ”¯ä»˜æˆåŠŸï¼Œå¯¹æ”¯æŒå®æ—¶çš„é“¶è¡Œï¼‰
+        30ï¼ˆæ”¯ä»˜å¤±è´¥ï¼Œå¯¹æ”¯æŒå®æ—¶çš„é“¶è¡Œï¼‰ï¼› 
+v_pstring æ”¯ä»˜ç»“æœè¯´æ˜
 v_md5info =char* hmac_md5(char* text, char* key)
-          char* text     Æ´´®½á¹û
-          char* key    ¶Ô³ÆÃÜÔ¿
-×¢£ºMD5Ğ£ÑéÊ±Æ´½Ó×Ö·û´®µÄË³ĞòÎª£ºv_oid£¬v_pstatus£¬v_pstring£¬v_pmode
+          char* text     æ‹¼ä¸²ç»“æœ
+          char* key    å¯¹ç§°å¯†é’¥
+æ³¨ï¼šMD5æ ¡éªŒæ—¶æ‹¼æ¥å­—ç¬¦ä¸²çš„é¡ºåºä¸ºï¼šv_oidï¼Œv_pstatusï¼Œv_pstringï¼Œv_pmode
 */
 
 require_once( "header.inc.php" );
@@ -34,23 +34,23 @@ require_once( "../pay.inc.php" );
     <td width="550" rowspan="3"> 
 <?
 /* 
- * »ñÈ¡²ÎÊı
+ * è·å–å‚æ•°
  */
 if( $v_oid = $HTTP_GET_VARS['v_oid'] ){
-	//GET ·½Ê½´«µİ²ÎÊı
+	//GET æ–¹å¼ä¼ é€’å‚æ•°
 	$v_pstatus = $HTTP_GET_VARS['v_pstatus'];
 	$v_pstring = $HTTP_GET_VARS['v_pstring'];
 	$v_pmode = $HTTP_GET_VARS['v_pmode'];
 	$v_md5info = $HTTP_GET_VARS['v_md5info'];
 }else if( $v_oid = $HTTP_POST_VARS['v_oid'] ){ 
-	//POST ·½Ê½´«µİ²ÎÊı
+	//POST æ–¹å¼ä¼ é€’å‚æ•°
 	$v_pstatus = $HTTP_POST_VARS['v_pstatus'];
 	$v_pstring = $HTTP_POST_VARS['v_pstring'];
 	$v_pmode = $HTTP_POST_VARS['v_pmode'];
 	$v_md5info = $HTTP_POST_VARS['v_md5info'];
 }else{
-	paylog( "payback.php: Ã»ÓĞ´«µİ²ÎÊı" );
-	err_msg( "ÏµÍ³Ã¦£¬ÇëºÍ¹ÜÀíÔ±ÁªÏµ£¬´íÎóºÅ 900" );
+	paylog( "payback.php: æ²¡æœ‰ä¼ é€’å‚æ•°" );
+	err_msg( "ç³»ç»Ÿå¿™ï¼Œè¯·å’Œç®¡ç†å‘˜è”ç³»ï¼Œé”™è¯¯å· 900" );
 	require( "footer.inc.php" );
 	exit;
 }
@@ -62,23 +62,23 @@ foreach( $_REQUEST as $key => $value ){
 
 $v_md5 = bin2hex( mhash( MHASH_MD5, $v_oid . $v_pstatus . $v_pstring . $v_pmode, MD5_KEY ) );
 
-if( 1==$v_pstatus ){ //ÒÑÌá½»£¬¶Ô²»Ö§³ÖÊµÊ±µÄÒøĞĞ
-	$v_pstatus_memo='ÒÑÌá½»£¬¶Ô²»Ö§³ÖÊµÊ±µÄÒøĞĞ';
-}else if( 20==$v_pstatus ){//Ö§¸¶³É¹¦£¬¶ÔÖ§³ÖÊµÊ±µÄÒøĞĞ
-	$v_pstatus_memo='Ö§¸¶³É¹¦£¬¶ÔÖ§³ÖÊµÊ±µÄÒøĞĞ';
-}else if( 30==$v_pstatus ){//Ö§¸¶Ê§°Ü£¬¶ÔÖ§³ÖÊµÊ±µÄÒøĞĞ
-	$v_pstatus_memo='Ö§¸¶Ê§°Ü£¬¶ÔÖ§³ÖÊµÊ±µÄÒøĞĞ';
-}else{//Î´ÎÄµµµÄ²ÎÊıÖµ
-	$v_pstatus_memo='Î´ÎÄµµµÄ²ÎÊıÖµ';
+if( 1==$v_pstatus ){ //å·²æäº¤ï¼Œå¯¹ä¸æ”¯æŒå®æ—¶çš„é“¶è¡Œ
+	$v_pstatus_memo='å·²æäº¤ï¼Œå¯¹ä¸æ”¯æŒå®æ—¶çš„é“¶è¡Œ';
+}else if( 20==$v_pstatus ){//æ”¯ä»˜æˆåŠŸï¼Œå¯¹æ”¯æŒå®æ—¶çš„é“¶è¡Œ
+	$v_pstatus_memo='æ”¯ä»˜æˆåŠŸï¼Œå¯¹æ”¯æŒå®æ—¶çš„é“¶è¡Œ';
+}else if( 30==$v_pstatus ){//æ”¯ä»˜å¤±è´¥ï¼Œå¯¹æ”¯æŒå®æ—¶çš„é“¶è¡Œ
+	$v_pstatus_memo='æ”¯ä»˜å¤±è´¥ï¼Œå¯¹æ”¯æŒå®æ—¶çš„é“¶è¡Œ';
+}else{//æœªæ–‡æ¡£çš„å‚æ•°å€¼
+	$v_pstatus_memo='æœªæ–‡æ¡£çš„å‚æ•°å€¼';
 }
 
 /*
- * ¼ì²éÊÇ·ñÒÑ¾­Ìá½»¹ıµÄ¶©µ¥
+ * æ£€æŸ¥æ˜¯å¦å·²ç»æäº¤è¿‡çš„è®¢å•
  */
 $result=mysql_query( "select EndDate from NetPay_TB where PayNO='$v_oid'" );
 if( !$result ){
-	paylog( "payback.php: Ã»ÓĞ $v_oid Õâ¸ö¶©µ¥ºÅ»òmysql error" );
-	err_msg( "ÏµÍ³Ã¦£¬ÇëºÍ¹ÜÀíÔ±ÁªÏµ£¬´íÎóºÅ 1000" );
+	paylog( "payback.php: æ²¡æœ‰ $v_oid è¿™ä¸ªè®¢å•å·æˆ–mysql error" );
+	err_msg( "ç³»ç»Ÿå¿™ï¼Œè¯·å’Œç®¡ç†å‘˜è”ç³»ï¼Œé”™è¯¯å· 1000" );
 	err_msg( "System busy, Please contact system administrator. error no.: 1000" );
 	require( "footer.inc.php" );
 	exit;
@@ -87,7 +87,7 @@ if( $row=mysql_fetch_array($result) ){
 	$enddate=$row['EndDate'];
 }else{
 	paylog( "payback.php: mysql error, v_oid=$v_oid" );
-	err_msg( "ÏµÍ³Ã¦£¬ÇëºÍ¹ÜÀíÔ±ÁªÏµ, ´íÎóºÅ 2000" );
+	err_msg( "ç³»ç»Ÿå¿™ï¼Œè¯·å’Œç®¡ç†å‘˜è”ç³», é”™è¯¯å· 2000" );
 	err_msg( "System busy, Please contact system administrator. error no.: 2000" );
 	require( "footer.inc.php" );
 	exit;
@@ -95,14 +95,14 @@ if( $row=mysql_fetch_array($result) ){
 mysql_free_result( $result );
 
 if( isset($enddate) ){
-	notice_msg( "±¾´ÎÖ§¸¶ÒÑ¾­³É¹¦£¬Çë¼ì²éÄúµÄAKAÕÊ»§£¬ÈçÓĞÎÊÌâÇëÁªÏµ¹ÜÀíÔ±" );
+	notice_msg( "æœ¬æ¬¡æ”¯ä»˜å·²ç»æˆåŠŸï¼Œè¯·æ£€æŸ¥æ‚¨çš„AKAå¸æˆ·ï¼Œå¦‚æœ‰é—®é¢˜è¯·è”ç³»ç®¡ç†å‘˜" );
 	err_msg( "Pay Succeed! Please remeber the time of now." );
 	require( "footer.inc.php" );
 	exit;
 }
 
 /*
- * ¼ìÑémd5Ö¸ÎÆ
+ * æ£€éªŒmd5æŒ‡çº¹
  */
 $isSuccess = false;
 if( $v_md5 == $v_md5info ){
@@ -110,15 +110,15 @@ if( $v_md5 == $v_md5info ){
 }
 $memo = "($v_pstatus_memo), v_pstring=$v_pstring, v_pmode=$v_pmode";
 if( $isSuccess ){
-	// ¼ÇÂ¼µ÷ÓÃ
+	// è®°å½•è°ƒç”¨
 	if( !mysql_query( "insert into NetPayProcess_TB (PayNO, OccurTime, isSuccess, Status, Memo) values('$v_oid', now(), 'Yes', '$v_pstatus', 'payback.php: $memo') ") ){
 		paylog( "payback.php: PayNO: $v_oid, isSuccess: Yes, $memo" );
 	}
 }else{
-	if( !mysql_query( "insert into NetPayProcess_TB (PayNO, OccurTime, isSuccess, Status, Memo) values('$v_oid', now(), 'No', '$v_pstatus', 'payback.php: md5ÑéÖ¤Ê§°Ü, $memo, v_md5info=$v_md5info ')" ) ){
-		paylog( "payback.php: PayNO: $v_oid, isSuccess: No, md5ÑéÖ¤Ê§°Ü, $memo, v_md5info=$v_md5info" );
+	if( !mysql_query( "insert into NetPayProcess_TB (PayNO, OccurTime, isSuccess, Status, Memo) values('$v_oid', now(), 'No', '$v_pstatus', 'payback.php: md5éªŒè¯å¤±è´¥, $memo, v_md5info=$v_md5info ')" ) ){
+		paylog( "payback.php: PayNO: $v_oid, isSuccess: No, md5éªŒè¯å¤±è´¥, $memo, v_md5info=$v_md5info" );
 	}
-	err_msg( "ÍøÂç½ğÈÚ·¸×ï£¬¹ú·¨²»Èİ¡£¾¯²ìÕıÔÚÇ°À´µÄÂ·ÉÏ£¬ÇëÄã¼°ÔçÏò110×ÔÊ×¡£" );
+	err_msg( "ç½‘ç»œé‡‘èçŠ¯ç½ªï¼Œå›½æ³•ä¸å®¹ã€‚è­¦å¯Ÿæ­£åœ¨å‰æ¥çš„è·¯ä¸Šï¼Œè¯·ä½ åŠæ—©å‘110è‡ªé¦–ã€‚" );
 	err_msg( "OOPs! ooPs! OoPs! FBI's coming!" );
 	require( "footer.inc.php" );
 	exit;
@@ -126,36 +126,36 @@ if( $isSuccess ){
 }
 
 
-if( 1==$v_pstatus ){ //ÒÑÌá½»£¬¶Ô²»Ö§³ÖÊµÊ±µÄÒøĞĞ
-	notice_msg( 	"Ö§¸¶Íê±Ï£¬µ«ÊÇÄúµÄÒøĞĞ¿¨²»Ö§³ÖÊµÊ±»®ÕÊ£¬<br>" . 
-			"Ö»ÓĞÔÚÒøĞĞ»®ÕÊ²Ù×÷Íê±Ïºó<br>" .
-			"ÄúµÄAKAÕÊ»§ÖĞ²Å»á³öÏÖÏàÓ¦½ğ¶î£¬<br>" .
-			"ÇëÄÍĞÄµÈ´ı(Ó¦¸Ã²»³¬¹ı24Ğ¡Ê±£©" );
+if( 1==$v_pstatus ){ //å·²æäº¤ï¼Œå¯¹ä¸æ”¯æŒå®æ—¶çš„é“¶è¡Œ
+	notice_msg( 	"æ”¯ä»˜å®Œæ¯•ï¼Œä½†æ˜¯æ‚¨çš„é“¶è¡Œå¡ä¸æ”¯æŒå®æ—¶åˆ’å¸ï¼Œ<br>" . 
+			"åªæœ‰åœ¨é“¶è¡Œåˆ’å¸æ“ä½œå®Œæ¯•å<br>" .
+			"æ‚¨çš„AKAå¸æˆ·ä¸­æ‰ä¼šå‡ºç°ç›¸åº”é‡‘é¢ï¼Œ<br>" .
+			"è¯·è€å¿ƒç­‰å¾…(åº”è¯¥ä¸è¶…è¿‡24å°æ—¶ï¼‰" );
 
 	notice_msg( 	"Pay has been completed<br>" . 
 			"system should receive the money in 24 hours." );
-}else if( 20==$v_pstatus ){//Ö§¸¶³É¹¦£¬¶ÔÖ§³ÖÊµÊ±µÄÒøĞĞ
+}else if( 20==$v_pstatus ){//æ”¯ä»˜æˆåŠŸï¼Œå¯¹æ”¯æŒå®æ—¶çš„é“¶è¡Œ
 	/*
- 	 * ÓÃ»§¼ÓÇ®
+ 	 * ç”¨æˆ·åŠ é’±
  	 */
 	//TODO finish pay_ok
 	mysql_query( "begin" );
 	if( !pay_ok( $v_oid, $v_pmode ) ){
 		mysql_query( "rollback" );
-		paylog( "payback.php: agent_pay_ok($v_oid, $v_pmode)Ê§°Ü" );
-		err_msg( "¼ÓÇ®²Ù×÷Ê§°Ü£¬Çë¼ÇÏÂµ±Ç°Ê±¼ä²¢ÁªÏµ¹ÜÀíÔ±" );
+		paylog( "payback.php: agent_pay_ok($v_oid, $v_pmode)å¤±è´¥" );
+		err_msg( "åŠ é’±æ“ä½œå¤±è´¥ï¼Œè¯·è®°ä¸‹å½“å‰æ—¶é—´å¹¶è”ç³»ç®¡ç†å‘˜" );
 		err_msg( "System error, Please remember the time of now and contact systemadministrator" );
 	}else{
 		mysql_query( "commit" );
-		ok_msg( "×ªÕÊ³É¹¦£¡" );
+		ok_msg( "è½¬å¸æˆåŠŸï¼" );
 		ok_msg( "Pay Succeed!" );
 
 	}
-}else if( 30==$v_pstatus ){//Ö§¸¶Ê§°Ü£¬¶ÔÖ§³ÖÊµÊ±µÄÒøĞĞ
-	notice_msg( "Ö§¸¶¿¨ÍøÉÏÖ§¸¶Ê§°Ü" );
+}else if( 30==$v_pstatus ){//æ”¯ä»˜å¤±è´¥ï¼Œå¯¹æ”¯æŒå®æ—¶çš„é“¶è¡Œ
+	notice_msg( "æ”¯ä»˜å¡ç½‘ä¸Šæ”¯ä»˜å¤±è´¥" );
 	notice_msg( "Pay operation failed." );
-}else{//Î´ÎÄµµµÄ²ÎÊıÖµ
-	paylog( "payback.php: v_pstatusÎ´ÎÄµµµÄÖµ, $memo" );
+}else{//æœªæ–‡æ¡£çš„å‚æ•°å€¼
+	paylog( "payback.php: v_pstatusæœªæ–‡æ¡£çš„å€¼, $memo" );
 }
 //printf( "v_oid=%s, v_pmode=%s, v_pstatus=%s, v_pstring=%s, v_md5info=%s<br>", $v_oid, $v_pmode, $v_pstatus, $v_pstring, $v_md5info );
 

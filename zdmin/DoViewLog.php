@@ -25,13 +25,13 @@ function isParamExist(){
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                ��ǰλ�ã�</font> </b><a href="/" class="a5">������ҳ</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $ADMINURLROOT ;?>/" class="a5">��վ����Ա</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $ADMINURLROOT ;?>/AdminMenu.php" class="a5">�����˵�</a> <font color="#458DE4">&gt;
-                </font><a href="<? echo $ADMINURLROOT ;?>/Log/ViewLog.php" class="a5">�쿴������־</a>
+                当前位置：</font> </b><a href="/" class="a5">阿卡首页</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $ADMINURLROOT ;?>/" class="a5">网站管理员</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $ADMINURLROOT ;?>/AdminMenu.php" class="a5">管理菜单</a> <font color="#458DE4">&gt;
+                </font><a href="<? echo $ADMINURLROOT ;?>/Log/ViewLog.php" class="a5">察看管理日志</a>
 				<br>
                 <br>
-                <span class="newstitle">�쿴������־</span></p>
+                <span class="newstitle">察看管理日志</span></p>
               <p>&nbsp;</p>
             </td>
         </tr>
@@ -43,15 +43,15 @@ function isParamExist(){
 <?
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
-����δ��½��<br>
-������<A HREF="<? echo $ADMINURLROOT ;?>/index.php">��½</a>��
+您尚未登陆。<br>
+请首先<A HREF="<? echo $ADMINURLROOT ;?>/index.php">登陆</a>。
 <?
 }else {
 
 if ( (!isset($_SESSION['LogAdmin'])) ) {
 ?>
-��û�в쿴������־��Ȩ��<br>
-�뷵��<A HREF="<? echo $ADMINURLROOT ;?>/AdminMenu.php">�����˵�</a>
+你没有察看管理日志的权限<br>
+请返回<A HREF="<? echo $ADMINURLROOT ;?>/AdminMenu.php">管理菜单</a>
 <?
 } else {
 
@@ -77,8 +77,8 @@ if (isset($_REQUEST['AdminUser'])) {
 
 if ( (!isParamExist()) || ($addCondition=="")){
 ?>
-���ò�����ȫ��<br>
-���쿴ϵͳ��־����������<a href="<? echo $ADMINURLROOT ;?>/Log/ViewLog.php">����</a>��
+调用参数不全。<br>
+欲察看系统日志，请您访问<a href="<? echo $ADMINURLROOT ;?>/Log/ViewLog.php">这里</a>。
 <?
 }else {
 
@@ -155,11 +155,11 @@ function sortOnLogType(){
 </OBJECT>
 <TABLE border="0" width="530" datasrc="#LogContent">
 <thead>
-<th onclick="return sortOnAdminID();">����Ա</th>
-<th onclick="return sortOnLogTime();">ʱ��</th>
-<th >��¼����</th>
-<th onclick="return sortOnSourceIP();">��ԴIP</th>
-<th onclick="return sortOnLogType();">����</th>
+<th onclick="return sortOnAdminID();">管理员</th>
+<th onclick="return sortOnLogTime();">时间</th>
+<th >记录内容</th>
+<th onclick="return sortOnSourceIP();">来源IP</th>
+<th onclick="return sortOnLogType();">类型</th>
 </thead>
 <tbody>
 <tr>

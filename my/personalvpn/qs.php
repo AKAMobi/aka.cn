@@ -1,30 +1,30 @@
 <?
 /*
-ÊäÈë²ÎÊý:
-ÓÃ»§Ãû
-ÃÜÂë
-µ±Ç°Ö÷°æ±¾	APCVERSIONA
-µ±Ç°¸±°æ±¾	APCVERSIONB
-³ö¹ú/»Ø¹ú	APCTYPE={0:³ö¹ú£¬1:»Ø¹ú};
+è¾“å…¥å‚æ•°:
+ç”¨æˆ·å
+å¯†ç 
+å½“å‰ä¸»ç‰ˆæœ¬	APCVERSIONA
+å½“å‰å‰¯ç‰ˆæœ¬	APCVERSIONB
+å‡ºå›½/å›žå›½	APCTYPE={0:å‡ºå›½ï¼Œ1:å›žå›½};
 
-µÚÒ»ÐÐ
+ç¬¬ä¸€è¡Œ
 ErrorCode:
-999		°æ±¾ºÅÓÐ´í
-1000		±ØÐëÉý¼¶client
-1001		Ó¦¸ÃÉý¼¶client
-2000		Ã»ÓÐÕâ¸öÓÃ»§;
-3000		ÃÜÂë´íÎó
-4000		ÓÃ»§ÕÊ»§Î´Í¨¹ýÕýÊ½×¢²á»ò±»Í£ÓÃ
-5000		VPN¹¦ÄÜÎ´´ò¿ª		
-6000		°üÔÂVPN£¬±»Í£ÓÃ
-7000		¼ÆÊ±VPN£¬·ÑÓÃ²»×ã
-9999		Ò»ÇÐÕý³£,¿ÉÒÔÁ¬½Ó
+999		ç‰ˆæœ¬å·æœ‰é”™
+1000		å¿…é¡»å‡çº§client
+1001		åº”è¯¥å‡çº§client
+2000		æ²¡æœ‰è¿™ä¸ªç”¨æˆ·;
+3000		å¯†ç é”™è¯¯
+4000		ç”¨æˆ·å¸æˆ·æœªé€šè¿‡æ­£å¼æ³¨å†Œæˆ–è¢«åœç”¨
+5000		VPNåŠŸèƒ½æœªæ‰“å¼€		
+6000		åŒ…æœˆVPNï¼Œè¢«åœç”¨
+7000		è®¡æ—¶VPNï¼Œè´¹ç”¨ä¸è¶³
+9999		ä¸€åˆ‡æ­£å¸¸,å¯ä»¥è¿žæŽ¥
 
-µÚ¶þ-µ¹ÊýµÚ¶þÐÐ
-VPN·þÎñÆ÷IP list
+ç¬¬äºŒ-å€’æ•°ç¬¬äºŒè¡Œ
+VPNæœåŠ¡å™¨IP list
 
-×îºóÒ»ÐÐ
-1111	½áÊø
+æœ€åŽä¸€è¡Œ
+1111	ç»“æŸ
 */
 
 define( "APCLASTVERSIONA", 2 );
@@ -34,12 +34,12 @@ define( "APCBACK", 1 );
 
 $ID=$HTTP_GET_VARS['UserID'] ;
 if( !eregi( "^[a-z][_0-9a-z\.]*$", $ID ) ){
-	echo "Ê±¼ä£ºÇØ³¯ \n×îÐÂÐÂÎÅ£ºÒ»¸öÇàÍÜÒ»ÕÅ×ì£¬Á½Ö»ÑÛ¾¦ËÄÌõÍÈ";
+	echo "æ—¶é—´ï¼šç§¦æœ \næœ€æ–°æ–°é—»ï¼šä¸€ä¸ªé’è›™ä¸€å¼ å˜´ï¼Œä¸¤åªçœ¼ç›å››æ¡è…¿";
 	exit;
 }
 
 require( "db.inc.php" );
-$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("ÎÞ·¨Á¬½ÓDBM.");
+$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("æ— æ³•è¿žæŽ¥DBM.");
 mysql_select_db('AKA',$conn) or die( "2000\n" );
 
 $result=mysql_query("select A.password as Password,A.Status as Status ,A.UserFunc as UserFunc ,A.UserFuncStatus as UserFuncStatus , B.UserAccount as UserAccount ,C.Fee as Fee,C.CutOff as CutOff from User_TB as A, UserAccount_TB as B,PersonalVPN_Fee_TB as C where A.ID='{$ID}' and A.AutoID=B.UserAutoID and C.FeeType='PerHour'");
@@ -49,19 +49,19 @@ $APCVERSIONB=$HTTP_GET_VARS['APCVERSIONB'] ;
 $APCTYPE=$HTTP_GET_VARS['APCTYPE'] ;
 
 if ( ! (is_numeric($APCVERSIONA) && is_numeric($APCVERSIONB)) ){
-	//°æ±¾ºÅ²»ÊÇÊý×Ö£¿
+	//ç‰ˆæœ¬å·ä¸æ˜¯æ•°å­—ï¼Ÿ
 	echo "999\n";
 echo $APCVERSIONA . "\n";
 echo $APCVERSIONB . "\n";
 }elseif( $APCVERSIONA < APCLASTVERSIONA ){ 
-	//¿Í»§¶Ë°æ±¾Ì«µÍ£¬±ØÐèÒªÉý¼¶
+	//å®¢æˆ·ç«¯ç‰ˆæœ¬å¤ªä½Žï¼Œå¿…éœ€è¦å‡çº§
 	echo "1000\n";
 } else if ( $APCVERSIONB < APCLASTVERSIONB ){
-	//¿Í»§¶Ë²»ÊÇ×îÐÂ£¬µ«ÈÔÈ»¿ÉÒÔ¼ÌÐøÊ¹ÓÃ
+	//å®¢æˆ·ç«¯ä¸æ˜¯æœ€æ–°ï¼Œä½†ä»ç„¶å¯ä»¥ç»§ç»­ä½¿ç”¨
 	echo "1001\n";
-} else if ( !($row=mysql_fetch_array($result)) ){ //ÎÞ´ËÓÃ»§
+} else if ( !($row=mysql_fetch_array($result)) ){ //æ— æ­¤ç”¨æˆ·
 	echo "2000\n";
-} else if (strcmp($HTTP_GET_VARS['Password'],$row["Password"])){ //ÃÜÂë´íÎó
+} else if (strcmp($HTTP_GET_VARS['Password'],$row["Password"])){ //å¯†ç é”™è¯¯
 	echo "3000\n";
 } else if (strcmp($row['Status'],"Normal")){ //
 	echo "4000\n";

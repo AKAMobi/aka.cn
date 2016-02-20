@@ -11,9 +11,9 @@ require_once( "header.inc.php" );
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-                </font><a href="/my/" class="a5">ÎÒµÄ°¢¿¨</a><font color="#458DE4">&gt; 
-                </font><a href="/my/money/TransferMoney.php" class="a5">×ªÕÊ</a>
+                å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+                </font><a href="/my/" class="a5">æˆ‘çš„é˜¿å¡</a><font color="#458DE4">&gt; 
+                </font><a href="/my/money/TransferMoney.php" class="a5">è½¬å¸</a>
 				<br>
                 <br>
               <p>&nbsp;</p>
@@ -27,8 +27,8 @@ require_once( "header.inc.php" );
 <?
 if ( (!isset($HTTP_SESSION_VARS['UserID']) ) ) {
 ?>
-ÄúÉÐÎ´µÇÂ½¡£<br>
-ÇëÊ×ÏÈ<A HREF="/my/" class=a5>µÇÂ½</a>¡£
+æ‚¨å°šæœªç™»é™†ã€‚<br>
+è¯·é¦–å…ˆ<A HREF="/my/" class=a5>ç™»é™†</a>ã€‚
 <?
 }else {
 ?>
@@ -36,17 +36,17 @@ if ( (!isset($HTTP_SESSION_VARS['UserID']) ) ) {
 <!--
 function TransferMoney(){
 	if (document.all.oTransferTarget.value=="") {
-		alert("ÇëÊäÈëÄú»®ÕË¶ÔÏóµÄID");
+		alert("è¯·è¾“å…¥æ‚¨åˆ’è´¦å¯¹è±¡çš„ID");
 		document.all.oTransferTarget.focus();
 		return ;
 	}
 	if (document.all.oTransferTargetName.value=="") {
-		alert("ÇëÊäÈëÄú»®ÕË¶ÔÏóµÄÕæÊµÐÕÃû");
+		alert("è¯·è¾“å…¥æ‚¨åˆ’è´¦å¯¹è±¡çš„çœŸå®žå§“å");
 		document.all.oTransferTargetName.focus();
 		return ;
 	}
 	if (document.all.oMoney.value=="") {
-		alert("ÇëÊäÈëÄú»®ÕËµÄ½ð¶î");
+		alert("è¯·è¾“å…¥æ‚¨åˆ’è´¦çš„é‡‘é¢");
 		document.all.oMoney.focus();
 		return ;
 	}
@@ -80,26 +80,26 @@ function testKey_Money(){
                       <br>
   <div align="center"><table border="0" id="AutoNumber1">
     <tr>
-      <td>ÓÃ»§ÕÊºÅ£º</td>
+      <td>ç”¨æˆ·å¸å·ï¼š</td>
       <td><? echo $HTTP_SESSION_VARS['UserID']; ?></td>
     </tr>
     <tr>
-      <td>»®ÕË¶ÔÏóÕËºÅ£º</td>
+      <td>åˆ’è´¦å¯¹è±¡è´¦å·ï¼š</td>
       <td><input type="textfield" id="oTransferTarget" name="TransferTarget" size="20" onkeypress="testKey_TransferTarget();" ></td>
     </tr>
     <tr>
-      <td>»®ÕË¶ÔÏóÕæÊµÐÕÃû£º</td>
+      <td>åˆ’è´¦å¯¹è±¡çœŸå®žå§“åï¼š</td>
       <td><input type="textfield" id="oTransferTargetName" name="TransferTargetName" size="20" onkeypress="testKey_TransferTargetName();" ></td>
     </tr>
     <tr>
-      <td>»®ÕË½ð¶î£º</td>
+      <td>åˆ’è´¦é‡‘é¢ï¼š</td>
       <td><input type="textfield" id="oMoney" name="Money" size="20" onkeypress="testKey_Money();" ></td>
     </tr>
     <tr>
-      <td>»õ±ÒÖÖÀà</td>
+      <td>è´§å¸ç§ç±»</td>
       <td><select name="Currency" id="oCurrenect" size="1">
-	<option selected value="RMB">ÈËÃñ±Ò</option>
-	<option value="USD">ÃÀÔª</option>
+	<option selected value="RMB">äººæ°‘å¸</option>
+	<option value="USD">ç¾Žå…ƒ</option>
 	</select>
 	</td>
     </tr>
@@ -107,7 +107,7 @@ function testKey_Money(){
   </div>
   <br>
   <p align="center">
-  <input type="button" id="oTransferMoney" value="È·¶¨»®ÕË" onclick="TransferMoney();"> 
+  <input type="button" id="oTransferMoney" value="ç¡®å®šåˆ’è´¦" onclick="TransferMoney();"> 
    </p>
 </form>
 

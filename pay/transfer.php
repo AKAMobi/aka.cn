@@ -1,35 +1,35 @@
 <?
 /*
-ËÄ¡¢ÉÌ³ÇÍ¨ÖªÉÌ»§×ªÕÊ½á¹û½Ó¿Ú£¨ÉÌ³Ç      ÉÌ»§£©
-ÓÃÍ¾£ºÉÌ³Ç½«¶©µ¥×ªÕÊ½á¹ûÍ¨ÖªÉÌ»§¡£
-1¡¢	Ê×¶¼µç×ÓÉÌ³ÇÌá½»µÄFORM±íµ¥²ÎÊıËµÃ÷
-¶©µ¥ÊıÄ¿£¨v_count£©£º±¾´Î·¢ËÍµÄ¶©µ¥¸öÊı£»
-¶©µ¥±àºÅ×é£¨v_oid£©£º¶¨ÒåÍ¬Ê×¶¼µç×ÓÉÌ³Ç¶©µ¥Ö§¸¶½á¹û·µ»Ø½Ó¿ÚÖĞµÄ¶©µ¥±àºÅ¶¨Òå£»
-    ĞÎÊ½ÈçÏÂ£ºv_oid=v_oid1|_|v_oid2|_|v_oid3|_|v_oid4|_|¡­¡­¡­¡­¡£
-×ªÕÊ½á¹û£¨v_virement£©£º1¨¤×ªÕÊ³É¹¦£»£¨Ò»Åú¶©µ¥ÎŞÂÛ¶àÉÙÖ»·µ»ØÒ»¸ö1¡££©
-Êı×ÖÖ¸ÎÆ£¨v_mac£©£ºÆ´´®Ë³ĞòÎªv_oid+v_virement+v_count¡£ÀıÈç·¢ËÍ¾Å±Ê¶©µ¥£º
+å››ã€å•†åŸé€šçŸ¥å•†æˆ·è½¬å¸ç»“æœæ¥å£ï¼ˆå•†åŸ      å•†æˆ·ï¼‰
+ç”¨é€”ï¼šå•†åŸå°†è®¢å•è½¬å¸ç»“æœé€šçŸ¥å•†æˆ·ã€‚
+1ã€	é¦–éƒ½ç”µå­å•†åŸæäº¤çš„FORMè¡¨å•å‚æ•°è¯´æ˜
+è®¢å•æ•°ç›®ï¼ˆv_countï¼‰ï¼šæœ¬æ¬¡å‘é€çš„è®¢å•ä¸ªæ•°ï¼›
+è®¢å•ç¼–å·ç»„ï¼ˆv_oidï¼‰ï¼šå®šä¹‰åŒé¦–éƒ½ç”µå­å•†åŸè®¢å•æ”¯ä»˜ç»“æœè¿”å›æ¥å£ä¸­çš„è®¢å•ç¼–å·å®šä¹‰ï¼›
+    å½¢å¼å¦‚ä¸‹ï¼šv_oid=v_oid1|_|v_oid2|_|v_oid3|_|v_oid4|_|â€¦â€¦â€¦â€¦ã€‚
+è½¬å¸ç»“æœï¼ˆv_virementï¼‰ï¼š1Ã è½¬å¸æˆåŠŸï¼›ï¼ˆä¸€æ‰¹è®¢å•æ— è®ºå¤šå°‘åªè¿”å›ä¸€ä¸ª1ã€‚ï¼‰
+æ•°å­—æŒ‡çº¹ï¼ˆv_macï¼‰ï¼šæ‹¼ä¸²é¡ºåºä¸ºv_oid+v_virement+v_countã€‚ä¾‹å¦‚å‘é€ä¹ç¬”è®¢å•ï¼š
 20001220-888-135|_|20001220-888-143|_|20001221-888-144|_|20001221-888-145|_|20001221-888-146|_|20001222-888-148|_|20001220-888-141|_|20001222-888-149|_|20001222-888-14719
-2¡¢	ÉÌ»§·µ»ØÏûÏ¢
-"received"£¬±íÊ¾³É¹¦ÊÕµ½×ªÕÊ½á¹û¡£
-"error"£¬±íÊ¾½ÓÊÕÏûÏ¢·¢Éú´íÎó£¬Èçmd5Ğ£Ñé´í¡£
-3¡¢ÀıÈç£¬ÔÚASPÖĞµÄ²Î¿¼´úÂë£º
- <% ' »ñÈ¡²ÎÊı 
+2ã€	å•†æˆ·è¿”å›æ¶ˆæ¯
+"received"ï¼Œè¡¨ç¤ºæˆåŠŸæ”¶åˆ°è½¬å¸ç»“æœã€‚
+"error"ï¼Œè¡¨ç¤ºæ¥æ”¶æ¶ˆæ¯å‘ç”Ÿé”™è¯¯ï¼Œå¦‚md5æ ¡éªŒé”™ã€‚
+3ã€ä¾‹å¦‚ï¼Œåœ¨ASPä¸­çš„å‚è€ƒä»£ç ï¼š
+ <% ' è·å–å‚æ•° 
 v_oid=request("v_oid")
 v_virement=request("v_virement")
 v_count=request("v_count")
-' ½âÎö²ÎÊı
+' è§£æå‚æ•°
 a_oid=split(v_oid,"|_|")
-' ÑéÖ¤md5
+' éªŒè¯md5
 dim md,fff
 set md=server.CreateObject ("md5_VB.md5class")
 fff=md.hmac(v_oid&v_virement&v_count,"test")
-' °´ÑéÖ¤½á¹ûÊä³ö½á¹û
+' æŒ‰éªŒè¯ç»“æœè¾“å‡ºç»“æœ
 if fff<>v_mac then
 		response.write "error"
 else
 		response.write "received"
-		' ²Ù×÷Êı¾İ¿â £¨ÂÔ£©
-			¡­¡­
+		' æ“ä½œæ•°æ®åº“ ï¼ˆç•¥ï¼‰
+			â€¦â€¦
 end if
 %>
 */
@@ -38,7 +38,7 @@ require_once ("pay.inc.php");
 require_once ("db.inc.php");
 
 if( $v_count = $HTTP_GET_VARS['v_count'] ){
-	// GET ·½Ê½
+	// GET æ–¹å¼
 	$v_oid = $HTTP_GET_VARS['v_oid'];
 	$v_virement = $HTTP_GET_VARS['v_virement'];
 	$v_mac = $HTTP_GET_VARS['v_mac'];
@@ -48,7 +48,7 @@ if( $v_count = $HTTP_GET_VARS['v_count'] ){
 	$v_mac = $HTTP_POST_VARS['v_mac'];
 }else{
 	print "error";
-	paylog( "transfer.php: Ã»ÓĞ²ÎÊı" );
+	paylog( "transfer.php: æ²¡æœ‰å‚æ•°" );
 	exit;
 }
 
@@ -58,16 +58,16 @@ $v_md5 = mhash( MHASH_MD5, $v_oid . $v_virement . $v_count, MD5_KEY );
 $v_md5 = bin2hex( $v_md5 );
 
 if( $v_md5 != $v_mac ){
-	paylog( "transfer.php: md5Ğ£Ñé´íÎó, v_count=$v_count ,v_oid=$v_oid , v_virement=$v_virement ,v_mac=$v_mac" );
+	paylog( "transfer.php: md5æ ¡éªŒé”™è¯¯, v_count=$v_count ,v_oid=$v_oid , v_virement=$v_virement ,v_mac=$v_mac" );
 	print "error";
 	exit;
 }
 
-$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("ÎŞ·¨Á¬½ÓDBM.");
-mysql_select_db( DB_NAME, $conn) or die("ÎŞ·¨´ò¿ªÊı¾İ¿â.");
+$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("æ— æ³•è¿æ¥DBM.");
+mysql_select_db( DB_NAME, $conn) or die("æ— æ³•æ‰“å¼€æ•°æ®åº“.");
 
 for( $i=0; $i<$v_count; $i++ ){
-	//µ÷ÓÃº¯Êı´¦ÀíÃ¿Ò»±ÊÖ§¸¶
+	//è°ƒç”¨å‡½æ•°å¤„ç†æ¯ä¸€ç¬”æ”¯ä»˜
 	do_transfer( $a_oid[$i] );
 }
 

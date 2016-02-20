@@ -7,55 +7,55 @@
         <tr> 
           <td valign="top"> 
             <p><br>
-              <b><font color="#3366CC">ÄúµÄÎ»ÖÃ£º</font></b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> 
-              <font color="#458DE4">&gt;</font> <a href="../index.shtml" class="a5">¿Í»§·şÎñ</a> 
-              <font color="#458DE4">&gt;</font> <span class="a5">ÁªÏµÎÒÃÇ</span></p>
-            <p class="newstitle">ÁªÏµÎÒÃÇ</p>
-            <p>Äú¿ÉÒÔÍ¨¹ıÒÔÏÂ¼¸ÖÖ·½Ê½£º</p>
+              <b><font color="#3366CC">æ‚¨çš„ä½ç½®ï¼š</font></b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> 
+              <font color="#458DE4">&gt;</font> <a href="../index.shtml" class="a5">å®¢æˆ·æœåŠ¡</a> 
+              <font color="#458DE4">&gt;</font> <span class="a5">è”ç³»æˆ‘ä»¬</span></p>
+            <p class="newstitle">è”ç³»æˆ‘ä»¬</p>
+            <p>æ‚¨å¯ä»¥é€šè¿‡ä»¥ä¸‹å‡ ç§æ–¹å¼ï¼š</p>
             <p>&nbsp; 
             <form name="form2" method="post" action="/cgi-bin/contact/post">
-              <p class="newssubtitle">Web·½Ê½</p>
+              <p class="newssubtitle">Webæ–¹å¼</p>
               <p> 
               <table width="450" cellspacing="0" cellpadding="0">
                 <tr> 
-                  <td width="25%">ĞÕÃû£º</td>
+                  <td width="25%">å§“åï¼š</td>
                   <td> 
-                    <input type="text" name="ĞÕÃû" size="25">
+                    <input type="text" name="å§“å" size="25">
                   </td>
                 </tr>
                 <tr> 
-                  <td width="25%">E-Maill£º</td>
+                  <td width="25%">E-Maillï¼š</td>
                   <td> 
                     <input type="text" name="E-Mail" size="25">
                   </td>
                 </tr>
                 <tr> 
-                  <td width="25%">µØÖ·£º</td>
+                  <td width="25%">åœ°å€ï¼š</td>
                   <td> 
-                    <input type="text" name="µØÖ·" size="25">
+                    <input type="text" name="åœ°å€" size="25">
                   </td>
                 </tr>
                 <tr> 
-                  <td width="25%" valign="top">ÄúÒªËµµÄ»°£º</td>
+                  <td width="25%" valign="top">æ‚¨è¦è¯´çš„è¯ï¼š</td>
                   <td> 
-                    <textarea name="ËùËµµÄ»°" cols="45" rows="12"></textarea>
+                    <textarea name="æ‰€è¯´çš„è¯" cols="45" rows="12"></textarea>
                   </td>
                 </tr>
               </table>
               <p align="center"> 
-                <input type="submit" name="Submit" value="Ìá½»">
+                <input type="submit" name="Submit" value="æäº¤">
               </p>
             </form>
             <p><br>
-              <span class="newssubtitle">E-Mail·½Ê½</span></p>
-            <p>ÏúÊÛ£º<a href="mailto:sales@aka.cn" class="a6">sales@aka.cn</a></p>
-            <p>¿Í·ş£º<a href="mailto:service@aka.cn" class="a6">service@aka.cn</a></p>
-            <p>ºÏ×÷£º<a href="mailto:partners@aka.cn" class="a6">partners@aka.cn</a></p>
-            <p>ÍøÒ³£º<a href="mailto:webmaster@aka.cn" class="a6">webmaster@aka.cn</a></p>
-            <p>ÆäËû£º<a href="mailto:general@aka.cn" class="a6">general@aka.cn</a></p>
-            <p class="newssubtitle">µç»°·½Ê½</p>
-            <p >°ì¹«µç»°£º(010)81727418</p >
-            <!--p >¿Í·ş×¨Ô±£º13911179457</p -->
+              <span class="newssubtitle">E-Mailæ–¹å¼</span></p>
+            <p>é”€å”®ï¼š<a href="mailto:sales@aka.cn" class="a6">sales@aka.cn</a></p>
+            <p>å®¢æœï¼š<a href="mailto:service@aka.cn" class="a6">service@aka.cn</a></p>
+            <p>åˆä½œï¼š<a href="mailto:partners@aka.cn" class="a6">partners@aka.cn</a></p>
+            <p>ç½‘é¡µï¼š<a href="mailto:webmaster@aka.cn" class="a6">webmaster@aka.cn</a></p>
+            <p>å…¶ä»–ï¼š<a href="mailto:general@aka.cn" class="a6">general@aka.cn</a></p>
+            <p class="newssubtitle">ç”µè¯æ–¹å¼</p>
+            <p >åŠå…¬ç”µè¯ï¼š(010)81727418</p >
+            <!--p >å®¢æœä¸“å‘˜ï¼š13911179457</p -->
             <p >&nbsp;</p>
             </td>
         </tr>
@@ -69,20 +69,20 @@
         </tr>
         <tr> 
           <td bgcolor="C3D4F4" colspan="2"> 
-            <div align="left"><font color="032B7A"><b><font face="Arial"> Ïà¹ØÁ´½Ó</font></b></font></div>
+            <div align="left"><font color="032B7A"><b><font face="Arial"> ç›¸å…³é“¾æ¥</font></b></font></div>
           </td>
         </tr>
         <tr> 
           <td> 
             <div align="right"><img src="../../image/leadarrow.gif" width="5" height="10"></div>
           </td>
-          <td><a href="../../serv_prod/index.shtml" class="a6">²úÆ·Óë·şÎñ</a></td>
+          <td><a href="../../serv_prod/index.shtml" class="a6">äº§å“ä¸æœåŠ¡</a></td>
         </tr>
         <tr> 
           <td> 
             <div align="right"><img src="../../image/leadarrow.gif" width="5" height="10"></div>
           </td>
-          <td><a href="../../solution/index.shtml" class="a6">½â¾ö·½°¸</a></td>
+          <td><a href="../../solution/index.shtml" class="a6">è§£å†³æ–¹æ¡ˆ</a></td>
         </tr>
       </table>
     </td>

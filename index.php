@@ -9,7 +9,7 @@ require_once( "header.inc.php" );
 ?>
 
 <? 
-/*µ¯³öĞÂÎÅ´°¿Ú */
+/*å¼¹å‡ºæ–°é—»çª—å£ */
 if ($isPopupNews){
 ?>
 <!--
@@ -33,24 +33,24 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                     <tr> 
                       <td valign=top> 
                         <font color="#666666"><b><font color="#818181">.:: 
-                          °¢¿¨ÈÈµã ::.</font></b></font><br>
+                          é˜¿å¡çƒ­ç‚¹ ::.</font></b></font><br>
                         <font size="1" color="#FF0000"><? echo date('Y.m.d'); ?></font><br>
                         <IFRAME src="news/scroll.php" frameborder="0" height="210" width="230" scrolling="no"></iframe>
-<? /* Ô­ÓĞĞÂÎÅ
-                        <a href="news/index.shtml" class="a4">- ĞÂÔö´ú°ì¹ú¼Ê¼İÊ»Ö´ÕÕ·şÎñ</a><br>
-                          <a href="news/index.shtml" class="a4">- ·şÎñÆ÷×¨ÓÃLinux·¢ĞĞ°æ½ôÕÅ¿ª·¢ÖĞ</a><br>
+<? /* åŸæœ‰æ–°é—»
+                        <a href="news/index.shtml" class="a4">- æ–°å¢ä»£åŠå›½é™…é©¾é©¶æ‰§ç…§æœåŠ¡</a><br>
+                          <a href="news/index.shtml" class="a4">- æœåŠ¡å™¨ä¸“ç”¨Linuxå‘è¡Œç‰ˆç´§å¼ å¼€å‘ä¸­</a><br>
                           <a href="news/akanews20011208052.shtml" class="a4">- 
-                          </a><a href="news/index.shtml" class="a4">AKAÍøÕ¾¿ªÍ¨</a><br>
+                          </a><a href="news/index.shtml" class="a4">AKAç½‘ç«™å¼€é€š</a><br>
                           <a href="news/akanews20011208052.shtml" class="a4"></a><a href="news/index.shtml" class="a4">- 
-                          °¢¿¨ VPN ½â¾ö·½°¸»ñµÃÓÃ»§ºÃÆÀ</a><br>
-                          <a href="news/index.shtml" class="a4">- °¢¿¨ VPN °²È«ĞÔÓÖÉÏÌ¨½×</a><br>
-                          <a href="news/index.shtml" class="a4">- °¢¿¨ VPN ÆóÒµ½â¾ö·½°¸ÕıÊ½ÍÆ³ö</a><br>
+                          é˜¿å¡ VPN è§£å†³æ–¹æ¡ˆè·å¾—ç”¨æˆ·å¥½è¯„</a><br>
+                          <a href="news/index.shtml" class="a4">- é˜¿å¡ VPN å®‰å…¨æ€§åˆä¸Šå°é˜¶</a><br>
+                          <a href="news/index.shtml" class="a4">- é˜¿å¡ VPN ä¼ä¸šè§£å†³æ–¹æ¡ˆæ­£å¼æ¨å‡º</a><br>
                           <a href="news/akanews20011208052.shtml" class="a4">- 
-                          °¢¿¨ VPN ×é½¨¼¼ÊõÖ§³Ö·şÎñ¶ÓÎé</a><br>
-                          <a href="news/index.shtml" class="a4">- °¢¿¨ VPN ½â¾ö·½°¸½øĞĞ´ó¹æÄ£²âÊÔ<br>
-                          </a><a href="news/index.shtml" class="a4">- °¢¿¨ VPN ½â¾ö·½°¸½øĞĞ¿ª·ÅÊ½²âÊÔ</a><br>
+                          é˜¿å¡ VPN ç»„å»ºæŠ€æœ¯æ”¯æŒæœåŠ¡é˜Ÿä¼</a><br>
+                          <a href="news/index.shtml" class="a4">- é˜¿å¡ VPN è§£å†³æ–¹æ¡ˆè¿›è¡Œå¤§è§„æ¨¡æµ‹è¯•<br>
+                          </a><a href="news/index.shtml" class="a4">- é˜¿å¡ VPN è§£å†³æ–¹æ¡ˆè¿›è¡Œå¼€æ”¾å¼æµ‹è¯•</a><br>
                           <a href="news/akanews20011208052.shtml" class="a4"></a><a href="news/index.shtml" class="a4">- 
-                          °¢¿¨ VPN ½â¾ö·½°¸ÍÆ³ö Beta °æ</a><br>
+                          é˜¿å¡ VPN è§£å†³æ–¹æ¡ˆæ¨å‡º Beta ç‰ˆ</a><br>
                           <a href="news/akanews20011208052.shtml" class="a4"></a>
 */
 ?>                          
@@ -78,8 +78,8 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                               <table width="100%" border="0" cellspacing="3" cellpadding="0">
                                 <tr>
                                   <td><img src="image/smallrndarw.gif" width="14" height="14"> 
-                                    &nbsp;&nbsp;VPN£º³ö¹úVPN½â¾ö·½°¸£¬×¨ÃÅÎª½ÌÓıÍøÌá¹©·şÎñ£¡<a href="serv_prod/vpn/edu/index.shtml" class="a4">µã»÷ÕâÀï½øÈë</a><br>
-                                    &nbsp;&nbsp;&nbsp;Ïà¹ØÁ´½Ó£º<a href="customer/index.shtml" class="a4">¿Í»§·şÎñ</a><a href="customer/index.shtml" class="a4"></a> 
+                                    &nbsp;&nbsp;VPNï¼šå‡ºå›½VPNè§£å†³æ–¹æ¡ˆï¼Œä¸“é—¨ä¸ºæ•™è‚²ç½‘æä¾›æœåŠ¡ï¼<a href="serv_prod/vpn/edu/index.shtml" class="a4">ç‚¹å‡»è¿™é‡Œè¿›å…¥</a><br>
+                                    &nbsp;&nbsp;&nbsp;ç›¸å…³é“¾æ¥ï¼š<a href="customer/index.shtml" class="a4">å®¢æˆ·æœåŠ¡</a><a href="customer/index.shtml" class="a4"></a> 
                                   </td>
                                 </tr>
                               </table>
@@ -97,7 +97,7 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
               <tr>
                 <td bgcolor="666666" height="20"><!--  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="prov.local.forinvestors" class="a2">For 
                   Investors</a>&nbsp;<img src="images/smallleftdb.gif" width="14" height="7"> 
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="prov.local.knowledge" class="a2">ÖªÊ¶</a>&nbsp;<img src="images/smallleftdb.gif" width="14" height="7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="prov.local.market" class="a2">ÊĞ³¡</a>&nbsp;<img src="images/smallleftdb.gif" width="14" height="7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="prov.newsletter" class="a2">ProsLetter</a>&nbsp;<img src="images/smallleftdb.gif"> --> </td>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="prov.local.knowledge" class="a2">çŸ¥è¯†</a>&nbsp;<img src="images/smallleftdb.gif" width="14" height="7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="prov.local.market" class="a2">å¸‚åœº</a>&nbsp;<img src="images/smallleftdb.gif" width="14" height="7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="prov.newsletter" class="a2">ProsLetter</a>&nbsp;<img src="images/smallleftdb.gif"> --> </td>
   </tr>
 </table>
             <table width="100%" border="0" cellspacing="0" cellpadding="0" height="98">
@@ -125,7 +125,7 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                   <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="BFBFBF">
                     <tr> 
                       <td height="18" width="132" bgcolor="737373"><b><font color="#FFFFFF"> 
-                        &nbsp;¹«Ë¾ĞÂÎÅ</font></b></td>
+                        &nbsp;å…¬å¸æ–°é—»</font></b></td>
                       <td height="18" width="44"><img src="image/rmenubdr.gif" width="15" height="17"></td>
                     </tr>
                     <tr> 
@@ -133,13 +133,13 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                         <table width="100%" border="0" cellspacing="1" cellpadding="2">
                           <tr> 
                             <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("/news/");'  
-  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;×îĞÂÏûÏ¢</td>
+  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;æœ€æ–°æ¶ˆæ¯</td>
                           </tr>
                         </table>
                         <table width="100%" border="0" cellspacing="1" cellpadding="2">
                           <tr>
                             <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("/company/about/companymilestones.shtml");'  
-  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;°¢¿¨Àú³Ì</td>
+  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;é˜¿å¡å†ç¨‹</td>
                           </tr>
                           <tr> 
                             <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("javascript://");'  
@@ -158,7 +158,7 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                         <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="BFBFBF" dwcopytype="CopyTableRow">
                           <tr> 
                             <td height="18" width="132" bgcolor="737373"><b><font color="#FFFFFF"> 
-                              &nbsp;²úÆ·Óë·şÎñ</font></b></td>
+                              &nbsp;äº§å“ä¸æœåŠ¡</font></b></td>
                             <td height="18" width="44"><img src="image/rmenubdr.gif" width="15" height="17"></td>
                           </tr>
                         </table>
@@ -169,7 +169,7 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                         <table width="100%" border="0" cellspacing="1" cellpadding="2">
                           <tr> 
                             <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("/serv_prod/wmail/");'  
-  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;WMAILÆóÒµÓÊ¼şÏµÍ³</td>
+  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;WMAILä¼ä¸šé‚®ä»¶ç³»ç»Ÿ</td>
                           </tr>
                         </table>
                       </td>
@@ -180,7 +180,7 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                         <table width="100%" border="0" cellspacing="1" cellpadding="2">
                           <tr>
                             <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("serv_prod/idl/");'  
-  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;°ìÀí¹ú¼Ê¼İÕÕ&nbsp;</td>
+  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;åŠç†å›½é™…é©¾ç…§&nbsp;</td>
                           </tr>
                           <tr> 
                             <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("javascript://");'  
@@ -204,7 +204,7 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                         <table width="100%" border="0" cellspacing="1" cellpadding="2">
                           <tr> 
                             <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("/serv_prod/nas/");'  
-  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;NASÍøÂç´æ´¢·şÎñÆ÷</td>
+  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;NASç½‘ç»œå­˜å‚¨æœåŠ¡å™¨</td>
                           </tr>
                         </table>
                       </td>
@@ -230,7 +230,7 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                               <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="BFBFBF" dwcopytype="CopyTableRow">
                                 <tr> 
                                   <td height="18" width="132" bgcolor="737373"><b><font color="#FFFFFF"> 
-                                    &nbsp;¿Í»§·şÎñ</font></b></td>
+                                    &nbsp;å®¢æˆ·æœåŠ¡</font></b></td>
                                   <td height="18" width="44"><img src="image/rmenubdr.gif" width="15" height="17"></td>
                                 </tr>
                               </table>
@@ -241,19 +241,19 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
                               <table width="100%" border="0" cellspacing="1" cellpadding="2">
                                 <tr> 
                                   <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("/customer/downloads/index.shtml");'  
-  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;ÏÂÔØ×¨Çø</td>
+  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;ä¸‹è½½ä¸“åŒº</td>
                                 </tr>
                               </table>
                               <table width="100%" border="0" cellspacing="1" cellpadding="2">
                                 <tr> 
                                   <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("/customer/support/index.shtml");'  
-  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;¼¼ÊõÖ§³Ö</td>
+  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;æŠ€æœ¯æ”¯æŒ</td>
                                 </tr>
                               </table>
                               <table width="100%" border="0" cellspacing="1" cellpadding="2">
                                 <tr> 
                                   <td onMouseOver="this.style.backgroundColor='#E8E8E8';this.style.border='1px #999999 solid';" onMouseOut="this.style.backgroundColor='BFBFBF';this.style.border='1px #BFBFBF solid';" onClick='naVigateto("/customer/contact/index.shtml");'  
-  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;ÁªÏµÎÒÃÇ</td>
+  class=rmenu>&nbsp;&nbsp;&nbsp;&nbsp;è”ç³»æˆ‘ä»¬</td>
                                 </tr>
                               </table>
                             </td>

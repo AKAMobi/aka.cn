@@ -4,7 +4,7 @@ function MonthChanged(){
 	var nYear=parseInt(document.all.oYear.value);
 	var nMonth=document.all.oMonth.selectedIndex;
 	if ((nYear<2000) || (nYear>2100) || (nYear!=nYear)) {
-		alert("Äê·İÊäÈë´íÎó¡£ÇëÖØĞÂÊäÈë");
+		alert("å¹´ä»½è¾“å…¥é”™è¯¯ã€‚è¯·é‡æ–°è¾“å…¥");
 		document.all.oYear.select();
 		document.all.oYear.focus();
 	}
@@ -33,15 +33,15 @@ function MonthChanged(){
   <td>
 <form id="MainForm"method="post" action="ViewAnalysis.php">
   <fieldset>
-  <legend align="left">ÇëÑ¡ÔñÍ³¼ÆÀàĞÍ</legend>
-  <input type="radio" value="1" checked name="AnalysisType">ÄêVPNÁ÷Á¿Í³¼Æ<br>
-  <input type="radio" name="AnalysisType" value="2">ÔÂVPNÁ÷Á¿Í³¼Æ<br>
-  <input type="radio" name="AnalysisType" value="3">ÖÜVPNÁ÷Á¿Í³¼Æ<br>
-  <input type="radio" name="AnalysisType" value="4">ÈÕVPNÁ÷Á¿Í³¼Æ</fieldset><p align="left">
-  &nbsp; ÇëÑ¡ÔñÍ³¼Æ½ØÖ¹ÈÕÆÚ</p>
+  <legend align="left">è¯·é€‰æ‹©ç»Ÿè®¡ç±»å‹</legend>
+  <input type="radio" value="1" checked name="AnalysisType">å¹´VPNæµé‡ç»Ÿè®¡<br>
+  <input type="radio" name="AnalysisType" value="2">æœˆVPNæµé‡ç»Ÿè®¡<br>
+  <input type="radio" name="AnalysisType" value="3">å‘¨VPNæµé‡ç»Ÿè®¡<br>
+  <input type="radio" name="AnalysisType" value="4">æ—¥VPNæµé‡ç»Ÿè®¡</fieldset><p align="left">
+  &nbsp; è¯·é€‰æ‹©ç»Ÿè®¡æˆªæ­¢æ—¥æœŸ</p>
   <blockquote>
     <p align="left">
-  <input type="text" name="YEAR" id="oYear" size="4" maxlength=4> Äê 
+  <input type="text" name="YEAR" id="oYear" size="4" maxlength=4> å¹´ 
   <select size="1" name="MONTH" id="oMonth" onchange="MonthChanged()">
   <option value=1>1</option>
   <option value=2>2</option>
@@ -55,9 +55,9 @@ function MonthChanged(){
   <option value=10>10</option>
   <option value=11>11</option>
   <option value=12>12</option>
-  </select> ÔÂ <select size="1" name="DAY" id="oDay">
+  </select> æœˆ <select size="1" name="DAY" id="oDay">
   <option selected> 1</option>
-  </select> ÈÕ </p>
+  </select> æ—¥ </p>
   <script language="javascript">
   <!--
 	var da= new Date();
@@ -69,7 +69,7 @@ function MonthChanged(){
   -->
   </script>
   </blockquote>
-  <p align="center"><input type="submit" value="²ì¿´·ÖÎö½á¹û" name="submit"></p>
+  <p align="center"><input type="submit" value="å¯Ÿçœ‹åˆ†æç»“æœ" name="submit"></p>
 </form>
 </td>
 </tr>

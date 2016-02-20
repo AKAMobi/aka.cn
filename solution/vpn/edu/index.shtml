@@ -7,10 +7,10 @@
           <tr> 
             <td> 
               <p><br>
-                <b><font color="#3366CC">µ±Ç°Î»ÖÃ£º</font> </b><a href="/index.shtml" class="a5">°¢¿¨Ê×Ò³</a> 
-                <font color="#458DE4">&gt;</font> <a href="/solution/index.shtml" class="a5">½â¾ö·½°¸</a> 
+                <b><font color="#3366CC">å½“å‰ä½ç½®ï¼š</font> </b><a href="/index.shtml" class="a5">é˜¿å¡é¦–é¡µ</a> 
+                <font color="#458DE4">&gt;</font> <a href="/solution/index.shtml" class="a5">è§£å†³æ–¹æ¡ˆ</a> 
                 <font color="#458DE4">&gt; <a href="../index.shtml" class=a5>VPN</a> 
-                &gt;</font> <a href="/solution/vpn/edu/index.shtml" class="a5">³ö¹úVPN</a> 
+                &gt;</font> <a href="/solution/vpn/edu/index.shtml" class="a5">å‡ºå›½VPN</a> 
               </p>
             </td>
           </tr>
@@ -23,13 +23,13 @@
                       <p>&nbsp;</p>
                       <table width="475" cellspacing="0" cellpadding="0">
                         <tr> 
-                          <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">³ö¹úVPN·þÎñ</td>
+                          <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">å‡ºå›½VPNæœåŠ¡</td>
                         </tr>
                       </table>
                       <br>
                       <table width="160" cellspacing="0" cellpadding="0" bordercolor="#FFD291" class="redefinetable" align="right">
                         <tr> 
-                          <td bgcolor="#FFD291"><b><font color="#FF6633">&nbsp;¼òµ¥Ò×ÓÃ</font></b></td>
+                          <td bgcolor="#FFD291"><b><font color="#FF6633">&nbsp;ç®€å•æ˜“ç”¨</font></b></td>
                         </tr>
                         <tr> 
                           <td> 
@@ -37,7 +37,7 @@
                               <table width="150" cellspacing="0" cellpadding="1">
                                 <tr> 
                                   <td> 
-                                    <p>³ö¹úVPNÉèÖÃ¼ò±ã£¬¼´±ãÄú¶ÔÍøÂçÉèÖÃÖªÖ®ÉõÉÙ£¬Ò²¿ÉÇáËÉÊ¹ÓÃ¡£Í¬Ê±£¬VPNµÄÇ¿´ó¹¦ÄÜÓÖ¿ÉÒÔÂú×ã¸ß¼¶ÓÃ»§µÄ¸÷ÖÖ¿Á¿ÌÐèÇó¡£</p>
+                                    <p>å‡ºå›½VPNè®¾ç½®ç®€ä¾¿ï¼Œå³ä¾¿æ‚¨å¯¹ç½‘ç»œè®¾ç½®çŸ¥ä¹‹ç”šå°‘ï¼Œä¹Ÿå¯è½»æ¾ä½¿ç”¨ã€‚åŒæ—¶ï¼ŒVPNçš„å¼ºå¤§åŠŸèƒ½åˆå¯ä»¥æ»¡è¶³é«˜çº§ç”¨æˆ·çš„å„ç§è‹›åˆ»éœ€æ±‚ã€‚</p>
                                   </td>
                                 </tr>
                               </table>
@@ -47,181 +47,9 @@
                         <tr> 
                           <td> 
                             <div align="right"><font color="#0066CC">- </font> 
-                              <a href="javascript://" class="a6">¸ü¶àÐÅÏ¢</a><font color="#0066CC"> 
+                              <a href="javascript://" class="a6">æ›´å¤šä¿¡æ¯</a><font color="#0066CC"> 
                               - </font>&nbsp;&nbsp;</div>
                           </td>
                         </tr>
                       </table>
-                      <p>£ £ 21ÊÀ¼ÍÊôÓÚÐÅÏ¢Ê±´ú£¬InternetÊÇ¸öÓÐÄ§Á¦µÄ´Ê»ã£¬ËüÓµÓÐÎÞÇî¶àµÄ×ÊÔ´¡¢×î¿ì×îÐÂµÄÐÅÏ¢¡¢»¥Áª»¥Í¨µÄÈËÈº¡£×÷ÎªÐÂÊ±´úµÄ³ÉÔ±£¬ÎÒÃÇÐèÒª×ÔÔÚÂþÓÎ»¥ÁªÍøµÄÈ¨Àû£¬²éÎÄÏ×ÕÒ×ÊÁÏ£¬¿´ÐÂÎÅÏÂÈí¼þ£¬ÓëÊÀ½ç¸÷µØµÄÈËÃÇ½»Á÷¡£ÉíÔÚ½ÌÓýÍøÄÚ£¬¸ß°ºµÄ³ö¹úÍø·ÑÈ´Ê¼ÖÕÊÇÐüÔÚÎÒÃÇÍ·ÉÏµÄ´ïÄ¦¿ËÀûË¹Ö®½££¬ÔõÃ´°ì£¬<font color=red size=+1>ÔõÃ´°ì£¿£¡</font></p>
-                      <p><font color=red size=+1>¨w</font> Ö»ÔÚ¹úÄÚä¯ÀÀ£¿ÐÅÏ¢²»È«¡¢·þÎñ²»¼Ñ£¬¸ù±¾ÕÒ²»µ½×îÐÂ×îÈ«µÄÎÄÏ××ÊÁÏ¡£<br>
-                        <font color=red size=+1>¨w</font> Ãâ·Ñ´úÀí£¿ËäÈ»²»»¨Ç®£¬µ«·ÑÊ±·ÑÁ¦¡¢ËÙ¶ÈÂýÓÖ²»ÎÈ¶¨£¬¼òÖ±ÊÇÊÜ×ï¡£<br>
-                        <font color=red size=+1>¨w</font> ²¦ºÅÉÏÍø»ò°²×°×¨Ïß£¿·ÑÓÃ¸ü°º¹ó£¬ËÙ¶ÈÒ²²»¿ì£¬ÊµÔÚÊÇµÃ²»³¥Ê§¡£</p>
-                      <p><font size="+2" face="ÐÂËÎÌå" color="#FF0000">Ê¹ÓÃVPN·þÎñ£¬²»ÐèÈç´ËÂé·³£¬</font></p>
-                      <p align="right"><font size="+2" face="ÐÂËÎÌå" color="#FF0000">ÈÃÎÒÃÇÒ»Æð×ÔÔÚåÛÓÎ»¥ÁªÍø£¡<br>
-                        </font><font size="+2" face="ÐÂËÎÌå" color="#FF0000"></font> 
-                      </p>
-                      </td>
-                  </tr>
-                </table>
-              </center>
-            </td>
-          </tr>
-          <tr> 
-            <td> 
-              <table width="500" border="0" cellspacing="0" cellpadding="0">
-                <tr> 
-                  <td width="50%" valign="top"> 
-                    <center>
-                      <table width="220" cellspacing="0" cellpadding="0" bordercolor="639A63" class="redefinetable">
-                        <tr> 
-                          <td bgcolor="639A63" height="11">&nbsp;<b><font color="#FFFFFF"> 
-                            ½éÉÜ</font></b></td>
-                        </tr>
-                        <tr> 
-                          <td height="27"> 
-                            <center>
-                              <table width="200" cellspacing="4" cellpadding="0">
-                                <tr> 
-                                  <td> 
-                                    <p><b><span class="a4"><a href="/solution/vpn/edu/feature.shtml" class=a4>ÌØµã</a></span></b><br>
-                                      ¼òµ¥Ò×ÓÃ£¬ÅäÖÃ¼òµ¥£¬¹¦ÄÜÇ¿´ó¡£<br>
-                                      <b><span class="a4"><a href="/solution/vpn/edu/compare.shtml" class=a4>ÓëÆäËû·ÃÎÊ·½Ê½¶Ô±È</a></span></b><br>
-                                      ÓëÏÈ½øµÄVPN¼¼ÊõÏà±È£¬¸üÄÜÏÔÊ¾³öÆäËû·½Ê½µÄ²»×ã¡£</p>
-                                    </td>
-                                </tr>
-                              </table>
-                            </center>
-                          </td>
-                        </tr>
-                      </table>
-                      <br>
-                      <table width="220" cellspacing="0" cellpadding="0" bordercolor="639A63" class="redefinetable">
-                        <tr> 
-                          <td bgcolor="639A63"><b><font color="#FFFFFF">&nbsp;·ÑÓÃ</font></b></td>
-                        </tr>
-                        <tr> 
-                          <td> 
-                            <table width="200" cellspacing="4" cellpadding="0" align="center">
-                              <tr> 
-                                <td> 
-                                  <p><b><span class="a4"><a href="/solution/vpn/edu/price.shtml" class="a4">¼Û¸ñ¼°¸¶·Ñ·½Ê½</a></span></b><br>
-                                    ·ÑÓÃ²ÉÈ¡ÔÂ×â·½Ê½£¬²»Í¬¸¶¿î·½Ê½»¹ÓÐÕÛ¿Û¿É¹©Ñ¡Ôñ£¡<br>
-                                    <b><span class="a4"><a href="/solution/vpn/edu/calc.shtml" class="a4">·ÑÓÃ·ÖÎö</a></span></b><br>
-                                    Ïà²îÐüÊâ£¡Óë½ÌÓýÍø´«Í³µÄÁ÷Á¿¼Æ·Ñ¶Ô±ÈÍ¼¡£</p>
-                                  </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                      <br>
-                      <table width="220" cellspacing="0" cellpadding="0" bordercolor="639A63" class="redefinetable">
-                        <tr> 
-                          <td bgcolor="639A63"><b><font color="#FFFFFF">&nbsp;È¨Òæ</font></b></td>
-                        </tr>
-                        <tr> 
-                          <td> 
-                            <table width="200" cellspacing="4" cellpadding="0" align="center">
-                              <tr> 
-                                <td> 
-                                  <p><b><span class="a4"><a href="/solution/vpn/edu/cusright.shtml" class="a4">ÓÃ»§È¨Òæ<br>
-                                    </a></span></b>ÏíÊÜ×¨Òµ¼¼Êõ·þÎñ£¬ÈÃÄú·ÅÐÄ¡£</p>
-                                  </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                    </center>
-                  </td>
-                  <td width="0%" valign="top"> 
-                    <center>
-                    </center>
-                  </td>
-                  <td width="50%" valign="top"> 
-                    <center>
-                      <table width="220" cellspacing="0" cellpadding="0" bordercolor="639A63" class="redefinetable">
-                        <tr> 
-                          <td bgcolor="639A63"><b><font color="#FFFFFF">&nbsp;¼¼Êõ</font></b></td>
-                        </tr>
-                        <tr> 
-                          <td> 
-                            <table width="200" cellspacing="4" cellpadding="0" align="center">
-                              <tr> 
-                                <td> 
-                                  <p><b><span class="a4"><a href="/solution/vpn/edu/tech.shtml#1" class="a4">»ù±¾¸ÅÄî</a></span></b><br>
-                                    Ê²Ã´ÊÇVPN£¿<br>
-                                    <br>
-                                    <b><span class="a4"><a href="/solution/vpn/edu/tech.shtml#2" class="a4">»ù±¾¼¼Êõ</a></span></b><br>
-                                    VPNµÄÊµÏÖ·½Ê½°üÀ¨GRE¡¢IPSec¡¢PPTP¡¢IPIPµÈ¡£</p>
-                                  <p><b><span class="a4"><a href="/solution/vpn/edu/tech.shtml#3" class="a4">°²È«ÐÔ</a></span></b><br>
-                                    VPN¿É×î´óÏÞ¶ÈµÄ±£Ö¤Êý¾Ý°²È«¡£<br>
-                                  </p>
-                                  <p><b><span class="a4"><a href="/solution/vpn/edu/tech.shtml#3" class="a4">ÈíÓ²¼þÖ§³Ö</a></span></b><br>
-                                    VPNÖ§³Ö¾ø´ó¶àÊýµÄµÄÏµÍ³ÓëÆ½Ì¨¡£<br>
-                                  </p>
-                                  <p align="right"><br>
-                                    <a href="/solution/vpn/edu/tech.shtml" class="a6">- 
-                                    ÁË½â¸ü¶à -</a> <br>
-                                  </p>
-                                  <p align="right">&nbsp; </p>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                    </center>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr> 
-            <td>&nbsp; </td>
-          </tr>
-        </table>
-      </center>
-    </td>
-    <td width="210" bgcolor="F0FAFF" valign="top" height="45"></td>
-  </tr>
-  <tr> 
-    <td width="210" bgcolor="F0FAFF" valign="top"> 
-      <table width="210" cellspacing="8" cellpadding="3">
-        <tr> 
-          <td bgcolor="C3D4F4" colspan="2"><b><font color="032B7A" face="Arial, Helvetica, sans-serif">Ïà¹ØÁ´½Ó</font></b></td>
-        </tr>
-        <tr> 
-          <td width="27"> 
-            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
-          </td>
-          <td><a href="/customer/order/vpn/index.shtml" class="a6">¹ºÂòVPN·þÎñ</a></td>
-        </tr>
-        <tr> 
-          <td> 
-            <div align="right"><img src="/image/leadarrow.gif"></div>
-          </td>
-          <td><a href="/serv_prod/index.shtml" class="a6">¼¼ÊõÖ§³Ö</a></td>
-        </tr>
-        <tr> 
-          <td> 
-            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
-          </td>
-          <td><a href="/customer/contact/index.shtml" class="a6">ÁªÏµÎÒÃÇ</a></td>
-        </tr>
-        <tr> 
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr> 
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td width="210" bgcolor="F0FAFF" valign="bottom">&nbsp;</td>
-  </tr>
-</table>
-<!--#include virtual="/footer.html" -->
+                      <p>

@@ -6,14 +6,14 @@ require_once("zdmin.inc.php");
 
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
-дЗипн╢╣гб╫║ё<br>
+Ф┌╗Е╟ Ф°╙Г≥╩И≥├Ц─┌<br>
 <?
 }else {
 
 if ( (!isset($_SESSION['NewsAdmin'])) ) {
 ?>
  <td align="center" >
-дЦц╩сппбне╧эюМ╣дх╗оч<br>
+Д╫═Ф╡║Ф°┴Ф√╟И≈╩Г╝║Г░├Г └Ф²┐И≥░<br>
 <?
 } else {
 
@@ -23,14 +23,14 @@ $id = $_REQUEST['id'];
 $result = mysql_query("select Title, DATE_FORMAT(PostDate,'%Y-%m-%d') as PostDate,Title,Body,ImagePath from News_TB where AutoID=$id" );
 if ( !( $ra = mysql_fetch_array( $result ))){
 ?>
-ц╩спур╣╫╦цпбне║ё
+Ф╡║Ф°┴Ф┴╬Е┬╟Х╞╔Ф√╟И≈╩Ц─┌
 <?
 } else {
 
 
 	echo $ra['PostDate'] . "<br><br>";
 ?>
-<a href="chg.php?id=<? echo $id ?>" class="a6">╦Э ╦д</a> | <a href="del.php?id=<? echo $id ?>" class="a6">и╬ ЁЩ</a><br>
+<a href="chg.php?id=<? echo $id ?>" class="a6">Ф⌡╢ Ф■╧</a> | <a href="del.php?id=<? echo $id ?>" class="a6">Е┬═ И≥╓</a><br>
 <?
 
 ?>
@@ -62,7 +62,7 @@ echo '<p>'.nl2br(  $ra['Body'] ) . '</p><br>';
 
 <br>
 <hr width=500>
-<a href="chg.php?id=<? echo $id ?>" class="a6">╦Э ╦д</a> | <a href="del.php?id=<? echo $id ?>" class="a6">и╬ ЁЩ</a><br>
+<a href="chg.php?id=<? echo $id ?>" class="a6">Ф⌡╢ Ф■╧</a> | <a href="del.php?id=<? echo $id ?>" class="a6">Е┬═ И≥╓</a><br>
 <?
 
 }

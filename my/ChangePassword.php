@@ -11,13 +11,13 @@ require_once( "header.inc.php" );
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-                </font><a href="/my/" class="a5">ÎÒµÄ°¢¿¨</a><font color="#458DE4">&gt; 
-                </font><a href="ChangePassword.php" class="a5">¸ü¸ÄÃÜÂë</a>
+                å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+                </font><a href="/my/" class="a5">æˆ‘çš„é˜¿å¡</a><font color="#458DE4">&gt; 
+                </font><a href="ChangePassword.php" class="a5">æ›´æ”¹å¯†ç </a>
 				<br>
                 <br>
-                <span class="newstitle">¸ü¸ÄÃÜÂë</span></p>
-              <p>ÕâÀïÊÇ¸ü¸ÄÃÜÂë·þÎñÒ³Ãæ¡£ÇëÊ×ÏÈÊäÈëÄúÕËºÅµÄ¾ÉÃÜÂë£¬ÔÙÊäÈëÓû¸ü¸ÄµÄÐÂÃÜÂë¡£°´¡°¸ü¸ÄÃÜÂë¡±¼üÈ·ÈÏ¸ü¸Ä¡£</p>
+                <span class="newstitle">æ›´æ”¹å¯†ç </span></p>
+              <p>è¿™é‡Œæ˜¯æ›´æ”¹å¯†ç æœåŠ¡é¡µé¢ã€‚è¯·é¦–å…ˆè¾“å…¥æ‚¨è´¦å·çš„æ—§å¯†ç ï¼Œå†è¾“å…¥æ¬²æ›´æ”¹çš„æ–°å¯†ç ã€‚æŒ‰â€œæ›´æ”¹å¯†ç â€é”®ç¡®è®¤æ›´æ”¹ã€‚</p>
               <p>&nbsp;</p>
             </td>
         </tr>
@@ -29,8 +29,8 @@ require_once( "header.inc.php" );
 <?
 if ( (!isset($HTTP_SESSION_VARS['UserID']) ) ) {
 ?>
-ÄúÉÐÎ´µÇÂ½¡£<br>
-ÇëÊ×ÏÈ<A HREF="index.php" class=a5>µÇÂ½</a>¡£
+æ‚¨å°šæœªç™»é™†ã€‚<br>
+è¯·é¦–å…ˆ<A HREF="index.php" class=a5>ç™»é™†</a>ã€‚
 <?
 }else {
 ?>
@@ -38,17 +38,17 @@ if ( (!isset($HTTP_SESSION_VARS['UserID']) ) ) {
 <!--
 function ChangePassword(){
 	if (document.all.oPassword.value=="") {
-		alert("ÇëÊäÈëÄúµÄÃÜÂë");
+		alert("è¯·è¾“å…¥æ‚¨çš„å¯†ç ");
 		document.all.oPassword.focus();
 		return ;
 	}
 	if (document.all.oNewPassword1.value=="") {
-		alert("ÇëÊäÈëÄúµÄÐÂÃÜÂë");
+		alert("è¯·è¾“å…¥æ‚¨çš„æ–°å¯†ç ");
 		document.all.oNewPassword1.focus();
 		return ;
 	}
 	if (document.all.oNewPassword2.value!=document.all.oNewPassword1.value) {
-		alert("Á½´ÎÊäÈëµÄÐÂÃÜÂë²»Ò»ÖÂ");
+		alert("ä¸¤æ¬¡è¾“å…¥çš„æ–°å¯†ç ä¸ä¸€è‡´");
 		document.all.oNewPassword2.focus();
 		return ;
 	}
@@ -82,19 +82,19 @@ function testKey_NewPassword2(){
                       <br>
   <div align="center"><table border="0" id="AutoNumber1">
     <tr>
-      <td>ÕÊºÅÃû£º</td>
+      <td>å¸å·åï¼š</td>
       <td><? echo $HTTP_SESSION_VARS['UserID']; ?></td>
     </tr>
     <tr>
-      <td>¾ÉÃÜÂë£º</td>
+      <td>æ—§å¯†ç ï¼š</td>
       <td><input type="password" id="oPassword" name="Password" size="20" onkeypress="testKey_Password();" ></td>
     </tr>
     <tr>
-      <td>ÐÂÃÜÂë£º</td>
+      <td>æ–°å¯†ç ï¼š</td>
       <td><input type="password" id="oNewPassword1" name="NewPassword1" size="20" onkeypress="testKey_NewPassword1();" ></td>
     </tr>
     <tr>
-      <td>ÔÙ´ÎÊäÈëÐÂÃÜÂë£º</td>
+      <td>å†æ¬¡è¾“å…¥æ–°å¯†ç ï¼š</td>
       <td><input type="password" id="oNewPassword2" name="NewPassword2" size="20" onkeypress="testKey_NewPassword2();" ></td>
     </tr>
 
@@ -102,7 +102,7 @@ function testKey_NewPassword2(){
   </div>
   <br>
   <p align="center">
-  <input type="button" id="oChangePassword" value="¸ü¸ÄÃÜÂë" onclick="ChangePassword();"> 
+  <input type="button" id="oChangePassword" value="æ›´æ”¹å¯†ç " onclick="ChangePassword();"> 
    </p>
 </form>
 

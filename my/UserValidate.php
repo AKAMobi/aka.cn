@@ -10,9 +10,9 @@ require_once( "header.inc.php" );
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-                </font><a href="/my" class="a5">ÎÒµÄ°¢¿¨</a>
-				<font color="#458DE4">&gt; </font><a href="/my/UserRegister.shtml" class="a5">¿ìËÙÈÏÖ¤</a><br>
+                å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+                </font><a href="/my" class="a5">æˆ‘çš„é˜¿å¡</a>
+				<font color="#458DE4">&gt; </font><a href="/my/UserRegister.shtml" class="a5">å¿«é€Ÿè®¤è¯</a><br>
                 <br>
             </td>
         </tr>
@@ -23,19 +23,19 @@ require_once( "header.inc.php" );
 function validate(){
 
 if (!isset($_SESSION['ValidateID'])) {
-	echo "µ÷ÓÃ²ÎÊı´íÎó£¬Çë<a href='{$_SERVER['HTTP_REFERER']}' class='a6'>·µ»Ø</a>";
+	echo "è°ƒç”¨å‚æ•°é”™è¯¯ï¼Œè¯·<a href='{$_SERVER['HTTP_REFERER']}' class='a6'>è¿”å›</a>";
 	return -1;
 }
 $result=mysql_query("select AutoID,MobilePhone,EMail,Status from User_TB where ID='{$_SESSION['ValidateID']}'");
 
 
-if (!($row=mysql_fetch_array($result))){//´ËID²»´æÔÚ
-	echo "ÓÃ»§ {$_SESSION['ValidateID']} ²»´æÔÚ";
+if (!($row=mysql_fetch_array($result))){//æ­¤IDä¸å­˜åœ¨
+	echo "ç”¨æˆ· {$_SESSION['ValidateID']} ä¸å­˜åœ¨";
 	return -2;
 }
 
 if ($row['Status']!='ProfileNotProved') {
-	echo "Äú²»ÄÜ½øĞĞ¿ìËÙÉí·İÑéÖ¤<br>";
+	echo "æ‚¨ä¸èƒ½è¿›è¡Œå¿«é€Ÿèº«ä»½éªŒè¯<br>";
 	return -5;
 }
 
@@ -45,16 +45,16 @@ $EMail=$row['EMail'];
 
 $result=mysql_query("select * from UserValidate_TB where UserAutoID='{$UserAutoID}'");
 
-if (!($row=mysql_fetch_array($result))){ //²»´æÔÚÑéÖ¤Êı¾İ
+if (!($row=mysql_fetch_array($result))){ //ä¸å­˜åœ¨éªŒè¯æ•°æ®
         $validationCode=mt_rand();
         $sql="insert into UserValidate_TB(UserAutoID,ValidationCode,validated) values ('{$UserAutoID}','{$validationCode}','N');";
 	if (!mysql_query($sql)) {
-		echo "Êı¾İ¿â²Ù×÷Ê§°Ü£¬ÇëÁªÂç¹ÜÀíÔ±<br>";
+		echo "æ•°æ®åº“æ“ä½œå¤±è´¥ï¼Œè¯·è”ç»œç®¡ç†å‘˜<br>";
 		return -3;
 	}
 } else{
 	if ($row['validated']=='Y') {
-		echo "ÄúÒÑ¾­ÑéÖ¤Í¨¹ıÁË£¬Çë²»ÒªÖØ¸´ÑéÖ¤";
+		echo "æ‚¨å·²ç»éªŒè¯é€šè¿‡äº†ï¼Œè¯·ä¸è¦é‡å¤éªŒè¯";
 		return -4;	
 	}
 	$validationCode=$row['ValidationCode'];
@@ -62,10 +62,10 @@ if (!($row=mysql_fetch_array($result))){ //²»´æÔÚÑéÖ¤Êı¾İ
 
 if (isset($_REQUEST['Mobile'])){
 	//@dl('libsms.so');
-	if (sendsms("localhost","4000",$UserAutoID,$MobilePhone,"ÄúµÄÈÏÖ¤Âë: {$validationCode}")==0) {
-		echo "ÊÖ»úÈÏÖ¤¶ÌĞÅÒÑ·¢ËÍµ½ÄúµÄÊÖ»ú {$MobilePhone} £¬ÇëÄú×¢Òâ²éÊÕ£¡<br>";
+	if (sendsms("localhost","4000",$UserAutoID,$MobilePhone,"æ‚¨çš„è®¤è¯ç : {$validationCode}")==0) {
+		echo "æ‰‹æœºè®¤è¯çŸ­ä¿¡å·²å‘é€åˆ°æ‚¨çš„æ‰‹æœº {$MobilePhone} ï¼Œè¯·æ‚¨æ³¨æ„æŸ¥æ”¶ï¼<br>";
 	} else {
-		echo "ÊÖ»úÈÏÖ¤¶ÌĞÅ·¢ËÍÊ§°Ü<br>";
+		echo "æ‰‹æœºè®¤è¯çŸ­ä¿¡å‘é€å¤±è´¥<br>";
 	}
 }
 
@@ -79,17 +79,17 @@ if (validate()>=0) {
 <!--
 function Login(){
 	if (document.all.oName.value=="") {
-		alert("ÇëÊäÈëÄúµÄÓÃ»§ÕÊºÅ");
+		alert("è¯·è¾“å…¥æ‚¨çš„ç”¨æˆ·å¸å·");
 		document.all.oName.focus();
 		return ;
 	}
 	if (document.all.oPassword.value=="") {
-		alert("ÇëÊäÈëÄúµÄÃÜÂë");
+		alert("è¯·è¾“å…¥æ‚¨çš„å¯†ç ");
 		document.all.oPassword.focus();
 		return ;
 	}
 	if (document.all.oValidateCode.value=="") {
-		alert("ÇëÊäÈëÄúµÄÈÏÖ¤Âë");
+		alert("è¯·è¾“å…¥æ‚¨çš„è®¤è¯ç ");
 		document.all.oValidateCode.focus();
 		return ;
 	}
@@ -103,27 +103,27 @@ function  Mobile(){
 -->
 </script>
 	<br>
-	<input type=button value="·¢ËÍÈÏÖ¤¶ÌĞÅ" onclick="Mobile();">
+	<input type=button value="å‘é€è®¤è¯çŸ­ä¿¡" onclick="Mobile();">
 	<br>
                     <form id="mainForm" method="POST" action="dompvalidate.php">
                       <br>
   <div align="center"><table border="0" id="AutoNumber1">
     <tr>
-      <td>ÓÃ»§ÕÊºÅ£º</td>
+      <td>ç”¨æˆ·å¸å·ï¼š</td>
       <td><input type="text" id="oName" name="Name" size="20" ></td>
     </tr>
     <tr>
-      <td>ÓÃ»§ÃÜÂë£º</td>
+      <td>ç”¨æˆ·å¯†ç ï¼š</td>
       <td><input type="password" id="oPassword" name="Password" size="20" ></td>
     </tr>
     <tr>
-      <td>ÈÏÖ¤Âë£º</td>
+      <td>è®¤è¯ç ï¼š</td>
       <td><input type="text" id="oValidateCode" name="validateCode" size="20" ></td>
     </tr>
   </table>
   </div>
   <br>
-                      <p align="center"> <img src="/image/enter.gif" width="74" height="22" id="oLogOn" value="µÇÂ½" onclick="Login();"> 
+                      <p align="center"> <img src="/image/enter.gif" width="74" height="22" id="oLogOn" value="ç™»é™†" onclick="Login();"> 
                       </p>
 </form>
 
@@ -143,19 +143,19 @@ function  Mobile(){
           <td>
             <table width="210" cellspacing="8" cellpadding="3">
               <tr> 
-                <td bgcolor="C3D4F4" colspan="2"><b><font face="Arial, Helvetica, sans-serif" color="032B7A">Ïà¹ØÁ´½Ó</font></b></td>
+                <td bgcolor="C3D4F4" colspan="2"><b><font face="Arial, Helvetica, sans-serif" color="032B7A">ç›¸å…³é“¾æ¥</font></b></td>
               </tr>
               <tr> 
                 <td width="27"> 
                   <div align="right"><img src="../image/leadarrow.gif" width="5" height="10"></div>
                 </td>
-                <td><a href="../serv_prod/index.shtml" class="a6">²úÆ·Óë·şÎñ</a></td>
+                <td><a href="../serv_prod/index.shtml" class="a6">äº§å“ä¸æœåŠ¡</a></td>
               </tr>
               <tr> 
                 <td width="27"> 
                   <div align="right"><img src="../image/leadarrow.gif" width="5" height="10"></div>
                 </td>
-                <td><a href="../customer/index.shtml" class="a6">¿Í»§·şÎñ</a></td>
+                <td><a href="../customer/index.shtml" class="a6">å®¢æˆ·æœåŠ¡</a></td>
               </tr>
             </table>
           </td>

@@ -19,13 +19,13 @@ IncludeHTML("{$AKAROOT}/header.html");
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $ADMINURLROOT; ?>/" class="a5">ÍøÕ¾¹ÜÀíÔ±</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $ADMINURLROOT; ?>/AdminMenu.php" class="a5">¹ÜÀí²Ëµ¥</a> <font color="#458DE4">&gt;
-                </font><a href="<? echo $ADMINURLROOT; ?>/News/NewsAdmin.php" class="a5">ÐÂÎÅ¹ÜÀí</a>
+                å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $ADMINURLROOT; ?>/" class="a5">ç½‘ç«™ç®¡ç†å‘˜</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $ADMINURLROOT; ?>/AdminMenu.php" class="a5">ç®¡ç†èœå•</a> <font color="#458DE4">&gt;
+                </font><a href="<? echo $ADMINURLROOT; ?>/News/NewsAdmin.php" class="a5">æ–°é—»ç®¡ç†</a>
 				<br>
                 <br>
-                <span class="newstitle">ÐÂÎÅ¹ÜÀí</span></p>
+                <span class="newstitle">æ–°é—»ç®¡ç†</span></p>
               <p>&nbsp;</p>
             </td>
         </tr>
@@ -37,16 +37,16 @@ IncludeHTML("{$AKAROOT}/header.html");
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
  <td align="center" >
-ÄúÉÐÎ´µÇÂ½¡£<br>
-ÇëÊ×ÏÈ<A HREF="<? echo $ADMINURLROOT; ?>/index.php">µÇÂ½</a>¡£
+æ‚¨å°šæœªç™»é™†ã€‚<br>
+è¯·é¦–å…ˆ<A HREF="<? echo $ADMINURLROOT; ?>/index.php">ç™»é™†</a>ã€‚
 <?
 }else {
 
 if ( (!isset($_SESSION['NewsAdmin'])) ) {
 ?>
  <td align="center" >
-ÄãÃ»ÓÐÐÂÎÅ¹ÜÀíµÄÈ¨ÏÞ<br>
-Çë·µ»Ø<A HREF="<? echo $ADMINURLROOT; ?>/AdminMenu.php">¹ÜÀí²Ëµ¥</a>
+ä½ æ²¡æœ‰æ–°é—»ç®¡ç†çš„æƒé™<br>
+è¯·è¿”å›ž<A HREF="<? echo $ADMINURLROOT; ?>/AdminMenu.php">ç®¡ç†èœå•</a>
 <?
 } else {
 
@@ -72,23 +72,23 @@ if(!isset($_REQUEST['area'])) {
 } else {
 	$area = $_REQUEST['area'];
 }
-echo 'µ±Ç°Ä¬ÈÏÀà±ð£º';
+echo 'å½“å‰é»˜è®¤ç±»åˆ«ï¼š';
 $result = mysql_query("select Class from News_TB where Class='$area'" );
 $cr = mysql_fetch_array( $result );
-if ( $cr[0] != '' ) echo $cr[0]; else echo 'ÎÞ';
+if ( $cr[0] != '' ) echo $cr[0]; else echo 'æ— ';
 echo '<br>';
 
-echo "²Ù×÷Ô±:".$_SESSION['AdminID'] ."<br><div align=center>".$year. "Äê" . $month. "ÔÂ" . "</div><br>";
+echo "æ“ä½œå‘˜:".$_SESSION['AdminID'] ."<br><div align=center>".$year. "å¹´" . $month. "æœˆ" . "</div><br>";
 ?>
 <table border=1 bordercolor=#c0c0c0 bordercolordark=#c0c0c0 bordercoloclight=#c0c0c0 cellpadding=3 cellspacing=1>
 <tr bgcolor=#c0c0c0>
-	<td bgcolor=#ffc0c0 align=center>ÈÕ</td>
-	<td  align=center>Ò»</td>
-	<td  align=center>¶þ</td>
-	<td  align=center>Èý</td>
-	<td  align=center>ËÄ</td>
-	<td  align=center>Îå</td>
-	<td  align=center>Áù</td>
+	<td bgcolor=#ffc0c0 align=center>æ—¥</td>
+	<td  align=center>ä¸€</td>
+	<td  align=center>äºŒ</td>
+	<td  align=center>ä¸‰</td>
+	<td  align=center>å››</td>
+	<td  align=center>äº”</td>
+	<td  align=center>å…­</td>
 </tr>
 
 <tr>	
@@ -107,9 +107,9 @@ for ( $i = 1 ; $i <32 ; $i++)
 </tr>
 </table>
 <br>
-<span onclick="return document.frames('IMainFrame').document.location.href='nlm.php?area=<? echo $area; ?>&year=<? echo $year; ?>&month=<? echo $month; ?>'; " class="a11" onmouseover="this.className='a10';" onmouseout="this.className='a11';">ÁÐ³ö´ËÔÂ·ÝËùÓÐ´ËÀàÐÂÎÅ</span><br>
+<span onclick="return document.frames('IMainFrame').document.location.href='nlm.php?area=<? echo $area; ?>&year=<? echo $year; ?>&month=<? echo $month; ?>'; " class="a11" onmouseover="this.className='a10';" onmouseout="this.className='a11';">åˆ—å‡ºæ­¤æœˆä»½æ‰€æœ‰æ­¤ç±»æ–°é—»</span><br>
 <br>
-Ìø×ªµ½£º<br>
+è·³è½¬åˆ°ï¼š<br>
 <form method=post action="<? echo $_SERVER['PHP_SELF']; ?>">
 <INPUT type="hidden" name="area" value="<? echo $area;?>">
 <select name=year size=1>
@@ -122,7 +122,7 @@ for ( $i = 1 ; $i <32 ; $i++)
 	}
 ?>
 </select>
-Äê
+å¹´
 <select name=month size=1>
 <?
 	for ( $i = 1 ; $i <13 ; $i ++ )
@@ -133,13 +133,13 @@ for ( $i = 1 ; $i <32 ; $i++)
 	}
 ?>
 </select>
-ÔÂ<input type=submit name="gotomonth" value=" Go ">
+æœˆ<input type=submit name="gotomonth" value=" Go ">
 </form>
 
 <br>
-<input value="Ìí¼ÓÐÂÎÅ" type="button" onclick="return document.frames('IMainFrame').document.location.href='AddNews.php';">
+<input value="æ·»åŠ æ–°é—»" type="button" onclick="return document.frames('IMainFrame').document.location.href='AddNews.php';">
 <br>
-ÐÂÎÅ·ÖÀà
+æ–°é—»åˆ†ç±»
 <hr>
 <?
 
@@ -152,7 +152,7 @@ while ( $cr = mysql_fetch_array( $result ))
 }
 ?>
 <BR>
-<a href="<? echo $_SERVER['PHP_SELF']; ?>?year=<? echo $year ; ?>&month=<? echo $month ;?>" class="a6">È¡Ïû·ÖÀà</a><br>
+<a href="<? echo $_SERVER['PHP_SELF']; ?>?year=<? echo $year ; ?>&month=<? echo $month ;?>" class="a6">å–æ¶ˆåˆ†ç±»</a><br>
 
 </td>
 </td>

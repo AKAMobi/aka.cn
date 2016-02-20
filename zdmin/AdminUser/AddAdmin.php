@@ -1,20 +1,20 @@
 <? session_start() ?>
 <link rel="stylesheet" href="/css/aka.css" type="text/css"> 
 <DIV align="center">
-Ìí¼Ó¹ÜÀíÔ±ÕËºÅ
+æ·»åŠ ç®¡ç†å‘˜è´¦å·
 <?
 require_once("zdmin.inc.php");
 
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
-ÄúÉÐÎ´µÇÂ½¡£<br>
+æ‚¨å°šæœªç™»é™†ã€‚<br>
 <?
 }else {
 
 if ( (!isset($_SESSION['AdminAdmin'])) ) {
 ?>
  <td align="center" >
-ÄãÃ»ÓÐ¹ÜÀíÆäËû¹ÜÀíÔ±µÄÈ¨ÏÞ<br>
+ä½ æ²¡æœ‰ç®¡ç†å…¶ä»–ç®¡ç†å‘˜çš„æƒé™<br>
 <?
 } else {
 ?>
@@ -22,22 +22,22 @@ if ( (!isset($_SESSION['AdminAdmin'])) ) {
 <!--
 function AddAdmin(){
 	if (document.all.oAdminID.value=="") {
-		alert("ÇëÊäÈëÐÂ¹ÜÀíÔ±µÄÕËºÅ");
+		alert("è¯·è¾“å…¥æ–°ç®¡ç†å‘˜çš„è´¦å·");
 		document.all.oAdminID.focus();
 		return ;
 	}
 	if (document.all.oAdminName.value=="") {
-		alert("ÇëÊäÈëÐÂ¹ÜÀíÔ±µÄÐÕÃû");
+		alert("è¯·è¾“å…¥æ–°ç®¡ç†å‘˜çš„å§“å");
 		document.all.oAdminID.focus();
 		return ;
 	}	
 	if (document.all.oNewPassword1.value=="") {
-		alert("ÇëÊäÈëÐÂ¹ÜÀíÔ±µÄÃÜÂë");
+		alert("è¯·è¾“å…¥æ–°ç®¡ç†å‘˜çš„å¯†ç ");
 		document.all.oNewPassword1.focus();
 		return ;
 	}
 	if (document.all.oNewPassword2.value!=document.all.oNewPassword1.value) {
-		alert("Á½´ÎÊäÈëµÄÃÜÂë²»Ò»ÖÂ");
+		alert("ä¸¤æ¬¡è¾“å…¥çš„å¯†ç ä¸ä¸€è‡´");
 		document.all.oNewPassword2.focus();
 		return ;
 	}
@@ -51,37 +51,37 @@ function AddAdmin(){
                       <br>
   <div align="center"><table border="0" >
     <tr>
-      <td>ÐÂ¹ÜÀíÔ±ÕËºÅ£º</td>
+      <td>æ–°ç®¡ç†å‘˜è´¦å·ï¼š</td>
       <td><input type="text" id="oAdminID" name="AdminID" size="20" ></td>
     </tr>
     <tr>
-      <td>ÐÂ¹ÜÀíÔ±ÐÕÃû£º</td>
+      <td>æ–°ç®¡ç†å‘˜å§“åï¼š</td>
       <td><input type="text" id="oAdminName" name="AdminName" size="20" ></td>
     </tr>
     
     <tr>
-      <td>ÃÜÂë£º</td>
+      <td>å¯†ç ï¼š</td>
       <td><input type="password" id="oNewPassword1" name="NewPassword1" size="20" ></td>
     </tr>
     <tr>
-      <td>ÔÙ´ÎÊäÈëÃÜÂë£º</td>
+      <td>å†æ¬¡è¾“å…¥å¯†ç ï¼š</td>
       <td><input type="password" id="oNewPassword2" name="NewPassword2" size="20" ></td>
     </tr>
     <tr>
-      <td valign="top">È¨ÏÞ£º</td>
+      <td valign="top">æƒé™ï¼š</td>
       <td align>
       <TABLE border="0">
-      <tr><td><INPUT type="checkbox" name="UserAccount">ÓÃ»§¹ÜÀí</td></td>
-      <tr><td><INPUT type="checkbox" name="News">ÐÂÎÅ¹ÜÀí</td></td>
-      <tr><td><INPUT type="checkbox" name="PersonalVPN">¸öÈËVPN¹ÜÀí</td></td>
-      <tr><td><INPUT type="checkbox" name="Money">ÓÃ»§×Ê½ð¹ÜÀí</td></td>
-      <tr><td><INPUT type="checkbox" name="Admin">¹ÜÀíÔ±ÕËºÅ¹ÜÀí</td></td>
-      <tr><td><INPUT type="checkbox" name="Log">ÈÕÖ¾¹ÜÀí</td></td>
+      <tr><td><INPUT type="checkbox" name="UserAccount">ç”¨æˆ·ç®¡ç†</td></td>
+      <tr><td><INPUT type="checkbox" name="News">æ–°é—»ç®¡ç†</td></td>
+      <tr><td><INPUT type="checkbox" name="PersonalVPN">ä¸ªäººVPNç®¡ç†</td></td>
+      <tr><td><INPUT type="checkbox" name="Money">ç”¨æˆ·èµ„é‡‘ç®¡ç†</td></td>
+      <tr><td><INPUT type="checkbox" name="Admin">ç®¡ç†å‘˜è´¦å·ç®¡ç†</td></td>
+      <tr><td><INPUT type="checkbox" name="Log">æ—¥å¿—ç®¡ç†</td></td>
       </table> 
       </td>
     </tr>
     <tr>
-      <td>±¸×¢£º</td>
+      <td>å¤‡æ³¨ï¼š</td>
       <td><textarea id="oNote" name="Note" ></textarea></td>
     </tr>
 
@@ -89,7 +89,7 @@ function AddAdmin(){
   </div>
   <br>
   <p align="center">
-  <input type="button" id="oAddAdmin" value="Ìí¼Ó¹ÜÀíÔ±ÕËºÅ" onclick="AddAdmin();"> 
+  <input type="button" id="oAddAdmin" value="æ·»åŠ ç®¡ç†å‘˜è´¦å·" onclick="AddAdmin();"> 
    </p>
 </form>
 

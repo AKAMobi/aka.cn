@@ -24,7 +24,7 @@ print $q->header;
 if( $INPUT == $sw ){
 	print <<_INPUT_;
 <a href="http://www.nic.edu.cn/RS/ipstat/internalip/" target=_blank>
-nic.edu.cnµÄÃâ·ÑÁĞ±í
+nic.edu.cnçš„å…è´¹åˆ—è¡¨
 </a>
 <form action=freeip.cgi method=post>
 	<textarea name=freeip ROWS=20 COLS=60></textarea>
@@ -36,7 +36,7 @@ nic.edu.cnµÄÃâ·ÑÁĞ±í
 	<input type=radio name=sw value=$IPROUTE checked>Linux iproute2 command
 	<input type=radio name=sw value=$LINUXROUTE>Linux route command
 	<input type=radio name=sw value=$WINROUTE>Windows route command
-	<input type=radio name=sw value=$APCTAB>¿Í»§¶ËÓÃÃâ·ÑIPÊı×é
+	<input type=radio name=sw value=$APCTAB>å®¢æˆ·ç«¯ç”¨å…è´¹IPæ•°ç»„
 	<br>
 	<input type=submit>
 </form>

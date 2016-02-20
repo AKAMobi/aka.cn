@@ -14,7 +14,7 @@ if ((!isset($_REQUEST['Name'])) || (!isset($_REQUEST['Password'])) ){
 <table width="760" border="0" cellspacing="0" cellpadding="0">
   <tr> 
   <td align="center" >
-	<p>ÇëÕý³£<A HREF="<? echo $ADMINURLROOT; ?>/index.php">µÇÂ¼</a>£¡</p>
+	<p>è¯·æ­£å¸¸<A HREF="<? echo $ADMINURLROOT; ?>/index.php">ç™»å½•</a>ï¼</p>
 	<br>
 	<br>
 	<br>
@@ -29,13 +29,13 @@ $result=mysql_query("select ID,Password,Privilege from AdminUser_TB where ID='{$
 
 
 if ( (!($row=mysql_fetch_array($result))) &&
-	($_REQUEST['Name']==$SYSOPID) ) {  //ÅÐ¶ÏÕËºÅ'zixia'ÊÇ·ñµÚÒ»´ÎÊ¹ÓÃ
+	($_REQUEST['Name']==$SYSOPID) ) {  //åˆ¤æ–­è´¦å·'zixia'æ˜¯å¦ç¬¬ä¸€æ¬¡ä½¿ç”¨
 	$isSYSOPFirstTime=true;
 }  else {
 	$isSYSOPFirstTime=false;
 }
 
-if ((!$isSYSOPFirstTime) && (!$row) ){//ÎÞ´ËÓÃ»§
+if ((!$isSYSOPFirstTime) && (!$row) ){//æ— æ­¤ç”¨æˆ·
 IncludeHTML("{$AKAROOT}/header.html");
 ?>
 <br>
@@ -51,15 +51,15 @@ IncludeHTML("{$AKAROOT}/header.html");
 	<br>
 	<br>
 	<br>
-ÎÞ´Ë¹ÜÀíÔ±ÕËºÅ£¡<BR>
-ÇëÖØÐÂ<A HREF="<? echo $ADMINURLROOT; ?>/index.php">µÇÂ¼</a>
+æ— æ­¤ç®¡ç†å‘˜è´¦å·ï¼<BR>
+è¯·é‡æ–°<A HREF="<? echo $ADMINURLROOT; ?>/index.php">ç™»å½•</a>
 	<br>
 	<br>
 <?
 }
 else{
 if  ( (!$isSYSOPFirstTime) &&
-		(crypt($_REQUEST['Password'],$row["Password"])!=$row["Password"]) ){//ÃÜÂë´íÎó
+		(crypt($_REQUEST['Password'],$row["Password"])!=$row["Password"]) ){//å¯†ç é”™è¯¯
 IncludeHTML("{$AKAROOT}/header.html");
 ?>
 <br>
@@ -75,13 +75,13 @@ IncludeHTML("{$AKAROOT}/header.html");
 	<br>
 	<br>
 	<br>
-ÃÜÂë´íÎó£¡<br>
-ÇëÖØÐÂ<A href="<? echo $ADMINURLROOT; ?>/index.php">µÇÂ¼</a>
+å¯†ç é”™è¯¯ï¼<br>
+è¯·é‡æ–°<A href="<? echo $ADMINURLROOT; ?>/index.php">ç™»å½•</a>
 	<br>
 	<br>
 <?
 }
-else{//Õý³£µÇÂ¼
+else{//æ­£å¸¸ç™»å½•
 
 
 $_SESSION['AdminID']=$_REQUEST['Name'];
@@ -103,7 +103,7 @@ foreach ($privileges as $privilege){
 }
 }
 
-mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_REQUEST['Name']}','{$_REQUEST['Name']} Õý³£µÇÂ¼' , '{$_SERVER['REMOTE_ADDR']}', 'LogOn', NOW()) ");
+mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_REQUEST['Name']}','{$_REQUEST['Name']} æ­£å¸¸ç™»å½•' , '{$_SERVER['REMOTE_ADDR']}', 'LogOn', NOW()) ");
 
 
 mysql_free_result($result);

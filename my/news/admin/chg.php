@@ -14,15 +14,15 @@ $Body = $_REQUEST['Body'];
 $mid = $_REQUEST['mid'];
 $sub1 = $_REQUEST['sub1'];
 
-if($sub1=='ĞŞ¸Ä'){
+if($sub1=='ä¿®æ”¹'){
 
-if($Cimage=='1'){//ÉÏ´«
-if($oldimage==''){//ÉÏ´«ĞÂÍ¼
+if($Cimage=='1'){//ä¸Šä¼ 
+if($oldimage==''){//ä¸Šä¼ æ–°å›¾
 $thistime=date("dHis");
 $location=$IMGROOT.date("Y").'/'.date("m").'/'.$thistime.'-'.$files['name'];
 $ImagePath=$files['name'];
 $s1="ImagePath='$ImagePath'";
-}else{//¸²¸ÇÔ­Í¼
+}else{//è¦†ç›–åŸå›¾
 $aa=$imgname=GetNewsImgPath($mid);
 $location=$IMGROOT.$aa;
 $ImagePath=$oldimage;
@@ -36,34 +36,34 @@ foreach ($files['name'] as $key=>$name) {
 		}}
 }
 
-if($Cimage=='0'){//É¾³ıÔ­Í¼
+if($Cimage=='0'){//åˆ é™¤åŸå›¾
 $imgname=GetNewsImgPath($mid);
 if(is_file($IMGROOT.$imgname))unlink($IMGROOT.$imgname);
 $s1="ImagePath=''";
 }
-if($Cimage=='2'){//±£³ÖÔ­Í¼
+if($Cimage=='2'){//ä¿æŒåŸå›¾
 $s1="ImagePath=ImagePath";
 }
-//ĞŞ¸Ä¼ÇÂ¼
+//ä¿®æ”¹è®°å½•
 $rst=mysql_query("update News_TB set Class='$eClass',Important='$Important',Title='$Title',Body='$Body',$s1 where AutoID=$mid");
-if($rst){echo '<script language="javascript">alert("ĞŞ¸ÄÍê±Ï!");top.location="update.php";</script>';
-}else{echo '<script language="javascript">alert("Î´Öª´íÎó£¬²»ÄÜĞŞ¸Ä!");top.location="update.php";</script>';}
+if($rst){echo '<script language="javascript">alert("ä¿®æ”¹å®Œæ¯•!");top.location="update.php";</script>';
+}else{echo '<script language="javascript">alert("æœªçŸ¥é”™è¯¯ï¼Œä¸èƒ½ä¿®æ”¹!");top.location="update.php";</script>';}
 }//end if
 
 $rst=mysql_query("select * from News_TB where AutoID=$id");
 $row=mysql_fetch_array($rst);
 echo '<form name="form1" method="post" action="" enctype="multipart/form-data"><table border=1>';
-echo '<tr><td>ĞÂÎÅÀàĞÍ£º<input type="text" name="eClass" size=20 value="'.$row[1].'"></td></tr>';
+echo '<tr><td>æ–°é—»ç±»å‹ï¼š<input type="text" name="eClass" size=20 value="'.$row[1].'"></td></tr>';
 if($row[Important]=="N"){
-echo '<tr><td>ÊÇ·ñÎªÖØÒªĞÂÎÅ£º<input type="radio" name="Important" value="N" checked>·ñ<input type="radio" name="Important" value="Y">ÊÇ</td></tr>';
+echo '<tr><td>æ˜¯å¦ä¸ºé‡è¦æ–°é—»ï¼š<input type="radio" name="Important" value="N" checked>å¦<input type="radio" name="Important" value="Y">æ˜¯</td></tr>';
 }else{
-echo '<tr><td>ÊÇ·ñÎªÖØÒªĞÂÎÅ£º<input type="radio" name="Important" value="N">·ñ<input type="radio" name="Important" value="Y" checked>ÊÇ</td></tr>';
+echo '<tr><td>æ˜¯å¦ä¸ºé‡è¦æ–°é—»ï¼š<input type="radio" name="Important" value="N">å¦<input type="radio" name="Important" value="Y" checked>æ˜¯</td></tr>';
 }
 $imgname=GetNewsImgPath($id);
-echo '<tr><td>Í¼Æ¬ÉÏ´«<br><input type="hidden" name="oldimage" value="'.$row[ImagePath].'"><input type="radio" name="Cimage" value="2" checked>±£³ÖÔ­Ñù(ÓĞ»òÃ»ÓĞÍ¼)<br><input type="radio" name="Cimage" value="1">ÉÏ´«ĞÂÍ¼or¸²¸ÇÔ­Í¼<input type=file name=files[] size=20><img src="'.$IMGURL.$imgname.'" align=right><br><input type="radio" name="Cimage" value="0">É¾³ıÔ­Í¼</td></tr>';
-echo '<tr><td>ĞÂÎÅÌâÄ¿<input type="text" name="Title" size=70 value="'.$row[Title].'"></td></tr>';
+echo '<tr><td>å›¾ç‰‡ä¸Šä¼ <br><input type="hidden" name="oldimage" value="'.$row[ImagePath].'"><input type="radio" name="Cimage" value="2" checked>ä¿æŒåŸæ ·(æœ‰æˆ–æ²¡æœ‰å›¾)<br><input type="radio" name="Cimage" value="1">ä¸Šä¼ æ–°å›¾orè¦†ç›–åŸå›¾<input type=file name=files[] size=20><img src="'.$IMGURL.$imgname.'" align=right><br><input type="radio" name="Cimage" value="0">åˆ é™¤åŸå›¾</td></tr>';
+echo '<tr><td>æ–°é—»é¢˜ç›®<input type="text" name="Title" size=70 value="'.$row[Title].'"></td></tr>';
 
-echo '<tr><td>ĞÂÎÅÄÚÈİ<textarea name="Body" wrap="VIRTUAL" cols="70" rows="20">'.htmlspecialchars($row[Body]).'</textarea></td></tr>';
-echo '<tr><td><input type="hidden" name="mid" value="'.$row[AutoID].'"><input type="submit" name="sub1" value="ĞŞ¸Ä"></td></tr></table></form>';
+echo '<tr><td>æ–°é—»å†…å®¹<textarea name="Body" wrap="VIRTUAL" cols="70" rows="20">'.htmlspecialchars($row[Body]).'</textarea></td></tr>';
+echo '<tr><td><input type="hidden" name="mid" value="'.$row[AutoID].'"><input type="submit" name="sub1" value="ä¿®æ”¹"></td></tr></table></form>';
 require_once("../footer.inc.php");
 ?>

@@ -18,8 +18,8 @@
 
         <tr> 
 
-          <td> <b><font color="#3366CC">��ǰλ�ã�</font> </b><a href="/" class="a5">������ҳ</a> 
-            <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">��Ʒ�����</a><font color="#458DE4">&gt; 
+          <td> <b><font color="#3366CC">当前位置：</font> </b><a href="/" class="a5">阿卡首页</a> 
+            <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">产品与服务</a><font color="#458DE4">&gt; 
             <a href="index.shtml" class=a5>wForum</a></font></td>
 
         </tr>
@@ -35,25 +35,25 @@
                         <tr> 
 
                           
-                      <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">��������ҵ��̳wForum</td>
+                      <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">高性能企业论坛wForum</td>
 
                         </tr>
 
                       </table>
 
                       
-                  <p>wForum�����ڸ����ܵ�ˮľ�廪BBSԴ�루һ����ǧ��ͬʱ���ߣ��ĸ�������̳ϵͳ <br>
+                  <p>wForum，基于高性能的水木清华BBS源码（一万五千人同时在线）的高性能论坛系统 <br>
                   </p>
-		  <p>��Ȩ��������������Ϣ�������޹�˾���У���ѭGPL���κ��˶�����������ء���װ������δ��������˾�������ɣ�����Ӧ������ҵ����</p>
-			ˮľ�廪BBS����վ��<br />
+		  <p>版权归属北京阿卡信息技术有限公司所有，遵循GPL，任何人都可以免费下载、安装，但是未经阿卡公司书面许可，不得应用于商业领域。</p>
+			水木清华BBS开发站：<br />
 			<a href="http://dev.smth.org/" target=_blank class="a6">http://dev.smth.org/</a><br />
 			<p>
-                      wForum ÿ�մ���汾 : <br />
+                      wForum 每日打包版本 : <br />
                       <a href="ftp://dev.smth.org/src/wForum-snapshot.tar.gz" class="a6">wForum-snapshot.tar.gz</a> <br>
                       <a href="ftp://dev.smth.org/src/smthbbs-snapshot.tar.gz" class="a6">smthbbs-snapshot.tar.gz</a> <br>
 			<p>
 
-			wForum ��������<br />
+			wForum 讨论区：<br />
 			<a href="http://wforum.wforum.zixia.net/" class="a6" target=_blank>http://wforum.wforum.zixia.net/</a><br />
                   <p></p>
                   </td>
@@ -67,7 +67,7 @@
 
                           <td bgcolor="639A63" height="11">&nbsp;<b><font color="#FFFFFF"> 
 
-                            ����</font></b></td>
+                            介绍</font></b></td>
 
                         </tr>
 
@@ -82,27 +82,27 @@
                                 <tr> 
 
 					<br>
-					�ɹ�������<br>
+					成功案例：<br>
 					<br>
-					ƽ������ < 100 �ˣ�<br>
+					平均在线 < 100 人：<br>
 					<ol>
-						<li><a href="http://bbs.bfa.edu.cn" target=_blank class=a4>http://bbs.bfa.edu.cn</a> ������ӰѧԺ</li>
+						<li><a href="http://bbs.bfa.edu.cn" target=_blank class=a4>http://bbs.bfa.edu.cn</a> 北京电影学院</li>
 					</ol>
 					<br>
-					ƽ������ 1000 ��
+					平均在线 1000 人
 					<ol>
-						<li><a href="http://wforum.zixia.net" target=_blank class=a4>http://wforum.zixia.net</a> ��������̳</li>
+						<li><a href="http://wforum.zixia.net" target=_blank class=a4>http://wforum.zixia.net</a> 大话西游论坛</li>
 					</ol>
 					<br>
 <!--
-                                    <td> <p><b><span class="a4"><a href="area.shtml" class=a4>Ӧ������</a></span></b><br>
-                                        Roc NASϵ�в�Ʒ����ҪӦ������ </p>
+                                    <td> <p><b><span class="a4"><a href="area.shtml" class=a4>应用领域</a></span></b><br>
+                                        Roc NAS系列产品的主要应用领域。 </p>
 										
-                                      <p> <b><span class="a4"><a href="advantages.shtml" class=a4>��Ʒ����</a></span></b><br>
-                                        Roc NASϵ�в�Ʒ������ͬ����������ȵ��ŵ㡣 </p>
+                                      <p> <b><span class="a4"><a href="advantages.shtml" class=a4>产品优势</a></span></b><br>
+                                        Roc NAS系列产品与其他同类解决方案相比的优点。 </p>
 										
                                       <p> <b><span class="a4"><a href="faq.shtml" class=a4>FAQ</a></span></b><br>
-                                        ����NAS�ĸ���͹��ܵĳ��������� </p>
+                                        关于NAS的概念和功能的常见问题解答。 </p>
                                       <p><br>
                                       </p>
 -->
@@ -175,15 +175,15 @@
               </tr>
               <tr> 
                 <td bgcolor="C3D4F4" colspan="2"> <div align="left"><font color="032B7A"><b><font face="Arial"> 
-                    �������</font></b></font></div></td>
+                    相关链接</font></b></font></div></td>
               </tr>
               <tr> 
                 <td> <div align="right"><img src="/image/leadarrow.gif"></div></td>
-                <td><a href="/serv_prod/index.shtml" class="a6">����֧��</a></td>
+                <td><a href="/serv_prod/index.shtml" class="a6">技术支持</a></td>
               </tr>
               <tr> 
                 <td> <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div></td>
-                <td><a href="/customer/contact/index.shtml" class="a6">��ϵ����</a></td>
+                <td><a href="/customer/contact/index.shtml" class="a6">联系我们</a></td>
               </tr>
               <tr> 
                 <td> <div align="right"></div></td>

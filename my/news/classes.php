@@ -10,7 +10,7 @@ $offset=($page*15)-15;
 $rst2=mysql_query("SELECT * FROM News_TB where Class='$area' ORDER BY AutoID limit $offset,$NUMBERPAGE");
 $num_fields = mysql_num_fields($rst2);
 echo '<br>';
-echo '<br>ÄÚÈİÁĞ±í£¬¹²ÓĞ'.$c.'Ìõ¼ÇÂ¼:<br><br>±¾Ò³ÊÇµÚ'.$page.'Ò³';
+echo '<br>å†…å®¹åˆ—è¡¨ï¼Œå…±æœ‰'.$c.'æ¡è®°å½•:<br><br>æœ¬é¡µæ˜¯ç¬¬'.$page.'é¡µ';
 echo '<table>';
 while($row2=mysql_fetch_array($rst2)){
 ?>
@@ -21,10 +21,10 @@ while($row2=mysql_fetch_array($rst2)){
 <tr><td>
 <?
 if($page==1){
-echo 'ÉÏÒ»Ò³&nbsp;';
+echo 'ä¸Šä¸€é¡µ&nbsp;';
 }else {
 $page1=$page-1;
-echo '<a href="'.$PHP_SELF.'?page='.$page1.'&area='.$area.'">ÉÏÒ»Ò³</a>&nbsp;';
+echo '<a href="'.$PHP_SELF.'?page='.$page1.'&area='.$area.'">ä¸Šä¸€é¡µ</a>&nbsp;';
 }
 $j=$c/15;
 if(!is_int($j)) $j++;
@@ -35,10 +35,10 @@ if($i<=$xx){
 echo '<a href="'.$PHP_SELF.'?page='.$i.'&area='.$area.'">'.$i.'</a>&nbsp;';
 }
 }
-echo '<a href="'.$PHP_SELF.'?page='.$j.'&area='.$area.'">×îºóÒ»Ò³</a>';
+echo '<a href="'.$PHP_SELF.'?page='.$j.'&area='.$area.'">æœ€åä¸€é¡µ</a>';
 ?>
 <form action="" enctype=multipart/form-data method=post>
-<input type=text name="page" size=3><input name=Submit type=submit value=Ìø×ªµ½´ËÒ³>
+<input type=text name="page" size=3><input name=Submit type=submit value=è·³è½¬åˆ°æ­¤é¡µ>
 </form>
 </table>
 <?

@@ -6,33 +6,33 @@ require_once("zdmin.inc.php");
 
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
-ÄúÉÐÎ´µÇÂ½¡£<br>
+æ‚¨å°šæœªç™»é™†ã€‚<br>
 <?
 }else {
 
 if ( (!isset($_SESSION['AdminAdmin'])) ) {
 ?>
  <td align="center" >
-ÄãÃ»ÓÐ¹ÜÀíÆäËû¹ÜÀíÔ±µÄÈ¨ÏÞ<br>
+ä½ æ²¡æœ‰ç®¡ç†å…¶ä»–ç®¡ç†å‘˜çš„æƒé™<br>
 <?
 } else {
 
 require "{$ADMINROOT}/Include/InitDB.php"; 
 $result=mysql_query("select ID from AdminUser_TB where ID='{$_REQUEST['AdminID']}'");
 
-if (!($row=mysql_fetch_array($result))){//´Ë¹ÜÀíÔ±²»´æÔÚ
+if (!($row=mysql_fetch_array($result))){//æ­¤ç®¡ç†å‘˜ä¸å­˜åœ¨
 ?>
-´Ë¹ÜÀíÔ±²»´æÔÚ£¡<BR>
+æ­¤ç®¡ç†å‘˜ä¸å­˜åœ¨ï¼<BR>
 <?
 } else{
 if (mysql_query("delete from  AdminUser_TB where ID='{$_REQUEST['AdminID']}'")) {
-	mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} É¾³ýÁË {$_REQUEST['AdminID']} µÄÕËºÅ', '{$_SERVER['REMOTE_ADDR']}','Admin', NOW()) ", $conn);
+	mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} åˆ é™¤äº† {$_REQUEST['AdminID']} çš„è´¦å·', '{$_SERVER['REMOTE_ADDR']}','Admin', NOW()) ", $conn);
 ?>
-	¹ÜÀíÔ±ÕËºÅÉ¾³ý³É¹¦£¡<br>
+	ç®¡ç†å‘˜è´¦å·åˆ é™¤æˆåŠŸï¼<br>
 <?
 } else {
 ?>
-	Êý¾Ý¿â²Ù×÷Ê§°Ü£¡ÇëÁªÂç¹ÜÀíÔ±¡£<br>
+	æ•°æ®åº“æ“ä½œå¤±è´¥ï¼è¯·è”ç»œç®¡ç†å‘˜ã€‚<br>
 <?
 }
 

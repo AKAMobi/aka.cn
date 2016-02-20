@@ -13,14 +13,14 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $ADMINURLROOT ;?>/" class="a5">ÍøÕ¾¹ÜÀíÔ±</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $ADMINURLROOT ;?>/AdminMenu.php" class="a5">¹ÜÀí²Ëµ¥</a> <font color="#458DE4">&gt;
-                </font><a href="<? echo $ADMINURLROOT ;?>/Money/AddUserMoney.php" class="a5">¸øÓÃ»§¼ÓÇ®</a>
+                å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $ADMINURLROOT ;?>/" class="a5">ç½‘ç«™ç®¡ç†å‘˜</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $ADMINURLROOT ;?>/AdminMenu.php" class="a5">ç®¡ç†èœå•</a> <font color="#458DE4">&gt;
+                </font><a href="<? echo $ADMINURLROOT ;?>/Money/AddUserMoney.php" class="a5">ç»™ç”¨æˆ·åŠ é’±</a>
 				<br>
                 <br>
-                <span class="newstitle">¸øÓÃ»§¼ÓÇ®</span></p>
-              <p>¸øµ¥¸öÓÃ»§¼ÓÇ®</p>
+                <span class="newstitle">ç»™ç”¨æˆ·åŠ é’±</span></p>
+              <p>ç»™å•ä¸ªç”¨æˆ·åŠ é’±</p>
             </td>
         </tr>
       </table>
@@ -30,25 +30,25 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
   <td align="center">
 <?
 
-if ( (!isset($_SESSION['AdminID']))   ){//Î´Õı³£µÇÂ¼
+if ( (!isset($_SESSION['AdminID']))   ){//æœªæ­£å¸¸ç™»å½•
 ?>
-ÄúÉĞÎ´µÇÂ¼¡£<BR>
-ÇëÊ×ÏÈ<A HREF="<? echo $ADMINURLROOT ;?>/index.php">µÇÂ¼</a>¡£
+æ‚¨å°šæœªç™»å½•ã€‚<BR>
+è¯·é¦–å…ˆ<A HREF="<? echo $ADMINURLROOT ;?>/index.php">ç™»å½•</a>ã€‚
 <?
 }else {
 
 if ( (!isset($_SESSION['MoneyAdmin'])) ) {
 ?>
-ÄãÃ»ÓĞ¸øÆäËûÓÃ»§¼ÓÇ®µÄÈ¨ÏŞ<br>
-Çë·µ»Ø<A HREF="<? echo $ADMINURLROOT ;?>/AdminMenu.php">¹ÜÀí²Ëµ¥</a>
+ä½ æ²¡æœ‰ç»™å…¶ä»–ç”¨æˆ·åŠ é’±çš„æƒé™<br>
+è¯·è¿”å›<A HREF="<? echo $ADMINURLROOT ;?>/AdminMenu.php">ç®¡ç†èœå•</a>
 <?
 } else {
 
 if ((!isset($_REQUEST['UserID'])) || (!isset($_REQUEST['Amount'])) || (!isset($_REQUEST['Reason'])) 
 	|| (!isset($_REQUEST['Currency'])) ){
 ?>
-ÊäÈë²ÎÊı²»È«£¬Çë¼ì²éÄúµÄÊäÈë¡£
-<INPUT type="button" value="·µ»Ø" onclick="history.back();">
+è¾“å…¥å‚æ•°ä¸å…¨ï¼Œè¯·æ£€æŸ¥æ‚¨çš„è¾“å…¥ã€‚
+<INPUT type="button" value="è¿”å›" onclick="history.back();">
 <?
 }else {
 
@@ -64,26 +64,26 @@ if ($_REQUEST['Currency']=="USD"){
 mysql_query("begin");
 $result=mysql_query("select A.AutoID as UserAutoID ,B.{$accountType} as UserAccount,  A.ID as UserID from User_TB as A, UserAccount_TB as B where A.ID='{$_REQUEST['UserID']}' and A.AutoID=B.UserAutoID and A.Status='Normal' ");
 
-if ( !($row=mysql_fetch_array($result)) ){ //ÎŞ´ËÓÃ»§
+if ( !($row=mysql_fetch_array($result)) ){ //æ— æ­¤ç”¨æˆ·
 mysql_query("rollback");
 ?>
-	ÎŞ´ËÓÃ»§»ò´ËÓÃ»§Î´Í¨¹ı×¢²á¡£Çë¼ì²éÊäÈëµÄÓÃ»§IDÊÇ·ñÕıÈ·¡£
-	<input type="button" value="·µ»Ø" onclick="history.back();">
+	æ— æ­¤ç”¨æˆ·æˆ–æ­¤ç”¨æˆ·æœªé€šè¿‡æ³¨å†Œã€‚è¯·æ£€æŸ¥è¾“å…¥çš„ç”¨æˆ·IDæ˜¯å¦æ­£ç¡®ã€‚
+	<input type="button" value="è¿”å›" onclick="history.back();">
 <?
 } else {
 
-$reason=preg_replace("/,/","£¬",$_REQUEST['Reason']);
+$reason=preg_replace("/,/","ï¼Œ",$_REQUEST['Reason']);
 $query=array();
 $NewAccount=floatval($row['UserAccount'])+floatval($_REQUEST['Amount']);
 $query[]="Update UserAccount_TB Set {$accountType}={$NewAccount} where UserAutoID='{$row['UserAutoID']}'";
 
 if ( floatval($_REQUEST['Amount']) > 0 ){
-	$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason,Currency) values (NULL,{$row['UserAutoID']},now(),{$_REQUEST['Amount']},0,$NewAccount,'ÒòÎª {$reason} ¸øÄú¼Ó {$_REQUEST['Amount']} Ôª','Bonus','{$currencyType}')";
-	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} ¸ø {$row['UserID']}  µÄ¸öÈËÕË»§ÉÏ¼ÓÇ® {$_REQUEST['Amount']} Ôª{$currencyType}£¬ÀíÓÉÊÇ£º{$reason}', '{$_SERVER['REMOTE_ADDR']}','Money', NOW()) ";
+	$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason,Currency) values (NULL,{$row['UserAutoID']},now(),{$_REQUEST['Amount']},0,$NewAccount,'å› ä¸º {$reason} ç»™æ‚¨åŠ  {$_REQUEST['Amount']} å…ƒ','Bonus','{$currencyType}')";
+	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} ç»™ {$row['UserID']}  çš„ä¸ªäººè´¦æˆ·ä¸ŠåŠ é’± {$_REQUEST['Amount']} å…ƒ{$currencyType}ï¼Œç†ç”±æ˜¯ï¼š{$reason}', '{$_SERVER['REMOTE_ADDR']}','Money', NOW()) ";
 }else{
 	$Amount = abs( $_REQUEST['Amount'] );
-	$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason,Currency) values (NULL,{$row['UserAutoID']},now(),0,{$Amount},$NewAccount,'ÒòÎª {$reason} ¸øÄú¼õ {$Amount} Ôª','Bonus','{$currencyType}')";
-	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} ¸ø {$row['UserID']}  µÄ¸öÈËÕË»§ÉÏ¼õÇ® {$Amount} Ôª{$currencyType}£¬ÀíÓÉÊÇ£º{$reason}', '{$_SERVER['REMOTE_ADDR']}','Money', NOW()) ";
+	$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason,Currency) values (NULL,{$row['UserAutoID']},now(),0,{$Amount},$NewAccount,'å› ä¸º {$reason} ç»™æ‚¨å‡ {$Amount} å…ƒ','Bonus','{$currencyType}')";
+	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} ç»™ {$row['UserID']}  çš„ä¸ªäººè´¦æˆ·ä¸Šå‡é’± {$Amount} å…ƒ{$currencyType}ï¼Œç†ç”±æ˜¯ï¼š{$reason}', '{$_SERVER['REMOTE_ADDR']}','Money', NOW()) ";
 }
 
 $query[]="commit";
@@ -101,11 +101,11 @@ for ($i=0;$i<count($query);++$i){
 }
 if ($success) {
 ?>
-	¼ÓÇ®²Ù×÷³É¹¦£¡<br>
+	åŠ é’±æ“ä½œæˆåŠŸï¼<br>
 <?
 } else {
 ?>
-	Êı¾İ¿â²Ù×÷Ê§°Ü£¡ÇëÁªÂç¹ÜÀíÔ±¡£<br>
+	æ•°æ®åº“æ“ä½œå¤±è´¥ï¼è¯·è”ç»œç®¡ç†å‘˜ã€‚<br>
 <?
 }
 }

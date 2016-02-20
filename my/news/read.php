@@ -18,7 +18,7 @@ else	$news_exist = false;
 <center>
 <? 
 if ( $news_exist ) echo htmlspecialchars( $ra[Title] ) . "<br>";
-	else echo "<font color=#ff0000>错误，信息提取错误！</font><br>";
+	else echo "<font color=#ff0000>閿欒锛屼俊鎭彁鍙栭敊璇紒</font><br>";
 ?>
 </center>
 </h3>

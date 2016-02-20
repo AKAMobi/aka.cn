@@ -19,7 +19,7 @@ $result=mysql_query($sql, $conn);
 while($row=mysql_fetch_array($result)){
 	if ($row['ID']==$SYSOPID) continue;
 	$AdminAccountID=urlencode($row['ID']);
-	$privilege=preg_replace("/,/","¡¢",$row['Privilege']);
+	$privilege=preg_replace("/,/","ã€",$row['Privilege']);
 	echo "{$row['ID']},{$privilege},ChangeAdminPassword.php?AdminID={$AdminAccountID},ModifyPrivilege.php?AdminID={$AdminAccountID},DeleteAdmin.php?AdminID={$AdminAccountID},{$row['FullName']}\n";
 }
 ?>

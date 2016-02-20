@@ -18,122 +18,12 @@
 
         <tr> 
 
-          <td> <p><b><font color="#3366CC">µ±Ç°Î»ÖÃ£º</font> </b><a href="/index.shtml" class="a5">°¢¿¨Ê×Ò³</a> 
-              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">²úÆ·Óë·þÎñ</a><font color="#458DE4">&gt; 
-              <a href="./index.shtml" class=a5>WMLä¯ÀÀÆ÷</a></font></p>
+          <td> <p><b><font color="#3366CC">å½“å‰ä½ç½®ï¼š</font> </b><a href="/index.shtml" class="a5">é˜¿å¡é¦–é¡µ</a> 
+              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">äº§å“ä¸ŽæœåŠ¡</a><font color="#458DE4">&gt; 
+              <a href="./index.shtml" class=a5>WMLæµè§ˆå™¨</a></font></p>
 
             <p class="newstitle">WMLBrowser</p>
 
-            <p>WMLÖ§³Ö£º<br>
+            <p>WMLæ”¯æŒï¼š<br>
 
-              £ £ ·ûºÏW3C×éÖ¯ÖÆ¶¨µÄWML 1.3±ê×¼£¬Ö§³ÖUNICODEºÍÖÐÎÄÏÔÊ¾£¬Ö§³ÖWMLÎÄ±¾±àÂë¡£</p>
-
-            <p></p>
-
-            <p>WMLScriptÖ§³Ö£º<br>
-
-              £ £ ·ûºÏW3C×éÖ¯ÖÆ¶¨µÄWMLScript 1.2±ê×¼£¬ÊµÏÖ¹æ·¶WAP-193-WMLScript Language Specification, 
-
-              June-2000Óë¹æ·¶WAP-194-WMLScript Standard Libraries Specification, 
-
-              June-2000ÖÐ¶ÔÓÚWMLScriptµÄÃèÊö£¬Ö§³ÖÄ¿Ç°¿ÉÒÔÕÒµ½µÄ¼¸ºõËùÓÐWMLScript³ÌÐò¡£</p>
-
-            <p>ÆäËû£º<br>
-
-              £ £ ¶ÔÏóÊ½³ÌÐò½á¹¹£»<br>
-
-              £ £ Ö§³Ö±£´æÎÄ¼þµÄ¹¦ÄÜ£»<br>
-
-            </p>
-
-            <p>&nbsp; </p>
-
-          </td>
-
-        </tr>
-
-      </table>
-
-    </td>
-
-    <td width="210" bgcolor="#F0FAFF" valign="top"> </td>
-
-    <br>
-
-  </tr>
-
-  <tr> 
-
-    <td width="210" bgcolor="#F0FAFF" valign="top"> 
-
-      <p>&nbsp;</p>
-
-
-
-    </td>
-
-  </tr>
-
-  <tr>
-
-    <td width="210" bgcolor="#F0FAFF" valign="top">
-
-      <table width="210" cellspacing="0" cellpadding="0">
-
-        <tr> 
-
-          <td height="45">&nbsp;</td>
-
-        </tr>
-
-        <tr>
-
-          <td>
-
-            <table width="210" border="0" cellspacing="8" cellpadding="3">
-              <tr> 
-                <td colspan="2">&nbsp;</td>
-              </tr>
-              <tr> 
-                <td bgcolor="C3D4F4" colspan="2"> <div align="left"><font color="032B7A"><b><font face="Arial"> 
-                    Ïà¹ØÁ´½Ó</font></b></font></div></td>
-              </tr>
-              <tr> 
-                <td> <div align="right"><img src="/image/leadarrow.gif"></div></td>
-                <td><a href="/serv_prod/index.shtml" class="a6">¼¼ÊõÖ§³Ö</a></td>
-              </tr>
-              <tr> 
-                <td> <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div></td>
-                <td><a href="/customer/contact/index.shtml" class="a6">ÁªÏµÎÒÃÇ</a></td>
-              </tr>
-              <tr> 
-                <td> <div align="right"></div></td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr> 
-                <td> <div align="right"></div></td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr> 
-                <td> <div align="right"></div></td>
-                <td>&nbsp;</td>
-              </tr>
-              <tr> 
-                <td> <div align="right"></div></td>
-                <td>&nbsp;</td>
-              </tr>
-            </table>
-
-          </td>
-
-        </tr>
-
-      </table>
-
-    </td>
-
-  </tr>
-
-</table>
-
-<!--#include virtual="../../footer.html" -->
+              

@@ -1,5 +1,5 @@
 
-echo -n "必须在脚本文件所在目录执行程序，确认？[Yes/N]"
+echo -n "蹇呴』鍦ㄨ剼鏈枃浠舵墍鍦ㄧ洰褰曟墽琛岀▼搴忥紝纭锛焄Yes/N]"
 read yn
 
 if [ -z $yn ] ; then 

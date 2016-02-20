@@ -12,13 +12,13 @@ IncludeHTML("../Include/Part1.html");
             
       <td> 
         <p><b><font color="#3366CC"><br>
-          ��ǰλ�ã�</font> </b><a href="/" class="a5">������ҳ</a> <font color="#458DE4">&gt; 
-          </font><a href="/personal/" class="a5">�ҵİ���</a><font color="#458DE4">&gt; 
-          </font><a href="/personal/UserMenu.php" class="a5">�û��˵�</a> <font color="#458DE4">&gt;</font><a href="/personal/vpn/SelectDate.shtml" class="a5">VPN����ͳ��</a> 
+          当前位置：</font> </b><a href="/" class="a5">阿卡首页</a> <font color="#458DE4">&gt; 
+          </font><a href="/personal/" class="a5">我的阿卡</a><font color="#458DE4">&gt; 
+          </font><a href="/personal/UserMenu.php" class="a5">用户菜单</a> <font color="#458DE4">&gt;</font><a href="/personal/vpn/SelectDate.shtml" class="a5">VPN流量统计</a> 
           <br>
           <br>
-          <span class="newstitle">VPN����ͳ��</span></p>
-              <p>���ǲ쿴VPN����ͳ��ҳ�档������ѡ��ͳ�����ͣ�Ȼ��ѡ��ͳ�ƽ�ֹ���ڡ�ѡ����Ϻ��밴���鿴�������������ʼͳ�ơ�</p>
+          <span class="newstitle">VPN流量统计</span></p>
+              <p>这是察看VPN流量统计页面。请首先选择统计类型，然后选择统计截止日期。选择完毕后，请按“查看分析结果”键开始统计。</p>
               <p>&nbsp;</p>
             </td>
         </tr>
@@ -32,15 +32,15 @@ session_unregister("sYEAR");
 session_unregister("sMONTH");
 session_unregister("sDAY");
 if ( (!isset($HTTP_SESSION_VARS['UserName'])) || (!isset($HTTP_POST_VARS['AnalysisType']))
-	|| (!isset($HTTP_POST_VARS['YEAR'])) || (!isset($HTTP_POST_VARS['MONTH'])) || (!isset($HTTP_POST_VARS['DAY'])) ){//δ������¼
+	|| (!isset($HTTP_POST_VARS['YEAR'])) || (!isset($HTTP_POST_VARS['MONTH'])) || (!isset($HTTP_POST_VARS['DAY'])) ){//未正常登录
 ?>
-������<A HREF="../index.shtml">��½</a>��
+请首先<A HREF="../index.shtml">登陆</a>！
 <?
 }else {
 $temp=intval($HTTP_POST_VARS['AnalysisType']);
-if (($temp<1) || ($temp>4)){ //AnalysisType����
+if (($temp<1) || ($temp>4)){ //AnalysisType错误
 ?>
-���ύ�ı�����Ϣ������<A HREF="../index.shtml">��½</a>�����ԣ�
+你提交的表单信息错误，请<A HREF="../index.shtml">登陆</a>后重试！
 <? 
 } else{
 $sAnalysisType=$temp;
@@ -58,7 +58,7 @@ session_register("sDAY");
 	echo $HTTP_SESSION_VARS['NickName'];
 	$str;
 	if ($sAnalysisType==4) {
-		$str=sprintf("%d��%d��%d��",$sYEAR,$sMONTH,$sDAY);
+		$str=sprintf("%d年%d月%d日",$sYEAR,$sMONTH,$sDAY);
 	} else {
 		$sEndTime=sprintf("%4d-%02d-%02d",$sYEAR,$sMONTH,$sDAY);
 		switch($sAnalysisType){
@@ -72,9 +72,9 @@ session_register("sDAY");
 			$nBeginTime=strtotime("{$sEndTime} -1 YEAR");
 			break;
 		}
-		$sBeginTime=strftime("%Y��%m��%d��",$nBeginTime); //ͳ����ʼʱ�䣨�ַ�����ʽ��
-		$str= sprintf("%d��%d��%d��",$sYEAR,$sMONTH,$sDAY);
-		$str= $sBeginTime . "��" . $str;
+		$sBeginTime=strftime("%Y年%m月%d日",$nBeginTime); //统计起始时间（字符串形式）
+		$str= sprintf("%d年%d月%d日",$sYEAR,$sMONTH,$sDAY);
+		$str= $sBeginTime . "到" . $str;
 	}
 	$conn=mysql_pconnect('localhost','aka','zpzAKA!@#');
 	mysql_select_db('aka',$conn);
@@ -82,7 +82,7 @@ session_register("sDAY");
     mysql_query("INSERT INTO  VPN_QUERY_LOG(OperTime,UserName,UserIP,OperType,Note) VALUES (NOW(),'$UserName','$ip',1,'$str')");
 	mysql_close($conn);
 	echo $str;
-?>VPN��������</span><br>
+?>VPN流量分析</span><br>
 	<IMG src="AnalysisChart.php">
 	</div>
 	<br>

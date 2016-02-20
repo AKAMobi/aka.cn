@@ -12,11 +12,11 @@ IncludeHTML("{$NEWSROOT}/Include/Part1.html");
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                ตฑวฐฮปึรฃบ</font> </b><a href="/" class="a5">ฐขฟจสืาณ</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $NEWSURL; ?>/" class="a5">ฐขฟจะยฮล</a><font color="#458DE4">&gt; 
-                </font><a href="<? echo $NEWSURL; ?>/classes.php" class="a5">ะยฮลมะฑํ</a><br>
+                ๅฝ“ๅไฝ็ฝฎ๏ผ</font> </b><a href="/" class="a5">้ฟๅก้ฆ–้กต</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $NEWSURL; ?>/" class="a5">้ฟๅกๆ–ฐ้—ป</a><font color="#458DE4">&gt; 
+                </font><a href="<? echo $NEWSURL; ?>/classes.php" class="a5">ๆ–ฐ้—ปๅ—่กจ</a><br>
                 <br>
-                <span class="newstitle"> ฐขฟจึฑอจณตื๎ะยอจึช </span></p>
+                <span class="newstitle"> ้ฟๅก็ด้€่ฝฆๆ€ๆ–ฐ้€็ฅ </span></p>
             </td>
         </tr>
       </table>
@@ -29,7 +29,7 @@ IncludeHTML("{$NEWSROOT}/Include/Part1.html");
 $ID=$_REQUEST['UserID'] ;
 if( !eregi( "^[0-9a-z][_0-9a-z\.]*$", $ID ) ){
 ?>
-ว๋ฮ๐ึฑฝำทรฮสฑพาณฃก
+่ฏทๅฟ็ดๆฅ่ฎฟ้—ฎๆฌ้กต๏ผ
 <?
 }else{
 
@@ -59,10 +59,10 @@ $sql="select A.AutoID as AutoID, A.Title As Title, A.Important As Important from
 $result=mysql_query($sql);
 if (mysql_num_rows($result) <=0) { 
 ?>
-รปำะื๎ะยอจึชฃก
+ๆฒกๆๆ€ๆ–ฐ้€็ฅ๏ผ
 <?
-} else {		//ฮÞะยฮล
-echo 'ฑพาณสวตฺ'.$page.'าณ';
+} else {		//ๆ— ๆ–ฐ้—ป
+echo 'ๆฌ้กตๆฏ็ฌฌ'.$page.'้กต';
 ?>
 <br><br>
 <table border="0" width="400">
@@ -89,19 +89,19 @@ for ($i=0;$i<(15-$num);$i++){
 <br>
 <?
 if($page==1){
-echo 'ษฯาปาณ&nbsp;&nbsp;';
+echo 'ไธไธ€้กต&nbsp;&nbsp;';
 }else {
 $page1=$page-1;
-echo '<a href="showNews.php?page='.$page1.'&area='.$area.'" class=\"a6\">ษฯาปาณ</a>&nbsp;&nbsp;';
+echo '<a href="showNews.php?page='.$page1.'&area='.$area.'" class=\"a6\">ไธไธ€้กต</a>&nbsp;&nbsp;';
 }
 $j=$c/15;
 if(!is_int($j)) $j++;
 $j=intval($j);
 if($page==$j){
-echo 'ฯยาปาณ&nbsp;&nbsp;';
+echo 'ไธไธ€้กต&nbsp;&nbsp;';
 }else {
 $page1=$page+1;
-echo '<a href="showNews.php?page='.$page1.'&area='.$area.'" class=\"a6\">ฯยาปาณ</a>&nbsp;&nbsp;';
+echo '<a href="showNews.php?page='.$page1.'&area='.$area.'" class=\"a6\">ไธไธ€้กต</a>&nbsp;&nbsp;';
 }
 $xx=$page+9;
 for($i=$page;$i<=$j;$i++){
@@ -115,7 +115,7 @@ for($i=$page;$i<=$j;$i++){
 		break;
 	}
 }
-echo '<a href="showNews.php?page='.$j.'&area='.$area.'" class=\"a6\">ื๎บ๓าปาณ</a>';
+echo '<a href="showNews.php?page='.$j.'&area='.$area.'" class=\"a6\">ๆ€ๅไธ€้กต</a>';
 
 ?>
 </td></tr>

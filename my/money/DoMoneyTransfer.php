@@ -11,9 +11,9 @@ require_once( "header.inc.php" );
             
       <td> 
         <p><b><font color="#3366CC"><br>
-          µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-          </font><font color="#458DE4"><a href="/my/" class="a5">ÎÒµÄ°¢¿¨</a><font color="#458DE4">&gt; 
-          </font></font><a href="/my/money/MoneyTransfer.php" class="a5">ÓÃ»§¼ä×ªÕÊ</a> 
+          å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+          </font><font color="#458DE4"><a href="/my/" class="a5">æˆ‘çš„é˜¿å¡</a><font color="#458DE4">&gt; 
+          </font></font><a href="/my/money/MoneyTransfer.php" class="a5">ç”¨æˆ·é—´è½¬å¸</a> 
           <br>
           <br>
         <p>&nbsp;</p>
@@ -34,7 +34,7 @@ if ( (!isset($HTTP_SESSION_VARS['UserID'])) || (!isset($HTTP_POST_VARS['Transfer
 	|| (!isset($HTTP_POST_VARS['Money'])) 
 	|| (!isset($_REQUEST['Currency'])) ){
 ?>
-	<p>ÇëÊ×ÏÈ<A HREF="index.php">µÇÂ¼</a>£¡</p>
+	<p>è¯·é¦–å…ˆ<A HREF="index.php">ç™»å½•</a>ï¼</p>
 	<br>
 	<br>
 	<br>
@@ -45,8 +45,8 @@ if ( (!isset($HTTP_SESSION_VARS['UserID'])) || (!isset($HTTP_POST_VARS['Transfer
 } 
 if (!strcmp($HTTP_SESSION_VARS['UserID'],$HTTP_POST_VARS['TransferTarget'])){
 ?>
-	<p>²»ÄÜ×ªÕË¸ø×Ô¼º¡£</p>
-	<p>Çë¼ì²éÄúµÄ×ªÕË¶ÔÏóÊÇ·ñÊäÈëÓÐÎó¡£</p>
+	<p>ä¸èƒ½è½¬è´¦ç»™è‡ªå·±ã€‚</p>
+	<p>è¯·æ£€æŸ¥æ‚¨çš„è½¬è´¦å¯¹è±¡æ˜¯å¦è¾“å…¥æœ‰è¯¯ã€‚</p>
 <BR>
 </td></tr></table>
 <?
@@ -60,12 +60,12 @@ if ($_REQUEST['Currency']=="USD"){
 
 
 $result=mysql_query("select A.AutoID as OriginUserAutoID ,B.{$accountType} as OriginUserAccount ,C.AutoID as TargetUserAutoID, D.{$accountType} as TargetUserAccount, C.UserName as TargetUserName ,A.ID as OriginUserID, C.ID as TargetUserID from User_TB as A, UserAccount_TB as B, User_TB as C, UserAccount_TB as D where A.ID='{$HTTP_SESSION_VARS['UserID']}' and A.AutoID=B.UserAutoID and C.ID='{$HTTP_POST_VARS['TransferTarget']}' and C.Status='Normal' and C.AutoID=D.UserAutoID ");
-if ((!($row=mysql_fetch_array($result))) || (floatval($HTTP_POST_VARS['Money'])<0) ){//ÎÞ´ËÓÃ»§
+if ((!($row=mysql_fetch_array($result))) || (floatval($HTTP_POST_VARS['Money'])<0) ){//æ— æ­¤ç”¨æˆ·
 ?>
-ÊäÈëÓÐÎó»òÕßÄ¿±êÓÃ»§Î´ÆôÓÃ£¡<BR>
-Çë¼ì²éÄúµÄÊäÈëÊÇ·ñÕýÈ·<BR>
+è¾“å…¥æœ‰è¯¯æˆ–è€…ç›®æ ‡ç”¨æˆ·æœªå¯ç”¨ï¼<BR>
+è¯·æ£€æŸ¥æ‚¨çš„è¾“å…¥æ˜¯å¦æ­£ç¡®<BR>
 <br>
-<input type="button" value="·µ»Ø" onclick="history.back();">
+<input type="button" value="è¿”å›ž" onclick="history.back();">
 <br>
 <?
 }
@@ -73,18 +73,18 @@ else{
 
 if ($row['TargetUserName']!=$HTTP_POST_VARS['TransferTargetName']){
 ?>
-	ÓÃ»§ÕæÊµÃû³Æ´íÎó£¬Çë¼ì²éÄúµÄÊäÈëÊÇ·ñÕýÈ·<br>
+	ç”¨æˆ·çœŸå®žåç§°é”™è¯¯ï¼Œè¯·æ£€æŸ¥æ‚¨çš„è¾“å…¥æ˜¯å¦æ­£ç¡®<br>
 <br>
-<input type="button" value="·µ»Ø" onclick="history.back();">
+<input type="button" value="è¿”å›ž" onclick="history.back();">
 <br>
 <?
 } else {
 if (floatval($row['OriginUserAccount'])<floatval($HTTP_POST_VARS['Money'])){
 ?>
-ÄúÕË»§ÉÏµÄÓà¶î²»×ã£¡<BR>
-Çë¼ì²éÄúµÄÊäÈëÊÇ·ñÕýÈ·<BR>
+æ‚¨è´¦æˆ·ä¸Šçš„ä½™é¢ä¸è¶³ï¼<BR>
+è¯·æ£€æŸ¥æ‚¨çš„è¾“å…¥æ˜¯å¦æ­£ç¡®<BR>
 <br>
-<input type="button" value="·µ»Ø" onclick="history.back();">
+<input type="button" value="è¿”å›ž" onclick="history.back();">
 <br>
 <?
 } else {
@@ -92,12 +92,12 @@ $query=array();
 $query[]="begin";
 $NewAccount=floatval($row['OriginUserAccount'])-floatval($HTTP_POST_VARS['Money']);
 $query[]="Update UserAccount_TB Set {$accountType}={$NewAccount} where UserAutoID='{$row['OriginUserAutoID']}'";
-$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason,Currency) values (NULL,{$row['OriginUserAutoID']},now(),0,{$HTTP_POST_VARS['Money']},$NewAccount,'Äú×ª¸ø {$row['TargetUserID']} ¹² {$HTTP_POST_VARS['Money']} Ôª ','InternalTransferOut','{$currencyType}')";
+$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason,Currency) values (NULL,{$row['OriginUserAutoID']},now(),0,{$HTTP_POST_VARS['Money']},$NewAccount,'æ‚¨è½¬ç»™ {$row['TargetUserID']} å…± {$HTTP_POST_VARS['Money']} å…ƒ ','InternalTransferOut','{$currencyType}')";
 $NewAccount=floatval($row['TargetUserAccount'])+floatval($HTTP_POST_VARS['Money']);
 $query[]="Update UserAccount_TB Set {$accountType}={$NewAccount},AccountEnable='Y' where UserAutoID='{$row['TargetUserAutoID']}'";
-$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason,Currency) values (NULL,{$row['TargetUserAutoID']},now(),{$HTTP_POST_VARS['Money']},0,$NewAccount,' {$row['OriginUserID']} ×ª¸øÄú {$HTTP_POST_VARS['Money']} Ôª','InternalTransferIn','{$currencyType}')";
+$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason,Currency) values (NULL,{$row['TargetUserAutoID']},now(),{$HTTP_POST_VARS['Money']},0,$NewAccount,' {$row['OriginUserID']} è½¬ç»™æ‚¨ {$HTTP_POST_VARS['Money']} å…ƒ','InternalTransferIn','{$currencyType}')";
 if ((isset($_SESSION['AdminID'])) ){
-	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} ´Ó {$row['OriginUserID']}  µÄ¸öÈËÕË»§ÉÏ»®×ß {$HTTP_POST_VARS['Money']} {$currencyType} ×ª¸ø {$row['TargetUserID']}', '{$_SERVER['REMOTE_ADDR']}','UserAccount', NOW()) ";
+	$query[]="insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} ä»Ž {$row['OriginUserID']}  çš„ä¸ªäººè´¦æˆ·ä¸Šåˆ’èµ° {$HTTP_POST_VARS['Money']} {$currencyType} è½¬ç»™ {$row['TargetUserID']}', '{$_SERVER['REMOTE_ADDR']}','UserAccount', NOW()) ";
 }
 $query[]="commit";
 
@@ -111,11 +111,11 @@ for ($i=0;$i<count($query);++$i){
 }
 if ($success) {
 ?>
-	»®ÕËÇëÇóÒÑ³É¹¦´¦Àí£¡<br>
+	åˆ’è´¦è¯·æ±‚å·²æˆåŠŸå¤„ç†ï¼<br>
 <?
 } else {
 ?>
-	Êý¾Ý¿â²Ù×÷Ê§°Ü£¡ÇëÁªÂç¹ÜÀíÔ±¡£<br>
+	æ•°æ®åº“æ“ä½œå¤±è´¥ï¼è¯·è”ç»œç®¡ç†å‘˜ã€‚<br>
 <?
 }
 }

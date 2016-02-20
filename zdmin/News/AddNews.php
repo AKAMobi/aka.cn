@@ -1,7 +1,7 @@
 <? session_start() ?>
 <html>
 <head>
-<TITLE>Ìí¼ÓÐÂÎÅ</title>
+<TITLE>æ·»åŠ æ–°é—»</title>
 <link rel="stylesheet" href="/css/aka.css" type="text/css"> 
 </head>
 <body>
@@ -11,14 +11,14 @@ require_once("zdmin.inc.php");
 
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
-ÄúÉÐÎ´µÇÂ½¡£<br>
+æ‚¨å°šæœªç™»é™†ã€‚<br>
 <?
 }else {
 
 if ( (!isset($_SESSION['NewsAdmin'])) ) {
 ?>
  <td align="center" >
-ÄãÃ»ÓÐÐÂÎÅ¹ÜÀíµÄÈ¨ÏÞ<br>
+ä½ æ²¡æœ‰æ–°é—»ç®¡ç†çš„æƒé™<br>
 <?
 } else {
 require_once("news.inc.php");
@@ -33,7 +33,7 @@ $Body=$_REQUEST['Body'];
 $Title=$_REQUEST['Title'];
 $Important=$_REQUEST['Important'];
 
-//ÅÐ¶ÏÊÇ·ñÓÐÍ¼Æ¬ÉÏ´«£¬²¢½¨Á¢ÉÏ´«Í¼Æ¬ËùÐèÄ¿Â¼
+//åˆ¤æ–­æ˜¯å¦æœ‰å›¾ç‰‡ä¸Šä¼ ï¼Œå¹¶å»ºç«‹ä¸Šä¼ å›¾ç‰‡æ‰€éœ€ç›®å½•
 if(is_uploaded_file($_FILES['file']['tmp_name'])){
 	if(!is_dir($IMGROOT.date("Y"))){
 		mkdir($IMGROOT.date("Y"),0777);
@@ -42,7 +42,7 @@ if(is_uploaded_file($_FILES['file']['tmp_name'])){
 		mkdir($IMGROOT.date("Y").'/'.date("m"),0777);
 	}
 	$thistime=date("dHis");
-	//ÉÏ´«Í¼Æ¬
+	//ä¸Šä¼ å›¾ç‰‡
 	$ImagePath=date("Y").'/'.date("m").'/';
 	
 	$name=$_FILES['file']['name'];
@@ -52,12 +52,12 @@ if(is_uploaded_file($_FILES['file']['tmp_name'])){
 }else {
 	$ImagePath='';
 }
-//¼ì²éÊÇ·ñÎªÐÂÔöÐÂÎÅÀàÐÍ
+//æ£€æŸ¥æ˜¯å¦ä¸ºæ–°å¢žæ–°é—»ç±»åž‹
 if($ExistClass=="yes"){$Class=$OldClass;}else{$Class=$NewClass;}
-//Ìæ»»µô»Ø³µºÍ¿Õ¸ñ£¬ÒÔ±ãÔÚhtmlÎÄ¼þÖÐÕý³£ÏÔÊ¾
+//æ›¿æ¢æŽ‰å›žè½¦å’Œç©ºæ ¼ï¼Œä»¥ä¾¿åœ¨htmlæ–‡ä»¶ä¸­æ­£å¸¸æ˜¾ç¤º
 //$Body=ereg_replace(" ","&nbsp;",$Body);
 //$Body=ereg_replace("\n","<br>",$Body);
-//Ìí¼Ó¼ÇÂ¼
+//æ·»åŠ è®°å½•
 $thistime=date("Y-m-d H:i:s");
 
 $query=array();
@@ -84,15 +84,15 @@ if ($isQuerySuccessful) {
 }
 
 if ($isQuerySuccessful) {
-$temp=preg_replace("/,/","£¬",$Title);
-mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} Ìí¼ÓÁË±êÌâÎª {$temp} µÄÐÂÎÅ ','{$_SERVER['REMOTE_ADDR']}','News', NOW()) ", $conn);
+$temp=preg_replace("/,/","ï¼Œ",$Title);
+mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} æ·»åŠ äº†æ ‡é¢˜ä¸º {$temp} çš„æ–°é—» ','{$_SERVER['REMOTE_ADDR']}','News', NOW()) ", $conn);
 ?>
-<BR>ÐÂÎÅ³É¹¦Ìí¼ÓÍê±Ï£¡<BR><BR>
+<BR>æ–°é—»æˆåŠŸæ·»åŠ å®Œæ¯•ï¼<BR><BR>
 <?
 } else {
 	mysql_query("rollback");
 ?>
-Êý¾Ý¿â²Ù×÷Ê§°Ü£¬ÇëÁªÂç¹ÜÀíÔ±¡£
+æ•°æ®åº“æ“ä½œå¤±è´¥ï¼Œè¯·è”ç»œç®¡ç†å‘˜ã€‚
 <?
 }
 
@@ -100,29 +100,11 @@ mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogT
 ?>
 <form name="form1" method="post" action="<? echo $_SERVER['PHP_SELF'] ?>" enctype="multipart/form-data">
 <table border=1>
-<tr><td>ÐÂÎÅÀàÐÍ£ºÔ­ÓÐÐÂÎÅÀàÐÍ<input type="radio" name="ExistClass" value="yes" checked><select name="OldClass">
+<tr><td>æ–°é—»ç±»åž‹ï¼šåŽŸæœ‰æ–°é—»ç±»åž‹<input type="radio" name="ExistClass" value="yes" checked><select name="OldClass">
 	<?
 	$rst=mysql_query("select Class from News_TB group by Class");
 	while($row=mysql_fetch_row($rst)){
 	echo '<option value="'.$row[0].'">'.$row[0].'</option>';
     }
 	?>
-	</select><br>£ £ £ £ £ Ôö¼ÓÐÂÎÅÀàÐÍ<input type="radio" name="ExistClass" value="no"><input type="text" name="NewClass" size=20></td></tr>
-<tr><td>ÊÇ·ñÎªÖØÒªÐÂÎÅ£º<input type="radio" name="Important" value="N" checked>·ñ<input type="radio" name="Important" value="Y">ÊÇ</td></tr>
-<tr><td>ÊÇ·ñÐèÒªÔÚ¸öÈËVPN¿Í»§¶ËÏÔÊ¾£º<input type="radio" name="ShowOnVPNClient" value="N" checked>·ñ<input type="radio" name="ShowOnVPNClient" value="Y">ÊÇ</td></tr>
-<tr><td>Ñ¡ÔñÍ¼Æ¬ÉÏ´«£º<input type=file name=file size=20></td></tr>
-<tr><td>ÐÂÎÅÌâÄ¿<input type="text" name="Title" size=70></td></tr>
-<tr><td>ÐÂÎÅÄÚÈÝ<textarea name="Body" wrap="VIRTUAL" cols="70" rows="20"></textarea></td></tr>
-<tr><td><input type="submit" name="sub1" value="Add"></td></tr>
-</table>
-</form>
-
-<?
-}
-}
-}
-?>
-</div>
-</body>
-</html>
-
+	</select><br>

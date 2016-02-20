@@ -17,7 +17,7 @@
 
               <tr> 
 
-                <td bgcolor="C3D4F4" colspan="2"><b><font face="Arial, Helvetica, sans-serif" color="032B7A">อ๘ีพนÜภํ</font></b></td>
+                <td bgcolor="C3D4F4" colspan="2"><b><font face="Arial, Helvetica, sans-serif" color="032B7A">็ฝ‘็ซ็ฎก็</font></b></td>
 
               </tr>
        	</table>

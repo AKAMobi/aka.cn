@@ -12,7 +12,7 @@ require_once( "header.inc.php" );
 <table width="760" border="0" cellspacing="0" cellpadding="0">
   <tr> 
   <td align="center" >
-	<p>ÇëÕý³£<A HREF="/my/" class=a5>µÇÂ¼</a>£¡</p>
+	<p>è¯·æ­£å¸¸<A HREF="/my/" class=a5>ç™»å½•</a>ï¼</p>
 	<br>
 	<br>
 	<br>
@@ -23,12 +23,12 @@ require_once( "header.inc.php" );
 }
 
 require_once( "db.inc.php" );
-$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("ÎÞ·¨Á¬½ÓDBM.");
-mysql_select_db( DB_NAME, $conn) or die("ÎÞ·¨´ò¿ªÊý¾Ý¿â.");
+$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("æ— æ³•è¿žæŽ¥DBM.");
+mysql_select_db( DB_NAME, $conn) or die("æ— æ³•æ‰“å¼€æ•°æ®åº“.");
 
 $result=mysql_query("select * from User_TB where ID='{$HTTP_POST_VARS['Name']}'");
 
-if (!($row=mysql_fetch_array($result))){//ÎÞ´ËÓÃ»§
+if (!($row=mysql_fetch_array($result))){//æ— æ­¤ç”¨æˆ·
 require_once( "header.inc.php" );
 ?>
 <br>
@@ -44,14 +44,14 @@ require_once( "header.inc.php" );
 	<br>
 	<br>
 	<br>
-ÎÞ´ËÓÃ»§ÕËºÅ£¡<BR>
-ÇëÖØÐÂ<A HREF="index.php" class=a5>µÇÂ¼</a>
+æ— æ­¤ç”¨æˆ·è´¦å·ï¼<BR>
+è¯·é‡æ–°<A HREF="index.php" class=a5>ç™»å½•</a>
 	<br>
 	<br>
 <?
 }
 else{
-if (strcmp($HTTP_POST_VARS['Password'],$row["Password"])){//ÃÜÂë´íÎó
+if (strcmp($HTTP_POST_VARS['Password'],$row["Password"])){//å¯†ç é”™è¯¯
 require_once( "header.inc.php" );
 ?>
 <br>
@@ -67,13 +67,13 @@ require_once( "header.inc.php" );
 	<br>
 	<br>
 	<br>
-ÃÜÂë´íÎó£¡<br>
-ÇëÖØÐÂ<A href="/my/" onclick="history.back();" class=a5>µÇÂ¼</a>
+å¯†ç é”™è¯¯ï¼<br>
+è¯·é‡æ–°<A href="/my/" onclick="history.back();" class=a5>ç™»å½•</a>
 	<br>
 	<br>
 <?
 }
-else{//Õý³£µÇÂ¼
+else{//æ­£å¸¸ç™»å½•
 
 
 mysql_free_result($result);
@@ -81,7 +81,7 @@ $AutoID=$row['AutoID'];
 /*
 $result=mysql_query("select DATE_FORMAT(C.LastActiveTime,'%Y-%c-%e %T') as LastActiveTime from UserActive_TB where UserAutoID={$AutoID}");
 if( !($row=mysql_fetch_array($result)) ){
-	$HTTP_SESSION_VARS['LastActiveTime'] = 'Î´ÔøµÇÂ½';
+	$HTTP_SESSION_VARS['LastActiveTime'] = 'æœªæ›¾ç™»é™†';
 }else{
 	$HTTP_SESSION_VARS['LastActiveTime'] = $row['LastActiveTime'];
 }
@@ -116,10 +116,10 @@ require_once( "header.inc.php" );
 	<br>
 	<br>
 	<br>
-	ÄúµÄÕË»§ÒÑ±»Í£ÓÃ¡£<br>
-	ÇëÖ±½ÓÓë¹ÜÀíÔ±ÁªÏµÒÔÁË½âÏêÏ¸Çé¿ö¡£
+	æ‚¨çš„è´¦æˆ·å·²è¢«åœç”¨ã€‚<br>
+	è¯·ç›´æŽ¥ä¸Žç®¡ç†å‘˜è”ç³»ä»¥äº†è§£è¯¦ç»†æƒ…å†µã€‚
 	<br>
-<input type="button" value="·µ»Ø" onclick="history.back();">
+<input type="button" value="è¿”å›ž" onclick="history.back();">
 	<br>
 <?
 } else {

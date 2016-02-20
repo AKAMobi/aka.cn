@@ -11,19 +11,19 @@
         <tr>
 
           <td valign="top"> <p><br>
-              <b><font color="#3366CC">µ±Ç°Î»ÖÃ:</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> 
+              <b><font color="#3366CC">å½“å‰ä½ç½®:</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> 
               <font color="#458DE4">&gt;</font><a href="/solution" class="a5"> 
-              </a><a href="/serv_prod/index.shtml" class="a5">²úÆ·Óë·þÎñ</a><font color="#458DE4">&gt;</font> 
+              </a><a href="/serv_prod/index.shtml" class="a5">äº§å“ä¸ŽæœåŠ¡</a><font color="#458DE4">&gt;</font> 
               <a href="/serv_prod/vpn/index.shtml" class="a5">VPN</a><font color="#458DE4"> 
-              &gt;</font> <a href="index.shtml" class="a5">³ö¹úVPN</a><font color="#458DE4"> 
+              &gt;</font> <a href="index.shtml" class="a5">å‡ºå›½VPN</a><font color="#458DE4"> 
               </font><font color="#458DE4"> </font><font color="#458DE4">&gt;</font> 
-              <font class=a4>¸÷ÖÖ·½Ê½¶Ô±È</font></p>
+              <font class=a4>å„ç§æ–¹å¼å¯¹æ¯”</font></p>
 
             <table width="475" cellspacing="0" cellpadding="0">
 
               <tr> 
 
-                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">±È½Ï¸÷ÖÖÍøÂç·þÎñµÄÓÅÈ±µã</td>
+                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">æ¯”è¾ƒå„ç§ç½‘ç»œæœåŠ¡çš„ä¼˜ç¼ºç‚¹</td>
 
               </tr>
 
@@ -37,83 +37,83 @@
 
                 <td width="10%">&nbsp;</td>
 
-                <td width="21%"> VPN·þÎñ <br>
+                <td width="21%"> VPNæœåŠ¡ <br>
 
                 </td>
 
-                <td width="11%"> ½ÌÓýÍø</td>
+                <td width="11%"> æ•™è‚²ç½‘</td>
 
-                <td width="32%">Ãâ·Ñ´úÀí</td>
+                <td width="32%">å…è´¹ä»£ç†</td>
 
-                <td width="8%">²¦ºÅ</td>
+                <td width="8%">æ‹¨å·</td>
 
-                <td width="18%">DDN×¨Ïß</td>
-
-              </tr>
-
-              <tr> 
-
-                <td width="10%">·ÑÓÃ</td>
-
-                <td width="21%">°üÔÂÖÆ£¬²»¼ÆÁ÷Á¿£¬·ÑÓÃµÍÁ®</td>
-
-                <td width="11%">Ïàµ±¸ß</td>
-
-                <td width="32%">ÎÞ</td>
-
-                <td width="8%">±È½Ï¸ß</td>
-
-                <td width="18%">·Ç³£¸ß</td>
+                <td width="18%">DDNä¸“çº¿</td>
 
               </tr>
 
               <tr> 
 
-                <td width="10%">ËÙ¶È</td>
+                <td width="10%">è´¹ç”¨</td>
 
-                <td width="21%">·Ç³£ºÃ</td>
+                <td width="21%">åŒ…æœˆåˆ¶ï¼Œä¸è®¡æµé‡ï¼Œè´¹ç”¨ä½Žå»‰</td>
 
-                <td width="11%">·Ç³£ºÃ</td>
+                <td width="11%">ç›¸å½“é«˜</td>
 
-                <td width="32%"> ±È½ÏÂý</td>
+                <td width="32%">æ— </td>
 
-                <td width="8%"> ·Ç³£Âý</td>
+                <td width="8%">æ¯”è¾ƒé«˜</td>
 
-                <td width="18%">½ÏºÃ</td>
-
-              </tr>
-
-              <tr> 
-
-                <td width="10%">Ò×ÓÃÐÔ</td>
-
-                <td width="21%">¶ÔÓÃ»§Í¸Ã÷£¬Ö§³ÖËùÓÐÍøÂçÐ­Òé</td>
-
-                <td width="11%">ºÃ</td>
-
-                <td width="32%">Ö»Ö§³ÖÌØ¶¨µÄÐ­Òé£¬Ò»°ã½öÖ§³ÖWWW·ÃÎÊ</td>
-
-                <td width="8%">ºÃ</td>
-
-                <td width="18%">ÐèÒª¶îÍâ°²×°Éè±¸</td>
+                <td width="18%">éžå¸¸é«˜</td>
 
               </tr>
 
               <tr> 
 
-                <td width="10%">ÎÈ¶¨ÐÔ</td>
+                <td width="10%">é€Ÿåº¦</td>
 
-                <td width="21%">ºÃ</td>
+                <td width="21%">éžå¸¸å¥½</td>
+
+                <td width="11%">éžå¸¸å¥½</td>
+
+                <td width="32%"> æ¯”è¾ƒæ…¢</td>
+
+                <td width="8%"> éžå¸¸æ…¢</td>
+
+                <td width="18%">è¾ƒå¥½</td>
+
+              </tr>
+
+              <tr> 
+
+                <td width="10%">æ˜“ç”¨æ€§</td>
+
+                <td width="21%">å¯¹ç”¨æˆ·é€æ˜Žï¼Œæ”¯æŒæ‰€æœ‰ç½‘ç»œåè®®</td>
+
+                <td width="11%">å¥½</td>
+
+                <td width="32%">åªæ”¯æŒç‰¹å®šçš„åè®®ï¼Œä¸€èˆ¬ä»…æ”¯æŒWWWè®¿é—®</td>
+
+                <td width="8%">å¥½</td>
+
+                <td width="18%">éœ€è¦é¢å¤–å®‰è£…è®¾å¤‡</td>
+
+              </tr>
+
+              <tr> 
+
+                <td width="10%">ç¨³å®šæ€§</td>
+
+                <td width="21%">å¥½</td>
 
                 <td width="11%">&nbsp;</td>
 
-                <td width="32%">·Ç³£²î¾­³£¸ü»»</td>
+                <td width="32%">éžå¸¸å·®ç»å¸¸æ›´æ¢</td>
 
-                <td width="8%">±È½Ï²î</td>
+                <td width="8%">æ¯”è¾ƒå·®</td>
 
                 <td width="18%"> 
 
-                  <p>ºÃ</p>
+                  <p>å¥½</p>
 
                 </td>
 
@@ -121,33 +121,33 @@
 
               <tr> 
 
-                <td width="10%">°²È«ÐÔ</td>
+                <td width="10%">å®‰å…¨æ€§</td>
 
-                <td width="21%">Ö§³Ö¼ÓÃÜ·ÃÎÊ£¬°²È«ÐÔ¸ß</td>
+                <td width="21%">æ”¯æŒåŠ å¯†è®¿é—®ï¼Œå®‰å…¨æ€§é«˜</td>
 
-                <td width="11%">ºÃ</td>
+                <td width="11%">å¥½</td>
 
-                <td width="32%">°²È«ÐÔµÍ</td>
+                <td width="32%">å®‰å…¨æ€§ä½Ž</td>
 
-                <td width="8%">ºÃ</td>
+                <td width="8%">å¥½</td>
 
-                <td width="18%">ºÃ</td>
+                <td width="18%">å¥½</td>
 
               </tr>
 
               <tr> 
 
-                <td width="10%">Ê¹ÓÃ·çÏÕ</td>
+                <td width="10%">ä½¿ç”¨é£Žé™©</td>
 
-                <td width="21%">ÎÞ</td>
+                <td width="21%">æ— </td>
 
-                <td width="11%">·ÑÓÃÄÑÒÔ¿ØÖÆ</td>
+                <td width="11%">è´¹ç”¨éš¾ä»¥æŽ§åˆ¶</td>
 
-                <td width="32%">ÓÐ·¨ÂÉ·çÏÕ</td>
+                <td width="32%">æœ‰æ³•å¾‹é£Žé™©</td>
 
-                <td width="8%">ÎÞ</td>
+                <td width="8%">æ— </td>
 
-                <td width="18%">ÎÞ</td>
+                <td width="18%">æ— </td>
 
               </tr>
 
@@ -177,7 +177,7 @@
 
           <td bgcolor="C3D4F4" colspan="2"> 
 
-            <div align="left"><font color="032B7A"><b><font face="Arial"> Ïà¹ØÁ´½Ó</font></b></font></div>
+            <div align="left"><font color="032B7A"><b><font face="Arial"> ç›¸å…³é“¾æŽ¥</font></b></font></div>
 
           </td>
 
@@ -191,7 +191,7 @@
 
           </td>
 
-          <td><a href="/serv_prod/index.shtml" class="a6">²úÆ·Óë·þÎñ</a></td>
+          <td><a href="/serv_prod/index.shtml" class="a6">äº§å“ä¸ŽæœåŠ¡</a></td>
 
         </tr>
 
@@ -203,7 +203,7 @@
 
           </td>
 
-          <td><a href="feature.shtml" class="a6">VPNµÄÌØµã</a></td>
+          <td><a href="feature.shtml" class="a6">VPNçš„ç‰¹ç‚¹</a></td>
 
         </tr>
 

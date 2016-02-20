@@ -1,7 +1,7 @@
 <? session_start() ?>
 <html>
 <head>
-<TITLE>лМ╪спбне</title>
+<TITLE>Ф╥╩Е┼═Ф√╟И≈╩</title>
 <link rel="stylesheet" href="/css/aka.css" type="text/css"> 
 </head>
 <body>
@@ -11,14 +11,14 @@ require_once("zdmin.inc.php");
 
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
-дЗипн╢╣гб╫║ё<br>
+Ф┌╗Е╟ Ф°╙Г≥╩И≥├Ц─┌<br>
 <?
 }else {
 
 if ( (!isset($_SESSION['NewsAdmin'])) ) {
 ?>
  <td align="center" >
-дЦц╩сппбне╧эюМ╣дх╗оч<br>
+Д╫═Ф╡║Ф°┴Ф√╟И≈╩Г╝║Г░├Г └Ф²┐И≥░<br>
 <?
 } else {
 require_once("news.inc.php");
@@ -36,7 +36,7 @@ $sub1 = $_REQUEST['sub1'];
 
 if($sub1=='Modify'){
 
-if(is_uploaded_file($_FILES['file']['tmp_name'])){//ио╢╚
+if(is_uploaded_file($_FILES['file']['tmp_name'])){//Д╦┼Д╪═
 
 	if(!is_dir($IMGROOT.date("Y"))){
 		mkdir($IMGROOT.date("Y"),0777);
@@ -54,23 +54,23 @@ if(is_uploaded_file($_FILES['file']['tmp_name'])){//ио╢╚
 
 	$oldImage=str_replace( $IMGURL,$IMGROOT,$oldImage);
 	if(is_file($oldImage))unlink($oldImage);
-}else{//й╧сцт╜м╪
+}else{//Д╫©Г■╗Е▌÷Е⌡╬
 	$ImagePath=$oldImage;
 }
 
-//пч╦д╪гб╪
+//Д©╝Ф■╧Х╝╟Е╫∙
 $sql="update News_TB set Class='$eClass',Important='$Important',Title='$Title',Body='$Body',PostDate=PostDate,ImagePath='{$ImagePath}' where AutoID=$id";
 $rst=mysql_query($sql);
 if($rst){
-$originTitle=preg_replace("/,/","ё╛",$_REQUEST['originTitle']);
-$Title=preg_replace("/,/","ё╛",$Title);
-mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} пч╦дак {$_REQUEST['originPostDate']} ╠ЙлБн╙ {$originTitle} ╣дпбнеё╛пб╠ЙлБн╙ {$Title}','{$_SERVER['REMOTE_ADDR']}','News', NOW()) ");
+$originTitle=preg_replace("/,/","О╪▄",$_REQUEST['originTitle']);
+$Title=preg_replace("/,/","О╪▄",$Title);
+mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} Д©╝Ф■╧Д╨├ {$_REQUEST['originPostDate']} Ф═┤И╒≤Д╦╨ {$originTitle} Г └Ф√╟И≈╩О╪▄Ф√╟Ф═┤И╒≤Д╦╨ {$Title}','{$_SERVER['REMOTE_ADDR']}','News', NOW()) ");
 ?>
-пбнеряЁи╧╕пч╦дё║
+Ф√╟И≈╩Е╥╡Ф┬░Е┼÷Д©╝Ф■╧О╪│
 <?
 }else{
 ?>
-йЩ╬щ©Б╡ывВй╖╟э║ёгКа╙бГ╧эюМт╠║ё
+Ф∙╟Ф█╝Е╨⌠Ф⌠█Д╫°Е╓╠Х╢╔Ц─┌Х╞╥Х│■Г╩°Г╝║Г░├Е▒≤Ц─┌
 <?
 }//end if
 
@@ -82,29 +82,29 @@ if ($row=mysql_fetch_array($rst)) {
 <INPUT type="hidden" name="originTitle" value="<? echo $row['Title']; ?>">
 <INPUT type="hidden" name="originPostDate" value="<? echo $row['PostDate']; ?>">
 <table border=1>
-<tr><td>пбнеюЮпмё╨<input type="text" name="eClass" size=20 value="<? echo $row['Class']; ?>"></td></tr>
+<tr><td>Ф√╟И≈╩Г╠╩Е·▀О╪ <input type="text" name="eClass" size=20 value="<? echo $row['Class']; ?>"></td></tr>
 <?
 if($row['Important']=="N"){
 ?>
-<tr><td>йг╥Ян╙жьр╙пбнеё╨<input type="radio" name="Important" value="N" checked>╥Я<input type="radio" name="Important" value="Y">йг</td></tr>
+<tr><td>Ф≤╞Е░╕Д╦╨И┤█Х╕│Ф√╟И≈╩О╪ <input type="radio" name="Important" value="N" checked>Е░╕<input type="radio" name="Important" value="Y">Ф≤╞</td></tr>
 <?
 }else{
 ?>
-<tr><td>йг╥Ян╙жьр╙пбнеё╨<input type="radio" name="Important" value="N">╥Я<input type="radio" name="Important" value="Y" checked>йг</td></tr>
+<tr><td>Ф≤╞Е░╕Д╦╨И┤█Х╕│Ф√╟И≈╩О╪ <input type="radio" name="Important" value="N">Е░╕<input type="radio" name="Important" value="Y" checked>Ф≤╞</td></tr>
 <?
 }
 ?>
-<tr><td>м╪ф╛ио╢╚<br><input type="hidden" name="oldimage" value="<? echo $row['ImagePath']; ?>">
+<tr><td>Е⌡╬Г┴┤Д╦┼Д╪═<br><input type="hidden" name="oldimage" value="<? echo $row['ImagePath']; ?>">
 <input type=file name=file size=20>
-<tr><td>пбнелБд©<input type="text" name="Title" size=70 value="<? echo $row['Title'] ; ?>"></td></tr>
-<tr><td>пбнедзхщ<textarea name="Body" wrap="VIRTUAL" cols="70" rows="20"><? echo htmlspecialchars($row[Body]); ?>
+<tr><td>Ф√╟И≈╩И╒≤Г⌡╝<input type="text" name="Title" size=70 value="<? echo $row['Title'] ; ?>"></td></tr>
+<tr><td>Ф√╟И≈╩Е├┘Е╝╧<textarea name="Body" wrap="VIRTUAL" cols="70" rows="20"><? echo htmlspecialchars($row[Body]); ?>
 </textarea></td></tr>
 <tr><td><input type="hidden" name="id" value="<? echo $row['AutoID']; ?>"><input type="submit" name="sub1" value="Modify"></td></tr>
 </table></form>
 <?
 } else {
 ?>
-н╢ур╣╫ж╦╤╗╣дпбне║ё
+Ф°╙Ф┴╬Е┬╟Ф▄┤Е╝ Г └Ф√╟И≈╩Ц─┌
 <?
 }
 

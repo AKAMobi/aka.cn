@@ -28,7 +28,7 @@ DEV: while( $line=<FD> ){
 	#		print "$trash, $1\n";
 			next DEV if( $trash eq $1 );
 		}
-		# ×ª»»Îª KByte
+		# è½¬æ¢ä¸º KByte
 		$traffic{$1}{'R'} = int( $2/(1024) );
 		$traffic{$1}{'T'} = int( $3/(1024) );
 	}
@@ -48,7 +48,7 @@ foreach $dev ( keys %traffic ){
 		$transmit = $traffic{$dev}{'T'} - $lt;
 	}
 		
-	# KB ÎªÊý¾Ý¿âÖÐ Receive/Transmit µÄµ¥Î»
+	# KB ä¸ºæ•°æ®åº“ä¸­ Receive/Transmit çš„å•ä½
 	$sth_ins->execute( $dev, $traffic{$dev}{'R'}, $traffic{$dev}{'T'},
 			$receive, $transmit ) or die "execute sth_ins";
 	#print "$dev: \n\tR: $traffic{$dev}{'R'}\n\tT: $traffic{$dev}{'T'}\n\tLastR: $lr\n\tLastT: $lt\n\tReceive: $receive\n\tTransmit: $transmit\n" if ( $dev eq 'zixia' );

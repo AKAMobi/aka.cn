@@ -4,14 +4,14 @@ use strict;
 use CGI 'param','header';
 use Net::SMTP;
 
-my %rate = ( 1=>'´Ó²»', 2=> 'Å¼¶û', 3=>'¾­³£', 4=>'Æµ·±' );
+my %rate = ( 1=>'ä»ä¸', 2=> 'å¶å°”', 3=>'ç»å¸¸', 4=>'é¢‘ç¹' );
 
 my $q;
 my ( $key, $value );
 
 $q = new CGI;
 print $q->header( -type=>'text/html',
-		-charset=>'gb2312' );
+		-charset=>'utf-8' );
 
 open( FD, "<../../header.html" );
 print <FD>;
@@ -24,96 +24,8 @@ print <<_HTML_;
         <tr> 
           <td valign="top"> 
             <p><br>
-              <b><font color="#3366CC">ÄúµÄÎ»ÖÃ£º</font></b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> 
-              <font color="#458DE4">&gt;</font> <a href="/customer/order/index.shtml" class="a5">¶¨¹º</a> 
-              <font color="#458DE4">&gt;</font> <span class="a5">VPN·şÎñ</span></p>
-            <p class="newstitle">¹ºÂòVPN·şÎñ</p>
-            <p>£ £ ¹§Ï²ÄúÑ¡ÔñÁË°¢¿¨ĞÅÏ¢¼¼ÊõÌá¹©µÄ³ö¹úVPN·şÎñ£¬ÄúµÃµ½µÄ²»½ö½öÊÇ×ÔÓÉµÄåÛÓÎ»¥ÁªÍø£¬»¹ÓĞ×¨¼ÒµÄ¼¼ÊõÖ§³ÖºÍÁ®¼ÛµÄ·ÑÓÃ¡£ÄúÒÑ¾­ÌîĞ´²¢Ìá½»ÁËÈçÏÂĞÅÏ¢£¬ÎÒÃÇ»áÔÚ48Ğ¡Ê±Ö®ÄÚÁªÏµÄú¡£</p>
+              <b><font color="#3366CC">æ‚¨çš„ä½ç½®ï¼š</font></b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> 
+              <font color="#458DE4">&gt;</font> <a href="/customer/order/index.shtml" class="a5">å®šè´­</a> 
+              <font color="#458DE4">&gt;</font> <span class="a5">VPNæœåŠ¡</span></p>
+            <p class="newstitle">è´­ä¹°VPNæœåŠ¡</p>
             <p>
-_HTML_
-
-$ENV{'HOSTNAME'} = 'aka.cn';
-$ENV{'USER'} = 'sales';
-
-my %userpost;
-
-
-#open( FD, "|mail -s \"VPN¿Í»§¶©µ¥\" sales\@aka.cn" );
-my $maildata = '';
-foreach $key ( $q->param() ){
-	$value = $q->param($key);
-	next if( $key eq 'Submit' );
-	$userpost{$key} = $value;
-	print "$key : $value<br>";
-	$maildata .= "$key : $value\n";
-#	print "$key : $value<br>";
-#	print FD "$key : $value\n"
-}
-#close( FD );
-my $smtp;
-$smtp = Net::SMTP->new('localhost');
-$smtp->mail( $userpost{'E-Mail'} );
-$smtp->to('sales@aka.cn');
-
-$smtp->data();
-$smtp->datasend("From: \"" . $userpost{'ÁªÏµÈË'} . "\" <" . $userpost{'E-Mail'} . ">\n");
-$smtp->datasend("To: sales\@aka.cn\n");
-$smtp->datasend("Subject: VPN¶©µ¥\n");
-$smtp->datasend("Date: " . `date` . "\n");
-$smtp->datasend("\n");
-$smtp->datasend( $maildata );
-$smtp->dataend();
-$smtp->quit;
-
-print <<_HTML_;
-            </td>
-        </tr>
-      </table>
-      <p>&nbsp;</p>
-    </td>
-    <td width="210" bgcolor="#F0FAFF" valign="top"> 
-      <table width="210" border="0" cellspacing="8" cellpadding="3">
-        <tr> 
-          <td colspan="2">&nbsp;</td>
-        </tr>
-        <tr> 
-          <td bgcolor="C3D4F4" colspan="2"> 
-            <div align="left"><font color="032B7A"><b><font face="Arial"> Ïà¹ØÁ´½Ó</font></b></font></div>
-          </td>
-        </tr>
-        <tr> 
-          <td> 
-            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
-          </td>
-          <td><a href="/solution/vpn/edu/price.shtml" class="a6">¼Û¸ñ¼°¸¶·Ñ·½Ê½</a></td>
-        </tr>
-        <tr> 
-          <td> 
-            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
-          </td>
-          <td><a href="/solution/vpn/edu/index.shtml" class="a6">³ö¹úVPN·şÎñ</a></td>
-        </tr>
-        <tr> 
-          <td> 
-            <div align="right"></div>
-          </td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr> 
-          <td> 
-            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
-          </td>
-          <td><a href="/customer/contact/index.shtml" class="a6">ÁªÏµÎÒÃÇ</a></td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td width="210" bgcolor="#F0FAFF" valign="bottom">&nbsp; </td>
-  </tr>
-</table>
-_HTML_
-open( FD, "<../../footer.html" );
-print <FD>;
-close( FD );
-

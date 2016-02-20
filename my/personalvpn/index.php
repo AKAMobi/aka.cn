@@ -6,12 +6,12 @@
 <!--
 function Login(){
 	if (document.all.oName.value=="") {
-		alert("�����������û��ʺ�");
+		alert("请输入您的用户帐号");
 		document.all.oName.focus();
 		return ;
 	}
 	if (document.all.oPassword.value=="") {
-		alert("��������������");
+		alert("请输入您的密码");
 		document.all.oPassword.focus();
 		return ;
 	}
@@ -45,11 +45,11 @@ function testKey_Password(){
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                ��ǰλ�ã�</font> </b><a href="/" class="a5">������ҳ</a> <font color="#458DE4">&gt; 
-                </font><a href="/PersonalVPN" class="a5">�ҵİ���</a><br>
+                当前位置：</font> </b><a href="/" class="a5">阿卡首页</a> <font color="#458DE4">&gt; 
+                </font><a href="/PersonalVPN" class="a5">我的阿卡</a><br>
                 <br>
-                <span class="newstitle"> �ҵİ���</span></p>
-              <p>��������Ϊ��˾�Ŀͻ��ṩVPN������ѯ�ȷ�����ʹ�������ṩ�������˺ź������½��</p>
+                <span class="newstitle"> 我的阿卡</span></p>
+              <p>这里我们为公司的客户提供VPN流量查询等服务。请使用我们提供给您的账号和密码登陆。</p>
               <p>&nbsp;</p>
             </td>
         </tr>
@@ -58,7 +58,7 @@ function testKey_Password(){
       <div align="left"> 
         <table width="500" cellspacing="0" cellpadding="0" align="center">
           <tr> 
-            <td bgcolor="#006699" height="14"><b><font color="#FFFFFF">��¼�ͻ�����ϵͳ</font></b> 
+            <td bgcolor="#006699" height="14"><b><font color="#FFFFFF">登录客户服务系统</font></b> 
               <table width="500" cellspacing="0" cellpadding="0" align="center">
                 <tr> 
                   <td bgcolor="#FFFFFF" height="14">
@@ -67,17 +67,17 @@ function testKey_Password(){
                       <br>
   <div align="center"><table border="0" id="AutoNumber1">
     <tr>
-      <td>�û��ʺţ�</td>
+      <td>用户帐号：</td>
       <td><input type="text" id="oName" name="Name" size="20" onkeypress="testKey_Name();" ></td>
     </tr>
     <tr>
-      <td>�û����룺</td>
+      <td>用户密码：</td>
       <td><input type="password" id="oPassword" name="Password" size="20" onkeypress="testKey_Password();" ></td>
     </tr>
   </table>
   </div>
   <br>
-                      <p align="center"> <img src="../customer/images/enter.gif" width="74" height="22" id="oLogOn" value="��½" onclick="Login();"> 
+                      <p align="center"> <img src="../customer/images/enter.gif" width="74" height="22" id="oLogOn" value="登陆" onclick="Login();"> 
 		      <a href="UserAgreement.shtml"><img src="../customer/images/register.gif" width=74 height=22 border=0></a> 
                       </p>
 </form>
@@ -101,20 +101,20 @@ function testKey_Password(){
           <td>
             <table width="210" cellspacing="8" cellpadding="3">
               <tr> 
-                <td bgcolor="C3D4F4" colspan="2"><b><font face="Arial, Helvetica, sans-serif" color="032B7A">�������</font></b></td>
+                <td bgcolor="C3D4F4" colspan="2"><b><font face="Arial, Helvetica, sans-serif" color="032B7A">相关链接</font></b></td>
               </tr>
               <tr> 
                 <td width="27"> 
                   <div align="right"><img src="../image/leadarrow.gif" width="5" height="10"></div>
                 </td>
-                <td><a href="UserAgreement.shtml" class="a6">ע�����û�</a></td>
+                <td><a href="UserAgreement.shtml" class="a6">注册新用户</a></td>
               </tr>
               <tr> 
               <tr> 
                 <td width="27"> 
                   <div align="right"><img src="../image/leadarrow.gif" width="5" height="10"></div>
                 </td>
-                <td><a href="usage.shtml" class="a6" target="_blank">����VPNʹ��˵��</a></td>
+                <td><a href="usage.shtml" class="a6" target="_blank">个人VPN使用说明</a></td>
               </tr>
               </tr>
             </table>

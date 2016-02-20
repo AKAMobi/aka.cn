@@ -14,12 +14,12 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
             
       <td> 
         <p><b><font color="#3366CC"><br>
-          µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-          </font><a href="<? echo $ADMINURLROOT ;?>/" class="a5">ÍøÕ¾¹ÜÀíÔ±</a><font color="#458DE4">&gt; 
-          </font><a href="<? echo $ADMINURLROOT ;?>/AdminMenu.php" class="a5">¹ÜÀí²Ëµ¥</a><font color="#458DE4">&gt; 
-          </font><a href="<? echo $ADMINURLROOT ;?>/UserAccount/ModifyProfile.php" class="a5">ÐÞ¸ÄÓÃ»§ÐÅÏ¢</a><br>
+          å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+          </font><a href="<? echo $ADMINURLROOT ;?>/" class="a5">ç½‘ç«™ç®¡ç†å‘˜</a><font color="#458DE4">&gt; 
+          </font><a href="<? echo $ADMINURLROOT ;?>/AdminMenu.php" class="a5">ç®¡ç†èœå•</a><font color="#458DE4">&gt; 
+          </font><a href="<? echo $ADMINURLROOT ;?>/UserAccount/ModifyProfile.php" class="a5">ä¿®æ”¹ç”¨æˆ·ä¿¡æ¯</a><br>
           <br>
-          <span class="newstitle">ÐÞ¸ÄÓÃ»§ÐÅÏ¢</span></p>
+          <span class="newstitle">ä¿®æ”¹ç”¨æˆ·ä¿¡æ¯</span></p>
               <p>&nbsp;</p>
             </td>
         </tr>
@@ -32,27 +32,27 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
 
 
 
-if ( (!isset($_SESSION['AdminID']))  || (!isset($_REQUEST['ID']))   ){//Î´Õý³£µÇÂ¼
+if ( (!isset($_SESSION['AdminID']))  || (!isset($_REQUEST['ID']))   ){//æœªæ­£å¸¸ç™»å½•
 ?>
-ÄúÉÐÎ´µÇÂ¼¡£<BR>
-ÇëÊ×ÏÈ<A HREF="<? echo $ADMINURLROOT ;?>/index.php">µÇÂ¼</a>¡£
+æ‚¨å°šæœªç™»å½•ã€‚<BR>
+è¯·é¦–å…ˆ<A HREF="<? echo $ADMINURLROOT ;?>/index.php">ç™»å½•</a>ã€‚
 <?
 }else {
 
 if ( (!isset($_SESSION['UserAccountAdmin'])) ) {
 ?>
-ÄãÃ»ÓÐÐÞ¸ÄÓÃ»§ÐÅÏ¢µÄÈ¨ÏÞ<br>
-Çë·µ»Ø<A HREF="<? echo $ADMINURLROOT ;?>/AdminMenu.php">¹ÜÀí²Ëµ¥</a>
+ä½ æ²¡æœ‰ä¿®æ”¹ç”¨æˆ·ä¿¡æ¯çš„æƒé™<br>
+è¯·è¿”å›ž<A HREF="<? echo $ADMINURLROOT ;?>/AdminMenu.php">ç®¡ç†èœå•</a>
 <?
 } else {
 
 require_once("{$ADMINROOT}/Include/InitDB.php"); 
 
 $result=mysql_query("select * from User_TB where ID='{$_REQUEST['ID']}'"); 
-if ( !($row=mysql_fetch_array($result)) ){ //ÎÞ´ËÓÃ»§
+if ( !($row=mysql_fetch_array($result)) ){ //æ— æ­¤ç”¨æˆ·
 ?>
-	ÎÞ´ËÓÃ»§¡£ÇëÖØÊÔ¡£
-	<input type="button" onclick="history.back();" value="·µ»Ø">
+	æ— æ­¤ç”¨æˆ·ã€‚è¯·é‡è¯•ã€‚
+	<input type="button" onclick="history.back();" value="è¿”å›ž">
 <?
 } else {
 ?>
@@ -60,37 +60,37 @@ if ( !($row=mysql_fetch_array($result)) ){ //ÎÞ´ËÓÃ»§
 <!--
 function register(){
 	if (document.all.oUserName.value=="") {
-		alert("ÇëÊäÈëÓÃ»§µÄÐÕÃû");
+		alert("è¯·è¾“å…¥ç”¨æˆ·çš„å§“å");
 		document.all.oUserName.focus();
 		return ;
 	}
 	if (document.all.oPassword.value!=document.all.oPassword1.value) {
-		alert("Á½´ÎÊäÈëÃÜÂë²»Ò»ÖÂ");
+		alert("ä¸¤æ¬¡è¾“å…¥å¯†ç ä¸ä¸€è‡´");
 		document.all.oPassword1.focus();
 		return ;
 	}
 	if (document.all.oIdNum.value=="") {
-		alert("ÇëÊäÈëÓÃ»§µÄÉí·ÝÖ¤ºÅÂë");
+		alert("è¯·è¾“å…¥ç”¨æˆ·çš„èº«ä»½è¯å·ç ");
 		document.all.oIdNum.focus();
 		return ;
 	}
 	if (document.all.oCompany.value=="") {
-		alert("ÇëÊäÈëÓÃ»§µÄµ¥Î»Ãû³Æ");
+		alert("è¯·è¾“å…¥ç”¨æˆ·çš„å•ä½åç§°");
 		document.all.oCompany.focus();
 		return ;
 	}
 	if (document.all.oEMail.value=="") {
-		alert("ÇëÊäÈëÓÃ»§µÄµç×ÓÓÊÏä");
+		alert("è¯·è¾“å…¥ç”¨æˆ·çš„ç”µå­é‚®ç®±");
 		document.all.oEMail.focus();
 		return ;
 	}
 	if (document.all.oAddress.value=="") {
-		alert("ÇëÊäÈëÓÃ»§µÄµØÖ·");
+		alert("è¯·è¾“å…¥ç”¨æˆ·çš„åœ°å€");
 		document.all.oAddress.focus();
 		return ;
 	}
 	if (document.all.oZipCode.value=="") {
-		alert("ÇëÊäÈëÓÃ»§µÄÓÊ±à");
+		alert("è¯·è¾“å…¥ç”¨æˆ·çš„é‚®ç¼–");
 		document.all.oZipCode.focus();
 		return ;
 	}	
@@ -106,49 +106,49 @@ function register(){
         <td width="83%"><? echo $row['ID'] ?><input type="hidden" id="oID" name="ID"  value="<? echo $row['ID'] ?>"></td>
       </tr>
       <tr> 
-        <td>ÐÕÃû</td>
+        <td>å§“å</td>
         <td><input type="text" id="oUserName" name="UserName"  value="<? echo $row['UserName'] ?>"> * </td>
       </tr>
       <tr> 
-        <td>ÃÜÂë</td>
+        <td>å¯†ç </td>
         <td><input type="password" id="oPassword" name="Password" ></td>
       </tr>
       <tr> 
-        <td>ÑéÖ¤ÃÜÂë</td>
+        <td>éªŒè¯å¯†ç </td>
         <td><input type="password" id="oPassword1" name="Password1" ></td>
       </tr>
       <tr> 
-        <td>Éí·ÝÖ¤ºÅ</td>
+        <td>èº«ä»½è¯å·</td>
         <td><input type="text" id="oIdNum" name="IdNum" value="<? echo $row['IdentifierNum'] ?>"></td>
       </tr>
       <tr> 
-        <td>µ¥Î»Ãû³Æ</td>
+        <td>å•ä½åç§°</td>
         <td><input type="text" id="oCompany" name="Company" value="<? echo $row['Company']?>"> * </td>
       </tr>
       <tr> 
-        <td>ÁªÏµµç»°</td>
+        <td>è”ç³»ç”µè¯</td>
         <td><input type="text" id="oTel" name="Tel" value="<? echo $row['TelephoneNumber']?>"></td>
       </tr>
       <tr> 
-        <td>ÊÖ»ú</td>
+        <td>æ‰‹æœº</td>
         <td><input type="text" id="oMobile" name="Mobile" value="<? echo $row['MobilePhone']?>"></td>
       </tr>
       <tr> 
-        <td>µç×ÓÓÊÏä</td>
+        <td>ç”µå­é‚®ç®±</td>
         <td><input type="text" id="oEMail" name="EMail" value="<? echo $row['EMail']?>"></td>
       </tr>
   <tr>
-    <td>µØÖ·</td>
+    <td>åœ°å€</td>
     <td>
  <input id=oAddress type=text name=Address value="<? echo $row['Address']?>"> * </td></tr>
   <tr>
-    <td>ÓÊ±à</td>
+    <td>é‚®ç¼–</td>
     <td>
  <input id=oZipCode type=text name=ZipCode value="<? echo $row['ZipCode']?>"></td></tr>
     </table>
 
 <p>
-      <input type="button" name="Submit" value="Ìá½»" onclick="register();"> 
+      <input type="button" name="Submit" value="æäº¤" onclick="register();"> 
 </p>
   </form>
 

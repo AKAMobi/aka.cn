@@ -14,13 +14,13 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $ADMINURLROOT ;?>/" class="a5">ÍøÕ¾¹ÜÀíÔ±</a><font color="#458DE4">&gt; 
-                </font><a href="<? echo $ADMINURLROOT ;?>/AdminMenu.php" class="a5">¹ÜÀí²Ëµ¥</a> 
-                <font color="#458DE4">&gt;</font><a href="<? echo $ADMINURLROOT ;?>/UserAccount/FindUser.php" class="a5">²éÕÒÓÃ»§</a>
+                å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $ADMINURLROOT ;?>/" class="a5">ç½‘ç«™ç®¡ç†å‘˜</a><font color="#458DE4">&gt; 
+                </font><a href="<? echo $ADMINURLROOT ;?>/AdminMenu.php" class="a5">ç®¡ç†èœå•</a> 
+                <font color="#458DE4">&gt;</font><a href="<? echo $ADMINURLROOT ;?>/UserAccount/FindUser.php" class="a5">æŸ¥æ‰¾ç”¨æˆ·</a>
 				<br>
                 <br>
-                <span class="newstitle">²éÕÒÓÃ»§</span></p>
+                <span class="newstitle">æŸ¥æ‰¾ç”¨æˆ·</span></p>
               
 			  <p>&nbsp;</p>
             </td>
@@ -33,15 +33,15 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
 <?
 if ( (!isset($_SESSION['AdminID']) ) ) {
 ?>
-ÄúÉÐÎ´µÇÂ½¡£<br>
-ÇëÊ×ÏÈ<A HREF="<? echo $ADMINURLROOT ;?>/index.php">µÇÂ½</a>¡£
+æ‚¨å°šæœªç™»é™†ã€‚<br>
+è¯·é¦–å…ˆ<A HREF="<? echo $ADMINURLROOT ;?>/index.php">ç™»é™†</a>ã€‚
 <?
 }else {
 
 if ( (!isset($_SESSION['UserAccountAdmin'])) ) {
 ?>
-ÄãÃ»ÓÐÓÃ»§ÕÊ»§¹ÜÀíµÄÈ¨ÏÞ<br>
-Çë·µ»Ø<A HREF="<? echo $ADMINURLROOT ;?>/AdminMenu.php">¹ÜÀí²Ëµ¥</a>
+ä½ æ²¡æœ‰ç”¨æˆ·å¸æˆ·ç®¡ç†çš„æƒé™<br>
+è¯·è¿”å›ž<A HREF="<? echo $ADMINURLROOT ;?>/AdminMenu.php">ç®¡ç†èœå•</a>
 <?
 } else {
 
@@ -51,7 +51,7 @@ if ( (!isset($_SESSION['UserAccountAdmin'])) ) {
 <!--
 function FindUser(){
 	if (document.all.oUserID.value=="") {
-		alert("ÇëÊäÈë´ý²éÕÒÓÃ»§µÄID");
+		alert("è¯·è¾“å…¥å¾…æŸ¥æ‰¾ç”¨æˆ·çš„ID");
 		document.all.oUserID.focus();
 		return ;
 	}
@@ -74,14 +74,14 @@ function testKey_UserID(){
                       <br>
   <div align="center"><table border="0" id="AutoNumber1">
     <tr>
-      <td>ÓÃ»§ID</td>
+      <td>ç”¨æˆ·ID</td>
       <td><input type="textfield" id="oUserID" name="ID" size="20" onkeypress="testKey_UserID();" ></td>
     </tr>
 </table>
   </div>
   <br>
   <p align="center">
-  <input type="button" id="oFindUser" value="²éÕÒÓÃ»§" onclick="FindUser();"> 
+  <input type="button" id="oFindUser" value="æŸ¥æ‰¾ç”¨æˆ·" onclick="FindUser();"> 
    </p>
 </form>
 

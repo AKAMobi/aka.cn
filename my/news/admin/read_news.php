@@ -14,7 +14,7 @@ if ( $news_exist )
 {
 	echo $ra[PostDate] . "<br><br>";
 ?>
-<a href="chg.php?id=<? echo $id ?>">¸ü ¸Ä</a> | <a href="del.php?id=<? echo $id ?>">É¾ ³ı</a><br>
+<a href="chg.php?id=<? echo $id ?>">æ›´ æ”¹</a> | <a href="del.php?id=<? echo $id ?>">åˆ  é™¤</a><br>
 <?
 }
 ?>
@@ -27,7 +27,7 @@ if ( $news_exist )
 <center>
 <? 
 if ( $news_exist ) echo htmlspecialchars( $ra[Title] ) . "<br>";
-	else echo "<font color=#ff0000>´íÎó£¬ĞÅÏ¢ÌáÈ¡´íÎó£¡</font><br>";
+	else echo "<font color=#ff0000>é”™è¯¯ï¼Œä¿¡æ¯æå–é”™è¯¯ï¼</font><br>";
 ?>
 </center>
 </h3>
@@ -52,7 +52,7 @@ if ( $news_exist ) echo '<p>'.nl2br( htmlspecialchars( $ra[Body] )).'</p><br>';
 if ( $news_exist )
 {
 ?>
-<a href="chg.php?id=<? echo $id ?>">¸ü ¸Ä</a> | <a href="del.php?id=<? echo $id ?>">É¾ ³ı</a><br>
+<a href="chg.php?id=<? echo $id ?>">æ›´ æ”¹</a> | <a href="del.php?id=<? echo $id ?>">åˆ  é™¤</a><br>
 <?
 }
 require_once( "../footer.inc.php" );

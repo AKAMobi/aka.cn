@@ -10,23 +10,23 @@
 
         <tr> 
           <td valign="top"> <p><br>
-              <b><font color="#3366CC">µ±Ç°Î»ÖÃ:</font> </b><a href="/index.shtml" class="a5">°¢¿¨Ê×Ò³</a> 
-              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">²úÆ·Óë·şÎñ</a><font color="#458DE4">&gt; 
-              <a href="index.shtml" class=a5>WMail</a> &gt;</font> <font color="#458DE4">°²×°ËµÃ÷</font></p>
+              <b><font color="#3366CC">å½“å‰ä½ç½®:</font> </b><a href="/index.shtml" class="a5">é˜¿å¡é¦–é¡µ</a> 
+              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">äº§å“ä¸æœåŠ¡</a><font color="#458DE4">&gt; 
+              <a href="index.shtml" class=a5>WMail</a> &gt;</font> <font color="#458DE4">å®‰è£…è¯´æ˜</font></p>
             <table width="475" cellspacing="0" cellpadding="0">
               <tr> 
-                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">°²×°ËµÃ÷</td>
+                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">å®‰è£…è¯´æ˜</td>
               </tr>
             </table> 
-                    qmail/vpopmail/ucspi-tcp/maildropµÄ°²×°ËµÃ÷Çë×Ô¼º²Î¿¼Èí¼şÖĞµÄËµÃ÷ÎÄµµ¡£°²×°vpopmailÊ±£¬ÍÆ¼ö½«vpopmailµÄuid¸Ä³ÉÓëapacheµÄuidÏàÍ¬£¬²¢ÓÃapache×éÓÃ»§¡£maildropÇë°²×°µ½Ä¬ÈÏµÄ/usr/local/binÄ¿Â¼ÏÂ¡£<br>
-            Æô¶¯smtp£¬ÓÃvchkpw×ösmth-authµÄÃüÁîĞĞ£º <br>
+                    qmail/vpopmail/ucspi-tcp/maildropçš„å®‰è£…è¯´æ˜è¯·è‡ªå·±å‚è€ƒè½¯ä»¶ä¸­çš„è¯´æ˜æ–‡æ¡£ã€‚å®‰è£…vpopmailæ—¶ï¼Œæ¨èå°†vpopmailçš„uidæ”¹æˆä¸apacheçš„uidç›¸åŒï¼Œå¹¶ç”¨apacheç»„ç”¨æˆ·ã€‚maildropè¯·å®‰è£…åˆ°é»˜è®¤çš„/usr/local/binç›®å½•ä¸‹ã€‚<br>
+            å¯åŠ¨smtpï¼Œç”¨vchkpwåšsmth-authçš„å‘½ä»¤è¡Œï¼š <br>
             <br>
             /usr/local/bin/tcpserver 0 smtp /var/qmail/bin/qmail-smtpd \<br>
             lfan.net /home/vpopmail/bin/vchkpw /bin/true 2&gt;&amp;1 \<br>
             | /var/qmail/bin/splogger smtpd 3 &amp; <br>
             <br>
-            °²×°wmailÊ±£¬ÍÆ¼öÓÃ./install°²×°£¬°²×°Ä¿Â¼ÊÇ/home/wmail ÄãÒ²¿ÉÒÔ ./install Ä¿Â¼Ãû£¬½«wmail°²×°µ½ÆäËüÄ¿Â¼<br> <br>
-            °²×°Íê±ÏºóĞŞ¸Ähttpd.conf£¬¼ÓÉÏÒÔÏÂÄÚÈİ£¬×¢ÒâÌæ»»±ØÒªµÄÄÚÈİ£º<br>
+            å®‰è£…wmailæ—¶ï¼Œæ¨èç”¨./installå®‰è£…ï¼Œå®‰è£…ç›®å½•æ˜¯/home/wmail ä½ ä¹Ÿå¯ä»¥ ./install ç›®å½•åï¼Œå°†wmailå®‰è£…åˆ°å…¶å®ƒç›®å½•<br> <br>
+            å®‰è£…å®Œæ¯•åä¿®æ”¹httpd.confï¼ŒåŠ ä¸Šä»¥ä¸‹å†…å®¹ï¼Œæ³¨æ„æ›¿æ¢å¿…è¦çš„å†…å®¹ï¼š<br>
             <br> &lt;VirtualHost *:80&gt;<br>
             SetEnv SQWEBMAIL_TEMPLATEDIR /home/wmail/html<br>
             ScriptAlias /cgi-bin/ &quot;/home/wmail/www/cgi-bin/&quot;<br> &lt;Directory 
@@ -36,9 +36,9 @@
             ServerAdmin lfan@lfan.net<br>
             DocumentRoot /home/wmail/www<br>
             ServerName mail.xxx.com<br> &lt;/VirtualHost&gt;<br><br>
-	    ×îºóĞŞ¸Ä /home/wmail/html/zh-cnÏÂµÄindex.htmlºÍinvalid.html£¬½«<br>
+	    æœ€åä¿®æ”¹ /home/wmail/html/zh-cnä¸‹çš„index.htmlå’Œinvalid.htmlï¼Œå°†<br>
 	    &lt;input type="hidden" name="domain" value="lfan.net"&gt;<br>
-	    ĞŞ¸ÄÎª×Ô¼ºµÄÓòÃû¾Í¿ÉÒÔÁË¡£
+	    ä¿®æ”¹ä¸ºè‡ªå·±çš„åŸŸåå°±å¯ä»¥äº†ã€‚
 <p></p>
               </p>
            </td>
@@ -63,7 +63,7 @@
 
           <td bgcolor="C3D4F4" colspan="2"> 
 
-            <div align="left"><font color="032B7A"><b><font face="Arial"> Ïà¹ØÁ´½Ó</font></b></font></div>
+            <div align="left"><font color="032B7A"><b><font face="Arial"> ç›¸å…³é“¾æ¥</font></b></font></div>
 
           </td>
 
@@ -77,7 +77,7 @@
 
           </td>
 
-          <td><a href="/serv_prod/index.shtml" class="a6">²úÆ·Óë·şÎñ</a></td>
+          <td><a href="/serv_prod/index.shtml" class="a6">äº§å“ä¸æœåŠ¡</a></td>
 
         </tr>
 

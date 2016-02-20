@@ -12,11 +12,11 @@ IncludeHTML("{$NEWSROOT}/Include/Part1.html");
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                ╣╠г╟н╩жцё╨</font> </b><a href="/" class="a5">╟╒©╗йврЁ</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $NEWSURL; ?>/" class="a5">╟╒©╗пбне</a><font color="#458DE4">&gt; 
-                </font><a href="<? echo $NEWSURL; ?>/classes.php" class="a5">пбнеап╠М</a><br>
+                Е╫⌠Е┴█Д╫█Г╫╝О╪ </font> </b><a href="/" class="a5">И≤©Е█║И╕√И║╣</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $NEWSURL; ?>/" class="a5">И≤©Е█║Ф√╟И≈╩</a><font color="#458DE4">&gt; 
+                </font><a href="<? echo $NEWSURL; ?>/classes.php" class="a5">Ф√╟И≈╩Е┬≈Х║╗</a><br>
                 <br>
-                <span class="newstitle"> пбнеап╠М </span></p>
+                <span class="newstitle"> Ф√╟И≈╩Е┬≈Х║╗ </span></p>
             </td>
         </tr>
       </table>
@@ -35,7 +35,7 @@ if(empty($page))$page=1;
 $offset=($page*15)-15;
 $rst2=mysql_query("SELECT * FROM News_TB where Class='$area' ORDER BY PostDate desc limit $offset,$NUMBERPAGE");
 $num_fields = mysql_num_fields($rst2);
-echo '╧╡сп'.$c.'лУпбнеё╛╠╬рЁйг╣з'.$page.'рЁ';
+echo 'Е┘╠Ф°┴'.$c.'Ф²║Ф√╟И≈╩О╪▄Ф°╛И║╣Ф≤╞Г╛╛'.$page.'И║╣';
 ?>
 <br><br>
 <table border="0" width="400">
@@ -54,19 +54,19 @@ while($row2=mysql_fetch_array($rst2)){
 <tr><td align="center">
 <?
 if($page==1){
-echo 'иор╩рЁ&nbsp;&nbsp;';
+echo 'Д╦┼Д╦─И║╣&nbsp;&nbsp;';
 }else {
 $page1=$page-1;
-echo '<a href="classes.php?page='.$page1.'&area='.$area.'" class=\"a6\">иор╩рЁ</a>&nbsp;&nbsp;';
+echo '<a href="classes.php?page='.$page1.'&area='.$area.'" class=\"a6\">Д╦┼Д╦─И║╣</a>&nbsp;&nbsp;';
 }
 $j=$c/15;
 if(!is_int($j)) $j++;
 $j=intval($j);
 if($page==$j){
-echo 'обр╩рЁ&nbsp;&nbsp;';
+echo 'Д╦▀Д╦─И║╣&nbsp;&nbsp;';
 }else {
 $page1=$page+1;
-echo '<a href="classes.php?page='.$page1.'&area='.$area.'" class=\"a6\">обр╩рЁ</a>&nbsp;&nbsp;';
+echo '<a href="classes.php?page='.$page1.'&area='.$area.'" class=\"a6\">Д╦▀Д╦─И║╣</a>&nbsp;&nbsp;';
 }
 $xx=$page+9;
 for($i=$page;$i<=$j;$i++){
@@ -80,7 +80,7 @@ for($i=$page;$i<=$j;$i++){
 		break;
 	}
 }
-echo '<a href="'.$PHP_SELF.'?page='.$j.'&area='.$area.'" class=\"a6\">вН╨Ср╩рЁ</a>';
+echo '<a href="'.$PHP_SELF.'?page='.$j.'&area='.$area.'" class=\"a6\">Ф°─Е░▌Д╦─И║╣</a>';
 ?>
 </td></tr>
 </table>

@@ -21,7 +21,7 @@ if ( (!isset($HTTP_POST_VARS['ID'])) ||
 <table width="760" border="0" cellspacing="0" cellpadding="0">
   <tr> 
   <td align="center" >
-	<p>�û�ע�������<A HREF="UserRegister.shtml">�û�ע��ҳ��</a>��</p>
+	<p>用户注册请访问<A HREF="UserRegister.shtml">用户注册页面</a>！</p>
 	<br>
 	<br>
 	<br>
@@ -39,9 +39,9 @@ if ( (!isset($HTTP_POST_VARS['ID'])) ||
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                ��ǰλ�ã�</font> </b><a href="/" class="a5">������ҳ</a> <font color="#458DE4">&gt; 
-                </font><a href="/my" class="a5">�ҵİ���</a>
-				<font color="#458DE4">&gt; </font><a href="/my/UserRegister.shtml" class="a5">�û�ע��</a><br>
+                当前位置：</font> </b><a href="/" class="a5">阿卡首页</a> <font color="#458DE4">&gt; 
+                </font><a href="/my" class="a5">我的阿卡</a>
+				<font color="#458DE4">&gt; </font><a href="/my/UserRegister.shtml" class="a5">用户注册</a><br>
                 <br>
             </td>
         </tr>
@@ -50,7 +50,7 @@ if ( (!isset($HTTP_POST_VARS['ID'])) ||
 
 $result=mysql_query("select * from User_TB where ID='{$HTTP_POST_VARS['ID']}'");
 
-if (($row=mysql_fetch_array($result))){//��ID�Ѵ���
+if (($row=mysql_fetch_array($result))){//此ID已存在
 
 ?>
 	<br>
@@ -58,9 +58,9 @@ if (($row=mysql_fetch_array($result))){//��ID�Ѵ���
 	<br>
 	<br>
 	<br>
-��ID�Ѵ��ڣ�<BR>
-�뻻һ��ID����ע��<br>
-<input type="button" value="����" onclick="history.back();">
+此ID已存在！<BR>
+请换一个ID重新注册<br>
+<input type="button" value="返回" onclick="history.back();">
 	<br>
 	<br>
 <?
@@ -75,16 +75,16 @@ if ($HTTP_POST_VARS['SuperiorUser']!="") {
 	else 
 	  $SuperUserID=$row['AutoID'];
 }
-if ( !$SuperUserRight ) { //��ϵ��ID�д���
+if ( !$SuperUserRight ) { //联系人ID有错误
 ?>
 	<br>
 	<br>
 	<br>
 	<br>
 	<br>
-����д�Ľ�����ID�д���<BR>
-��������дע�ᵥ<br>
-<input type="button" value="����" onclick="history.back();">
+您填写的介绍人ID有错误！<BR>
+请重新填写注册单<br>
+<input type="button" value="返回" onclick="history.back();">
 	<br>
 	<br>
 <?
@@ -128,10 +128,10 @@ if (!$success){
 	<br>
 	<br>
 	<br>
-����ע�ᵥ�ύʧ�ܡ�<BR>
-�뷵�����³����ύ��
-����������ɣ���ֱ����������ϵ��<br>
-<input type="button" value="����" onclick="history.back();">
+您的注册单提交失败。<BR>
+请返回重新尝试提交。
+如果问题依旧，请直接与我们联系。<br>
+<input type="button" value="返回" onclick="history.back();">
 	<br>
 	<br>
 <?
@@ -143,19 +143,19 @@ $_SESSION['ValidateID']=$_REQUEST['ID'];
 	<br>
 	<br>
 	<br>
-����ע�ᵥ�ѳɹ��ύ��<BR>
+您的注册单已成功提交。<BR>
 <br>
-<h1>ǿ���Ƽ�ֱ�����ֻ�ע�ᣬ��������ͨ��ע�᣺(Ŀǰֻ���й��ƶ��ֻ��û�����)</h1>
-<font size=+3>�뵽<a class="a6" href="UserValidate.php" class=a6><font size=+3>��һ����</font></a></font><br><br>
-<!--���ǽ���������������������ϵ���������ĵȴ�:)--><br>
-������ϸ�Ķ�<a href="usage.shtml" class="a5">ʹ��˵��</a>��Ȼ��<p>
+<h1>强烈推荐直接用手机注册，可以立即通过注册：(目前只对中国移动手机用户开放)</h1>
+<font size=+3>请到<a class="a6" href="UserValidate.php" class=a6><font size=+3>下一步。</font></a></font><br><br>
+<!--我们将在两个工作日内与您联系。请您耐心等待:)--><br>
+请您仔细阅读<a href="usage.shtml" class="a5">使用说明</a>，然后<p>
 <font size=+1 color=red>
 	<ol>	
-		<li>�ȴ�ע��ͨ��</li>
-		<li>��¼����ϵͳ</li>
-		<li>�ύ��Ǯ��Ϣ</li>
-		<li>�쿴�Լ��ʻ����ȴ����ǻ���</li>
-		<li>�ڡ����ܿ������˵��д򿪸���VPN����</li>
+		<li>等待注册通过</li>
+		<li>登录进入系统</li>
+		<li>提交加钱信息</li>
+		<li>察看自己帐户，等待正是划账</li>
+		<li>在“功能开启“菜单中打开个人VPN功能</li>
 	<ol>
 </font>
     <br>
@@ -176,19 +176,19 @@ $_SESSION['ValidateID']=$_REQUEST['ID'];
           <td>
             <table width="210" cellspacing="8" cellpadding="3">
               <tr> 
-                <td bgcolor="C3D4F4" colspan="2"><b><font face="Arial, Helvetica, sans-serif" color="032B7A">�������</font></b></td>
+                <td bgcolor="C3D4F4" colspan="2"><b><font face="Arial, Helvetica, sans-serif" color="032B7A">相关链接</font></b></td>
               </tr>
               <tr> 
                 <td width="27"> 
                   <div align="right"><img src="../image/leadarrow.gif" width="5" height="10"></div>
                 </td>
-                <td><a href="../serv_prod/index.shtml" class="a6">��Ʒ�����</a></td>
+                <td><a href="../serv_prod/index.shtml" class="a6">产品与服务</a></td>
               </tr>
               <tr> 
                 <td width="27"> 
                   <div align="right"><img src="../image/leadarrow.gif" width="5" height="10"></div>
                 </td>
-                <td><a href="../customer/index.shtml" class="a6">�ͻ�����</a></td>
+                <td><a href="../customer/index.shtml" class="a6">客户服务</a></td>
               </tr>
             </table>
           </td>

@@ -20,7 +20,7 @@ if ( (!isset($HTTP_SESSION_VARS['DoModifyRegister'])) ||
 <table width="760" border="0" cellspacing="0" cellpadding="0">
   <tr> 
   <td align="center" >
-	<p>¸ÃÒ³Ãæ¾Ü¾ø·ÃÎÊ</p>
+	<p>è¯¥é¡µé¢æ‹’ç»è®¿é—®</p>
 	<br>
 	<br>
 	<br>
@@ -32,12 +32,12 @@ if ( (!isset($HTTP_SESSION_VARS['DoModifyRegister'])) ||
 $UserID=$HTTP_SESSION_VARS['DoModifyRegister'];
 unset($HTTP_SESSION_VARS['DoModifyRegister']);
 require_once( "db.inc.php" );
-$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("ÎÞ·¨Á¬½ÓDBM.");
-mysql_select_db( DB_NAME, $conn) or die("ÎÞ·¨´ò¿ªÊý¾Ý¿â.");
+$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("æ— æ³•è¿žæŽ¥DBM.");
+mysql_select_db( DB_NAME, $conn) or die("æ— æ³•æ‰“å¼€æ•°æ®åº“.");
 
 $result=mysql_query("select * from User_TB where ID='{$UserID}'");
 
-if (!($row=mysql_fetch_array($result))){//´ËID²»´æÔÚ
+if (!($row=mysql_fetch_array($result))){//æ­¤IDä¸å­˜åœ¨
 
 ?>
 <br>
@@ -53,8 +53,8 @@ if (!($row=mysql_fetch_array($result))){//´ËID²»´æÔÚ
 	<br>
 	<br>
 	<br>
-´ËID²»´æÔÚ£¡<BR>
-Çë·µ»ØÖØÊÔ¡£
+æ­¤IDä¸å­˜åœ¨ï¼<BR>
+è¯·è¿”å›žé‡è¯•ã€‚
 	<br>
 	<br>
 <?
@@ -91,10 +91,10 @@ if (!$success){
 	<br>
 	<br>
 	<br>
-ÄúµÄ×¢²áµ¥ÐÞ¸ÄÊ§°Ü¡£<BR>
-ÖØÐÂ³¢ÊÔÌá½»¡£Èç¹ûÎÊÌâÒÀ¾É£¬ÇëÖ±½ÓÓëÎÒÃÇÁªÏµ¡£<br>
+æ‚¨çš„æ³¨å†Œå•ä¿®æ”¹å¤±è´¥ã€‚<BR>
+é‡æ–°å°è¯•æäº¤ã€‚å¦‚æžœé—®é¢˜ä¾æ—§ï¼Œè¯·ç›´æŽ¥ä¸Žæˆ‘ä»¬è”ç³»ã€‚<br>
 	<br>
-<input type="button" value="·µ»Ø" onclick="history.back()">
+<input type="button" value="è¿”å›ž" onclick="history.back()">
 	<br>
 <?
 } else {
@@ -112,8 +112,8 @@ if (!$success){
 	<br>
 	<br>
 	<br>
-ÄúµÄ×¢²áµ¥ÒÑ³É¹¦ÐÞ¸Ä¡£<BR>
-ÎÒÃÇ½«ÔÚÁ½¸ö¹¤×÷ÈÕÄÚÓëÄúÁªÏµ¡£ÇëÄúÄÍÐÄµÈ´ý:)<br>
+æ‚¨çš„æ³¨å†Œå•å·²æˆåŠŸä¿®æ”¹ã€‚<BR>
+æˆ‘ä»¬å°†åœ¨ä¸¤ä¸ªå·¥ä½œæ—¥å†…ä¸Žæ‚¨è”ç³»ã€‚è¯·æ‚¨è€å¿ƒç­‰å¾…:)<br>
     <br>
 	<br>
 <?

@@ -10,13 +10,13 @@ require_once( "header.inc.php" );
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                ��ǰλ�ã�</font> </b><a href="/" class="a5">������ҳ</a> <font color="#458DE4">&gt; 
-                </font><a href="/my/" class="a5">�ҵİ���</a> <font color="#458DE4">&gt; 
-                </font><a href="Logout.php" class="a5">�˳���¼</a>
+                当前位置：</font> </b><a href="/" class="a5">阿卡首页</a> <font color="#458DE4">&gt; 
+                </font><a href="/my/" class="a5">我的阿卡</a> <font color="#458DE4">&gt; 
+                </font><a href="Logout.php" class="a5">退出登录</a>
 				<br>
                 <br>
-                <span class="newstitle">�˳���¼</span></p>
-              <p>�������˳���¼ҳ�档</p>
+                <span class="newstitle">退出登录</span></p>
+              <p>这里是退出登录页面。</p>
               <p>&nbsp;</p>
             </td>
         </tr>
@@ -28,8 +28,8 @@ require_once( "header.inc.php" );
 <?
 if ( (!isset($HTTP_SESSION_VARS['UserID'])) ){
 ?>
-����δ��½��<br>
-������<A HREF="index.php">��½</a>��
+您尚未登陆。<br>
+请首先<A HREF="index.php">登陆</a>。
 <?
 }else {
 unset($HTTP_SESSION_VARS['UserID']);
@@ -37,7 +37,7 @@ session_unset();
 
 session_destroy(); 
 ?>
-���Ѿ��ɹ����˳���¼!
+您已经成功的退出登录!
 <?
 }
 ?>
@@ -52,19 +52,19 @@ session_destroy();
           <td>
             <table width="210" cellspacing="8" cellpadding="3">
               <tr> 
-                <td bgcolor="C3D4F4" colspan="2"><b><font face="Arial, Helvetica, sans-serif" color="032B7A">�������</font></b></td>
+                <td bgcolor="C3D4F4" colspan="2"><b><font face="Arial, Helvetica, sans-serif" color="032B7A">相关链接</font></b></td>
               </tr>
               <tr> 
                 <td width="27"> 
                   <div align="right"><img src="../image/leadarrow.gif" width="5" height="10"></div>
                 </td>
-                <td><a href="../serv_prod/index.shtml" class="a6">��Ʒ�����</a></td>
+                <td><a href="../serv_prod/index.shtml" class="a6">产品与服务</a></td>
               </tr>
               <tr> 
                 <td width="27"> 
                   <div align="right"><img src="../image/leadarrow.gif" width="5" height="10"></div>
                 </td>
-                <td><a href="../customer/index.shtml" class="a6">�ͻ�����</a></td>
+                <td><a href="../customer/index.shtml" class="a6">客户服务</a></td>
               </tr>
             </table>
           </td>

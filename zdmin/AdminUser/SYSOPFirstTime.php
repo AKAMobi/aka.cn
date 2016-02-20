@@ -15,12 +15,12 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
             
       <td> 
         <p><b><font color="#3366CC"><br>
-          µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-          </font><a href="<? echo $ADMINURLROOT; ?>" class="a5">ÍøÕ¾¹ÜÀíÔ±</a><font color="#458DE4">&gt; 
-          </font><a href="<? echo $ADMINURLROOT; ?>/SYSOPFirstTime.php" class="a5">Éè¶¨×î¸ß¹ÜÀíÔ±ÃÜÂë</a><br>
+          å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+          </font><a href="<? echo $ADMINURLROOT; ?>" class="a5">ç½‘ç«™ç®¡ç†å‘˜</a><font color="#458DE4">&gt; 
+          </font><a href="<? echo $ADMINURLROOT; ?>/SYSOPFirstTime.php" class="a5">è®¾å®šæœ€é«˜ç®¡ç†å‘˜å¯†ç </a><br>
           <br>
-          <span class="newstitle">Éè¶¨×î¸ß¹ÜÀíÔ±ÃÜÂë</span></p>
-              <p>ÕâÊÇÄúµÚÒ»´ÎµÇÂ½±¾ÏµÍ³¡£ÇëÉè¶¨ÄúµÄÃÜÂë:</p>
+          <span class="newstitle">è®¾å®šæœ€é«˜ç®¡ç†å‘˜å¯†ç </span></p>
+              <p>è¿™æ˜¯æ‚¨ç¬¬ä¸€æ¬¡ç™»é™†æœ¬ç³»ç»Ÿã€‚è¯·è®¾å®šæ‚¨çš„å¯†ç :</p>
               <p>&nbsp;</p>
             </td>
         </tr>
@@ -31,16 +31,16 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
   <td align="center">
 <?
 
-if ( (!isset($_SESSION['AdminID']))  ){//Î´Õý³£µÇÂ¼
+if ( (!isset($_SESSION['AdminID']))  ){//æœªæ­£å¸¸ç™»å½•
 ?>
-ÄúÉÐÎ´µÇÂ¼¡£<BR>
-ÇëÊ×ÏÈ<A HREF="<? echo $ADMINROOT; ?>/index.php">µÇÂ¼</a>¡£
+æ‚¨å°šæœªç™»å½•ã€‚<BR>
+è¯·é¦–å…ˆ<A HREF="<? echo $ADMINROOT; ?>/index.php">ç™»å½•</a>ã€‚
 <?
 }else {
 
 if ($_SESSION['AdminID']!=$SYSOPID){
 ?>
-Äú²»ÊÇ×î¸ß¹ÜÀíÔ±¡£ÇëÖØÐÂ<A HREF="<? echo $ADMINROOT; ?>/index.php">µÇÂ¼</a>¡£
+æ‚¨ä¸æ˜¯æœ€é«˜ç®¡ç†å‘˜ã€‚è¯·é‡æ–°<A HREF="<? echo $ADMINROOT; ?>/index.php">ç™»å½•</a>ã€‚
 <?
 } else {
 ?>
@@ -48,12 +48,12 @@ if ($_SESSION['AdminID']!=$SYSOPID){
 <!--
 function ChangePassword(){
 	if (document.all.oNewPassword1.value=="") {
-		alert("ÇëÊäÈëÄúµÄÐÂÃÜÂë");
+		alert("è¯·è¾“å…¥æ‚¨çš„æ–°å¯†ç ");
 		document.all.oNewPassword1.focus();
 		return ;
 	}
 	if (document.all.oNewPassword2.value!=document.all.oNewPassword1.value) {
-		alert("Á½´ÎÊäÈëµÄÐÂÃÜÂë²»Ò»ÖÂ");
+		alert("ä¸¤æ¬¡è¾“å…¥çš„æ–°å¯†ç ä¸ä¸€è‡´");
 		document.all.oNewPassword2.focus();
 		return ;
 	}
@@ -82,20 +82,20 @@ function testKey_NewPassword2(){
   <div align="center">
   <table border="0">
     <tr>
-      <td>×î¸ß¹ÜÀíÔ±ÕÊºÅ£º</td>
+      <td>æœ€é«˜ç®¡ç†å‘˜å¸å·ï¼š</td>
       <td><? echo $_SESSION['AdminID']; ?></td>
     </tr>
     <tr>
-      <td>ÐÂÃÜÂë£º</td>
+      <td>æ–°å¯†ç ï¼š</td>
       <td><input type="password" id="oNewPassword1" name="NewPassword1" size="20" onkeypress="testKey_NewPassword1();" ></td>
     </tr>
     <tr>
-      <td>ÔÙ´ÎÊäÈëÐÂÃÜÂë£º</td>
+      <td>å†æ¬¡è¾“å…¥æ–°å¯†ç ï¼š</td>
       <td><input type="password" id="oNewPassword2" name="NewPassword2" size="20" onkeypress="testKey_NewPassword2();" ></td>
     </tr>
 
 </table>
-    <input type="button" id="oChangePassword" value="¸ü»»ÃÜÂë" onclick="ChangePassword();"> 
+    <input type="button" id="oChangePassword" value="æ›´æ¢å¯†ç " onclick="ChangePassword();"> 
   </div>
 </form>
 

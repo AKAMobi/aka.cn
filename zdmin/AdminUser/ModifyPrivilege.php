@@ -1,29 +1,29 @@
 <? session_start() ?>
 <link rel="stylesheet" href="/css/aka.css" type="text/css"> 
 <DIV align="center">
-ÐÞ¸Ä¹ÜÀíÔ±ÐÕÃû/È¨ÏÞ
+ä¿®æ”¹ç®¡ç†å‘˜å§“å/æƒé™
 <?
 require_once("zdmin.inc.php");
 
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
-ÄúÉÐÎ´µÇÂ½¡£<br>
+æ‚¨å°šæœªç™»é™†ã€‚<br>
 <?
 }else {
 
 if ( (!isset($_SESSION['AdminAdmin'])) ) {
 ?>
  <td align="center" >
-ÄãÃ»ÓÐ¹ÜÀíÆäËû¹ÜÀíÔ±µÄÈ¨ÏÞ<br>
+ä½ æ²¡æœ‰ç®¡ç†å…¶ä»–ç®¡ç†å‘˜çš„æƒé™<br>
 <?
 } else {
 
 require "{$ADMINROOT}/Include/InitDB.php"; 
 $result=mysql_query("select Privilege,FullName from AdminUser_TB where ID='{$_REQUEST['AdminID']}'");
 
-if (!($row=mysql_fetch_array($result))){//´Ë¹ÜÀíÔ±²»´æÔÚ
+if (!($row=mysql_fetch_array($result))){//æ­¤ç®¡ç†å‘˜ä¸å­˜åœ¨
 ?>
-¹ÜÀíÔ±ÕËºÅ <? echo $_REQUEST['AdminID'] ; ?> ²»´æÔÚ£¡
+ç®¡ç†å‘˜è´¦å· <? echo $_REQUEST['AdminID'] ; ?> ä¸å­˜åœ¨ï¼
 <?
 }else {
 $privileges=explode(",",$row['Privilege']);
@@ -38,25 +38,25 @@ function ModifyPrivilege(){
                       <br>
   <div align="center"><table border="0" >
     <tr>
-      <td>¹ÜÀíÔ±£º</td>
+      <td>ç®¡ç†å‘˜ï¼š</td>
       <td><? echo $_REQUEST['AdminID']; ?></td>
     </tr>
     <tr>
-      <td>ÐÕÃû£º</td>
+      <td>å§“åï¼š</td>
       <td><input type="text" id="oAdminName" name="AdminName" size="20" value="<? echo $row['FullName']; ?>"></td>
     </tr>
     <tr>
-      <td valign="top">È¨ÏÞ£º</td>
+      <td valign="top">æƒé™ï¼š</td>
       <td align>
       <TABLE border="0">
-      <tr><td><INPUT type="checkbox" <? echo in_array('UserAccount',$privileges)?'Checked':'' ;?> name="UserAccount">ÓÃ»§¹ÜÀí</td></td>
-      <tr><td><INPUT type="checkbox" <? echo in_array('News',$privileges)?'Checked':'' ;?> name="News">ÐÂÎÅ¹ÜÀí</td></td>
-      <tr><td><INPUT type="checkbox" <? echo in_array('PersonalVPN',$privileges)?'Checked':'' ;?> name="PersonalVPN">¸öÈËVPN¹ÜÀí</td></td>
-      <tr><td><INPUT type="checkbox" <? echo in_array('Money',$privileges)?'Checked':'' ;?> name="Money">ÓÃ»§×Ê½ð¹ÜÀí</td></td>
-      <tr><td><INPUT type="checkbox" <? echo in_array('Admin',$privileges)?'Checked':'' ;?> name="Admin">¹ÜÀíÔ±ÕËºÅ¹ÜÀí</td></td>
-      <tr><td><INPUT type="checkbox" <? echo in_array('Log',$privileges)?'Checked':'' ;?> name="Log">ÈÕÖ¾¹ÜÀí</td></td>
-      <tr><td><INPUT type="checkbox" <? echo in_array('SMSChild',$privileges)?'Checked':'' ;?> name="SMSChild">¶ÌÐÅ¿Í»§¹ÜÀí</td></td>
-      <tr><td><INPUT type="checkbox" <? echo in_array('SMSLog',$privileges)?'Checked':'' ;?> name="SMSLog">¶ÌÐÅÈÕÖ¾¹ÜÀí</td></td>
+      <tr><td><INPUT type="checkbox" <? echo in_array('UserAccount',$privileges)?'Checked':'' ;?> name="UserAccount">ç”¨æˆ·ç®¡ç†</td></td>
+      <tr><td><INPUT type="checkbox" <? echo in_array('News',$privileges)?'Checked':'' ;?> name="News">æ–°é—»ç®¡ç†</td></td>
+      <tr><td><INPUT type="checkbox" <? echo in_array('PersonalVPN',$privileges)?'Checked':'' ;?> name="PersonalVPN">ä¸ªäººVPNç®¡ç†</td></td>
+      <tr><td><INPUT type="checkbox" <? echo in_array('Money',$privileges)?'Checked':'' ;?> name="Money">ç”¨æˆ·èµ„é‡‘ç®¡ç†</td></td>
+      <tr><td><INPUT type="checkbox" <? echo in_array('Admin',$privileges)?'Checked':'' ;?> name="Admin">ç®¡ç†å‘˜è´¦å·ç®¡ç†</td></td>
+      <tr><td><INPUT type="checkbox" <? echo in_array('Log',$privileges)?'Checked':'' ;?> name="Log">æ—¥å¿—ç®¡ç†</td></td>
+      <tr><td><INPUT type="checkbox" <? echo in_array('SMSChild',$privileges)?'Checked':'' ;?> name="SMSChild">çŸ­ä¿¡å®¢æˆ·ç®¡ç†</td></td>
+      <tr><td><INPUT type="checkbox" <? echo in_array('SMSLog',$privileges)?'Checked':'' ;?> name="SMSLog">çŸ­ä¿¡æ—¥å¿—ç®¡ç†</td></td>
       </table> 
       </td>
     </tr>
@@ -65,7 +65,7 @@ function ModifyPrivilege(){
   </div>
   <br>
   <p align="center">
-  <input type="button" id="oModifyPrivilege" value="ÐÞ¸Ä" onclick="ModifyPrivilege();"> 
+  <input type="button" id="oModifyPrivilege" value="ä¿®æ”¹" onclick="ModifyPrivilege();"> 
    </p>
 </form>
 

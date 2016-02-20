@@ -14,13 +14,13 @@
 
             <p><br>
 
-              <b><font color="#3366CC">µ±Ç°Î»ÖÃ£º</font></b><a href="/" class="a5">°¢¿¨Ê×Ò³ 
+              <b><font color="#3366CC">å½“å‰ä½ç½®ï¼š</font></b><a href="/" class="a5">é˜¿å¡é¦–é¡µ 
 
-              </a><font color="#458DE4">&gt;</font> <a href="../index.shtml" class="a5">¿Í»§·þÎñ</a> 
+              </a><font color="#458DE4">&gt;</font> <a href="../index.shtml" class="a5">å®¢æˆ·æœåŠ¡</a> 
 
-              <font color="#458DE4">&gt;</font> <span class="a5">¶¨¹º</span> </p>
+              <font color="#458DE4">&gt;</font> <span class="a5">å®šè´­</span> </p>
 
-            <p class="newstitle">ÔÚÏß¶¨¹º</p>
+            <p class="newstitle">åœ¨çº¿å®šè´­</p>
 
             <table width="75%" border="0" cellspacing="2" cellpadding="2">
 
@@ -28,12 +28,12 @@
 
                 <td width="25%"> 
 
-                  <div align="center"><span class="newssubtitle"><a href="vpn/index.shtml"><img src="images/VPN-Product.jpg" width="150" height="180" border="0" alt="½ÌÓýÍø³ö¹úVPN"></a></span></div>
+                  <div align="center"><span class="newssubtitle"><a href="vpn/index.shtml"><img src="images/VPN-Product.jpg" width="150" height="180" border="0" alt="æ•™è‚²ç½‘å‡ºå›½VPN"></a></span></div>
 
                 </td>
 
                 <td width="25%"> 
-                <div align="center"><span class="newssubtitle"><img src="images/browser.jpg" width="150" height="180" alt="ä¯ÀÀÆ÷¶¨ÖÆ"></span></div>
+                <div align="center"><span class="newssubtitle"><img src="images/browser.jpg" width="150" height="180" alt="æµè§ˆå™¨å®šåˆ¶"></span></div>
 
                 </td>
 
@@ -43,12 +43,12 @@
 
                 <td width="50%"> 
 
-                  <div align="center"><a href="vpn/index.shtml" class="a4">³ö¹úVPN·þÎñ</a></div>
+                  <div align="center"><a href="vpn/index.shtml" class="a4">å‡ºå›½VPNæœåŠ¡</a></div>
 
                 </td>
 
                 <td width="50%"> 
-                  <div align="center">ä¯ÀÀÆ÷¶¨ÖÆ</div>
+                  <div align="center">æµè§ˆå™¨å®šåˆ¶</div>
 				
 
                 </td>
@@ -68,7 +68,7 @@
 
                 <td width="50%">
                   <!--
-                  <div align="center"><span class="newssubtitle"><a href="idl/index.shtml"><img src="images/idl.jpg" width="150" height="180" border="0" alt="¹ú¼Ê¼ÝÊ»Ö´ÕÕ"></a></span></div>
+                  <div align="center"><span class="newssubtitle"><a href="idl/index.shtml"><img src="images/idl.jpg" width="150" height="180" border="0" alt="å›½é™…é©¾é©¶æ‰§ç…§"></a></span></div>
 -->
                 </td>
 
@@ -84,7 +84,7 @@
                 <td width="25%"> 
 
 <!--
-                  <div align="center"><a href="idl/index.shtml" class=a4>¹ú¼Ê¼ÝÊ»Ö´ÕÕ</a></div>
+                  <div align="center"><a href="idl/index.shtml" class=a4>å›½é™…é©¾é©¶æ‰§ç…§</a></div>
 -->
 
                 </td>
@@ -111,11 +111,11 @@
         </tr>
         <tr> 
           <td bgcolor="C3D4F4" colspan="2"> <div align="left"><font color="032B7A"><b><font face="Arial"> 
-              Ïà¹ØÁ´½Ó</font></b></font></div></td>
+              ç›¸å…³é“¾æŽ¥</font></b></font></div></td>
         </tr>
         <tr> 
           <td> <div align="right"><img src="../../image/leadarrow.gif" width="5" height="10"></div></td>
-          <td><a href="../../serv_prod/index.shtml" class="a6">²úÆ·Óë·þÎñ</a></td>
+          <td><a href="../../serv_prod/index.shtml" class="a6">äº§å“ä¸ŽæœåŠ¡</a></td>
         </tr>
         <tr> 
           <td> <div align="right"></div></td>

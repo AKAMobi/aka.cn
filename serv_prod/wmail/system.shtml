@@ -10,23 +10,23 @@
 
         <tr> 
           <td valign="top"> <p><br>
-              <b><font color="#3366CC">µ±Ç°Î»ÖÃ:</font> </b><a href="/index.shtml" class="a5">°¢¿¨Ê×Ò³</a> 
-              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">²úÆ·Óë·şÎñ</a><font color="#458DE4">&gt; 
-              <a href="index.shtml" class=a5>WMail</a> &gt;</font> <font color="#458DE4">¿Í»§°¸Àı</font></p>
+              <b><font color="#3366CC">å½“å‰ä½ç½®:</font> </b><a href="/index.shtml" class="a5">é˜¿å¡é¦–é¡µ</a> 
+              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">äº§å“ä¸æœåŠ¡</a><font color="#458DE4">&gt; 
+              <a href="index.shtml" class=a5>WMail</a> &gt;</font> <font color="#458DE4">å®¢æˆ·æ¡ˆä¾‹</font></p>
             <table width="475" cellspacing="0" cellpadding="0">
               <tr> 
-                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">¿Í»§°¸Àı</td>
+                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">å®¢æˆ·æ¡ˆä¾‹</td>
               </tr>
             </table> 
-	    ´ó¿Í»§(&gt;1000ÈË)<br>
+	    å¤§å®¢æˆ·(&gt;1000äºº)<br>
             <ul>
-              <!--li><strong>±±¾©µçÓ°Ñ§Ôº</strong> &nbsp;&nbsp;<a href="http://mail.bfa.edu.cn" target="_blank" class=a4>http://mail.bfa.edu.cn</a></li-->
-	      <li><strong>×Ï¹â¼¯ÍÅ</strong> &nbsp;&nbsp;<a href="http://mail.thunis.com" target="_blank" class=a4>http://mail.thunis.com</a></li>
+              <!--li><strong>åŒ—äº¬ç”µå½±å­¦é™¢</strong> &nbsp;&nbsp;<a href="http://mail.bfa.edu.cn" target="_blank" class=a4>http://mail.bfa.edu.cn</a></li-->
+	      <li><strong>ç´«å…‰é›†å›¢</strong> &nbsp;&nbsp;<a href="http://mail.thunis.com" target="_blank" class=a4>http://mail.thunis.com</a></li>
 	    </ul>
-	    Ğ¡¿Í»§(&lt;=1000ÈË)<br>
+	    å°å®¢æˆ·(&lt;=1000äºº)<br>
 	    <ul>
-	      <li><strong>ËÉÏÂµçÆ÷(»úµç)Ìì½òÓĞÏŞ¹«Ë¾</strong> &nbsp;&nbsp;<a href="http://211.99.22.180/" target="_blank" class=a4>http://mail.panasonic.com.cn</a></li>
-	      <li><strong>±±¾©Ê¦·¶´óÑ§¾©Ê¦´óÏÃ</strong> &nbsp;&nbsp;<a href="http://mail.ciae.bnu.edu.cn" target="_blank" class=a4>http://mail.ciae.bnu.edu.cn</a></li>
+	      <li><strong>æ¾ä¸‹ç”µå™¨(æœºç”µ)å¤©æ´¥æœ‰é™å…¬å¸</strong> &nbsp;&nbsp;<a href="http://211.99.22.180/" target="_blank" class=a4>http://mail.panasonic.com.cn</a></li>
+	      <li><strong>åŒ—äº¬å¸ˆèŒƒå¤§å­¦äº¬å¸ˆå¤§å¦</strong> &nbsp;&nbsp;<a href="http://mail.ciae.bnu.edu.cn" target="_blank" class=a4>http://mail.ciae.bnu.edu.cn</a></li>
             </ul>
 	  </td>
 
@@ -50,7 +50,7 @@
 
           <td bgcolor="C3D4F4" colspan="2"> 
 
-            <div align="left"><font color="032B7A"><b><font face="Arial"> Ïà¹ØÁ´½Ó</font></b></font></div>
+            <div align="left"><font color="032B7A"><b><font face="Arial"> ç›¸å…³é“¾æ¥</font></b></font></div>
 
           </td>
 
@@ -64,7 +64,7 @@
 
           </td>
 
-          <td><a href="/serv_prod/index.shtml" class="a6">²úÆ·Óë·şÎñ</a></td>
+          <td><a href="/serv_prod/index.shtml" class="a6">äº§å“ä¸æœåŠ¡</a></td>
 
         </tr>
 

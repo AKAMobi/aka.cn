@@ -1,5 +1,5 @@
 <?
 require_once( "db.inc.php" );
-$conn=mysql_pconnect(DB_HOST,DB_USER,DB_PASS) or die("ÎÞ·¨Á¬½ÓDBM.");
-mysql_select_db(DB_NAME,$conn) or die("ÎÞ·¨´ò¿ªÊý¾Ý¿â.");
+$conn=mysql_pconnect(DB_HOST,DB_USER,DB_PASS) or die("æ— æ³•è¿žæŽ¥DBM.");
+mysql_select_db(DB_NAME,$conn) or die("æ— æ³•æ‰“å¼€æ•°æ®åº“.");
 ?>

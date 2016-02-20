@@ -12,8 +12,8 @@ IncludeHTML("{$NEWSROOT}/Include/Part1.html");
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $NEWSURL; ?>/" class="a5">°¢¿¨ÐÂÎÅ</a>
+                å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $NEWSURL; ?>/" class="a5">é˜¿å¡æ–°é—»</a>
                 <br>
             </td>
         </tr>
@@ -28,7 +28,7 @@ require_once("{$NEWSROOT}/Include/InitDB.inc.php");
 $result = mysql_query("select Title,DATE_FORMAT(PostDate,'%Y-%m-%d') as PostDate ,Body,ImagePath from News_TB where AutoID={$_REQUEST['id']}" );
 if (!( $ra = mysql_fetch_array( $result )) ){
 ?>
-<font color=#ff0000>´íÎó£¬ÐÅÏ¢ÌáÈ¡´íÎó£¡</font><br>
+<font color=#ff0000>é”™è¯¯ï¼Œä¿¡æ¯æå–é”™è¯¯ï¼</font><br>
 <?
 } else {
 echo "<span class=\"newstitle\">".$ra['Title']  . "</span><br>";

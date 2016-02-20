@@ -13,7 +13,7 @@ if ( (!isset($HTTP_POST_VARS['Name'])) ||
 <table width="760" border="0" cellspacing="0" cellpadding="0">
   <tr> 
   <td align="center" >
-	<p>ÓÃ»§Éí·ÝÈÏÖ¤Çë·ÃÎÊ<A HREF="mpvalidate.php">ÊÖ»úÈÏÖ¤Ò³Ãæ</a>£¡</p>
+	<p>ç”¨æˆ·èº«ä»½è®¤è¯è¯·è®¿é—®<A HREF="mpvalidate.php">æ‰‹æœºè®¤è¯é¡µé¢</a>ï¼</p>
 	<br>
 	<br>
 	<br>
@@ -31,9 +31,9 @@ if ( (!isset($HTTP_POST_VARS['Name'])) ||
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-                </font><a href="/my" class="a5">ÎÒµÄ°¢¿¨</a><font color="#458DE4">&gt;
-                </font><a href="mpvalidate.php" class="a5">ÊÖ»úÈÏÖ¤</a>
+                å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+                </font><a href="/my" class="a5">æˆ‘çš„é˜¿å¡</a><font color="#458DE4">&gt;
+                </font><a href="mpvalidate.php" class="a5">æ‰‹æœºè®¤è¯</a>
                 <br>
             </td>
         </tr>
@@ -42,7 +42,7 @@ if ( (!isset($HTTP_POST_VARS['Name'])) ||
 
 $result=mysql_query("select A.ID, A.Password, B.* from User_TB as A, UserValidate_TB as B where B.UserAutoID=A.AutoID and A.ID='{$HTTP_POST_VARS['Name']}' and B.validated='N'");
 
-if (!($row=mysql_fetch_array($result))){//´ËID²»´æÔÚ
+if (!($row=mysql_fetch_array($result))){//æ­¤IDä¸å­˜åœ¨
 
 ?>
 	<br>
@@ -50,36 +50,36 @@ if (!($row=mysql_fetch_array($result))){//´ËID²»´æÔÚ
 	<br>
 	<br>
 	<br>
-´ËID²»´æÔÚ»òÎ´´ò¿ª¶ÌÐÅ×¢²á¹¦ÄÜ£¡<BR>
-<input type="button" value="·µ»Ø" onclick="history.back();">
+æ­¤IDä¸å­˜åœ¨æˆ–æœªæ‰“å¼€çŸ­ä¿¡æ³¨å†ŒåŠŸèƒ½ï¼<BR>
+<input type="button" value="è¿”å›ž" onclick="history.back();">
 	<br>
 	<br>
 <?
 }
 else{
-if (strcmp($HTTP_POST_VARS['Password'],$row["Password"])){//ÃÜÂë´íÎó
+if (strcmp($HTTP_POST_VARS['Password'],$row["Password"])){//å¯†ç é”™è¯¯
 ?>
 	<br>
 	<br>
 	<br>
 	<br>
 	<br>
-ÃÜÂë´íÎó£¡<BR>
-<input type="button" value="·µ»Ø" onclick="history.back();">
+å¯†ç é”™è¯¯ï¼<BR>
+<input type="button" value="è¿”å›ž" onclick="history.back();">
 	<br>
 	<br>
 <?
 
 } else {
-if (strcmp($HTTP_POST_VARS['validateCode'],$row["ValidationCode"])){//ÈÏÖ¤Âë´íÎó
+if (strcmp($HTTP_POST_VARS['validateCode'],$row["ValidationCode"])){//è®¤è¯ç é”™è¯¯
 ?>
         <br>
         <br>
         <br>
         <br>
         <br>
-ÈÏÖ¤Âë´íÎó£¡<BR>
-<input type="button" value="·µ»Ø" onclick="history.back();">
+è®¤è¯ç é”™è¯¯ï¼<BR>
+<input type="button" value="è¿”å›ž" onclick="history.back();">
         <br>
         <br>
 <?
@@ -106,10 +106,10 @@ if (!$success){
 	<br>
 	<br>
 	<br>
-ÄúµÄ¿ìËÙÈÏÖ¤ÇëÇóÌá½»Ê§°Ü¡£<BR>
-Çë·µ»ØÖØÐÂ³¢ÊÔÌá½»¡£
-Èç¹ûÎÊÌâÒÀ¾É£¬ÇëÖ±½ÓÓëÎÒÃÇÁªÏµ¡£<br>
-<input type="button" value="·µ»Ø" onclick="history.back();">
+æ‚¨çš„å¿«é€Ÿè®¤è¯è¯·æ±‚æäº¤å¤±è´¥ã€‚<BR>
+è¯·è¿”å›žé‡æ–°å°è¯•æäº¤ã€‚
+å¦‚æžœé—®é¢˜ä¾æ—§ï¼Œè¯·ç›´æŽ¥ä¸Žæˆ‘ä»¬è”ç³»ã€‚<br>
+<input type="button" value="è¿”å›ž" onclick="history.back();">
 	<br>
 	<br>
 <?
@@ -117,8 +117,8 @@ if (!$success){
 ?>
 <br>
 <br>
-¿ìËÙÈÏÖ¤³É¹¦<BR>
-ÄúÏÖÔÚ¿ÉÒÔÕý³£<a class="a6" href="/my">µÇÂ½</a>Ê¹ÓÃAKAµÄ¸÷Ïî·þÎñ    <br>
+å¿«é€Ÿè®¤è¯æˆåŠŸ<BR>
+æ‚¨çŽ°åœ¨å¯ä»¥æ­£å¸¸<a class="a6" href="/my">ç™»é™†</a>ä½¿ç”¨AKAçš„å„é¡¹æœåŠ¡    <br>
 	<br>
 <?
 }
@@ -137,19 +137,19 @@ if (!$success){
           <td>
             <table width="210" cellspacing="8" cellpadding="3">
               <tr> 
-                <td bgcolor="C3D4F4" colspan="2"><b><font face="Arial, Helvetica, sans-serif" color="032B7A">Ïà¹ØÁ´½Ó</font></b></td>
+                <td bgcolor="C3D4F4" colspan="2"><b><font face="Arial, Helvetica, sans-serif" color="032B7A">ç›¸å…³é“¾æŽ¥</font></b></td>
               </tr>
               <tr> 
                 <td width="27"> 
                   <div align="right"><img src="../image/leadarrow.gif" width="5" height="10"></div>
                 </td>
-                <td><a href="../serv_prod/index.shtml" class="a6">²úÆ·Óë·þÎñ</a></td>
+                <td><a href="../serv_prod/index.shtml" class="a6">äº§å“ä¸ŽæœåŠ¡</a></td>
               </tr>
               <tr> 
                 <td width="27"> 
                   <div align="right"><img src="../image/leadarrow.gif" width="5" height="10"></div>
                 </td>
-                <td><a href="../customer/index.shtml" class="a6">¿Í»§·þÎñ</a></td>
+                <td><a href="../customer/index.shtml" class="a6">å®¢æˆ·æœåŠ¡</a></td>
               </tr>
             </table>
           </td>

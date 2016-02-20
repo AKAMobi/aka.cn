@@ -10,10 +10,10 @@ require_once ("header.inc.php");
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                ��ǰλ�ã�</font> </b><a href="/" class="a5">������ҳ</a> <font color="#458DE4">&gt; 
-                </font><a href="/PersonalVPN/" class="a5">�ҵİ���</a><font color="#458DE4">&gt; 
-                </font><a href="/PersonalVPN/UserMenu.php" class="a5">�û��˵�</a> 
-                <font color="#458DE4">&gt;</font><a href="/PersonalVPN/AddMoney.php" class="a5">�û���Ǯ</a>
+                当前位置：</font> </b><a href="/" class="a5">阿卡首页</a> <font color="#458DE4">&gt; 
+                </font><a href="/PersonalVPN/" class="a5">我的阿卡</a><font color="#458DE4">&gt; 
+                </font><a href="/PersonalVPN/UserMenu.php" class="a5">用户菜单</a> 
+                <font color="#458DE4">&gt;</font><a href="/PersonalVPN/AddMoney.php" class="a5">用户加钱</a>
 				<br>
                 <br>
             </td>
@@ -26,8 +26,8 @@ require_once ("header.inc.php");
 <?
 if ( (!isset($HTTP_SESSION_VARS['UserID']) ) ) {
 ?>
-����δ��½��<br>
-������<A HREF="index.php">��½</a>��
+您尚未登陆。<br>
+请首先<A HREF="index.php">登陆</a>。
 <?
 }else {
 ?>
@@ -35,17 +35,17 @@ if ( (!isset($HTTP_SESSION_VARS['UserID']) ) ) {
 <!--
 function AddMoney(){
 	if (document.all.oOperTime.value=="") {
-		alert("�����������˵�ʱ��");
+		alert("请输入您划账的时间");
 		document.all.oOperTime.focus();
 		return ;
 	}
 	if (document.all.oMoney.value=="") {
-		alert("�����������˵Ľ��");
+		alert("请输入您划账的金额");
 		document.all.oMoney.focus();
 		return ;
 	}
 	if (document.all.oOperNumber.value=="") {
-		alert("�����������˵Ĳ�����ˮ��");
+		alert("请输入您划账的操作流水号");
 		document.all.oOperNumber.focus();
 		return ;
 	}
@@ -79,19 +79,19 @@ function testKey_OperNumber(){
                       <br>
   <div align="center"><table border="0" id="AutoNumber1">
     <tr>
-      <td>�û��ʺţ�</td>
+      <td>用户帐号：</td>
       <td><? echo $HTTP_SESSION_VARS['UserID']; ?></td>
     </tr>
     <tr>
-      <td>����ʱ�䣺</td>
+      <td>划账时间：</td>
       <td><input type="textfield" id="oOperTime" name="OperTime" size="20" onkeypress="testKey_OperTime();" ></td>
     </tr>
     <tr>
-      <td>���˽�</td>
+      <td>划账金额：</td>
       <td><input type="textfield" id="oMoney" name="Money" size="20" onkeypress="testKey_Money();" ></td>
     </tr>
     <tr>
-      <td>��ע�����˲�����ˮ�ţ���</td>
+      <td>备注（划账操作流水号）：</td>
       <td><input type="textfield" id="oOperNumber" name="OperNumber" size="20" onkeypress="testKey_OperNumber();" ></td>
     </tr>
 
@@ -99,7 +99,7 @@ function testKey_OperNumber(){
   </div>
   <br>
   <p align="center">
-  <input type="button" id="oAddMoney" value="�ύ��Ǯ��Ϣ" onclick="AddMoney();"> 
+  <input type="button" id="oAddMoney" value="提交加钱信息" onclick="AddMoney();"> 
    </p>
 </form>
 

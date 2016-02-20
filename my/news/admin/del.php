@@ -4,10 +4,10 @@ $id = $_REQUEST['id'];
 $delitem=GetNewsImgPath($id);
 $result = mysql_query("delete from News_TB where AutoID=$id");
 if ($result){
-$msg="É¾³ý²Ù×÷ÒÑÍê³É¡£";
+$msg="åˆ é™¤æ“ä½œå·²å®Œæˆã€‚";
 if(is_file($IMGROOT.$delitem))unlink($IMGROOT.$delitem);
 }
-	else $msg="Î´Öª´íÎó£¬É¾³ý²Ù×÷Î´Íê³É¡£";
+	else $msg="æœªçŸ¥é”™è¯¯ï¼Œåˆ é™¤æ“ä½œæœªå®Œæˆã€‚";
 require_once("../footer.inc.php");
 ?>
 <script language="javascript">alert("<?echo $msg;?>");top.window.location="update.php"</script>

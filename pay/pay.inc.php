@@ -9,7 +9,7 @@ define( 'Poundage', 3 );
 
 function transfer_ok( $v_oid )
 {
-	//¼ì²éÊÇ·ñÒÑ¾­Ö§¸¶³É¹¦
+	//æ£€æŸ¥æ˜¯å¦å·²ç»æ”¯ä»˜æˆåŠŸ
 	$result=mysql_query( "select EndDate, TransferDate from NetPay_TB where PayNO='$v_oid'" );
 	if( !$result ){
 		paylog( "transfer.php: mysql_query error: " . "select EndDate, TransferDate from NetPay_TB where PayNO='$v_oid'" );
@@ -25,10 +25,10 @@ function transfer_ok( $v_oid )
 	mysql_free_result( $result );
 
 	if( !isset($enddate) ){
-		paylog( "transfer.php: Ö§¸¶ºÅ'$v_oid'Ã»ÓĞÍê³É£¬È´±»×ªÕÊ" );
+		paylog( "transfer.php: æ”¯ä»˜å·'$v_oid'æ²¡æœ‰å®Œæˆï¼Œå´è¢«è½¬å¸" );
 	}
 	if( isset($transferdate) ){
-		paylog( "transfer.php: Ö§¸¶ºÅ'$v_oid'ÒÑ¾­×ªÕÊ£¬È´±»ÔÙ´Î×ªÕÊ" );
+		paylog( "transfer.php: æ”¯ä»˜å·'$v_oid'å·²ç»è½¬å¸ï¼Œå´è¢«å†æ¬¡è½¬å¸" );
 		return false;
 	}
 
@@ -40,12 +40,12 @@ function transfer_ok( $v_oid )
 }
 
 /*
- * ÓÃ»§ÍøÉÏÖ§¸¶³É¹¦
- * ´úÊÕ·Ñ²»µ÷ÓÃ pay_ok£¬´úÊÕ·Ñµ÷ÓÃ agent_pay_ok
+ * ç”¨æˆ·ç½‘ä¸Šæ”¯ä»˜æˆåŠŸ
+ * ä»£æ”¶è´¹ä¸è°ƒç”¨ pay_okï¼Œä»£æ”¶è´¹è°ƒç”¨ agent_pay_ok
  */
 function pay_ok( $v_oid, $v_pmode )
 {
-	//¼ì²éÊÇ·ñÒÑ¾­Ö§¸¶³É¹¦
+	//æ£€æŸ¥æ˜¯å¦å·²ç»æ”¯ä»˜æˆåŠŸ
 	$result=mysql_query( "select EndDate, Category from NetPay_TB where PayNO='$v_oid'" );
 	if( !$result ){
 		paylog( "payback.php: mysql_query error" . "select EndDate from NetPay_TB where PayNO='$v_oid'" );
@@ -61,7 +61,7 @@ function pay_ok( $v_oid, $v_pmode )
 	mysql_free_result( $result );
 
 	if( isset($enddate) ){
-		//paylog( "pay_ok: Ö§¸¶ºÅ'$v_oid'ÒÑ¾­Íê³É£¬È´±»ÔÙ´ÎÌá½»" );
+		//paylog( "pay_ok: æ”¯ä»˜å·'$v_oid'å·²ç»å®Œæˆï¼Œå´è¢«å†æ¬¡æäº¤" );
 		return true;
 	}
 
@@ -80,15 +80,15 @@ function pay_ok( $v_oid, $v_pmode )
 	}
 
 	if ( 'Sale'==$category ){
-		return add_money( $row['UserAutoID'], $row['Money'], $row['Currency'], "ÍøÉÏÖ§¸¶»®ÕÊ" );
+		return add_money( $row['UserAutoID'], $row['Money'], $row['Currency'], "ç½‘ä¸Šæ”¯ä»˜åˆ’å¸" );
 	}else if ( 'Agent'==$category ){
-		return add_agent_money( $row['UserAutoID'], $row['Money'], $row['Currency'], "°¢¿¨´úÊÕ·Ñ" );
+		return add_agent_money( $row['UserAutoID'], $row['Money'], $row['Currency'], "é˜¿å¡ä»£æ”¶è´¹" );
 	}
 }
 
 function add_agent_money( $userautoid, $amount, $currency, $msg )
 {
-	// ÊÖĞø·Ñ 30%
+	// æ‰‹ç»­è´¹ 30%
 	$poundage_rate = 0.3;
 
 	if( !mysql_query("begin") ) {
@@ -108,9 +108,9 @@ function add_agent_money( $userautoid, $amount, $currency, $msg )
 		$poundage = -0.01;
 	}
 
-	if( !user_add_money( $userautoid, $poundage, $currency, "´úÊÕ·ÑÒµÎñ30%ÊÖĞø·Ñ", Poundage ) ){
+	if( !user_add_money( $userautoid, $poundage, $currency, "ä»£æ”¶è´¹ä¸šåŠ¡30%æ‰‹ç»­è´¹", Poundage ) ){
 		mysql_query("rollback");
-		paylog( "agent_pay_ok: user_add_money($userautoid, $poundage, $currency, 30%ÊÖĞø·Ñ, Agent) error" );
+		paylog( "agent_pay_ok: user_add_money($userautoid, $poundage, $currency, 30%æ‰‹ç»­è´¹, Agent) error" );
 		return false;
 	}
 	mysql_query( "commit" );
@@ -119,12 +119,12 @@ function add_agent_money( $userautoid, $amount, $currency, $msg )
 }
 
 /*
- * ´úÊÕ·ÑÍøÉÏÖ§¸¶³É¹¦
+ * ä»£æ”¶è´¹ç½‘ä¸Šæ”¯ä»˜æˆåŠŸ
  */
-/* XXX ×÷·Ï
+/* XXX ä½œåºŸ
 function agent_pay_ok( $v_oid, $v_pmode )
 {
-	//¼ì²éÊÇ·ñÒÑ¾­Ö§¸¶³É¹¦
+	//æ£€æŸ¥æ˜¯å¦å·²ç»æ”¯ä»˜æˆåŠŸ
 	$result=mysql_query( "select EndDate from NetPay_TB where PayNO='$v_oid'" );
 	if( !$result ){
 		paylog( "payback.php: mysql_query error" . "select EndDate from NetPay_TB where PayNO='$v_oid'" );
@@ -139,7 +139,7 @@ function agent_pay_ok( $v_oid, $v_pmode )
 	mysql_free_result( $result );
 
 	if( isset($enddate) ){
-		//paylog( "pay_ok: Ö§¸¶ºÅ'$v_oid'ÒÑ¾­Íê³É£¬È´±»ÔÙ´ÎÌá½»" );
+		//paylog( "pay_ok: æ”¯ä»˜å·'$v_oid'å·²ç»å®Œæˆï¼Œå´è¢«å†æ¬¡æäº¤" );
 		return true;
 	}
 
@@ -157,14 +157,14 @@ function agent_pay_ok( $v_oid, $v_pmode )
 		return false;
 	}
 
-	// ¸øÓÃ»§ÕÊ»§¼ÓÇ®
+	// ç»™ç”¨æˆ·å¸æˆ·åŠ é’±
 
 	$userautoid = $row['UserAutoID'];
 	$amount = $row['Money'];
 	$currency = $row['Currency'];
-	$msg = "°¢¿¨´úÊÕ·ÑÒµÎñ";
+	$msg = "é˜¿å¡ä»£æ”¶è´¹ä¸šåŠ¡";
 
-	// ÊÖĞø·Ñ 30%
+	// æ‰‹ç»­è´¹ 30%
 	$poundage_rate = 0.3;
 
 	if( !mysql_query("begin") ) {
@@ -183,9 +183,9 @@ function agent_pay_ok( $v_oid, $v_pmode )
 		$poundage = -0.01;
 	}
 
-	if( !user_add_money( $userautoid, $poundage, $currency, "´úÊÕ·ÑÒµÎñ30%ÊÖĞø·Ñ", Poundage ) ){
+	if( !user_add_money( $userautoid, $poundage, $currency, "ä»£æ”¶è´¹ä¸šåŠ¡30%æ‰‹ç»­è´¹", Poundage ) ){
 		mysql_query("rollback");
-		paylog( "agent_pay_ok: user_add_money($userautoid, $poundage, $currency, 30%ÊÖĞø·Ñ, Agent) error" );
+		paylog( "agent_pay_ok: user_add_money($userautoid, $poundage, $currency, 30%æ‰‹ç»­è´¹, Agent) error" );
 		return false;
 	}
 	mysql_query( "commit" );
@@ -210,8 +210,8 @@ function paylog( $msg )
 
 /*
  * add_money
- * ¸øÓÃ»§ºÅ userautoid µÄÓÃ»§¼Ó amount Ç®£¬ÀíÓÉÊÇ $msg
- * Í¬Ê±½±ÀøÉÏÏßÓëÉÏÉÏÏß
+ * ç»™ç”¨æˆ·å· userautoid çš„ç”¨æˆ·åŠ  amount é’±ï¼Œç†ç”±æ˜¯ $msg
+ * åŒæ—¶å¥–åŠ±ä¸Šçº¿ä¸ä¸Šä¸Šçº¿
  */
 function add_money( $userautoid, $amount, $currency, $msg )
 {
@@ -227,8 +227,8 @@ function add_money( $userautoid, $amount, $currency, $msg )
 		return false;
 	}
 	/*
-	 * ¸øÉÏÏß¼ÓÇ®
-	 * ÉÏÏß£º 5%£¬ÉÏÉÏÏß£º10%
+	 * ç»™ä¸Šçº¿åŠ é’±
+	 * ä¸Šçº¿ï¼š 5%ï¼Œä¸Šä¸Šçº¿ï¼š10%
 	 */
 	 $srate = 0.05;
 	 $ssrate = 0.1;
@@ -237,26 +237,26 @@ function add_money( $userautoid, $amount, $currency, $msg )
 	if ($row=mysql_fetch_array($result)){
 		$superuserid=$row['SuperUserAutoID'];
 		$userid=$row['ID'];
-		if( !user_add_money($superuserid,floatval($amount*$srate),$currency,"ÏÂÏß $userid ÏòÕË»§¼ÓÇ®¸øÄúµÄ½±Àø", Bonus) ){
+		if( !user_add_money($superuserid,floatval($amount*$srate),$currency,"ä¸‹çº¿ $userid å‘è´¦æˆ·åŠ é’±ç»™æ‚¨çš„å¥–åŠ±", Bonus) ){
 			mysql_query("rollback");
-			paylog( "add_money: user_add_money($superuserid, $amount*$srate,$currency,ÏÂÏß $userid ÏòÕË»§¼ÓÇ®¸øÄúµÄ½±Àø, Bonus) error" );
+			paylog( "add_money: user_add_money($superuserid, $amount*$srate,$currency,ä¸‹çº¿ $userid å‘è´¦æˆ·åŠ é’±ç»™æ‚¨çš„å¥–åŠ±, Bonus) error" );
 			return false;
 		}
 		mysql_free_result( $result );
 		
-		// ÉÏÉÏÏß
+		// ä¸Šä¸Šçº¿
 		$result = mysql_query( "select B.AutoID as SuperUserAutoID ,B.ID as SuperUserID, A.ID as ID from User_TB as A, User_TB as B where A.AutoID=$superuserid and A.SuperiorUserAutoID=B.AutoID" );	
 		if( $row=mysql_fetch_array($result) ){
 			$userid=$row['ID'];
 			$ssuserid=$row['SuperUserAutoID'];
-			if( !user_add_money($ssuserid,floatval($amount*$ssrate),$currency,"ÏÂÏß $userid µÄÏÂÏßÏòÕË»§¼ÓÇ®¸øÄúµÄ½±Àø", Bonus) ){
+			if( !user_add_money($ssuserid,floatval($amount*$ssrate),$currency,"ä¸‹çº¿ $userid çš„ä¸‹çº¿å‘è´¦æˆ·åŠ é’±ç»™æ‚¨çš„å¥–åŠ±", Bonus) ){
 				mysql_query("rollback");
-				paylog( "add_money: user_add_money($superuserid, $amount*$srate,$currency,ÏÂÏß$useridµÄÏÂÏßÏòÕË»§¼ÓÇ®¸øÄúµÄ½±Àø,Bonus) error" );
+				paylog( "add_money: user_add_money($superuserid, $amount*$srate,$currency,ä¸‹çº¿$useridçš„ä¸‹çº¿å‘è´¦æˆ·åŠ é’±ç»™æ‚¨çš„å¥–åŠ±,Bonus) error" );
 				return false;
 			}
-		} //ÉÏÉÏÏß
+		} //ä¸Šä¸Šçº¿
 		mysql_free_result( $result );
-	} //ÉÏÏß
+	} //ä¸Šçº¿
 	mysql_query( "commit" );
 	return true;
 }
@@ -265,9 +265,9 @@ function add_money( $userautoid, $amount, $currency, $msg )
 
 /*
  * user_add_money
- * ¸øÓÃ»§ºÅ userautoid µÄÓÃ»§¼Ó amount Ç®£¬ÀíÓÉÊÇ $msg
- * Ö»¸øÓÃ»§¼ÓÇ®£¬Ã»ÓĞÆäËû½±Àø
- * ÄÚ²¿²Ù×÷Ã»ÓĞ commit£¬ĞèÒª¶îÍâµÄ begin/commit
+ * ç»™ç”¨æˆ·å· userautoid çš„ç”¨æˆ·åŠ  amount é’±ï¼Œç†ç”±æ˜¯ $msg
+ * åªç»™ç”¨æˆ·åŠ é’±ï¼Œæ²¡æœ‰å…¶ä»–å¥–åŠ±
+ * å†…éƒ¨æ“ä½œæ²¡æœ‰ commitï¼Œéœ€è¦é¢å¤–çš„ begin/commit
  */
 function user_add_money( $userautoid, $amount, $currency, $msg, $type )
 {
@@ -279,13 +279,13 @@ function user_add_money( $userautoid, $amount, $currency, $msg, $type )
 		return true;
 	}
 
-	if( ! (is_numeric($userautoid) && is_numeric($amount) && round(abs($amount),2)>=0) ){ //XXX round($amount,2)ÅĞ¶ÏÕâ¸öÓĞÊ²Ã´ÓÃ£¿
-		paylog( "user_add_money($userautoid,$amount,$currency,$msg,$type)²ÎÊı´íÎó" );
+	if( ! (is_numeric($userautoid) && is_numeric($amount) && round(abs($amount),2)>=0) ){ //XXX round($amount,2)åˆ¤æ–­è¿™ä¸ªæœ‰ä»€ä¹ˆç”¨ï¼Ÿ
+		paylog( "user_add_money($userautoid,$amount,$currency,$msg,$type)å‚æ•°é”™è¯¯" );
 		return false;
 	}
 
-	//¸øÓÃ»§ÕÊ»§¼ÓÇ®
-	// ÃÀÔª
+	//ç»™ç”¨æˆ·å¸æˆ·åŠ é’±
+	// ç¾å…ƒ
 	if ( "USD"==$currency ){
 		if( !mysql_query("update UserAccount_TB set UserAccountUSD=UserAccountUSD+$amount,AccountEnable='Y' where UserAutoID=$userautoid") ){
 			paylog ( "XXX1 sql query error: update UserAccount_TB set UserAccountUSD=UserAccountUSD+$amount,AccountEnable='Y' where UserAutoID=$userautoid" );
@@ -303,7 +303,7 @@ function user_add_money( $userautoid, $amount, $currency, $msg, $type )
 		return false;
 	}
 
-	//Ñ¡³öÓÃ»§ÕËÉÏ½ğ¶î
+	//é€‰å‡ºç”¨æˆ·è´¦ä¸Šé‡‘é¢
 	$result = mysql_query( "select UserAccount,UserAccountUSD from UserAccount_TB where UserAutoID=$userautoid" );
 	if( !$result ){
 		paylog( "sql query error: select UserAccount,UserAccountUSD from UserAccount_TB where UserAutoID=$userautoid and Currency='$currency'" );
@@ -333,7 +333,7 @@ function user_add_money( $userautoid, $amount, $currency, $msg, $type )
 	}else{
 		paylog( "user_add_money's type is neither NetPay nor Bonus nor Agent nor Poundage" );
 	}
-	//¼ÇÂ¼ÕÊ»§ÈÕÖ¾
+	//è®°å½•å¸æˆ·æ—¥å¿—
 	if ($amount>0){
 		if( !mysql_query("insert into UserAccountLog_TB set UserAutoID=$userautoid,OperateTime=now(),Incoming=$amount,Outcoming=0,balance=$UserAccount,Notes='$msg',Reason='$Reason',Currency='$currency'") ){
 			paylog( "mysql_query: insert into UserAccountLog_TB set UserAutoID=$userautoid,OperateTime=now(),Incoming=$amount,Outcoming=0,balance=$UserAccount,Notes='$msg',Reason='$Reason',Currency='$currency'" );
@@ -352,24 +352,24 @@ function user_add_money( $userautoid, $amount, $currency, $msg, $type )
 
 
 /*
- * ½«Ò³Ãæ×ªÏòÊ×¶¼µç×ÓÉÌ³Ç
- * $type ±ÒÖÖ,0ÎªÈËÃñ±Ò,1ÎªÃÀÔª
- * $url ÊÇÖ§¸¶Íê±ÏºóµÄ·µ»ØµØÖ·
+ * å°†é¡µé¢è½¬å‘é¦–éƒ½ç”µå­å•†åŸ
+ * $type å¸ç§,0ä¸ºäººæ°‘å¸,1ä¸ºç¾å…ƒ
+ * $url æ˜¯æ”¯ä»˜å®Œæ¯•åçš„è¿”å›åœ°å€
  */
 function doPrepare( $userautoid, $money, $type, $url, $category )
 {
 	global $v_mid;
 
-	$v_url=$url;  //Ö§¸¶Íê³ÉÏÔÊ¾ÉÌ»§Ò³Ãæ
-	$v_moneytype=$type?$type:0;  //±ÒÖÖ,0ÎªÈËÃñ±Ò,1ÎªÃÀÔª
-	$currency=$type?'USD':'RMB';  //±ÒÖÖ,0ÎªÈËÃñ±Ò,1ÎªÃÀÔª
+	$v_url=$url;  //æ”¯ä»˜å®Œæˆæ˜¾ç¤ºå•†æˆ·é¡µé¢
+	$v_moneytype=$type?$type:0;  //å¸ç§,0ä¸ºäººæ°‘å¸,1ä¸ºç¾å…ƒ
+	$currency=$type?'USD':'RMB';  //å¸ç§,0ä¸ºäººæ°‘å¸,1ä¸ºç¾å…ƒ
 
-	$v_mid=AKA_NO; //AKA µÄÊ×ĞÅÉÌ»§±àºÅ
+	$v_mid=AKA_NO; //AKA çš„é¦–ä¿¡å•†æˆ·ç¼–å·
 
 /*
-	if( $v_moneytype ){ //ÃÀÔª£¬°´ÕÕ 1:8 »ãÂÊ»»ËãÎªRMB
-		$v_amount=round( $money/8, 2 ); //ÃÀÔª°´ÕÕ 1:8 »ãÂÊ»»Ëã
-	}else{ //ÈËÃñ±Ò
+	if( $v_moneytype ){ //ç¾å…ƒï¼ŒæŒ‰ç…§ 1:8 æ±‡ç‡æ¢ç®—ä¸ºRMB
+		$v_amount=round( $money/8, 2 ); //ç¾å…ƒæŒ‰ç…§ 1:8 æ±‡ç‡æ¢ç®—
+	}else{ //äººæ°‘å¸
 */
 		$v_amount=$money;
 /*
@@ -393,7 +393,7 @@ function doPrepare( $userautoid, $money, $type, $url, $category )
 		return false;
 	}
 
-	//Éú³ÉÍøÉÏÖ§¸¶¶©µ¥ºÅ
+	//ç”Ÿæˆç½‘ä¸Šæ”¯ä»˜è®¢å•å·
 	if( $row=mysql_fetch_array($result) ){
 		$netpayid=$row[0];
 		$v_oid=$v_ymd . "-" . $v_mid . "-" . $netpayid;
@@ -413,12 +413,12 @@ function doPrepare( $userautoid, $money, $type, $url, $category )
 		return false;
 	}
 
-	$v_rcvname='ĞÕÃû';
-	$v_rcvaddr='µØÖ·';
-	$v_rcvtel='µç»°';
-	$v_rcvpost='ÓÊ±à';
-	$v_orderstatus=1; //ÉÌ»§Åä»õ×´Ì¬£¬0ÎªÎ´ÅäÆë£¬1ÎªÒÑÅäÆë
-	$v_ordername='¶©»õÈËĞÕÃû';
+	$v_rcvname='å§“å';
+	$v_rcvaddr='åœ°å€';
+	$v_rcvtel='ç”µè¯';
+	$v_rcvpost='é‚®ç¼–';
+	$v_orderstatus=1; //å•†æˆ·é…è´§çŠ¶æ€ï¼Œ0ä¸ºæœªé…é½ï¼Œ1ä¸ºå·²é…é½
+	$v_ordername='è®¢è´§äººå§“å';
 
 	$mark=$v_moneytype . $v_ymd . $v_amount . $v_rcvname . $v_oid . $v_mid . $v_url;
 	$hash = bin2hex( mhash (MHASH_MD5, $mark, MD5_KEY ) );
@@ -427,7 +427,7 @@ function doPrepare( $userautoid, $money, $type, $url, $category )
 	print "<br><p align=center>";
 	if( $v_moneytype ){
 		print "<form method=post action='http://pay.beijing.com.cn/prs/e_user_payment.checkit' name=capform>\n";
-	}else{ //ÈËÃñ±Ò
+	}else{ //äººæ°‘å¸
 		print "<form method=post action='http://pay.beijing.com.cn/prs/user_payment.checkit' name=capform>\n";
 	}
 ?>
@@ -444,7 +444,7 @@ function doPrepare( $userautoid, $money, $type, $url, $category )
 	<input type=hidden name=v_moneytype value="<?=$v_moneytype?>">
 	<input type=hidden name=v_url value="<?=$v_url?>">
 	<input type=hidden name=v_md5info value="<?=$hash?>">
-	<input type=submit name=v_action value="Ê×¶¼µç×ÓÉÌ³ÇÍøÉÏ°²È«Ö§¸¶Æ½Ì¨">
+	<input type=submit name=v_action value="é¦–éƒ½ç”µå­å•†åŸç½‘ä¸Šå®‰å…¨æ”¯ä»˜å¹³å°">
 </form>
 </p>
 <script language=javascript>

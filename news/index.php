@@ -12,10 +12,10 @@ IncludeHTML("{$NEWSROOT}/Include/Part1.html");
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $NEWSURL; ?>/" class="a5">°¢¿¨ÐÂÎÅ</a><br>
+                å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $NEWSURL; ?>/" class="a5">é˜¿å¡æ–°é—»</a><br>
                 <br>
-                <span class="newstitle"> °¢¿¨ÐÂÎÅ </span></p>
+                <span class="newstitle"> é˜¿å¡æ–°é—» </span></p>
             </td>
         </tr>
       </table>
@@ -48,7 +48,7 @@ while($row1=mysql_fetch_array($rst1)){
 ?>
 <td></tr>
 <tr><td align="right" >
-<a href="classes.php?area=<? echo $row['Class']; ?>" class="a6">¸ü¶àÄÚÈÝ...&nbsp;&nbsp;</a>
+<a href="classes.php?area=<? echo $row['Class']; ?>" class="a6">æ›´å¤šå†…å®¹...&nbsp;&nbsp;</a>
 </td></tr>
 </table>
 <?

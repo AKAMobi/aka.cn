@@ -13,7 +13,7 @@ if ( !$area=='0') $condition="and Class='".$area."'"; else $condition = "";
 echo $news_date . "<br><br>";
 $result = mysql_query("select count( * ) from News_TB where PostDate>='$start_date' and PostDate<='$end_date'" . $condition );
 $ca = mysql_fetch_array( $result );
-echo "±¾ÔÂ¹²ÓĞĞÂÎÅ " . $ca[0] . " Ìõ¡£<br>";
+echo "æœ¬æœˆå…±æœ‰æ–°é—» " . $ca[0] . " æ¡ã€‚<br>";
 ?>
 <br><br>
 <?

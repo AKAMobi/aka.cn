@@ -1,15 +1,15 @@
 <!--#include virtual="../../header.html" -->
 <table width="760" border="0" cellspacing="0" cellpadding="0">
   <tr> 
-    <td width="550" rowspan="3"> <img src="image/IDL-Logo.jpg" alt="¹ú¼Ê¼ÝÊ»Ö´ÕÕ-186¸ö¹ú¼ÒµÄ¼ÝÊ»Ö¤"> 
+    <td width="550" rowspan="3"> <img src="image/IDL-Logo.jpg" alt="å›½é™…é©¾é©¶æ‰§ç…§-186ä¸ªå›½å®¶çš„é©¾é©¶è¯"> 
       <center>
         <table width="501" border="0" cellspacing="0" cellpadding="0">
           <tr> 
             <td> 
               <p><br>
-                <b><font color="#3366CC">µ±Ç°Î»ÖÃ£º</font> </b><a href="/index.shtml" class="a5">°¢¿¨Ê×Ò³</a> 
-                <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">²úÆ·Óë·þÎñ</a> 
-                <font color="#458DE4">&gt;</font> <font class=a5>¹ú¼Ê¼ÝÕÕ</font></p>
+                <b><font color="#3366CC">å½“å‰ä½ç½®ï¼š</font> </b><a href="/index.shtml" class="a5">é˜¿å¡é¦–é¡µ</a> 
+                <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">äº§å“ä¸ŽæœåŠ¡</a> 
+                <font color="#458DE4">&gt;</font> <font class=a5>å›½é™…é©¾ç…§</font></p>
             </td>
           </tr>
           <tr> 
@@ -22,14 +22,14 @@
                       <table width="475" cellspacing="0" cellpadding="0">
                         <tr> 
                           <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle"> 
-                            <p>¹ú¼Ê¼ÝÊ»Ö´ÕÕ¼ò½é(International Driver's License)</p>
+                            <p>å›½é™…é©¾é©¶æ‰§ç…§ç®€ä»‹(International Driver's License)</p>
                             </td>
                         </tr>
                       </table>
                       <br>
                       <table width="160" cellspacing="0" cellpadding="0" bordercolor="#FFD291" class="redefinetable" align="right">
                         <tr> 
-                          <td bgcolor="#FFD291"><b><font color="#FF6633">&nbsp;¹ú¼Ê¼ÝÕÕÑù±¾</font></b></td>
+                          <td bgcolor="#FFD291"><b><font color="#FF6633">&nbsp;å›½é™…é©¾ç…§æ ·æœ¬</font></b></td>
                         </tr>
                         <tr> 
                           <td> 
@@ -47,181 +47,9 @@
                         <tr> 
                           <td> 
                             <div align="right"><font color="#0066CC">- </font> 
-                              <a href="pict.shtml" class="a6">¸ü¶à¹ú¼Ê¼ÝÕÕÍ¼Æ¬</a><font color="#0066CC"> 
+                              <a href="pict.shtml" class="a6">æ›´å¤šå›½é™…é©¾ç…§å›¾ç‰‡</a><font color="#0066CC"> 
                               - </font>&nbsp;&nbsp;</div>
                           </td>
                         </tr>
                       </table>
-                      <p>£ £ µ±Äú³ö¹ú¹«¸ÉµÄÊ±ºò£¬µ±Äú»·ÓÎÊÀ½çµÄÊ±ºò£¬µ±ÄúÓë°®ÂÂÔÚ¹úÍâ¹²¶ÈÃÛÔÂµÄÊ±ºò£¬ÊÇ·ñÏë¹ý×Ô¼ÝÆû³µ£¬½«Òì¹ú·ç¾°Ò»ÀÀÎÞÓà£¿</p>
-                      <p>£ £ ¹ú¼Ê¼ÝÕÕÄÜ°ïÄúÊµÏÖÕâ¸öÃÎÏë£¬Ëü¿ÉÒÔÈÃÄãÔÚ180¶à¸ö¹ú¼ÒÀï³©Í¨ÎÞ×è£¬ËüÄÜ°ïÄú¿Ë·þÔÚ¼ÝÊ»ÖÐÅöµ½µÄÀ§ÄÑ£¡²»ÐèÒªÔÙ²Î¼Ó¼ÝÊ»¿¼ÊÔ£¬²»ÐèÒªµ£±£ºÍÖ¤Ã÷£¬Ö»ÒªÄúÔÚ¹úÄÚÒÑ»ñµÃÁË¼ÝÊ»Ö´ÕÕ£¬¼´¿É°ìÀí¹ú¼Ê¼ÝÕÕ¡£</p>
-                      <p><span 
-            class=high>£ £ ¹ú¼Ê¼ÝÊ»Ö´ÕÕÊÇÄãÔÚËü¹úÓµÓÐ¼ÝÕÕ×Ê¸ñµÄÖ¤Ã÷£¬ÊÇ¸ù¾ÝÁªºÏ¹ú¡¶¹ú¼ÊµÀÂ·½»Í¨Ð­¶¨¡·£¨<font 
-            color=#006699>CONVENTION ON ROAD TRAFFIC£¬<a href="Convention_On_Road_Traffic.pdf" class=a4>µã»÷ÕâÀïÏÂÔØ</a></font>£©£¬ÊÚÈ¨Ïà¹ØµÄ¹ú¼Ê×éÖ¯Ç©·¢¸øÒÑ¾­ÔÚ±¾¹úÓµÓÐ¼ÝÕÕµÄ¼ÝÊ»Ô±£¬ÆäÖ÷ÒªÄ¿µÄÊÇÎªÏû³ýË¾»úÔÚ¹úÍâ¼Ý³µÊ±£¬ÓÉÓÚ¸÷¹ú¶Ô¼ÝÕÕÓÐ²»Í¬ÒªÇó¶øÓöµ½µÄÕÏ°­¡£</span></p>
-                      <p>£ £ ¹ú¼Ê¼ÝÕÕÐëÓÉÔÚÁªºÏ¹ú×¢²áµÄ¹ú¼Ê¼ÝÕÕ·¢Ö¤»ú¹¹ºÍ¸÷Ç©Ô¼¹úµÄ¼ÝÊ»Ö¤·¢Ö¤»ú¹¹ºÍ×éÖ¯Ç©·¢¡£¹ú¼Ê¼ÝÕÕ±»¸÷Ç©Ô¼¹ú¼Ò»òµØÇøµÄÈÏ¿É¡£µ«ÓÉÓÚ¸÷¹ú½»Í¨·¨¹æ²»¾¡ÏàÍ¬£¬¶øÇÒ¿ÉÄÜ»áËæÊ±¼ä¶øÓÐËù¸Ä±ä¡£½¨Òé³ÖÓÐ¹ú¼Ê¼ÝÕÕÕßµ½ÓÐ¹Ø¹ú¼Ò»òµØÇøÂÃÐÐÊ±£¬ÏÈÁË½âÒ»ÏÂ±¾µØµÄ×îÐÂÇé¿ö£¬²¢Êì¶Áµ±µØ¼ÝÊ»¹æÔò£¬È·±£°²È«¼ÝÊ»¡£</p>
-                      <p>£ £ ¡¶¹ú¼ÊµÀÂ·½»Í¨Ð­¶¨¡·Ôø¾­ÓÚ1923Äê¡¢1943Äê¡¢1949ÄêºÍ1968ÄêÔÚÁªºÏ¹úµÄÖ÷³ÖÏÂ¶à´ÎÐÞ¸Ä£¬ÒÑÓÐÓ¢¡¢ÃÀ¡¢·¨¡¢ÈÕ¡¢¼ÓµÈ180¶à¸ö¹ú¼ÒºÍµØÇøÔÚÁªºÏ¹úµÀÂ·½»Í¨·¨¹æÉÏÇ©×Ö£¬²¢½ÓÊÜ´ËÎÄ¼þ¡£ÖÐ¹úÒ²ÅÉ´ú±í²Î¼ÓÁË1968ÄêÔÚÎ¬Ò²ÄÉÕÙ¿ªµÄ»áÒé£¬µ«Ã»ÓÐÇ©Ô¼£¬ËùÒÔ¹ú¼Ê¼ÝÕÕ²»ÄÜÔÚÖÐ¹ú¾³ÄÚÊ¹ÓÃ¡£</p>
-                      <p>£ £ ¹«Ô¼¹æ¶¨£¬¹ú¼Ê¼ÝÕÕÐèÓë±¾¹ú¼ÝÕÕÒ»Í¬Ê¹ÓÃ¡£<br>
-                      </p>
-                      <p>&nbsp; </p>
-                      </td>
-                  </tr>
-                </table>
-              </center>
-            </td>
-          </tr>
-          <tr> 
-            <td> 
-              <table width="500" border="0" cellspacing="0" cellpadding="0">
-                <tr> 
-                  <td width="50%" valign="top"> 
-                    <center>
-                      <table width="220" cellspacing="0" cellpadding="0" bordercolor="639A63" class="redefinetable">
-                        <tr> 
-                          <td bgcolor="639A63" height="11">&nbsp;<b><font color="#FFFFFF"> 
-                            ½éÉÜ</font></b></td>
-                        </tr>
-                        <tr> 
-                          <td height="27"> 
-                            <center>
-                              <table width="200" cellspacing="4" cellpadding="0">
-                                <tr> 
-                                  <td> 
-                                    <p><b><span><a href="countries-e.shtml" class="a4">ÊÊÓÃ¹ú¼ÒÁÐ±í</a></span></b><br>
-                                      ¿´Ò»¿´186¸ö³ÐÈÏÁªºÏ¹ú¡¶¹ú¼ÊµÀÂ·¼ÝÊ»¹«Ô¼¡·µÄ¹ú¼ÒÁÐ±í¡£<br>
-                                      <b><span><a href="pict.shtml" class="a4">¼ÝÕÕÑù±¾ÕÕÆ¬</a></span></b><br>
-                                      ¹ú¼Ê¼ÝÕÕÎªÒ»±¾Ð¡²á×Ó£¬ÄÚ¸½·ÀÎ±IC¿¨Ò»ÕÅ¡£</p>
-                                    </td>
-                                </tr>
-                              </table>
-                            </center>
-                          </td>
-                        </tr>
-                      </table>
-                      <br>
-                      <table width="220" cellspacing="0" cellpadding="0" bordercolor="639A63" class="redefinetable">
-                        <tr> 
-                          <td bgcolor="639A63"><b><font color="#FFFFFF">&nbsp;³£¼ûÎÊÌâ½â´ð</font></b></td>
-                        </tr>
-                        <tr> 
-                          <td> 
-                            <table width="200" cellspacing="4" cellpadding="0" align="center">
-                              <tr> 
-                                <td> 
-                                  <p><a class=a4 href="faq.shtml"><b>ÔõÑùÊ¹ÓÃ¹ú¼Ê¼ÝÕÕ</b></a><br>
-                                    ÄúÐèÒªÍ¬Ê±³öÊ¾×Ô¼º¹ú¼ÒµÄ¼ÝÕÕºÍ¹ú¼Ê¼ÝÕÕ¡£ <br>
-                                    <a class=a4 href="faq.shtml"><b>Ò»¶¨Òª³ÖÓÐ»¤ÕÕ²ÅÄÜÉêÇëÂð£¿ 
-                                    </b></a><span class=high><br>
-                                    ²»ÊÇ¡£</span> <br>
-                                    <a class=a4 href="faq.shtml"><b>ÉêÇë¹ú¼Ê¼ÝÊ»Ö¤ÐèÒª¿¼ÊÔÂð£¿</b></a><span class=high><br>
-                                    ²»ÐèÒª£¬ÄúµÄ¼ÝÊ»¼¼ÄÜÒÑ¾­ÓÉ±¾¹ú¼ÝÕÕµ£±£ÁË¡£</span> </p>
-                                  <p align="right"><a href="faq.shtml" class="a6">- 
-                                    ÁË½â¸ü¶à -</a> <br>
-                                  </p>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                      <br>
-                      <table width="220" cellspacing="0" cellpadding="0" bordercolor="639A63" class="redefinetable">
-                        <tr> 
-                          <td bgcolor="639A63"><b><font color="#FFFFFF">&nbsp;ÏÖÔÚÉêÇë£¡</font></b></td>
-                        </tr>
-                        <tr> 
-                          <td> 
-                            <table width="200" cellspacing="4" cellpadding="0" align="center">
-                              <tr> 
-                                <td> 
-                                  <p><b><span class="a4"><a href="apply.shtml" class="a4">ÉêÇë°ìÀí<br>
-                                    </a></span></b>°ìÀíÊ±¼ä×î¿ì10Ìì£¬Ìá¹©ÉÏÃÅ·þÎñ¡£</p>
-                                  </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                    </center>
-                  </td>
-                  <td width="0%" valign="top">&nbsp; </td>
-                  <td width="50%" valign="top"> 
-                    <center>
-                      <table width="220" cellspacing="0" cellpadding="0" bordercolor="639A63" class="redefinetable">
-                        <tr> 
-                          <td bgcolor="639A63"><b><font color="#FFFFFF">&nbsp;ÓÃÍ¾ÓëÈ¨Òæ</font></b></td>
-                        </tr>
-                        <tr> 
-                          <td> 
-                            <table width="200" cellspacing="4" cellpadding="0" align="center">
-                              <tr> 
-                                <td> 
-                                  <p><b class=a4>¹úÍâÉí·ÝÖ¤</b><br>
-                                    ¹ú¼Ê¼ÝÊ»Ö¤¿É×÷ÎªÔÚ¹úÍâµÄºÏ·¨Éí·ÝÖ¤Ã÷...</p>
-                                  <p><b class=a4>×â³µ×Ô¼Ý</b><br>
-                                    ÔÚ¹úÍâÂÃÓÎÊ±£¬×â³µ×Ô¼ÝÊÇ¼«Îª¾­¼ÃºÍ·½±ãµÄ...</p>
-                                  <p><b class=a4> 187¸ö¹ú¼ÒºÍµØÇøµÄºÏ·¨¼ÝÕÕ</b><br>
-                                    ¹ú¼Ê¼ÝÕÕ±íÃ÷µÄÊÇÄã¾ß±¸ÔÚËü¹ú¼ÝÊ»µÄÄÜÁ¦...</p>
-                                  <p><b class=a4>ÊÊºÏÈËÈº</b><br>
-                                    ÊÊºÏÔÚ±¾¹úÒÑÓµÓÐ¼ÝÊ»Ö¤...</p>
-                                  <p align="right"><br>
-                                    <a href="usage.shtml" class="a6">- ÁË½â¸ü¶à -</a> 
-                                    <br>
-                                  </p>
-                                  <p align="right">&nbsp; </p>
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                    </center>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr> 
-            <td>&nbsp; </td>
-          </tr>
-        </table>
-      </center>
-    </td>
-    <td width="210" bgcolor="F0FAFF" valign="top" height="45"></td>
-  </tr>
-  <tr> 
-    <td width="210" bgcolor="F0FAFF" valign="top"> 
-      <table width="210" cellspacing="8" cellpadding="3">
-        <tr> 
-          <td bgcolor="C3D4F4" colspan="2"><b><font color="032B7A" face="Arial, Helvetica, sans-serif">Ïà¹ØÁ´½Ó</font></b></td>
-        </tr>
-        <tr> 
-          <td width="27"> 
-            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
-          </td>
-          <td><a href="apply.shtml" class="a6">ÉêÇë°ìÀí¹ú¼Ê¼ÝÕÕ</a></td>
-        </tr>
-        <tr> 
-          <td>&nbsp; </td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr> 
-          <td> 
-            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
-          </td>
-          <td><a href="/customer/contact/index.shtml" class="a6">ÁªÏµÎÒÃÇ</a></td>
-        </tr>
-        <tr> 
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr> 
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td width="210" bgcolor="F0FAFF" valign="bottom">&nbsp;</td>
-  </tr>
-</table>
-<!--#include virtual="../../footer.html" -->
+                      <p>

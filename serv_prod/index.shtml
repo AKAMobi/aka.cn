@@ -7,8 +7,8 @@
           <tr> 
             <td> 
               <p><b><font color="#3366CC"><br>
-                </font></b><b><font color="#3366CC">µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> 
-                <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">²úÆ·Óë·þÎñ</a><br>
+                </font></b><b><font color="#3366CC">å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> 
+                <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">äº§å“ä¸ŽæœåŠ¡</a><br>
                 <br>
               </p>
             </td>
@@ -18,109 +18,19 @@
       <div align="left"> 
         <table width="550" cellspacing="0" cellpadding="0">
           <tr> 
-            <td width="358">¡¡</td>
-            <td width="192">¡¡</td>
+            <td width="358">ã€€</td>
+            <td width="192">ã€€</td>
           </tr>
         </table>
         <p> 
         <table width="500" cellspacing="0" cellpadding="0" align="center">
           <tr> 
-            <td height="14" bgcolor="#3366CC">&nbsp; <b>²úÆ· &amp; ·þÎñ</b></td>
+            <td height="14" bgcolor="#3366CC">&nbsp; <b>äº§å“ &amp; æœåŠ¡</b></td>
           </tr>
         </table>
         <table width="500" cellspacing="15" cellpadding="0" align="center">
           <tr> 
             <td width="50%" valign="top"> 
               <p><br>
-                <a href="wmail/index.shtml" class="a6">ÆóÒµµç×ÓÓÊ¼þÏµÍ³WMail</a></p>
-              <p>£ £ °¢¿¨ÐÅÏ¢¼¼ÊõÌá¹©¸ßÐÔÄÜ£¬µÍ³É±¾µÄÆóÒµµç×ÓÓÊ¼þÏµÍ³²úÆ·¡ª¡ªWMail¡£</p>
-            </td>
-            <td width="50%" valign="top"> 
-              <p><br>
-                <a href="vpn/index.shtml" class="a6">VPN</a></p>
-              <p>£ £ °¢¿¨ÐÅÏ¢¼¼ÊõÌá¹©»ùÓÚVPN¼¼ÊõµÄ¸÷ÖÖ½â¾ö·½°¸¡£</p>
-              <p>¡¡</p>
-            </td>
-          </tr>
-          <tr> 
-            <td valign="top"> 
-              <p><br>
-                <a href="nas/index.shtml" class="a6">ÍøÂç´æ´¢·þÎñÆ÷NAS</a></p>
-              <p>£ £ °¢¿¨ÐÅÏ¢¼¼ÊõÌá¹©¸ßÐÔÄÜ£¬µÍÓµÓÐ³É±¾ºÍ¸ß¿É¿¿ÐÔµÄÊý¾Ý±£´æºÍ´«ËÍµÄ²úÆ·¡ª¡ªNAS¡£ </p>
-              <p>¡¡</p>
-            </td>
-            <td valign="top"> 
-              <p><br>
-				<a href="coreSearch/index.shtml" class="a6">coreSearchº£Á¿ÖÐÎÄ¼ìË÷ÏµÍ³
-
-</a></p>
-              <p>£ £ °¢¿¨ÐÅÏ¢¼¼ÊõÌá¹©Õë¶Ô½ÌÓýÐÐÒµ¡¢ÖÐÐ¡ÐÍÆóÒµ¡¢ÓÐÈ«ÎÄ¼ìË÷¶þ´Î¿ª·¢ÐèÇóµÈ»ú¹¹µÄ¸ßËÙÎÈ¶¨µÄÖÐÎÄ¼ìË÷ÏµÍ³¡£</p>
-            </td>
-          </tr>
-          <tr> 
-            <td valign="top" height="117"> 
-            </td>
-            <td valign="top" height="117">¡¡</td>
-          </tr>
-          <tr> 
-            <td valign="top"> 
-              <p> 
-                <!--//
-			<p><br>
-                <a href="browser/index.shtml" class="a6">ä¯ÀÀÆ÷</a></p>
-              <p>£ £ °¢¿¨ÐÅÏ¢¼¼ÊõÌá¹©Ö§³Ö¸÷ÖÖÆ½Ì¨ ( Windows / Linux / Unix ¡­¡­ ) ¡¢ ¸÷ÖÖÏµÍ³ ( ÊµÊ± / 
-                Ç¶Èë ¡­¡­ £©¡¢¸÷ÖÖÐ­Òé ( HTML / JavaScript / WML / WMLScript¡­¡­ ) ä¯ÀÀÆ÷¿ª·¢¹¤×÷£¬ 
-                Ä¿Ç° HTML / WML ¸÷ÓÐÒ»¸ö°æ±¾£¬ ¿É°´ÒªÇóÁ¿Ìå²ÃÒÂ¡£ </p>
-              <p>&nbsp;</p>
-			  //-->
-              </p>
-              <p><br>
-              </p>
-              <p>¡¡</p>
-            </td>
-            <td valign="top"> 
-              <!--
-              <p><br>
-
-                <a href="idl/index.shtml" class="a6">°ìÀí¹ú¼Ê¼ÝÕÕ</a></p>
-
-              <p>£ £ ÎÒÃÇÎªÐèÒª³ö¹ú¼Ü³µµÄ¿Í»§Ìá¹©°ìÀí¹ú¼Ê¼ÝÕÕ·þÎñ¡£</p>
-
-              <p>&nbsp;</p>
--->
-            </td>
-          </tr>
-        </table>
-      </div>
-    </td>
-    <td width="187" height="224" bgcolor="F0FAFF" valign="top">&nbsp; 
-      <table width="210" cellspacing="0" cellpadding="0">
-        <tr> 
-          <td height="120">¡¡</td>
-        </tr>
-        <tr> 
-          <td> 
-            <table width="210" cellspacing="8" cellpadding="3">
-              <tr> 
-                <td bgcolor="C3D4F4" colspan="2"><b><font color="032B7A" face="Arial, Helvetica, sans-serif">Ïà¹ØÁ´½Ó</font></b></td>
-              </tr>
-              <tr> 
-                <td width="27"> 
-                  <div align="right"><img src="../image/leadarrow.gif" width="5" height="10"></div>
-                </td>
-                <td><a href="../customer/index.shtml" class="a6">¿Í»§·þÎñ</a></td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr> 
-          <td>¡¡</td>
-        </tr>
-        <tr> 
-          <td>¡¡</td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
-<!--#include virtual="../footer.html" -->
+                <a href="wmail/index.shtml" class="a6">ä¼ä¸šç”µå­é‚®ä»¶ç³»ç»ŸWMail</a></p>
+              <p>

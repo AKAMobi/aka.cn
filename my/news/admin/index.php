@@ -17,8 +17,8 @@ echo '<script language="javascript">top.window.location="update.php"</script>';
 <div align=center>
 <form name="form1" method="post" action="index.php" enctype="multipart/form-data">
     <p>Please Login System</p>
-	Username£º<input type="text" name="na" size=20><br><br>
-	Password£º<input type="password" name="passwd" size=20>
+	Usernameï¼š<input type="text" name="na" size=20><br><br>
+	Passwordï¼š<input type="password" name="passwd" size=20>
 	<p> 
     <input type="submit" name="Submit" value="submit">
     <input type="reset" name="Submit2" value="reset">

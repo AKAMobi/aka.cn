@@ -18,9 +18,9 @@
 
         <tr> 
 
-          <td> <b><font color="#3366CC">��ǰλ�ã�</font> </b><a href="/index.shtml" class="a5">������ҳ</a> 
-            <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">��Ʒ�����</a><font color="#458DE4">&gt; 
-            SouKe��Ӣ��վ��ȫ����������</font> </td>
+          <td> <b><font color="#3366CC">当前位置：</font> </b><a href="/index.shtml" class="a5">阿卡首页</a> 
+            <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">产品与服务</a><font color="#458DE4">&gt; 
+            SouKe中英文站内全文搜索引擎</font> </td>
 
         </tr>
        <tr> 
@@ -35,16 +35,16 @@
                         <tr> 
 
                           
-                      <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">SouKe��Ӣ��վ��ȫ����������</td>
+                      <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">SouKe中英文站内全文搜索引擎</td>
 
                         </tr>
 
                       </table>
 
                       
-                  <p> SouKe��Ӣ��վ��ȫ������������Ҫ��Ի���Internet�ľֲ�վ��ͻ���Intranet�ľ������ڲ�����ҳ��Դ���п�����Ч��ȫ�ļ�����</p>
-                  <p> ���ڴ�����ҵ��λ���������š��ߵ�ԺУ�����ŵ�λ����վ������վ����Ϣ�ڲ�����һ����Ҫ�����ϵͳ��Ϣ�������ڶ�(ÿ�ܸ���һ�λ��������Ҫ��ʱ����)��һ����Ҫ������ٶȿ졣�������Google����������������м���վ����Ϣ�Ļ������Ա�֤���ݵĸ���Ҫ�󣻶�����Լ������������ݿ⼼���ļ���ϵͳ�Ļ��������Ա�֤�����ĸ�Ч�ʡ�ѡ��ʹ��Soukeվ��ȫ�ļ���ϵͳ��һ�����ݵĽ����վ����Ϣ�������ٵ����⡣������ˣ���ϵͳ�ھ߱�ͨ���������������еĸ���ܵĻ���֮�ϣ���һ�������ˡ�ģ��������������̬������ժ����������ض������������������������̬ҳ�桱�ȵȶ�����ɫ�Ĺ��ܣ���������û��ĸ�������</p>
-                  <p> ѡ��Soukeվ��ȫ�ļ���ϵͳ�������ܹ��÷ÿ�����̵�ʱ���ڴ���վ���ҵ�����Ҫ����Ϣ��������վ���Դ�����Ƶ����������˽⵽�ÿͶ���վ����Щ��Ϣ�����Ȥ������Ҫ���ǣ�����˾�����ṩ���Ƶķ��񣬱�֤���������ܹ�ȫ�Զ����޹��ϵ����С�
+                  <p> SouKe中英文站内全文搜索引擎主要针对基于Internet的局部站点和基于Intranet的局域网内部的网页资源进行快速有效的全文检索。</p>
+                  <p> 对于大型企业单位、政府部门、高等院校、新闻单位的网站，对于站点信息内部搜索一方面要求检索系统信息更新周期短(每周更新一次或根据特殊要求即时更新)；一方面要求检索速度快。如果利用Google这样的搜索引擎进行检索站内信息的话，难以保证数据的更新要求；而如果自己开发基于数据库技术的检索系统的话，又难以保证检索的高效率。选择使用Souke站内全文检索系统，一劳永逸的解决了站内信息检索面临的问题。不仅如此，本系统在具备通用搜索引擎所含有的各项功能的基础之上，进一步开发了“模糊检索”、“动态生成文摘”、“按相关度排列搜索结果”、“处理动态页面”等等独具特色的功能，充分满足用户的各种需求。</p>
+                  <p> 选择Souke站内全文检索系统，不仅能够让访客在最短的时间内从网站上找到所需要的信息，而且网站可以从搜索频率上清楚的了解到访客对网站上哪些信息最感兴趣，最重要的是，本公司可以提供完善的服务，保证检索服务能够全自动、无故障地运行。
                   </p>
 					<BR>
                   </td>
@@ -58,7 +58,7 @@
 
                           <td bgcolor="639A63" height="11">&nbsp;<b><font color="#FFFFFF"> 
 
-                            ����</font></b></td>
+                            介绍</font></b></td>
 
                         </tr>
 
@@ -72,13 +72,13 @@
 
                                 <tr> 
 
-                                    <td> <p><b><span class="a4"><a href="intro.shtml" class=a4>���</a></span></b><br>
-                                        SouKe�ļ�Ҫ���� �� </p>
+                                    <td> <p><b><span class="a4"><a href="intro.shtml" class=a4>简介</a></span></b><br>
+                                        SouKe的简要介绍 。 </p>
 										
 
 										
-                                      <p> <b><span class="a4"><a href="advantages.shtml" class=a4>��������</a></span></b><br>
-                                        ����������������ȣ�SouKe�����ơ�</p>
+                                      <p> <b><span class="a4"><a href="advantages.shtml" class=a4>技术优势</a></span></b><br>
+                                        与其他搜索引擎相比，SouKe的优势。</p>
                                       <br>
                                       
 
@@ -150,15 +150,15 @@
               </tr>
               <tr> 
                 <td bgcolor="C3D4F4" colspan="2"> <div align="left"><font color="032B7A"><b><font face="Arial"> 
-                    �������</font></b></font></div></td>
+                    相关链接</font></b></font></div></td>
               </tr>
               <tr> 
                 <td> <div align="right"><img src="/image/leadarrow.gif"></div></td>
-                <td><a href="/serv_prod/index.shtml" class="a6">����֧��</a></td>
+                <td><a href="/serv_prod/index.shtml" class="a6">技术支持</a></td>
               </tr>
               <tr> 
                 <td> <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div></td>
-                <td><a href="/customer/contact/index.shtml" class="a6">��ϵ����</a></td>
+                <td><a href="/customer/contact/index.shtml" class="a6">联系我们</a></td>
               </tr>
               <tr> 
                 <td> <div align="right"></div></td>

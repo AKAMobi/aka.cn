@@ -15,6 +15,6 @@ CREATE TABLE News_TB (
 # Dumping data for table 'News_TB'
 #
 
-INSERT INTO News_TB VALUES (1,'VPN','2002-11-13 16:09:08','Y','zixia','ºÃ³µ£¡',':)\r\n\r\nºÇºÇ\r\n·É»ú´ò£»jfsdf¼¸·Ý£»µÄÈö½¿£»·ÖÁËÈý½Ç·ã£»jj\r\n\r\n·¢´ïË¹»ù£»fjfjdsafsa¾ü·þµÄÈö£»¼¸·Ý£»adsj\r\n','2002/11/13160908-DSCF0077.JPG');
-INSERT INTO News_TB VALUES (2,'VPN','2002-11-13 16:14:01','N','zixia','·ÇÖØÒªÐÂÎÅ','en','2002/11/13161401-');
-INSERT INTO News_TB VALUES (3,'VPN','2002-11-13 16:14:13','Y','zixia','ÖØÒªÐÂÎÅ','en','2002/11/13161413-');
+INSERT INTO News_TB VALUES (1,'VPN','2002-11-13 16:09:08','Y','zixia','å¥½è½¦ï¼',':)\r\n\r\nå‘µå‘µ\r\né£žæœºæ‰“ï¼›jfsdfå‡ ä»½ï¼›çš„æ’’å¨‡ï¼›åˆ†äº†ä¸‰è§’æž«ï¼›jj\r\n\r\nå‘è¾¾æ–¯åŸºï¼›fjfjdsafsaå†›æœçš„æ’’ï¼›å‡ ä»½ï¼›adsj\r\n','2002/11/13160908-DSCF0077.JPG');
+INSERT INTO News_TB VALUES (2,'VPN','2002-11-13 16:14:01','N','zixia','éžé‡è¦æ–°é—»','en','2002/11/13161401-');
+INSERT INTO News_TB VALUES (3,'VPN','2002-11-13 16:14:13','Y','zixia','é‡è¦æ–°é—»','en','2002/11/13161413-');

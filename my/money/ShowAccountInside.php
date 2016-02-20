@@ -2,21 +2,21 @@
 <? session_start(); ?>
 <html>
 <head>
-<title>Welcome - ������Ϣ�������޹�˾</title>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>Welcome - 阿卡信息技术有限公司</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="/css/aka.css" type="text/css">
 </head>
 <body>
 <?
 if ( (!isset($HTTP_SESSION_VARS['UserID'])) ){
 ?>
-����δ��½��<br>
-������<A HREF="/my/">��½</a>��
+您尚未登陆。<br>
+请首先<A HREF="/my/">登陆</a>。
 <?
 }else {
 require_once( "db.inc.php" );
-$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("�޷�����DBM.");
-mysql_select_db( DB_NAME, $conn) or die("�޷������ݿ�.");
+$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("无法连接DBM.");
+mysql_select_db( DB_NAME, $conn) or die("无法打开数据库.");
 
 $result=mysql_query("select DATE_FORMAT(A.OperateTime,'%Y-%m-%d %H:%i') as OperateTime, A.Incoming as Incoming , A.Outcoming as Outcoming , A.balance as balance, A.Notes as Notes, A.Currency as Currency from UserAccountLog_TB as A, User_TB as B where A.UserAutoID=B.AutoID and B.ID='{$HTTP_SESSION_VARS['UserID']}' and  To_Days(DATE_ADD(A.OperateTime,INTERVAL 12 Month))>=To_Days(Now()) order by OperateTime desc, A.AutoID desc");
 if ( mysql_num_rows($result)!=0) {
@@ -27,11 +27,11 @@ if ( mysql_num_rows($result)!=0) {
 	while($row=mysql_fetch_array($result)){
 		if ((floatval($row['Incoming'])!=0) || (floatval($row['Outcoming'])!=0) ){
 			if ( 'RMB'==$row['Currency'] ){
-				$currency = "��";
+				$currency = "￥";
 			}else if ( 'USD'==$row['Currency'] ){
 				$currency = '$';
 			}else{
-				$currency = "ϵͳ�����뱨��ϵͳ����Ա";
+				$currency = "系统错误，请报告系统管理员";
 			}
 ?>
 <tr>
@@ -62,7 +62,7 @@ if ( mysql_num_rows($result)!=0) {
 <?
 }else {
 ?>
-	Ŀǰ�����˻���δ���ʽ�������¼<br>
+	目前您的账户尚未有资金流动纪录<br>
 <?
 }
 }

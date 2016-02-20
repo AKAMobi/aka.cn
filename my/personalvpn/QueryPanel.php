@@ -1,30 +1,30 @@
 <?
 /*
-ÊäÈë²ÎÊý:
-ID ÓÃ»§ID
+è¾“å…¥å‚æ•°:
+ID ç”¨æˆ·ID
 
-·µ»Ø£º
-ÓÃ»§¿Í»§¶ËÃæ°åÏÔÊ¾ÐÅÏ¢
+è¿”å›žï¼š
+ç”¨æˆ·å®¢æˆ·ç«¯é¢æ¿æ˜¾ç¤ºä¿¡æ¯
 */
 
 require( "db.inc.php" );
-$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("ÎÞ·¨Á¬½ÓDBM.");
+$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("æ— æ³•è¿žæŽ¥DBM.");
 mysql_select_db('AKA',$conn) or die( "2000\n" );
 
 $UserID=$HTTP_GET_VARS['UserID'] ;
 $Password=$HTTP_GET_VARS['Password'] ;
 if( !eregi( "^[0-9a-z][_0-9a-z\.]*$", $UserID ) ){
-	echo "Ò»¸öÇàÍÜÒ»ÕÅ×ì£¬Á½Ö»ÑÛ¾¦ËÄÌõÍÈ";
+	echo "ä¸€ä¸ªé’è›™ä¸€å¼ å˜´ï¼Œä¸¤åªçœ¼ç›å››æ¡è…¿";
 	exit;
 }
 
 /*
- * ¼ÆÊ±°æµÄVPN²»ÐèÒªUserFuncStatusÓÐÐ§£¬ËùÒÔÐèÒª¼ì²éUserFunc
+ * è®¡æ—¶ç‰ˆçš„VPNä¸éœ€è¦UserFuncStatusæœ‰æ•ˆï¼Œæ‰€ä»¥éœ€è¦æ£€æŸ¥UserFunc
  */
 $result=mysql_query("select u.UserFunc, u.UserFuncStatus, ua.UserAccount from User_TB u, UserAccount_TB ua where u.AutoID=ua.UserAutoID and u.ID='" . $UserID . "' and u.Password='" . $Password . "'");
 
-if (!($row=mysql_fetch_array($result))){//´ËID²»´æÔÚ
-	echo "Á½¸öÇàÍÜÁ½ÕÅ×ì£¬ËÄÖ»ÑÛ¾¦°ËÌõÍÈ";
+if (!($row=mysql_fetch_array($result))){//æ­¤IDä¸å­˜åœ¨
+	echo "ä¸¤ä¸ªé’è›™ä¸¤å¼ å˜´ï¼Œå››åªçœ¼ç›å…«æ¡è…¿";
 	exit;
 }
 
@@ -37,11 +37,11 @@ if( eregi( "PersonalHourVPN", $UserFunc ) ){
 	array_push( $Funcs, 'PersonalHourVPN' );
 }
 
-$FuncName['PersonalVPN'] = '°üÔÂVPN';
-$FuncName['PersonalHourVPN'] = '¼ÆÊ±VPN';
+$FuncName['PersonalVPN'] = 'åŒ…æœˆVPN';
+$FuncName['PersonalHourVPN'] = 'è®¡æ—¶VPN';
 $FuncName['PersonalProxy'] = 'Proxy';
 
-echo "¹¦ÄÜ£º";
+echo "åŠŸèƒ½ï¼š";
 $n=0;
 while( $Funcs[$n] ){
 	if (eregi($Funcs[$n], $UserFunc)){
@@ -49,7 +49,7 @@ while( $Funcs[$n] ){
 	}
 	$n++;
 }
-echo  "\nÓà¶î£º" . $UserAccount . "Ôª";
+echo  "\nä½™é¢ï¼š" . $UserAccount . "å…ƒ";
 
 mysql_free_result( $result );
 

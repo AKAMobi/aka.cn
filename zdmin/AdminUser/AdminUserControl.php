@@ -14,13 +14,13 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                ��ǰλ�ã�</font> </b><a href="/" class="a5">������ҳ</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $ADMINURLROOT; ?>/" class="a5">��վ����Ա</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $ADMINURLROOT; ?>/AdminMenu.php" class="a5">�����˵�</a> <font color="#458DE4">&gt;
-                </font><a href="<? echo $ADMINURLROOT; ?>/AdminUser/AdminUserControl.php" class="a5">����Ա�˺Ź���</a>
+                当前位置：</font> </b><a href="/" class="a5">阿卡首页</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $ADMINURLROOT; ?>/" class="a5">网站管理员</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $ADMINURLROOT; ?>/AdminMenu.php" class="a5">管理菜单</a> <font color="#458DE4">&gt;
+                </font><a href="<? echo $ADMINURLROOT; ?>/AdminUser/AdminUserControl.php" class="a5">管理员账号管理</a>
 				<br>
                 <br>
-                <span class="newstitle">����Ա�˺Ź���</span></p>
+                <span class="newstitle">管理员账号管理</span></p>
               <p>&nbsp;</p>
             </td>
         </tr>
@@ -32,16 +32,16 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
  <td align="center" >
-����δ��½��<br>
-������<A HREF="<? echo $ADMINURLROOT; ?>/index.php">��½</a>��
+您尚未登陆。<br>
+请首先<A HREF="<? echo $ADMINURLROOT; ?>/index.php">登陆</a>。
 <?
 }else {
 
 if ( (!isset($_SESSION['AdminAdmin'])) ) {
 ?>
  <td align="center" >
-��û�й�����������Ա�˺ŵ�Ȩ��<br>
-�뷵��<A HREF="<? echo $ADMINURLROOT; ?>/AdminMenu.php">�����˵�</a>
+你没有管理其他管理员账号的权限<br>
+请返回<A HREF="<? echo $ADMINURLROOT; ?>/AdminMenu.php">管理菜单</a>
 <?
 } else {
 
@@ -53,10 +53,10 @@ if ( (!isset($_SESSION['AdminAdmin'])) ) {
 <TABLE border="0">
 <tr>
 <td >
-<INPUT type="button" value="��ǰ����Ա�˺��б�" onclick="return document.frames('IMainFrame').document.location.href='AdminUserList.php';">
+<INPUT type="button" value="当前管理员账号列表" onclick="return document.frames('IMainFrame').document.location.href='AdminUserList.php';">
 </td>
 <td >
-<INPUT type="button" value="�����¹���Ա�˺�" onclick="return document.frames('IMainFrame').document.location.href='AddAdmin.php';">
+<INPUT type="button" value="添加新管理员账号" onclick="return document.frames('IMainFrame').document.location.href='AddAdmin.php';">
 </td>
 <tr>
 </table>

@@ -14,12 +14,12 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
             
       <td> 
         <p><b><font color="#3366CC"><br>
-          ��ǰλ�ã�</font> </b><a href="/" class="a5">������ҳ</a> <font color="#458DE4">&gt; 
-          </font><a href="<? echo $ADMINURLROOT; ?>" class="a5">��վ����Ա</a><font color="#458DE4">&gt; 
-          </font><a href="<? echo $ADMINURLROOT; ?>/SYSOPFirstTime.php" class="a5">�趨��߹���Ա����</a><br>
+          当前位置：</font> </b><a href="/" class="a5">阿卡首页</a> <font color="#458DE4">&gt; 
+          </font><a href="<? echo $ADMINURLROOT; ?>" class="a5">网站管理员</a><font color="#458DE4">&gt; 
+          </font><a href="<? echo $ADMINURLROOT; ?>/SYSOPFirstTime.php" class="a5">设定最高管理员密码</a><br>
           <br>
-          <span class="newstitle">�趨��߹���Ա����</span></p>
-              <p>��������һ�ε�½��ϵͳ��</p>
+          <span class="newstitle">设定最高管理员密码</span></p>
+              <p>这是您第一次登陆本系统。</p>
               <p>&nbsp;</p>
             </td>
         </tr>
@@ -35,7 +35,7 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
 <?
 if ( (!isset($_SESSION['AdminID'])) || (!isset($_REQUEST['NewPassword1'])) ){
 ?>
-	<p>������<A HREF="<? echo $ADMINURLROOT; ?>/index.php">��¼</a>��</p>
+	<p>请首先<A HREF="<? echo $ADMINURLROOT; ?>/index.php">登录</a>！</p>
 	<br>
 	<br>
 	<br>
@@ -45,22 +45,22 @@ if ( (!isset($_SESSION['AdminID'])) || (!isset($_REQUEST['NewPassword1'])) ){
 
 if ($_SESSION['AdminID']!=$SYSOPID){
 ?>
-��������߹���Ա��������<A HREF="<? echo $ADMINROOT; ?>/index.php">��¼</a>��
+您不是最高管理员。请重新<A HREF="<? echo $ADMINROOT; ?>/index.php">登录</a>。
 <?
 } else {
 
 require "{$ADMINROOT}/Include/InitDB.php"; 
 $passwd=crypt($_REQUEST['NewPassword1']);
-if (mysql_query("Insert into AdminUser_TB(ID,Password,FullName,Information,Privilege) values ( '{$SYSOPID}','{$passwd}','ϵͳ����Ա','ϵͳ��߹���Ա','') ")) {
-	mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}',' ��߹���Ա {$_SESSION['AdminID']} ���˺Ž����ɹ�', '{$_SERVER['REMOTE_ADDR']}','Admin', NOW()) ", $conn);
+if (mysql_query("Insert into AdminUser_TB(ID,Password,FullName,Information,Privilege) values ( '{$SYSOPID}','{$passwd}','系统管理员','系统最高管理员','') ")) {
+	mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP, LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}',' 最高管理员 {$_SESSION['AdminID']} 的账号建立成功', '{$_SERVER['REMOTE_ADDR']}','Admin', NOW()) ", $conn);
 ?>
-	��߹���Ա�˺� <? echo $SYSOPID; ?> �����趨�ɹ���<br>
-	<A href="<? echo $ADMINURLROOT; ?>/AdminMenu.php">�������˵�</a>
+	最高管理员账号 <? echo $SYSOPID; ?> 密码设定成功！<br>
+	<A href="<? echo $ADMINURLROOT; ?>/AdminMenu.php">进入主菜单</a>
 <?
 } else {
 ?>
-	���ݿ����ʧ�ܻ򱾹���Ա�Ѵ��ڣ�������ϵͳά������Ա��<br>
-	<A href="<? echo $ADMINURLROOT; ?>/SYSOPFirstTime.php">�����޸�����ҳ��</a>
+	数据库操作失败或本管理员已存在！请联络系统维护管理员。<br>
+	<A href="<? echo $ADMINURLROOT; ?>/SYSOPFirstTime.php">返回修改密码页面</a>
 <?
 }
 

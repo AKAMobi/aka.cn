@@ -10,21 +10,21 @@
 
         <tr> 
           <td valign="top"> <p><br>
-              <b><font color="#3366CC">µ±Ç°Î»ÖÃ:</font> </b><a href="/index.shtml" class="a5">°¢¿¨Ê×Ò³</a> 
-              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">²úÆ·Óë·şÎñ</a><font color="#458DE4">&gt; 
-              <a href="index.shtml" class=a5>WMail</a> &gt;</font> <font color="#458DE4">Ô´´úÂëÏÂÔØ</font></p>
+              <b><font color="#3366CC">å½“å‰ä½ç½®:</font> </b><a href="/index.shtml" class="a5">é˜¿å¡é¦–é¡µ</a> 
+              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">äº§å“ä¸æœåŠ¡</a><font color="#458DE4">&gt; 
+              <a href="index.shtml" class=a5>WMail</a> &gt;</font> <font color="#458DE4">æºä»£ç ä¸‹è½½</font></p>
             <table width="475" cellspacing="0" cellpadding="0">
               <tr> 
-                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">Ô´´úÂëÏÂÔØ</td>
+                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">æºä»£ç ä¸‹è½½</td>
               </tr>
             </table> 
             <br>
             <ul>
-            <li><a href="qmail-1.03-patched.tar.gz" class=a4>qmail-1.03-patched</a>£¨´ò¹ı²¹¶¡ºÍÖ§³Ösmtp-auth£©<br> 
+            <li><a href="qmail-1.03-patched.tar.gz" class=a4>qmail-1.03-patched</a>ï¼ˆæ‰“è¿‡è¡¥ä¸å’Œæ”¯æŒsmtp-authï¼‰<br> 
             <li><a href="ucspi-tcp-0.88.tar.gz" class=a4>ucspi-tcp-0.88</a><br> 
 			<li><a href="vpopmail-5.2.1.tar.gz" class=a4>vpopmail-5.2.1</a><br> 
-            <li><a href="maildrop-1.5.2.20030423.tar.gz" class=a4>maildrop-1.5.2.20030423</a> £¨Ìá¹©ÓÊ¼ş¹ıÂËÖ§³Ö£©<br> 
-            <li><a href="wmail-1.00rc1.20030724.tar.gz" class=a4>wmail-1.00rc1</a>£¨2003.07.24 release£©<a href="ChangeLog" class=a4>¸üĞÂ¼ÇÂ¼</a><br> 
+            <li><a href="maildrop-1.5.2.20030423.tar.gz" class=a4>maildrop-1.5.2.20030423</a> ï¼ˆæä¾›é‚®ä»¶è¿‡æ»¤æ”¯æŒï¼‰<br> 
+            <li><a href="wmail-1.00rc1.20030724.tar.gz" class=a4>wmail-1.00rc1</a>ï¼ˆ2003.07.24 releaseï¼‰<a href="ChangeLog" class=a4>æ›´æ–°è®°å½•</a><br> 
 	    <li><a href="FAQ" class=a4>FAQ</a><br>
 	    <li><a href="TODO" class=a4>TODO</a><br>
             </ul>
@@ -51,7 +51,7 @@
 
           <td bgcolor="C3D4F4" colspan="2"> 
 
-            <div align="left"><font color="032B7A"><b><font face="Arial"> Ïà¹ØÁ´½Ó</font></b></font></div>
+            <div align="left"><font color="032B7A"><b><font face="Arial"> ç›¸å…³é“¾æ¥</font></b></font></div>
 
           </td>
 
@@ -65,7 +65,7 @@
 
           </td>
 
-          <td><a href="/serv_prod/index.shtml" class="a6">²úÆ·Óë·şÎñ</a></td>
+          <td><a href="/serv_prod/index.shtml" class="a6">äº§å“ä¸æœåŠ¡</a></td>
 
         </tr>
 

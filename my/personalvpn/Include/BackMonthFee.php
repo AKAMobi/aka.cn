@@ -3,9 +3,9 @@
 
 	$resultFee=mysql_query("Select Fee,CutOff from PersonalVPN_Fee_TB where FeeType='" . $FeeType ."'");
 
-	if (!($rowFee=mysql_fetch_array($resultFee))){//���ñ��в����ڼ�¼
+	if (!($rowFee=mysql_fetch_array($resultFee))){//费用表中不存在纪录
 ?>
-	���ñ����ݿ���������������Ա��<br>
+	费用表数据库出错。请联络管理员。<br>
 <?
 	}else {
 		$fee=floatval($rowFee['Fee']) * floatval($rowFee['CutOff']);
@@ -15,8 +15,8 @@
 			$strFuncStatus=str_replace('BackVPNPersonal','',$strFuncStatus);
 			mysql_query("Update User_TB set UserFuncStatus='$strFuncStatus' where AutoID=$UserAutoID");
 		?>
-			<font color=red>���������˻����㣬���в���ʹ�ð�������ֱͨ�����ܡ�<br>
-			ע���ʻ���<?= $UserAccount ?>����Ҫ�ɷѣ�<?= $fee ?></font><br>
+			<font color=red>由于您的账户余额不足，您尚不能使用阿卡出国直通车功能。<br>
+			注：帐户余额：<?= $UserAccount ?>，需要缴费：<?= $fee ?></font><br>
 		<?
 		} else {
 			$strFuncStatus.=",BackVPNPersonal";
@@ -26,7 +26,7 @@
 			$newAccount=$UserAccount-$fee;
 			$query[]="Update UserAccount_TB set UserAccount=$newAccount where UserAutoID=$UserAutoID";
 			$query[]="Update PersonalVPN_UserChargeTime_TB set UserChargeTime=Now() where UserAutoID=$UserAutoID and FeeType='".$FeeType."'";
-			$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason) values (NULL,$UserAutoID,now(),0,{$fee},$newAccount, '���ɵ��»ع�ֱͨ������ʹ�÷�','BackPersonalVPN')";
+			$query[]="insert into UserAccountLog_TB(AutoID,UserAutoID,OperateTime,Incoming,Outcoming,balance,Notes,Reason) values (NULL,$UserAutoID,now(),0,{$fee},$newAccount, '缴纳当月回国直通车包月使用费','BackPersonalVPN')";
 			$query[]="commit";
 			$success=true;
 
@@ -39,12 +39,12 @@
 			}
 			if ($success) {
 			?>
-				���³���ֱͨ��ʹ�÷����Ѵ������˻��п۳���<br>
-				�����Կ�ʼʹ�ó���ֱͨ�����ܡ�<br>
+				当月出国直通车使用费用已从您的账户中扣除。<br>
+				您可以开始使用出国直通车功能。<br>
 			<?
 			} else {
 			?>
-				���ݲ���ʧ�ܡ����������Ա��<br>
+				数据操作失败。请联络管理员。<br>
 			<?
 			}
 		}

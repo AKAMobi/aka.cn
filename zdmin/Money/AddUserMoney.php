@@ -14,14 +14,14 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $ADMINURLROOT ;?>/" class="a5">ÍøÕ¾¹ÜÀíÔ±</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $ADMINURLROOT ;?>/AdminMenu.php" class="a5">¹ÜÀí²Ëµ¥</a> <font color="#458DE4">&gt;
-                </font><a href="<? echo $ADMINURLROOT ;?>/Money/AddUserMoney.php" class="a5">¸øÓÃ»§¼ÓÇ®</a>
+                å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $ADMINURLROOT ;?>/" class="a5">ç½‘ç«™ç®¡ç†å‘˜</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $ADMINURLROOT ;?>/AdminMenu.php" class="a5">ç®¡ç†èœå•</a> <font color="#458DE4">&gt;
+                </font><a href="<? echo $ADMINURLROOT ;?>/Money/AddUserMoney.php" class="a5">ç»™ç”¨æˆ·åŠ é’±</a>
 				<br>
                 <br>
-                <span class="newstitle">¸øÓÃ»§¼ÓÇ®</span></p>
-              <p>¸øµ¥¸öÓÃ»§¼ÓÇ®</p>
+                <span class="newstitle">ç»™ç”¨æˆ·åŠ é’±</span></p>
+              <p>ç»™å•ä¸ªç”¨æˆ·åŠ é’±</p>
             </td>
         </tr>
       </table>
@@ -32,15 +32,15 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
 <?
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
-ÄúÉÐÎ´µÇÂ½¡£<br>
-ÇëÊ×ÏÈ<A HREF="<? echo $ADMINURLROOT ;?>/index.php" class="a6">µÇÂ½</a>¡£
+æ‚¨å°šæœªç™»é™†ã€‚<br>
+è¯·é¦–å…ˆ<A HREF="<? echo $ADMINURLROOT ;?>/index.php" class="a6">ç™»é™†</a>ã€‚
 <?
 }else {
 
 if ( (!isset($_SESSION['MoneyAdmin'])) ) {
 ?>
-ÄãÃ»ÓÐ¸øÆäËûÓÃ»§¼ÓÇ®µÄÈ¨ÏÞ<br>
-Çë·µ»Ø<A HREF="<? echo $ADMINURLROOT ;?>/AdminMenu.php" class="a6">¹ÜÀí²Ëµ¥</a>
+ä½ æ²¡æœ‰ç»™å…¶ä»–ç”¨æˆ·åŠ é’±çš„æƒé™<br>
+è¯·è¿”å›ž<A HREF="<? echo $ADMINURLROOT ;?>/AdminMenu.php" class="a6">ç®¡ç†èœå•</a>
 <?
 } else {
 ?>
@@ -48,17 +48,17 @@ if ( (!isset($_SESSION['MoneyAdmin'])) ) {
 <!--
 function AddUserMoney(){
 	if (document.all.oUserID.value=="") {
-		alert("ÇëÊäÈë¼ÓÇ®¶ÔÏóÓÃ»§µÄID");
+		alert("è¯·è¾“å…¥åŠ é’±å¯¹è±¡ç”¨æˆ·çš„ID");
 		document.all.oUserID.focus();
 		return ;
 	}
 	if (document.all.oAddMoneyAmount.value=="") {
-		alert("ÇëÊäÈë¼ÓÇ®µÄÊý¶î");
+		alert("è¯·è¾“å…¥åŠ é’±çš„æ•°é¢");
 		document.all.oAddMoneyAmount.focus();
 		return ;
 	}
 	if (document.all.oAddMoneyReason.value=="") {
-		alert("ÇëÊäÈë¼ÓÇ®µÄÀíÓÉ");
+		alert("è¯·è¾“å…¥åŠ é’±çš„ç†ç”±");
 		document.all.oAddMoneyReason.focus();
 		return ;
 	}	
@@ -88,30 +88,30 @@ function testKey_AddMoneyAmount(){
                       <br>
   <div align="center"><table border="0">
     <tr>
-      <td>ÓÃ»§ID</td>
+      <td>ç”¨æˆ·ID</td>
       <td><input type="textfield" id="oUserID" name="UserID" size="20" onkeypress="return testKey_UserID();" ></td>
     </tr>
     <tr>
-      <td>¼ÓÇ®Êý¶î</td>
+      <td>åŠ é’±æ•°é¢</td>
       <td><input type="textfield" id="oAddMoneyAmount" name="Amount" size="20"  ></td>
     </tr>
     <tr>
-      <td>»õ±ÒÖÖÀà</td>
+      <td>è´§å¸ç§ç±»</td>
       <td><select name="Currency" id="oCurrenect" size="1">
-	<option selected value="RMB">ÈËÃñ±Ò</option>
-	<option value="USD">ÃÀÔª</option>
+	<option selected value="RMB">äººæ°‘å¸</option>
+	<option value="USD">ç¾Žå…ƒ</option>
 	</select>
 	</td>
     </tr>
     <tr>
-      <td>¼ÓÇ®ÀíÓÉ</td>
+      <td>åŠ é’±ç†ç”±</td>
       <td><TEXTAREA id="oAddMoneyReason" name="Reason" ></textarea>
     </tr>
 </table>
   </div>
   <br>
   <p align="center">
-  <input type="button" id="oAddUserMoney" value="¸øÓÃ»§¼ÓÇ®" onclick="AddUserMoney();"> 
+  <input type="button" id="oAddUserMoney" value="ç»™ç”¨æˆ·åŠ é’±" onclick="AddUserMoney();"> 
    </p>
 </form>
 

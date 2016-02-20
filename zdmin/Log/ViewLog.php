@@ -14,13 +14,13 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $ADMINURLROOT ;?>/" class="a5">ÍøÕ¾¹ÜÀíÔ±</a> <font color="#458DE4">&gt; 
-                </font><a href="<? echo $ADMINURLROOT ;?>/AdminMenu.php" class="a5">¹ÜÀí²Ëµ¥</a> <font color="#458DE4">&gt;
-                </font><a href="<? echo $ADMINURLROOT ;?>/Log/ViewLog.php" class="a5">²ì¿´¹ÜÀíÈÕÖ¾</a>
+                å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $ADMINURLROOT ;?>/" class="a5">ç½‘ç«™ç®¡ç†å‘˜</a> <font color="#458DE4">&gt; 
+                </font><a href="<? echo $ADMINURLROOT ;?>/AdminMenu.php" class="a5">ç®¡ç†èœå•</a> <font color="#458DE4">&gt;
+                </font><a href="<? echo $ADMINURLROOT ;?>/Log/ViewLog.php" class="a5">å¯Ÿçœ‹ç®¡ç†æ—¥å¿—</a>
 				<br>
                 <br>
-                <span class="newstitle">²ì¿´¹ÜÀíÈÕÖ¾</span></p>
+                <span class="newstitle">å¯Ÿçœ‹ç®¡ç†æ—¥å¿—</span></p>
               <p>&nbsp;</p>
             </td>
         </tr>
@@ -32,52 +32,52 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
 <?
 if ( (!isset($_SESSION['AdminID'])) ){
 ?>
-ÄúÉĞÎ´µÇÂ½¡£<br>
-ÇëÊ×ÏÈ<A HREF="<? echo $ADMINURLROOT ;?>/index.php">µÇÂ½</a>¡£
+æ‚¨å°šæœªç™»é™†ã€‚<br>
+è¯·é¦–å…ˆ<A HREF="<? echo $ADMINURLROOT ;?>/index.php">ç™»é™†</a>ã€‚
 <?
 }else {
 
 if ( (!isset($_SESSION['LogAdmin'])) ) {
 ?>
-ÄãÃ»ÓĞ²ì¿´¹ÜÀíÈÕÖ¾µÄÈ¨ÏŞ<br>
-Çë·µ»Ø<A HREF="<? echo $ADMINURLROOT ;?>/AdminMenu.php">¹ÜÀí²Ëµ¥</a>
+ä½ æ²¡æœ‰å¯Ÿçœ‹ç®¡ç†æ—¥å¿—çš„æƒé™<br>
+è¯·è¿”å›<A HREF="<? echo $ADMINURLROOT ;?>/AdminMenu.php">ç®¡ç†èœå•</a>
 <?
 } else {
 ?>
 <FORM action="DoViewLog.php" method="post">
 <TABLE border="0" width="200">
 <thead>
-<TH align="left" >ÈÕÖ¾ÀàĞÍÑ¡Ôñ</th>
+<TH align="left" >æ—¥å¿—ç±»å‹é€‰æ‹©</th>
 </thead>
 <tbody>
 <tr>
 <td>
-<INPUT type="checkbox" name="UserAccount" checked="true">ÓÃ»§ÕÊºÅ¹ÜÀíÈÕÖ¾
+<INPUT type="checkbox" name="UserAccount" checked="true">ç”¨æˆ·å¸å·ç®¡ç†æ—¥å¿—
 </td>
 </tr>
 <tr>
 <td>
-<INPUT type="checkbox" name="PersonalVPN" checked="true">¸öÈËVPN¹ÜÀíÈÕÖ¾
+<INPUT type="checkbox" name="PersonalVPN" checked="true">ä¸ªäººVPNç®¡ç†æ—¥å¿—
 </td>
 </tr>
 <tr>
 <td>
-<INPUT type="checkbox" name="News" checked="true">ĞÂÎÅÏµÍ³¹ÜÀíÈÕÖ¾
+<INPUT type="checkbox" name="News" checked="true">æ–°é—»ç³»ç»Ÿç®¡ç†æ—¥å¿—
 </td>
 </tr>
 <tr>
 <td>
-<INPUT type="checkbox" name="Money" checked="true">ÓÃ»§×Ê½ğ¹ÜÀíÈÕÖ¾
+<INPUT type="checkbox" name="Money" checked="true">ç”¨æˆ·èµ„é‡‘ç®¡ç†æ—¥å¿—
 </td>
 </tr>
 <tr>
 <td>
-<INPUT type="checkbox" name="LogOn" checked="true">¹ÜÀíÔ±µÇÂ¼¼ÇÂ¼
+<INPUT type="checkbox" name="LogOn" checked="true">ç®¡ç†å‘˜ç™»å½•è®°å½•
 </td>
 </tr>
 <tr>
 <td>
-<INPUT type="checkbox" name="AdminUser" checked="true">¹ÜÀíÔ±ÕËºÅ¹ÜÀí
+<INPUT type="checkbox" name="AdminUser" checked="true">ç®¡ç†å‘˜è´¦å·ç®¡ç†
 </td>
 </tr>
 </tbody>
@@ -88,7 +88,7 @@ function MonthChanged(){
 	var nYear=parseInt(document.all.oYear.value);
 	var nMonth=document.all.oMonth.selectedIndex;
 	if ((nYear<2000) || (nYear>2100) || (nYear!=nYear)) {
-		alert("Äê·İÊäÈë´íÎó¡£ÇëÖØĞÂÊäÈë");
+		alert("å¹´ä»½è¾“å…¥é”™è¯¯ã€‚è¯·é‡æ–°è¾“å…¥");
 		document.all.oYear.select();
 		document.all.oYear.focus();
 	}
@@ -113,7 +113,7 @@ function EndMonthChanged(){
 	var nYear=parseInt(document.all.oEndYear.value);
 	var nMonth=document.all.oEndMonth.selectedIndex;
 	if ((nYear<2000) || (nYear>2100) || (nYear!=nYear)) {
-		alert("Äê·İÊäÈë´íÎó¡£ÇëÖØĞÂÊäÈë");
+		alert("å¹´ä»½è¾“å…¥é”™è¯¯ã€‚è¯·é‡æ–°è¾“å…¥");
 		document.all.oEndYear.select();
 		document.all.oEndYear.focus();
 	}
@@ -137,11 +137,11 @@ function EndMonthChanged(){
 </script>
 <TABLE border="0" width="200">
 <thead>
-<TH align="left" >ÈÕÖ¾Ê±¼ä¶ÎÑ¡Ôñ</th>
+<TH align="left" >æ—¥å¿—æ—¶é—´æ®µé€‰æ‹©</th>
 </thead>
 <tbody>
 <tr><td>
-´Ó<input type="text" name="startYear" id="oYear" size="4" maxlength=4 onchange="MonthChanged()"> Äê 
+ä»<input type="text" name="startYear" id="oYear" size="4" maxlength=4 onchange="MonthChanged()"> å¹´ 
   <select size="1" name="startMonth" id="oMonth" onchange="MonthChanged()">
   <option value=1>1</option>
   <option value=2>2</option>
@@ -155,12 +155,12 @@ function EndMonthChanged(){
   <option value=10>10</option>
   <option value=11>11</option>
   <option value=12>12</option>
-  </select> ÔÂ <select size="1" name="startDay" id="oDay">
+  </select> æœˆ <select size="1" name="startDay" id="oDay">
   <option selected> 1</option>
-  </select> ÈÕ </p>
+  </select> æ—¥ </p>
 </td></tr>
 <tr><td>
-µ½<input type="text" name="endYear" id="oEndYear" size="4" maxlength=4 onchange="EndMonthChanged()"> Äê 
+åˆ°<input type="text" name="endYear" id="oEndYear" size="4" maxlength=4 onchange="EndMonthChanged()"> å¹´ 
   <select size="1" name="endMonth" id="oEndMonth" onchange="EndMonthChanged()">
   <option value=1>1</option>
   <option value=2>2</option>
@@ -174,9 +174,9 @@ function EndMonthChanged(){
   <option value=10>10</option>
   <option value=11>11</option>
   <option value=12>12</option>
-  </select> ÔÂ <select size="1" name="endDay" id="oEndDay">
+  </select> æœˆ <select size="1" name="endDay" id="oEndDay">
   <option selected> 1</option>
-  </select> ÈÕ </p>
+  </select> æ—¥ </p>
   <script language="javascript">
   <!--
 	var da= new Date();
@@ -197,7 +197,7 @@ function EndMonthChanged(){
 </tbody>
 </table>
 <BR>
-<INPUT type="submit" value="²ì¿´ÓĞ¹ØÈÕÖ¾">
+<INPUT type="submit" value="å¯Ÿçœ‹æœ‰å…³æ—¥å¿—">
 
 </FORM>
 <BR><BR>

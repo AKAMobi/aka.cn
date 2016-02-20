@@ -11,12 +11,12 @@ require_once( "header.inc.php" );
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                ��ǰλ�ã�</font> </b><a href="/" class="a5">������ҳ</a> <font color="#458DE4">&gt; 
-                </font><a href="/my/" class="a5">�ҵİ���</a> <font color="#458DE4">&gt; 
-                </font><a href="/my/money/ShowAccount.php" class="a5">�쿴�˻���Ϣ</a>
+                当前位置：</font> </b><a href="/" class="a5">阿卡首页</a> <font color="#458DE4">&gt; 
+                </font><a href="/my/" class="a5">我的阿卡</a> <font color="#458DE4">&gt; 
+                </font><a href="/my/money/ShowAccount.php" class="a5">察看账户信息</a>
                 <br>
 				<br>
-                <span class="newstitle">�˻���Ϣ</span><br>
+                <span class="newstitle">账户信息</span><br>
 				<br>
             </td>
         </tr>
@@ -28,39 +28,39 @@ require_once( "header.inc.php" );
 <?
 if ( (!isset($HTTP_SESSION_VARS['UserID'])) ){
 ?>
-����δ��½��<br>
-������<A HREF="/my/">��½</a>��
+您尚未登陆。<br>
+请首先<A HREF="/my/">登陆</a>。
 <?
 }else {
 
 $result=mysql_query("select A.UserAccount as UserAccount, A.UserAccountUSD from UserAccount_TB as A, User_TB as B where A.UserAutoID=B.AutoID and B.ID='{$HTTP_SESSION_VARS['UserID']}'");
 if (!($row=mysql_fetch_array($result)) ){
 ?>
-	���ݿ����ʧ�ܡ��������Ա��ϵ��
+	数据库操作失败。请与管理员联系。
 <?
 } else {
 ?>
-�û�<? echo $HTTP_SESSION_VARS['UserID'] ?>���˻����Ϊ��<br>
-����ң�<? echo "��" . (intval($row['UserAccount'])==-1?0.00:$row['UserAccount']); ?><br>
-��Ԫ��<? echo "$" . (intval($row['UserAccountUSD'])==-1?0.00:$row['UserAccountUSD']); ?><br>
+用户<? echo $HTTP_SESSION_VARS['UserID'] ?>的账户余额为：<br>
+人民币：<? echo "￥" . (intval($row['UserAccount'])==-1?0.00:$row['UserAccount']); ?><br>
+美元：<? echo "$" . (intval($row['UserAccountUSD'])==-1?0.00:$row['UserAccountUSD']); ?><br>
 <br>
 <div align="Center">
-<strong><font size="+1">������������˻��ʽ��������</font></strong><br>
+<strong><font size="+1">最近两个月内账户资金流动情况</font></strong><br>
 <br> 
 </div>
 <table id="oTable" width="500">
 <thead>
 <tr>
-<th id="oTime" width="90">ʱ��</th>
-<th id="oIncoming" width="55">������</th>
-<th id="oOutcoming" width="55">�������</th>
-<th id="oBalance" width="50">���</th>
-<th id="oNotes">����</th>
+<th id="oTime" width="90">时间</th>
+<th id="oIncoming" width="55">流入金额</th>
+<th id="oOutcoming" width="55">流出金额</th>
+<th id="oBalance" width="50">余额</th>
+<th id="oNotes">事由</th>
 </tr>
 </thead>
 </table>
 <iframe src="ShowAccountInside.php" style="width:540;height:300;">
-	����������汾̫�ͣ���ʹ��5.5���ϰ汾��IE���ʱ�վ
+	您的浏览器版本太低，请使用5.5以上版本的IE访问本站
 </iframe>
 
 <br>

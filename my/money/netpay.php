@@ -11,9 +11,9 @@ require_once( "header.inc.php" );
         <tr>
             <td> 
               <p><b><font color="#3366CC"><br>
-                µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-                </font><a href="/my/" class="a5">ÎÒµÄ°¢¿¨</a><font color="#458DE4">&gt; 
-                </font><a href="/my/money/netpay.php" class="a5">ÍøÉÏÖ§¸¶</a>
+                å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+                </font><a href="/my/" class="a5">æˆ‘çš„é˜¿å¡</a><font color="#458DE4">&gt; 
+                </font><a href="/my/money/netpay.php" class="a5">ç½‘ä¸Šæ”¯ä»˜</a>
 				<br>
                 <br>
               <p>&nbsp;</p>
@@ -27,24 +27,24 @@ require_once( "header.inc.php" );
 <?
 if ( (!isset($HTTP_SESSION_VARS['UserID']) ) ) {
 ?>
-ÄúÉÐÎ´µÇÂ½¡£<br>
-ÇëÊ×ÏÈ<A HREF="/my/" class=a5>µÇÂ½</a>¡£
+æ‚¨å°šæœªç™»é™†ã€‚<br>
+è¯·é¦–å…ˆ<A HREF="/my/" class=a5>ç™»é™†</a>ã€‚
 <?
 }else {
 ?>
 <br><br><br>
 
-<p align=center>Äú¿ÉÒÔÓÃ¼¸ºõËùÓÐµÄÖ§³ÖÍøÉÏÖ§¸¶µÄ´¢Ðî¿¨/ÐÅÓÃ¿¨½øÐÐÖ§¸¶£¬°üÀ¨¹ú¼ÊÐÅÓÃ¿¨¡£</p>
+<p align=center>æ‚¨å¯ä»¥ç”¨å‡ ä¹Žæ‰€æœ‰çš„æ”¯æŒç½‘ä¸Šæ”¯ä»˜çš„å‚¨è“„å¡/ä¿¡ç”¨å¡è¿›è¡Œæ”¯ä»˜ï¼ŒåŒ…æ‹¬å›½é™…ä¿¡ç”¨å¡ã€‚</p>
 <center>
 <!-- XXX
-ÏµÍ³Î¬»¤ÖÐ...
+ç³»ç»Ÿç»´æŠ¤ä¸­...
 -->
 <form action="http://pay.aka.cn/prepare.php" name=form method=post>
-ÔÚÏÂÃæÊäÈëÏ£Íû×ªÈë¡°ÎÒµÄ°¢¿¨ÕÊ»§¡±µÄÇ®Êý£º<p>
-<input type=text name=MoneyCount size=4>ÔªÈËÃñ±Ò<p>
+åœ¨ä¸‹é¢è¾“å…¥å¸Œæœ›è½¬å…¥â€œæˆ‘çš„é˜¿å¡å¸æˆ·â€çš„é’±æ•°ï¼š<p>
+<input type=text name=MoneyCount size=4>å…ƒäººæ°‘å¸<p>
 <input type=hidden name=MoneyType value=0>
 
-<input type=submit name=submit value='È¥ÒøÐÐ¸¶¿î'>
+<input type=submit name=submit value='åŽ»é“¶è¡Œä»˜æ¬¾'>
 </form>
 </center>
 <br><br><br>

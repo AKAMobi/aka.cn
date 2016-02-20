@@ -1,7 +1,7 @@
 <html>
 <head>
-<title>滚动新闻</title>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>婊氬姩鏂伴椈</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" href="/css/aka.css" type="text/css">
 </head>
 <body>

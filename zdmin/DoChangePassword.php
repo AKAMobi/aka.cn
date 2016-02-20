@@ -14,10 +14,10 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
             
       <td> 
         <p><b><font color="#3366CC"><br>
-          µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-          </font><font color="#458DE4"><a href="<? echo $ADMINURLROOT ;?>/" class="a5">ÍøÕ¾¹ÜÀíÔ±</a><font color="#458DE4">&gt; 
-          </font><a href="<? echo $ADMINURLROOT; ?>/AdminMenu.php" class="a5">¹ÜÀí²Ëµ¥</a> <font color="#458DE4">&gt; 
-          </font></font><a href="<? echo $ADMINURLROOT; ?>/ChangePassword.php" class="a5">ÐÞ¸ÄÃÜÂë</a> 
+          å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+          </font><font color="#458DE4"><a href="<? echo $ADMINURLROOT ;?>/" class="a5">ç½‘ç«™ç®¡ç†å‘˜</a><font color="#458DE4">&gt; 
+          </font><a href="<? echo $ADMINURLROOT; ?>/AdminMenu.php" class="a5">ç®¡ç†èœå•</a> <font color="#458DE4">&gt; 
+          </font></font><a href="<? echo $ADMINURLROOT; ?>/ChangePassword.php" class="a5">ä¿®æ”¹å¯†ç </a> 
           <br>
           <br>
         <p>&nbsp;</p>
@@ -36,7 +36,7 @@ IncludeHTML("{$ADMINROOT}/Include/Part1.html");
 if ( (!isset($_SESSION['AdminID'])) || (!isset($_REQUEST['Password']))
 	|| (!isset($_REQUEST['NewPassword1'])) ){
 ?>
-	<p>ÇëÊ×ÏÈ<A HREF="<? echo $ADMINURLROOT; ?>/index.php">µÇÂ¼</a>£¡</p>
+	<p>è¯·é¦–å…ˆ<A HREF="<? echo $ADMINURLROOT; ?>/index.php">ç™»å½•</a>ï¼</p>
 	<br>
 	<br>
 	<br>
@@ -49,30 +49,30 @@ if ( (!isset($_SESSION['AdminID'])) || (!isset($_REQUEST['Password']))
 require "{$ADMINROOT}/Include/InitDB.php"; 
 $result=mysql_query("select Password from AdminUser_TB where ID='{$_SESSION['AdminID']}'");
 
-if (!($row=mysql_fetch_array($result))){//ÎÞ´ËÓÃ»§
+if (!($row=mysql_fetch_array($result))){//æ— æ­¤ç”¨æˆ·
 ?>
-ÎÞ´ËÓÃ»§£¡<BR>
-ÇëÖØÐÂ<A HREF="<? echo $ADMINURLROOT; ?>/index.php">µÇÂ¼</a>
+æ— æ­¤ç”¨æˆ·ï¼<BR>
+è¯·é‡æ–°<A HREF="<? echo $ADMINURLROOT; ?>/index.php">ç™»å½•</a>
 <?
 }
 else{
-if (crypt($_REQUEST['Password'],$row["Password"])!=$row["Password"]){//ÃÜÂë´íÎó
+if (crypt($_REQUEST['Password'],$row["Password"])!=$row["Password"]){//å¯†ç é”™è¯¯
 ?>
-ÃÜÂë´íÎó£¡<br>
-Çë<A href="<? echo $ADMINURLROOT; ?>/ChangePassword.php">·µ»Ø</a>ÖØÐÂÊäÈëÃÜÂë
+å¯†ç é”™è¯¯ï¼<br>
+è¯·<A href="<? echo $ADMINURLROOT; ?>/ChangePassword.php">è¿”å›ž</a>é‡æ–°è¾“å…¥å¯†ç 
 <?
 }
-else{//Õý³£µÇÂ¼
+else{//æ­£å¸¸ç™»å½•
 $passwd=crypt($_REQUEST['NewPassword1']);
 if (mysql_query("Update AdminUser_TB Set Password='{$passwd}' where ID='{$_SESSION['AdminID']}'")) {
 ?>
-	ÃÜÂëÐÞ¸Ä³É¹¦£¡<br>
-	<A href="<? echo $ADMINURLROOT; ?>/AdminMenu.php">·µ»ØÖ÷²Ëµ¥</a>
+	å¯†ç ä¿®æ”¹æˆåŠŸï¼<br>
+	<A href="<? echo $ADMINURLROOT; ?>/AdminMenu.php">è¿”å›žä¸»èœå•</a>
 <?
 } else {
 ?>
-	Êý¾Ý¿â²Ù×÷Ê§°Ü£¡ÇëÁªÂç¹ÜÀíÔ±¡£<br>
-	<A href="<? echo $ADMINURLROOT; ?>/ChangePassword.php">·µ»ØÐÞ¸ÄÃÜÂëÒ³Ãæ</a>
+	æ•°æ®åº“æ“ä½œå¤±è´¥ï¼è¯·è”ç»œç®¡ç†å‘˜ã€‚<br>
+	<A href="<? echo $ADMINURLROOT; ?>/ChangePassword.php">è¿”å›žä¿®æ”¹å¯†ç é¡µé¢</a>
 <?
 }
 }

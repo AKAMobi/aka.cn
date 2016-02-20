@@ -10,13 +10,13 @@ require_once( "header.inc.php" );
             
       <td> 
         <p><b><font color="#3366CC"><br>
-          µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-          </font><a href="/my/" class="a5">ÎÒµÄ°¢¿¨</a><font color="#458DE4">&gt; 
-          </font><a href="/my/main.php" class="a5">ÓÃ»§²Ëµ¥</a><br>
+          å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+          </font><a href="/my/" class="a5">æˆ‘çš„é˜¿å¡</a><font color="#458DE4">&gt; 
+          </font><a href="/my/main.php" class="a5">ç”¨æˆ·èœå•</a><br>
           <br>
-          <span class="newstitle">ÐÞ¸Ä×¢²áÐÅÏ¢</span></p>
-              <p>ÄúÔ­ÏÈÌîÐ´µÄ×¢²áµ¥ÐÅÏ¢ÓÐÎó¡£Çë×ÐÏ¸¼ì²é²¢ÖØÐÂÌîÐ´×¢²áÐÅÏ¢</p>
-		<p>ËùÓÐÐÅÏ¢±ØÐëÕýÈ·¶øÏêÏ¸µÄÌîÐ´£¬¼Ó*ºÅµÄÇëÓÃÖÐÎÄÌîÐ´£¬·ñÔò½«ÎÞ·¨Í¨¹ý×¢²áÉóÅú£¬Ð»Ð»ºÏ×÷¡£</p>
+          <span class="newstitle">ä¿®æ”¹æ³¨å†Œä¿¡æ¯</span></p>
+              <p>æ‚¨åŽŸå…ˆå¡«å†™çš„æ³¨å†Œå•ä¿¡æ¯æœ‰è¯¯ã€‚è¯·ä»”ç»†æ£€æŸ¥å¹¶é‡æ–°å¡«å†™æ³¨å†Œä¿¡æ¯</p>
+		<p>æ‰€æœ‰ä¿¡æ¯å¿…é¡»æ­£ç¡®è€Œè¯¦ç»†çš„å¡«å†™ï¼ŒåŠ *å·çš„è¯·ç”¨ä¸­æ–‡å¡«å†™ï¼Œå¦åˆ™å°†æ— æ³•é€šè¿‡æ³¨å†Œå®¡æ‰¹ï¼Œè°¢è°¢åˆä½œã€‚</p>
               <p>&nbsp;</p>
             </td>
         </tr>
@@ -27,23 +27,23 @@ require_once( "header.inc.php" );
   <td align="center">
 <?
 
-if ( (!isset($HTTP_SESSION_VARS['ModifyRegister']))  ){//Î´Õý³£µÇÂ¼
+if ( (!isset($HTTP_SESSION_VARS['ModifyRegister']))  ){//æœªæ­£å¸¸ç™»å½•
 ?>
-ÄúÉÐÎ´µÇÂ¼¡£<BR>
-ÇëÊ×ÏÈ<A HREF="index.php">µÇÂ¼</a>¡£
+æ‚¨å°šæœªç™»å½•ã€‚<BR>
+è¯·é¦–å…ˆ<A HREF="index.php">ç™»å½•</a>ã€‚
 <?
 }else {
 require_once( "db.inc.php" );
-$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("ÎÞ·¨Á¬½ÓDBM.");
-mysql_select_db( DB_NAME, $conn) or die("ÎÞ·¨´ò¿ªÊý¾Ý¿â.");
+$conn=mysql_pconnect( DB_HOST, DB_USER, DB_PASS ) or die("æ— æ³•è¿žæŽ¥DBM.");
+mysql_select_db( DB_NAME, $conn) or die("æ— æ³•æ‰“å¼€æ•°æ®åº“.");
 
 $result=mysql_query("select * from User_TB where ID='{$HTTP_SESSION_VARS['ModifyRegister']}'"); 
 $HTTP_SESSION_VARS['DoModifyRegister']=$HTTP_SESSION_VARS['ModifyRegister'];
 unset($HTTP_SESSION_VARS['ModifyRegister']);
-if ( !($row=mysql_fetch_array($result)) ){ //ÎÞ´ËÓÃ»§
+if ( !($row=mysql_fetch_array($result)) ){ //æ— æ­¤ç”¨æˆ·
 ?>
-	ÎÞ´ËÓÃ»§¡£Çë³¢ÊÔÖØÐÂµÇÂ½¡£
-	<input type="button" onclick="history.back();" value="·µ»Ø">
+	æ— æ­¤ç”¨æˆ·ã€‚è¯·å°è¯•é‡æ–°ç™»é™†ã€‚
+	<input type="button" onclick="history.back();" value="è¿”å›ž">
 <?
 } else {
 ?>
@@ -51,32 +51,32 @@ if ( !($row=mysql_fetch_array($result)) ){ //ÎÞ´ËÓÃ»§
 <!--
 function register(){
 	if (document.all.oUserName.value=="") {
-		alert("ÇëÊäÈëÄúµÄÐÕÃû");
+		alert("è¯·è¾“å…¥æ‚¨çš„å§“å");
 		document.all.oUserName.focus();
 		return ;
 	}
 	if (document.all.oIdNum.value=="") {
-		alert("ÇëÊäÈëÄúµÄÉí·ÝÖ¤ºÅÂë");
+		alert("è¯·è¾“å…¥æ‚¨çš„èº«ä»½è¯å·ç ");
 		document.all.oIdNum.focus();
 		return ;
 	}
 	if (document.all.oCompany.value=="") {
-		alert("ÇëÊäÈëÄúµÄµ¥Î»Ãû³Æ");
+		alert("è¯·è¾“å…¥æ‚¨çš„å•ä½åç§°");
 		document.all.oCompany.focus();
 		return ;
 	}
 	if (document.all.oEMail.value=="") {
-		alert("ÇëÊäÈëÄúµÄµç×ÓÓÊÏä");
+		alert("è¯·è¾“å…¥æ‚¨çš„ç”µå­é‚®ç®±");
 		document.all.oEMail.focus();
 		return ;
 	}
 	if (document.all.oAddress.value=="") {
-		alert("ÇëÊäÈëÄúµÄµØÖ·");
+		alert("è¯·è¾“å…¥æ‚¨çš„åœ°å€");
 		document.all.oAddress.focus();
 		return ;
 	}
 	if (document.all.oZipCode.value=="") {
-		alert("ÇëÊäÈëÄúµÄÓÊ±à");
+		alert("è¯·è¾“å…¥æ‚¨çš„é‚®ç¼–");
 		document.all.oZipCode.focus();
 		return ;
 	}	
@@ -92,43 +92,43 @@ function register(){
         <td width="83%"><? echo $row[1] ?></td>
       </tr>
       <tr> 
-        <td>ÐÕÃû</td>
+        <td>å§“å</td>
         <td><input type="text" id="oUserName" name="UserName"  value="<? echo $row['UserName'] ?>"> * </td>
       </tr>
       <tr> 
-        <td>Éí·ÝÖ¤ºÅ</td>
+        <td>èº«ä»½è¯å·</td>
         <td><input type="text" id="oIdNum" name="IdNum" value="<? echo $row['IdentifierNum'] ?>"></td>
       </tr>
       <tr> 
-        <td>µ¥Î»Ãû³Æ</td>
+        <td>å•ä½åç§°</td>
         <td><input type="text" id="oCompany" name="Company" value="<? echo $row[5] ?>"> * </td>
       </tr>
       <tr> 
-        <td>ÁªÏµµç»°</td>
+        <td>è”ç³»ç”µè¯</td>
         <td><input type="text" id="oTel" name="Tel" value="<? echo $row[6] ?>"></td>
       </tr>
       <tr> 
-        <td>ÊÖ»ú</td>
+        <td>æ‰‹æœº</td>
         <td><input type="text" id="oMobile" name="Mobile" value="<? echo $row[7] ?>"></td>
       </tr>
       <tr> 
-        <td>µç×ÓÓÊÏä</td>
+        <td>ç”µå­é‚®ç®±</td>
         <td><input type="text" id="oEMail" name="EMail" value="<? echo $row[8] ?>"></td>
       </tr>
   <tr>
-    <td>µØÖ·</td>
+    <td>åœ°å€</td>
     <td>
  <input id=oAddress type=text name=Address value="<? echo $row[9] ?>"> * </td></tr>
   <tr>
-    <td>ÓÊ±à</td>
+    <td>é‚®ç¼–</td>
     <td>
  <input id=oZipCode type=text name=ZipCode value="<? echo $row[10] ?>"></td></tr>
     </table>
     <p>
-      ËµÃ÷£º±¾¹«Ë¾ÓÃ»§×¢²á²ÉÓÃµç»°È·ÈÏ·½Ê½£¬ÇëÄúÈçÊµÌîÐ´ÒÔÉÏ¸÷Ïî×ÊÁÏ¡£ÎÒÃÇ½«ÔÚ×ÊÁÏÌá½»ºóÁ½¸ö¹¤×÷ÈÕÄÚÓÃµç»°ÓëÄúÁªÏµ£¬ÒÔÈ·ÈÏÄúµÄ×¢²á×ÊÁÏÕýÈ·ÎÞÎó¡£Ð»Ð»ÄúµÄºÏ×÷£¡
+      è¯´æ˜Žï¼šæœ¬å…¬å¸ç”¨æˆ·æ³¨å†Œé‡‡ç”¨ç”µè¯ç¡®è®¤æ–¹å¼ï¼Œè¯·æ‚¨å¦‚å®žå¡«å†™ä»¥ä¸Šå„é¡¹èµ„æ–™ã€‚æˆ‘ä»¬å°†åœ¨èµ„æ–™æäº¤åŽä¸¤ä¸ªå·¥ä½œæ—¥å†…ç”¨ç”µè¯ä¸Žæ‚¨è”ç³»ï¼Œä»¥ç¡®è®¤æ‚¨çš„æ³¨å†Œèµ„æ–™æ­£ç¡®æ— è¯¯ã€‚è°¢è°¢æ‚¨çš„åˆä½œï¼
     </p>
 <p>
-      <input type="button" name="Submit" value="Ìá½»" onclick="register();"> 
+      <input type="button" name="Submit" value="æäº¤" onclick="register();"> 
 </p>
   </form>
 

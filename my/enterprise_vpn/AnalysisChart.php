@@ -3,22 +3,22 @@ header("Content-type: image/gif");
 session_start();
 /*-------------------------------- 
 I   AnalysisChart.php            I
-I	»æÖÆVPNÁ÷Á¿·ÖÎöÍ¼
-I   ËµÃ÷ÎÄ¼ş£º·ÖÎöÍ¼Éú³ÉÄ£¿éËã·¨.doc
+I	ç»˜åˆ¶VPNæµé‡åˆ†æå›¾
+I   è¯´æ˜æ–‡ä»¶ï¼šåˆ†æå›¾ç”Ÿæˆæ¨¡å—ç®—æ³•.doc
 I	Programmer: roy@zixia.net    I
 I	Date:		2002.02.24       I
 --------------------------------*/
 
 
-/*---------------- Í³¼Æ³£Á¿¶¨Òå ------------------*/
-//Ê±¼ä¶ÎÀàĞÍ
+/*---------------- ç»Ÿè®¡å¸¸é‡å®šä¹‰ ------------------*/
+//æ—¶é—´æ®µç±»å‹
 define("YEAR",1);
 define("MONTH",2);
 define("WEEK",3);
 define("DAY",4);
 
-//ÓÃÓÚÉú³ÉSQL²éÑ¯µÄ³£Á¿¶¨Òå
-//×îĞ¡Í³¼Æµ¥Î»
+//ç”¨äºç”ŸæˆSQLæŸ¥è¯¢çš„å¸¸é‡å®šä¹‰
+//æœ€å°ç»Ÿè®¡å•ä½
 $sUnit=array(YEAR	=>	'DAYOFYEAR',
 			 MONTH	=>	'HOUR',
 			 WEEK	=>	'HOUR',
@@ -26,115 +26,115 @@ $sUnit=array(YEAR	=>	'DAYOFYEAR',
 
 /*********************************/
 
-//Ê±¼ä¶Î¶¨Òå
-$sInterval=array(YEAR	=>	'-1 YEAR',  //´Ó½ØÖ¹ÈÕÆÚÍÆËãÆğÊ¼ÈÕÆÚ£¬¹ÊÊı×ÖÇ°ĞëÓĞ¸ººÅ
+//æ—¶é—´æ®µå®šä¹‰
+$sInterval=array(YEAR	=>	'-1 YEAR',  //ä»æˆªæ­¢æ—¥æœŸæ¨ç®—èµ·å§‹æ—¥æœŸï¼Œæ•…æ•°å­—å‰é¡»æœ‰è´Ÿå·
 			 MONTH	=>	'-1 MONTH',
 			 WEEK	=>	'-7 DAY',
 			 DAY	=>	'-1 DAY');
 
-//Ã¿Ìì°üº¬¶àÉÙ¸öÊı¾İµã¡ª¡ª¼ÆËãÊı¾İµãÊıÁ¿ÓÃ
+//æ¯å¤©åŒ…å«å¤šå°‘ä¸ªæ•°æ®ç‚¹â€”â€”è®¡ç®—æ•°æ®ç‚¹æ•°é‡ç”¨
 $nPointPerDay = array(YEAR	=>	1,  //
 			 MONTH	=>	24,			
 			 WEEK	=>	24,
 			 DAY	=>	24);
 			 
-//ºÏ²¢Êı¾İµã£¨1--²»ºÏ²¢£»2--Ã¿Á½¸öµãºÏ²¢³ÉÒ»¸öµã;3--Ã¿Èı¸öµãºÏ²¢³ÉÒ»¸öµã;ÒÔÏÂÀàÍÆ)
+//åˆå¹¶æ•°æ®ç‚¹ï¼ˆ1--ä¸åˆå¹¶ï¼›2--æ¯ä¸¤ä¸ªç‚¹åˆå¹¶æˆä¸€ä¸ªç‚¹;3--æ¯ä¸‰ä¸ªç‚¹åˆå¹¶æˆä¸€ä¸ªç‚¹;ä»¥ä¸‹ç±»æ¨)
 $nJoint = array(YEAR	=>	1,  //
 			 MONTH	=>	4,			
 			 WEEK	=>	1,
 			 DAY	=>	1);
 			 			 
-//¼ÆËãÈÕÆÚÓÃ£¬ÈÕÆÚÔö¼Ó²½³¤£¨Ò»ÌìÖĞµÄÃëÊı£©
+//è®¡ç®—æ—¥æœŸç”¨ï¼Œæ—¥æœŸå¢åŠ æ­¥é•¿ï¼ˆä¸€å¤©ä¸­çš„ç§’æ•°ï¼‰
 $nDateCalStep = 24 * 60 * 60;
-/*---------------------³£Á¿¶¨Òå½áÊø--------------------------*/
+/*---------------------å¸¸é‡å®šä¹‰ç»“æŸ--------------------------*/
 
-/*---------------- »æÍ¼³£Á¿¶¨Òå ------------------*/
+/*---------------- ç»˜å›¾å¸¸é‡å®šä¹‰ ------------------*/
 $nXBase = 83;
 $nXLength = 418;
 $nYBase = 106;
 $nYLength = 84;
 $nFontType = 3;
 
-$sDisplayUint = array(YEAR	=>	"Day",  // Í³¼Æµ¥Î»ÏÔÊ¾×Ö·û´®
+$sDisplayUint = array(YEAR	=>	"Day",  // ç»Ÿè®¡å•ä½æ˜¾ç¤ºå­—ç¬¦ä¸²
 			 MONTH	=>	"4 Hours",			
 			 WEEK	=>	"Hour",
 			 DAY	=>	"Hour");
-/*---------------------³£Á¿¶¨Òå½áÊø--------------------------*/
+/*---------------------å¸¸é‡å®šä¹‰ç»“æŸ--------------------------*/
 
-//³ÌĞò²ÎÊı¶¨Òå
+//ç¨‹åºå‚æ•°å®šä¹‰
 if (!isset($HTTP_SESSION_VARS['UserName']) ){
-	die("Î´µÇÂ½1¡­¡­");
+	die("æœªç™»é™†1â€¦â€¦");
 }
-$sUserName=$HTTP_SESSION_VARS['UserName'];			//ÓÃ»§ID
+$sUserName=$HTTP_SESSION_VARS['UserName'];			//ç”¨æˆ·ID
 if (!isset($HTTP_SESSION_VARS['sAnalysisType']) ){
-	die("Î´µÇÂ½2¡­¡­");
+	die("æœªç™»é™†2â€¦â€¦");
 }
-$nAnalysisType=$HTTP_SESSION_VARS['sAnalysisType'];				//Í³¼ÆÊ±¼ä¶ÎÀàĞÍ
+$nAnalysisType=$HTTP_SESSION_VARS['sAnalysisType'];				//ç»Ÿè®¡æ—¶é—´æ®µç±»å‹
 if  ( (!isset($HTTP_SESSION_VARS['sYEAR'])) || (!isset($HTTP_SESSION_VARS['sMONTH']))
 	|| (!isset($HTTP_SESSION_VARS['sDAY'])) ){
-	die("Î´µÇÂ½3¡­¡­");
+	die("æœªç™»é™†3â€¦â€¦");
 }
-$sTempTime=sprintf("%4d-%02d-%02d",$HTTP_SESSION_VARS['sYEAR'],$HTTP_SESSION_VARS['sMONTH'],$HTTP_SESSION_VARS['sDAY']); //´ÓSessionÖĞ¶ÁÈ¡Í³¼ÆÊ±¼ä
+$sTempTime=sprintf("%4d-%02d-%02d",$HTTP_SESSION_VARS['sYEAR'],$HTTP_SESSION_VARS['sMONTH'],$HTTP_SESSION_VARS['sDAY']); //ä»Sessionä¸­è¯»å–ç»Ÿè®¡æ—¶é—´
 
-$nEndTime=strtotime("{$sTempTime} +1 DAY"); 	//Í³¼Æ½ØÖ¹Ê±¼ä£¨×Ö·û´®ĞÎÊ½£©ÒòÎªmysql´Ó0Ê±¿ªÊ¼¼ÆËãÃ¿Ò»Ìì£¬ËùÒÔ¼ÆËãÊ±ĞèÒªÏÈÍÆÇ°Ò»Ìì
-$sEndTime=strftime("%Y-%m-%d",$nEndTime); //Í³¼Æ½ØÖ¹Ê±¼ä£¨Êı×ÖĞÎÊ½£©
+$nEndTime=strtotime("{$sTempTime} +1 DAY"); 	//ç»Ÿè®¡æˆªæ­¢æ—¶é—´ï¼ˆå­—ç¬¦ä¸²å½¢å¼ï¼‰å› ä¸ºmysqlä»0æ—¶å¼€å§‹è®¡ç®—æ¯ä¸€å¤©ï¼Œæ‰€ä»¥è®¡ç®—æ—¶éœ€è¦å…ˆæ¨å‰ä¸€å¤©
+$sEndTime=strftime("%Y-%m-%d",$nEndTime); //ç»Ÿè®¡æˆªæ­¢æ—¶é—´ï¼ˆæ•°å­—å½¢å¼ï¼‰
 if ($nEndTime==-1){
-	die("ÈÕÆÚ´íÎó¡­¡­" . $sEndTime);
+	die("æ—¥æœŸé”™è¯¯â€¦â€¦" . $sEndTime);
 }
 
 
-/*--------------- Part.I ³õÊ¼»¯ Begin ----------------------*/
+/*--------------- Part.I åˆå§‹åŒ– Begin ----------------------*/
 
-//Ê¹ÓÃAnalysisChart.gifÍ¼ĞÎÎÄ¼ş³õÊ¼»¯Í¼ĞÎ×ÊÔ´
-$hImage=ImageCreateFromGIF("AnalysisChart.gif");				//hImage: Í¼ĞÎ×ÊÔ´¾ä±ú
+//ä½¿ç”¨AnalysisChart.gifå›¾å½¢æ–‡ä»¶åˆå§‹åŒ–å›¾å½¢èµ„æº
+$hImage=ImageCreateFromGIF("AnalysisChart.gif");				//hImage: å›¾å½¢èµ„æºå¥æŸ„
 
-$cRed = ImageColorAllocate($hImage,255,0,0) ; //ºìÉ«
-$cYellow = ImageColorAllocate($hImage,255,255,0);	//cYellow: »ÆÉ«
-$cBlue = ImageColorAllocate($hImage,0,0,255);		//cBlue: À¶É«	
-$cBlack = ImageColorAllocate($hImage,0,0,0);		//cBlack: ºÚÉ«
-$cWhite = ImageColorAllocate($hImage,255,255,255);  //cWhite: °×É«
-$cLightyellow=ImageColorAllocate($hImage,255,255,0xE0); //cLightYellow: µ­»ÆÉ«
-$cSkyblue=ImageColorAllocate($hImage,80,160,208); //ÌìÀ¶É«
+$cRed = ImageColorAllocate($hImage,255,0,0) ; //çº¢è‰²
+$cYellow = ImageColorAllocate($hImage,255,255,0);	//cYellow: é»„è‰²
+$cBlue = ImageColorAllocate($hImage,0,0,255);		//cBlue: è“è‰²	
+$cBlack = ImageColorAllocate($hImage,0,0,0);		//cBlack: é»‘è‰²
+$cWhite = ImageColorAllocate($hImage,255,255,255);  //cWhite: ç™½è‰²
+$cLightyellow=ImageColorAllocate($hImage,255,255,0xE0); //cLightYellow: æ·¡é»„è‰²
+$cSkyblue=ImageColorAllocate($hImage,80,160,208); //å¤©è“è‰²
 
 /*--------------- Part.I End ----------------------*/
 
 
-/*--------------- Part.II Í³¼Æ¼ÆËã Begin ----------------------*/
-//¼ÆËãÍ³¼ÆÆğÖ¹Ê±¼ä
+/*--------------- Part.II ç»Ÿè®¡è®¡ç®— Begin ----------------------*/
+//è®¡ç®—ç»Ÿè®¡èµ·æ­¢æ—¶é—´
 
-$nBeginTime=strtotime("{$sEndTime} {$sInterval[$nAnalysisType]}"); //Í³¼ÆÆğÊ¼Ê±¼ä£¨Êı×ÖĞÎÊ½£©
-$sBeginTime=strftime("%Y-%m-%d",$nBeginTime); //Í³¼ÆÆğÊ¼Ê±¼ä£¨×Ö·û´®ĞÎÊ½£©
-//echo "\$sBeginTime = $sBeginTime <br>\n"; //²âÊÔÓÃ
+$nBeginTime=strtotime("{$sEndTime} {$sInterval[$nAnalysisType]}"); //ç»Ÿè®¡èµ·å§‹æ—¶é—´ï¼ˆæ•°å­—å½¢å¼ï¼‰
+$sBeginTime=strftime("%Y-%m-%d",$nBeginTime); //ç»Ÿè®¡èµ·å§‹æ—¶é—´ï¼ˆå­—ç¬¦ä¸²å½¢å¼ï¼‰
+//echo "\$sBeginTime = $sBeginTime <br>\n"; //æµ‹è¯•ç”¨
 
-//¼ÆËãÍ³¼ÆÊ±¼äÄÚµÄÈ«²¿ÈÕÆÚ
-$aDate = array(); //Êı×é£¬´æ·ÅÍ³¼ÆÊ±¼ä¶ÎÄÚµÄÈÕÆÚ
+//è®¡ç®—ç»Ÿè®¡æ—¶é—´å†…çš„å…¨éƒ¨æ—¥æœŸ
+$aDate = array(); //æ•°ç»„ï¼Œå­˜æ”¾ç»Ÿè®¡æ—¶é—´æ®µå†…çš„æ—¥æœŸ
 
-$i=$nBeginTime; //Ñ­»·¿ØÖÆ±äÁ¿&ÈÕÆÚ¼ÆËã½á¹û´æ·ÅÁÙÊ±±äÁ¿
+$i=$nBeginTime; //å¾ªç¯æ§åˆ¶å˜é‡&æ—¥æœŸè®¡ç®—ç»“æœå­˜æ”¾ä¸´æ—¶å˜é‡
 do{
 	  $aDate[]=$i;
 	  $i+=$nDateCalStep;
 }while($i<$nEndTime);
 
 /*
-//²âÊÔÈÕÆÚ¼ÆËãÊÇ·ñÕıÈ·
+//æµ‹è¯•æ—¥æœŸè®¡ç®—æ˜¯å¦æ­£ç¡®
 for ($i=0;$i<count($aDate);$i++) {
 	echo strftime("%Y-%m-%d",$aDate[$i]),"<br>\n";
 }
 */
  
 
-//¶ÁÈ¡Í³¼ÆÊı¾İ
+//è¯»å–ç»Ÿè®¡æ•°æ®
 $connection=mysql_pconnect('localhost','aka','zpzAKA!@#');
 mysql_select_db('aka',$connection);
 
 $rst=mysql_query("select DATE_FORMAT(TimeStamp, '%Y-%m-%d') As AssistUnit ,{$sUnit[$nAnalysisType]}(TimeStamp) as Unit ,sum(Transmit), sum(Receive) from Vpn_Log_TB where TimeStamp >= '{$sBeginTime}' and TimeStamp < '{$sEndTime}' and Name='{$sUserName}' group by AssistUnit,Unit Order by AssistUnit,Unit");
 
 
-//³õÊ¼»¯Êı¾İµã×ø±êÁĞ±í£»ÌîĞ´Êı¾İµãX×ø±ê
-$aTotalFlux=array();  //×ÜÁ÷Á¿ÁĞ±í
-$aInFlux=array();	//ÈëÁ÷Á¿ÁĞ±í
-$aOutFlux=array();	//³öÁ÷Á¿ÁĞ±í
-$nPointCount=count($aDate) * $nPointPerDay[$nAnalysisType]; //Êı¾İµãÊıÁ¿
+//åˆå§‹åŒ–æ•°æ®ç‚¹åæ ‡åˆ—è¡¨ï¼›å¡«å†™æ•°æ®ç‚¹Xåæ ‡
+$aTotalFlux=array();  //æ€»æµé‡åˆ—è¡¨
+$aInFlux=array();	//å…¥æµé‡åˆ—è¡¨
+$aOutFlux=array();	//å‡ºæµé‡åˆ—è¡¨
+$nPointCount=count($aDate) * $nPointPerDay[$nAnalysisType]; //æ•°æ®ç‚¹æ•°é‡
 
 for ($i=0;$i<$nPointCount;$i++){
 	$aTotalFlux[]=$nXBase+($i/($nPointCount-1))*$nXLength;
@@ -145,24 +145,24 @@ for ($i=0;$i<$nPointCount;$i++){
 	$aOutFlux[]=0;
 }
 
-//²éÕÒÁ÷Á¿·åÖµ;¼ÆËã³öÈë×ÜÁ÷Á¿;ÓÃÁ÷Á¿Êı¾İÌîĞ´Êı¾İµãY×ø±ê
-$nMaxFlux=0; //×ÜÁ÷Á¿·åÖµ
-$nMinFlux=-1; //×ÜÁ÷Á¿¹ÈÖµ
-$nTotalFlux=0; //×ÜÁ÷Á¿×Ü¼Æ£¬ËãÆ½¾ùÁ÷Á¿ÓÃ
+//æŸ¥æ‰¾æµé‡å³°å€¼;è®¡ç®—å‡ºå…¥æ€»æµé‡;ç”¨æµé‡æ•°æ®å¡«å†™æ•°æ®ç‚¹Yåæ ‡
+$nMaxFlux=0; //æ€»æµé‡å³°å€¼
+$nMinFlux=-1; //æ€»æµé‡è°·å€¼
+$nTotalFlux=0; //æ€»æµé‡æ€»è®¡ï¼Œç®—å¹³å‡æµé‡ç”¨
 
-$nOutMaxFlux=0; //×ÜÁ÷Á¿·åÖµ
-$nOutMinFlux=-1; //×ÜÁ÷Á¿¹ÈÖµ
-$nOutTotalFlux=0; //×ÜÁ÷Á¿×Ü¼Æ£¬ËãÆ½¾ùÁ÷Á¿ÓÃ
+$nOutMaxFlux=0; //æ€»æµé‡å³°å€¼
+$nOutMinFlux=-1; //æ€»æµé‡è°·å€¼
+$nOutTotalFlux=0; //æ€»æµé‡æ€»è®¡ï¼Œç®—å¹³å‡æµé‡ç”¨
 
-$nInMaxFlux=0; //×ÜÁ÷Á¿·åÖµ
-$nInMinFlux=-1; //×ÜÁ÷Á¿¹ÈÖµ
-$nInTotalFlux=0; //×ÜÁ÷Á¿×Ü¼Æ£¬ËãÆ½¾ùÁ÷Á¿ÓÃ
+$nInMaxFlux=0; //æ€»æµé‡å³°å€¼
+$nInMinFlux=-1; //æ€»æµé‡è°·å€¼
+$nInTotalFlux=0; //æ€»æµé‡æ€»è®¡ï¼Œç®—å¹³å‡æµé‡ç”¨
 
-$nRealPointNum =0 ;//ÓĞĞ§Êı¾İµã¸öÊı£¨Êı¾İ¿â¼ÇÂ¼ÊıÄ¿£©£¬¼ÆËãÆ½¾ùÁ÷Á¿ÓÃ
+$nRealPointNum =0 ;//æœ‰æ•ˆæ•°æ®ç‚¹ä¸ªæ•°ï¼ˆæ•°æ®åº“è®°å½•æ•°ç›®ï¼‰ï¼Œè®¡ç®—å¹³å‡æµé‡ç”¨
 while($row=mysql_fetch_row($rst)){
-	$nIndex=((strtotime($row[0])-$nBeginTime) / $nDateCalStep) ; //¼ÆËã¼ÍÂ¼ÔÚÊı¾İµãÁĞ±íÖĞµÄĞòºÅ
+	$nIndex=((strtotime($row[0])-$nBeginTime) / $nDateCalStep) ; //è®¡ç®—çºªå½•åœ¨æ•°æ®ç‚¹åˆ—è¡¨ä¸­çš„åºå·
 
-	if ($nPointPerDay[$nAnalysisType]!=1){	//Èç¹ûÃ¿Ìì²»Ö»Ò»¸öÊı¾İµã,×ø±ê¼ÆËãÖĞ»¹ĞèÒªÔö¼ÓÃ¿ÌìµãÊıÒò×Ó
+	if ($nPointPerDay[$nAnalysisType]!=1){	//å¦‚æœæ¯å¤©ä¸åªä¸€ä¸ªæ•°æ®ç‚¹,åæ ‡è®¡ç®—ä¸­è¿˜éœ€è¦å¢åŠ æ¯å¤©ç‚¹æ•°å› å­
 		$nIndex=$nIndex*$nPointPerDay[$nAnalysisType] + $row[1];
 	}
 	$aTotalFlux[($nIndex*2)+1]=$row[2]+$row[3];
@@ -202,12 +202,12 @@ mysql_close($connection);
 
 if ($nJoint[$nAnalysisType]!=1){
 	$i=0;
-	$aTempTotalFlux=array();  	//ÁÙÊ±Êı×é,ÓÃÓÚºÏ²¢×ÜÁ÷Á¿
-	$aTempOutFlux=array();		//ÁÙÊ±Êı×é,ÓÃÓÚºÏ²¢³öÁ÷Á¿
-	$aTempInFlux=array();		//ÁÙÊ±Êı×é,ÓÃÓÚºÏ²¢ÈëÁ÷Á¿
+	$aTempTotalFlux=array();  	//ä¸´æ—¶æ•°ç»„,ç”¨äºåˆå¹¶æ€»æµé‡
+	$aTempOutFlux=array();		//ä¸´æ—¶æ•°ç»„,ç”¨äºåˆå¹¶å‡ºæµé‡
+	$aTempInFlux=array();		//ä¸´æ—¶æ•°ç»„,ç”¨äºåˆå¹¶å…¥æµé‡
 	$nJointCount=$nJoint[$nAnalysisType];
 	$nCount=0;
-	$nPointJoint=$nPointCount/$nJoint[$nAnalysisType];//ºÏ²¢ºóµÄµãÊı,¼ÆËãºá×ø±êÓÃ
+	$nPointJoint=$nPointCount/$nJoint[$nAnalysisType];//åˆå¹¶åçš„ç‚¹æ•°,è®¡ç®—æ¨ªåæ ‡ç”¨
 	$nMinFlux=-1;
 	$nMaxFlux=0;
 	$nOutMinFlux=-1;
@@ -272,7 +272,7 @@ if ($nMinFlux==-1){
 	$nMinFlux=0;
 }
 
-//¼ÆËãÆ½¾ùÁ÷Á¿
+//è®¡ç®—å¹³å‡æµé‡
 if ($nRealPointNum){
 	$nAveFlux=$nTotalFlux / $nRealPointNum;
 	$nInAveFlux=$nInTotalFlux / $nRealPointNum;
@@ -284,9 +284,9 @@ if ($nRealPointNum){
 }
 
 /*
-//	ÇóÁ÷Á¿×ø±ê×î´óÖµ
+//	æ±‚æµé‡åæ ‡æœ€å¤§å€¼
 
-$nTempCord=1; //¸¨Öú±äÁ¿£¬ÇóÕûÊ±ÓÃ
+$nTempCord=1; //è¾…åŠ©å˜é‡ï¼Œæ±‚æ•´æ—¶ç”¨
 if ($nMaxFlux>=1024*1024){
 	$nTempCord=1024*1024;
 } else if ($nMaxFlux>=1024) {
@@ -294,15 +294,15 @@ if ($nMaxFlux>=1024*1024){
 }
 $nTempCord2=(int)((((int)(($nMaxFlux/$nTempCord)*10))-1)/4)+1;
 echo $nTempCord2;
-$nCordMax=(($nTempCord2*4)*$nTempCord/10); //Á÷Á¿×ø±ê×î´óÖµ
+$nCordMax=(($nTempCord2*4)*$nTempCord/10); //æµé‡åæ ‡æœ€å¤§å€¼
 */
 
-$nCordMax=$nMaxFlux; //ÁÙÊ±ÓÃ£¬ÒÔºóÊÇ·ñĞŞ¸ÄÊÓÇé¿ö¶ø¶¨
+$nCordMax=$nMaxFlux; //ä¸´æ—¶ç”¨ï¼Œä»¥åæ˜¯å¦ä¿®æ”¹è§†æƒ…å†µè€Œå®š
 if ($nCordMax==0) {
 	$nCordMax=4;
 }
 
-//½«Êı¾İµãY×ø±ê´ÓÊı¾İÁ÷Á¿»»ËãÎª×ø±êÖµ
+//å°†æ•°æ®ç‚¹Yåæ ‡ä»æ•°æ®æµé‡æ¢ç®—ä¸ºåæ ‡å€¼
 for ($i=0;$i<$nPointCount;$i++)
 {
 	$aInFlux[($i*2)+1]=$nYBase-(($aInFlux[($i*2)+1] / $nCordMax) * $nYLength);
@@ -310,7 +310,7 @@ for ($i=0;$i<$nPointCount;$i++)
 	$aTotalFlux[($i*2)+1]=$nYBase-(($aTotalFlux[($i*2)+1] / $nCordMax) * $nYLength);
 }
 
-//Ã¿¸öÁĞ±íÔö¼ÓXÖáµÄÁ½¸ö¶Ëµã£¬±ãÓÚÊ¹ÓÃImagePolygon()º¯Êı»æÍ¼
+//æ¯ä¸ªåˆ—è¡¨å¢åŠ Xè½´çš„ä¸¤ä¸ªç«¯ç‚¹ï¼Œä¾¿äºä½¿ç”¨ImagePolygon()å‡½æ•°ç»˜å›¾
 $aInFlux[]=$nXBase+$nXLength;
 $aInFlux[]=$nYBase;
 $aOutFlux[]=$nXBase+$nXLength;
@@ -321,7 +321,7 @@ $aOutFlux[]=$nXBase;
 $aOutFlux[]=$nYBase;
 
 /*
-//²âÊÔÊı¾İµã×ø±ê
+//æµ‹è¯•æ•°æ®ç‚¹åæ ‡
 echo "<table border=1>\n";
 for ($i=0;$i<$nPointCount+2;$i++)
 {
@@ -337,14 +337,14 @@ echo "</table> \n";
 
 /*--------------- Part.II End ----------------------*/
 
-/*--------------- Part.III Í³¼ÆÍ¼»æÖÆ Begin ----------------------*/
-//»æÖÆÍ³¼ÆÍ¼±³¾°
+/*--------------- Part.III ç»Ÿè®¡å›¾ç»˜åˆ¶ Begin ----------------------*/
+//ç»˜åˆ¶ç»Ÿè®¡å›¾èƒŒæ™¯
 imagefilledrectangle($hImage,$nXBase,$nYBase-$nYLength,$nXBase+$nXLength,$nYBase,$cLightyellow);
 
-//»æÖÆ×ÜÁ÷Á¿Í³¼ÆÍ¼ĞÎ
+//ç»˜åˆ¶æ€»æµé‡ç»Ÿè®¡å›¾å½¢
 for ($i=0;$i<$nPointCount-1;$i++)
 {
-	$aQuad=array(	//ËÄ±ßĞÎµÄËÄ¸ö¶¥µã
+	$aQuad=array(	//å››è¾¹å½¢çš„å››ä¸ªé¡¶ç‚¹
 			$aTotalFlux[$i*2],$nYBase,
 			$aTotalFlux[$i*2],$aTotalFlux[$i*2+1],
 			$aTotalFlux[($i+1)*2],$aTotalFlux[($i+1)*2+1],
@@ -353,11 +353,11 @@ for ($i=0;$i<$nPointCount-1;$i++)
 	ImageFilledPolygon($hImage,$aQuad,4,$cSkyblue);
 //	ImageFilledRectangle($hImage,$aTotalFlux[$i*2],$aTotalFlux[$i*2+1],$aTotalFlux[($i+1)*2],$nYBase,$cSkyblue);
 }	
-//»æÖÆ³öÈëÁ÷Á¿Í¼ĞÎ
+//ç»˜åˆ¶å‡ºå…¥æµé‡å›¾å½¢
 ImagePolygon($hImage,$aInFlux,$nPointCount+2,$cRed);
 ImagePolygon($hImage,$aOutFlux,$nPointCount+2,$cBlue);
 
-//»æÖÆ×î´ó¡¢×îĞ¡¡¢Æ½¾ùÁ÷Á¿Öµ
+//ç»˜åˆ¶æœ€å¤§ã€æœ€å°ã€å¹³å‡æµé‡å€¼
 function DrawFlux($Flux,$unit){
 	if ($Flux>=1024*1024){
 		return sprintf("%3.1f GB/%s",$Flux/(1024*1024),$unit);
@@ -379,29 +379,29 @@ imagestring($hImage,$nFontType, $nXBase + 300 ,$nYBase+40, sprintf("Max: %s",Dra
 imagestring($hImage,$nFontType, $nXBase + 300 ,$nYBase+55, sprintf("Min: %s",DrawFlux($nMinFlux, $sDisplayUint[$nAnalysisType]) ),$cBlack);
 imagestring($hImage,$nFontType, $nXBase + 300 ,$nYBase+70, sprintf("Ave: %s",DrawFlux($nAveFlux, $sDisplayUint[$nAnalysisType]) ),$cBlack);
 
-//»æÖÆÍ³¼ÆÍ¼¾ØĞÎ¿ò
+//ç»˜åˆ¶ç»Ÿè®¡å›¾çŸ©å½¢æ¡†
 imagerectangle($hImage,$nXBase,$nYBase-$nYLength,$nXBase+$nXLength,$nYBase,$cBlack);
 
-//»æÖÆXÏò¿Ì¶ÈÏß
-//ĞéÏß
+//ç»˜åˆ¶Xå‘åˆ»åº¦çº¿
+//è™šçº¿
 ImageDashedLine($hImage,$nXBase,$nYBase-($nYLength*3/4),$nXBase+$nXLength,$nYBase-($nYLength*3/4),$cBlack);
 ImageDashedLine($hImage,$nXBase,$nYBase-($nYLength*2/4),$nXBase+$nXLength,$nYBase-($nYLength*2/4),$cBlack);
 ImageDashedLine($hImage,$nXBase,$nYBase-($nYLength*1/4),$nXBase+$nXLength,$nYBase-($nYLength*1/4),$cBlack);
-//ÓÒ²à¿Ì¶È
+//å³ä¾§åˆ»åº¦
 imageline($hImage,$nXBase+$nXLength,$nYBase,$nXBase+$nXLength+3,$nYBase,$cBlack);
 imageline($hImage,$nXBase+$nXLength,$nYBase-($nYLength*1/4),$nXBase+$nXLength+3,$nYBase-($nYLength*1/4),$cBlack);
 imageline($hImage,$nXBase+$nXLength,$nYBase-($nYLength*2/4),$nXBase+$nXLength+3,$nYBase-($nYLength*2/4),$cBlack);
 imageline($hImage,$nXBase+$nXLength,$nYBase-($nYLength*3/4),$nXBase+$nXLength+3,$nYBase-($nYLength*3/4),$cBlack);
 imageline($hImage,$nXBase+$nXLength,$nYBase-$nYLength,$nXBase+$nXLength+3,$nYBase-$nYLength,$cBlack);
-//×ó²à¿Ì¶È
+//å·¦ä¾§åˆ»åº¦
 imageline($hImage,$nXBase-3,$nYBase,$nXBase,$nYBase,$cBlack);
 imageline($hImage,$nXBase-3,$nYBase-($nYLength*1/4),$nXBase,$nYBase-($nYLength*1/4),$cBlack);
 imageline($hImage,$nXBase-3,$nYBase-($nYLength*2/4),$nXBase,$nYBase-($nYLength*2/4),$cBlack);
 imageline($hImage,$nXBase-3,$nYBase-($nYLength*3/4),$nXBase,$nYBase-($nYLength*3/4),$cBlack);
 imageline($hImage,$nXBase-3,$nYBase-$nYLength,$nXBase,$nYBase-$nYLength,$cBlack);
 
-//ÊéĞ´YÖá¿Ì¶È
-//ÓÒ²à¿Ì¶È
+//ä¹¦å†™Yè½´åˆ»åº¦
+//å³ä¾§åˆ»åº¦
 imagestring($hImage,$nFontType ,$nXBase+$nXLength+5,$nYBase-7,"  0%",$cBlack);
 imagestring($hImage,$nFontType ,$nXBase+$nXLength+5,$nYBase-($nYLength*1/4)-7," 25%",$cBlack);
 imagestring($hImage,$nFontType ,$nXBase+$nXLength+5,$nYBase-($nYLength*2/4)-7," 50%",$cBlack);
@@ -417,7 +417,7 @@ function OutFlux($Max,$Flux){
 	}
 	return sprintf("%5d KB",$Flux);
 }
-//×ó²à¿Ì¶È
+//å·¦ä¾§åˆ»åº¦
 for ($i=1;$i<=4;$i++){
 	$sText=OutFlux($nCordMax,$nCordMax*$i/4);
 	imagestring($hImage,$nFontType ,$nXBase-64,$nYBase-($nYLength*$i/4)-7,$sText,$cBlack);  
@@ -427,65 +427,65 @@ imagestring($hImage,$nFontType ,$nXBase-64,$nYBase-7,"       0",$cBlack);
 
 /*--------------- Part.IV Begin ----------------------*/
 
-//»æÖÆYÏò¿Ì¶È
+//ç»˜åˆ¶Yå‘åˆ»åº¦
 switch($nAnalysisType){
 case DAY:
 	for ($i=0;$i<$nPointCount;$i+=4){
-		imagedashedline($hImage,	//ĞéÏß
+		imagedashedline($hImage,	//è™šçº¿
 			$aTotalFlux[2*$i],$nYBase-$nYLength,
 			$aTotalFlux[2*$i],$nYBase,
 			$cBlack);
-		imageline($hImage,			//¿Ì¶ÈÍ·
+		imageline($hImage,			//åˆ»åº¦å¤´
 			$aTotalFlux[2*$i],$nYBase,
 			$aTotalFlux[2*$i],$nYBase+2,
 			$cBlack);			
-		//¿Ì¶ÈÎÄ×Ö		
+		//åˆ»åº¦æ–‡å­—		
 		imagestring($hImage,$nFontType,$aTotalFlux[2*$i]-16,$nYBase+4,sprintf("%2d:00",$i),$cBlack);
 	}
 	BREAK;
 case WEEK:
 	for ($i=0;$i<7;$i++){
-		imagedashedline($hImage,	//ĞéÏß
+		imagedashedline($hImage,	//è™šçº¿
 			$aTotalFlux[2*24*$i],$nYBase-$nYLength,
 			$aTotalFlux[2*24*$i],$nYBase,
 			$cBlack);
-		imageline($hImage,			//¿Ì¶ÈÍ·
+		imageline($hImage,			//åˆ»åº¦å¤´
 			$aTotalFlux[2*24*$i],$nYBase,
 			$aTotalFlux[2*24*$i],$nYBase+2,
 			$cBlack);			
-		//¿Ì¶ÈÎÄ×Ö		
+		//åˆ»åº¦æ–‡å­—		
 		imagestring($hImage,$nFontType,$aTotalFlux[2*24*$i]-10,$nYBase+4,strftime("%a",$aDate[$i]),$cBlack);
 	}
 	BREAK;
 case MONTH:
 	for ($i=0;$i<count($aDate);$i+=5){
-		imagedashedline($hImage,	//ĞéÏß
+		imagedashedline($hImage,	//è™šçº¿
 			$aTotalFlux[2*24/$nJoint[MONTH]*$i],$nYBase-$nYLength,
 			$aTotalFlux[2*24/$nJoint[MONTH]*$i],$nYBase,
 			$cBlack);
-		imageline($hImage,			//¿Ì¶ÈÍ·
+		imageline($hImage,			//åˆ»åº¦å¤´
 			$aTotalFlux[2*24/$nJoint[MONTH]*$i],$nYBase,
 			$aTotalFlux[2*24/$nJoint[MONTH]*$i],$nYBase+2,
 			$cBlack);	
-		//¿Ì¶ÈÎÄ×Ö		
+		//åˆ»åº¦æ–‡å­—		
 		imagestring($hImage,$nFontType,$aTotalFlux[2*24/$nJoint[MONTH]*$i]-20,$nYBase+4,strftime("%b %d",$aDate[$i]),$cBlack);
 	}	
 	BREAK;
 case YEAR:
-	for ($i=1;$i<=12;$i++){	//Ñ­»·12´Î(Ò»Äê×Ü¹²ĞèÒªÏÔÊ¾12¸öÔÂµÄ¿Ì¶È)
-		$nTime1 = strtotime("$sBeginTime +{$i} MONTH");	//´ÓÍ³¼ÆÆğÊ¼Ê±¼äºóÍÆ$i¸öÔÂ
-		$sTime2 = strftime("%Y-%m",$nTime1) . "-01";		//ÕÒµ½¸ÃÔÂµÄµÚÒ»Ìì
-		$nTime2 = strtotime($sTime2);					//×ª»»³ÉtimestampĞÎÊ½
-		$nIndex=(($nTime2-$nBeginTime) / $nDateCalStep) ; //¼ÆËã¼ÍÂ¼ÔÚÊı¾İµãÁĞ±íÖĞµÄĞòºÅ
-		imagedashedline($hImage,	//ĞéÏß
+	for ($i=1;$i<=12;$i++){	//å¾ªç¯12æ¬¡(ä¸€å¹´æ€»å…±éœ€è¦æ˜¾ç¤º12ä¸ªæœˆçš„åˆ»åº¦)
+		$nTime1 = strtotime("$sBeginTime +{$i} MONTH");	//ä»ç»Ÿè®¡èµ·å§‹æ—¶é—´åæ¨$iä¸ªæœˆ
+		$sTime2 = strftime("%Y-%m",$nTime1) . "-01";		//æ‰¾åˆ°è¯¥æœˆçš„ç¬¬ä¸€å¤©
+		$nTime2 = strtotime($sTime2);					//è½¬æ¢æˆtimestampå½¢å¼
+		$nIndex=(($nTime2-$nBeginTime) / $nDateCalStep) ; //è®¡ç®—çºªå½•åœ¨æ•°æ®ç‚¹åˆ—è¡¨ä¸­çš„åºå·
+		imagedashedline($hImage,	//è™šçº¿
 			$aTotalFlux[2*$nIndex],$nYBase-$nYLength,
 			$aTotalFlux[2*$nIndex],$nYBase,
 			$cBlack);
-		imageline($hImage,			//¿Ì¶ÈÍ·
+		imageline($hImage,			//åˆ»åº¦å¤´
 			$aTotalFlux[2*$nIndex],$nYBase,
 			$aTotalFlux[2*$nIndex],$nYBase+2,
 			$cBlack);	
-		//¿Ì¶ÈÎÄ×Ö		
+		//åˆ»åº¦æ–‡å­—		
 		imagestring($hImage,$nFontType,$aTotalFlux[2*$nIndex]-10,$nYBase+4,strftime("%b",$nTime2),$cBlack);
 		
 	}	
@@ -500,7 +500,7 @@ case YEAR:
 /*--------------- Part.VI Begin ----------------------*/
 /*--------------- Part.VI End ----------------------*/
 
-//Éú³ÉÍ¼ĞÎÎÄ¼ş¡¢¹Ø±ÕÍ¼ĞÎ×ÊÔ´¡£³ÌĞò½áÊø
+//ç”Ÿæˆå›¾å½¢æ–‡ä»¶ã€å…³é—­å›¾å½¢èµ„æºã€‚ç¨‹åºç»“æŸ
 Imagegif($hImage);
 ImageDestroy($hImage); 
 

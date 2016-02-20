@@ -11,9 +11,9 @@ require_once( "header.inc.php" );
             
       <td> 
         <p><b><font color="#3366CC"><br>
-          µ±Ç°Î»ÖÃ£º</font> </b><a href="/" class="a5">°¢¿¨Ê×Ò³</a> <font color="#458DE4">&gt; 
-          </font><font color="#458DE4"><a href="<? echo dirname($_SERVER['PHP_SELF']); ?>" class="a5">ÎÒµÄ°¢¿¨</a><font color="#458DE4">&gt; 
-          </font></font><font class="a5"><a href="<? echo dirname($_SERVER['PHP_SELF']); ?>/ChangePassword.php" class="a5">ÐÞ¸ÄÃÜÂë</a></font> 
+          å½“å‰ä½ç½®ï¼š</font> </b><a href="/" class="a5">é˜¿å¡é¦–é¡µ</a> <font color="#458DE4">&gt; 
+          </font><font color="#458DE4"><a href="<? echo dirname($_SERVER['PHP_SELF']); ?>" class="a5">æˆ‘çš„é˜¿å¡</a><font color="#458DE4">&gt; 
+          </font></font><font class="a5"><a href="<? echo dirname($_SERVER['PHP_SELF']); ?>/ChangePassword.php" class="a5">ä¿®æ”¹å¯†ç </a></font> 
           <br>
           <br>
         <p>&nbsp;</p>
@@ -32,7 +32,7 @@ require_once( "header.inc.php" );
 if ( (!isset($HTTP_SESSION_VARS['UserID'])) || (!isset($HTTP_POST_VARS['Password']))
 	|| (!isset($HTTP_POST_VARS['NewPassword1'])) ){
 ?>
-	<p>ÇëÊ×ÏÈ<A HREF="<? echo dirname($_SERVER['PHP_SELF']); ?>">µÇÂ¼</a>£¡</p>
+	<p>è¯·é¦–å…ˆ<A HREF="<? echo dirname($_SERVER['PHP_SELF']); ?>">ç™»å½•</a>ï¼</p>
 	<br>
 	<br>
 	<br>
@@ -45,33 +45,33 @@ if ( (!isset($HTTP_SESSION_VARS['UserID'])) || (!isset($HTTP_POST_VARS['Password
 //require 'Include/InitDB.php';
 $result=mysql_query("select * from User_TB where ID='{$HTTP_SESSION_VARS['UserID']}'");
 
-if (!($row=mysql_fetch_array($result))){//ÎÞ´ËÓÃ»§
+if (!($row=mysql_fetch_array($result))){//æ— æ­¤ç”¨æˆ·
 ?>
-ÎÞ´ËÓÃ»§£¡<BR>
-ÇëÖØÐÂ<A HREF="index.php">µÇÂ¼</a>
+æ— æ­¤ç”¨æˆ·ï¼<BR>
+è¯·é‡æ–°<A HREF="index.php">ç™»å½•</a>
 <?
 }
 else{
-if (strcmp($HTTP_POST_VARS['Password'],$row["Password"])){//ÃÜÂë´íÎó
+if (strcmp($HTTP_POST_VARS['Password'],$row["Password"])){//å¯†ç é”™è¯¯
 ?>
-ÃÜÂë´íÎó£¡<br>
-Çë<A href="ChangePassword.php" class=a5>·µ»Ø</a>ÖØÐÂÊäÈëÃÜÂë
+å¯†ç é”™è¯¯ï¼<br>
+è¯·<A href="ChangePassword.php" class=a5>è¿”å›ž</a>é‡æ–°è¾“å…¥å¯†ç 
 <?
 }
-else{//Õý³£µÇÂ¼
+else{//æ­£å¸¸ç™»å½•
 $enNewPasswd=$HTTP_POST_VARS['NewPassword1'];
 if (mysql_query("Update User_TB Set Password='{$enNewPasswd}' where ID='{$HTTP_SESSION_VARS['UserID']}'")) {
 ?>
-	ÃÜÂëÐÞ¸Ä³É¹¦£¡<br>
-	<A href="<? echo dirname($_SERVER['PHP_SELF']); ?>" class=a5>·µ»ØÖ÷²Ëµ¥</a>
+	å¯†ç ä¿®æ”¹æˆåŠŸï¼<br>
+	<A href="<? echo dirname($_SERVER['PHP_SELF']); ?>" class=a5>è¿”å›žä¸»èœå•</a>
 <?
 if ((isset($_SESSION['AdminID'])) ){
-	mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} ÐÞ¸ÄÁË {$_SESSION['UserID']} µÄÃÜÂë', '{$_SERVER['REMOTE_ADDR']}', 'UserAccount', NOW()) ", $conn);
+	mysql_query("insert into AdminUser_Log_TB(AutoID, AdminID,Content,ClientIP,LogType, LogTime) values (NULL,'{$_SESSION['AdminID']}','{$_SESSION['AdminID']} ä¿®æ”¹äº† {$_SESSION['UserID']} çš„å¯†ç ', '{$_SERVER['REMOTE_ADDR']}', 'UserAccount', NOW()) ", $conn);
 }
 } else {
 ?>
-	Êý¾Ý¿â²Ù×÷Ê§°Ü£¡ÇëÁªÂç¹ÜÀíÔ±¡£<br>
-	<A href="ChangePassword.php" class=a5>·µ»ØÐÞ¸ÄÃÜÂëÒ³Ãæ</a>
+	æ•°æ®åº“æ“ä½œå¤±è´¥ï¼è¯·è”ç»œç®¡ç†å‘˜ã€‚<br>
+	<A href="ChangePassword.php" class=a5>è¿”å›žä¿®æ”¹å¯†ç é¡µé¢</a>
 <?
 }
 }
