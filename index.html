@@ -1,26 +1,5 @@
-<?
-if (!isset($_COOKIE["AKA_NEWS_POPUP"])) {
-setcookie("AKA_NEWS_POPUP");
-$isPopupNews=true;
-} else {
-$isPopupNews=false;
-}
-require_once( "header.inc.php" );
-?>
+{% include header.html %}
 
-<? 
-/*弹出新闻窗口 */
-if ($isPopupNews){
-?>
-<!--
-<script language="JScript">
-window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menubar=no,location=no,resizable=no,scrollbars=no")
-;
-</script>
--->
-<?
-}
-?>
 <table width="760" border="0" cellspacing="0" cellpadding="0">
 	<tr><td>
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -280,6 +259,5 @@ window.open("popMsg.html",null,"width=500,height=400,status=yes,toolbar=no,menub
     </td>
   </tr>
 </table>
-<?
-require_once( "footer.inc.php" );
-?>
+
+{% include footer.html %}
