@@ -1,0 +1,122 @@
+---
+---
+{% include header.html %}
+
+
+<table width="760" cellspacing="0" cellpadding="0">
+
+  <tr> 
+
+    <td width="550" valign="top"> 
+
+      <table width="500" cellspacing="0" cellpadding="0" align="center">
+
+        <tr> 
+          <td valign="top"> <p><br>
+              <b><font color="#3366CC">当前位置:</font> </b><a href="/index.shtml" class="a5">阿卡首页</a> 
+              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">产品与服务</a><font color="#458DE4">&gt;
+          <a href="index.shtml" class="a5">BBS手机短信接入平台</a> &gt;</font>
+          <font color="#458DE4">演示程序说明</font></p>
+            <table width="475" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">
+                示例说明
+                （Linux版）</td>
+              </tr>
+            </table> 
+                    <p>安装</p>
+          <p>首先请下载演示程序和接口运行库压缩包。
+解开压缩包，进入demo目录，首先拷贝运行库和头文件至当前目录，然后
+修改一下akasmsd.c文件头部的短信网关端口号、id、密码等SMSGW定义，直接make即可。make成功之后会生成两个文件，akasmsd和sendsms。</p>
+          <p>示例程序使用说明</p>
+          <p>akasmsd是一个简单的守护进程。执行后它会连接短信网关并处理短信请求。sendsms是一个命令行程序，用它来通过akasmsd发送短信。使用示例：<br>
+          sendsms Register 13612345678 xxx<br>
+          请求短信网关将bbs账号与手机号13612345678绑定。短信网关会自动生成一个注册号发往手机13612345678。<br>
+          sendsms Check 13612345678 xxx<br>
+          请求短信网关验证注册号。程序会要求您输入手机收到的注册号。验证成功之后，网关才会接受xxx使用13612345678给别人发送短信。<br>
+          sendsms Send 13612345678 xxx<br>
+          请求短信网关发送短信。程序会要求您输入目标手机号和短信内容。<br>
+          sendsms Unregister 13612345678 xxx<br>
+          请求短信网关解除手机13612345678和bbs账号xxx的绑定。</p>
+
+	  当akasmsd接到网关发送过来的手机短信时，会自动写入当前目录下的sms.txt文件
+          <p>代码说明</p>
+          <p>akasmsd和sendsms之间使用共享内存来传递信息。sendsms将操作请求放置在共享内存中，akasmsd定期检查共享内存并将其中的请求通过运行库中的接口发给上游短信网关。共享内存大小及使用的结构和常量定义在sendsms.h中。为简化程序，示例中没有对上游网关信息进行详细处理，也没有作多进程间的资源共享保护和signal阻塞处理。</p>
+              </p>
+           </td>
+
+        </tr>
+
+        <tr> 
+          <td valign="top"> 　</td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+    <td width="210" bgcolor="#F0FAFF" valign="top"> 
+
+      <table width="210" border="0" cellspacing="8" cellpadding="3">
+
+        <tr> 
+
+          <td colspan="2">　</td>
+
+        </tr>
+
+        <tr> 
+
+          <td bgcolor="C3D4F4" colspan="2"> 
+
+            <div align="left"><font color="032B7A"><b><font face="Arial"> 相关链接</font></b></font></div>
+
+          </td>
+
+        </tr>
+        <tr> 
+
+          <td> 
+
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+
+          </td>
+
+          <td><a href="/serv_prod/sms/bbs/index.shtml" class="a6">BBS短信接入</a></td>
+
+        </tr>
+        <tr> 
+
+          <td> 
+
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+
+          </td>
+
+          <td><a href="/serv_prod/sms/bbs/download.shtml" class="a6">SMS API下载</a></td>
+
+        </tr>
+
+        <tr> 
+
+          <td> 
+
+            <div align="right"><img src="/image/leadarrow.gif" width="5" height="10"></div>
+
+          </td>
+
+          <td><a href="/serv_prod/index.shtml" class="a6">产品与服务</a></td>
+
+        </tr>
+
+      </table>
+
+    </td>
+
+  </tr>
+
+</table>
+
+{% include footer.html %}
+

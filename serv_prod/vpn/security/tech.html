@@ -1,0 +1,164 @@
+---
+---
+{% include header.html %}
+
+
+<table width="760" cellspacing="0" cellpadding="0">
+
+  <tr> 
+
+    <td width="550" valign="top"> 
+
+      <table width="500" cellspacing="0" cellpadding="0" align="center">
+
+        <tr>
+
+          <td valign="top"> <p><br>
+              <b><font color="#3366CC">当前位置:</font> </b><a href="/index.shtml" class="a5">阿卡首页</a> 
+              <font color="#458DE4">&gt;</font> <a href="/serv_prod/index.shtml" class="a5">产品与服务</a><font color="#458DE4">&gt; 
+              <a href="../index.shtml" class=a5>VPN</a> &gt;</font><font color="#458DE4"> 
+              <a href="index.shtml" class=a6>企业安全互联VPN</a></font><font color="#458DE4"> 
+              </font><font color="#458DE4"> </font><font color="#458DE4">&gt;</font> 
+              <font class=a4>技术介绍</font></p>
+
+            <table width="475" cellspacing="0" cellpadding="0">
+
+              <tr> 
+
+                <td height="28" background="/serv_prod/images/bluegradient.gif" class="newstitle">虚拟专用网VPN技术介绍</td>
+
+              </tr>
+
+            </table>
+
+            <p><b><a name="1">VPN基本概念</a></b><br>
+
+              　<br>
+
+              虚拟专用网（VPN）是在Internet中“构造出”供企业专用的虚拟网络。共有三种类型的VPN，它们分别是远程访问虚拟专网（Access 
+
+              VPN）、企业内部虚拟专网（Intranet VPN）和扩展的企业内部虚拟专网（ExtranetVPN），这三种类型的 VPN 
+
+              分别与传统的远程访问网络、企业内部的 Intranet 以及企业网和相关合作伙伴的企业网所构成的 Extranet 相对应。<br>
+
+              　<br>
+
+              <b><a name="2">VPN基本技术</a></b><br>
+
+              　<br>
+
+              为了形成VPN链路，采用了所谓的“隧道”技术。可以模仿点对点连接技术，依赖已有的网络连接建立自己专用的“隧道”让数据包通过这条隧道传输。对于不同的信息来源，可分别给它们开出不同的隧道。<br>
+
+              　<br>
+
+              要形成隧道，基本的要素有以下几项：<br>
+
+              　<br>
+
+              　　●隧道开通器（TI）<br>
+
+              　　●有路由能力的公用网络<br>
+
+              　　●一个或多个隧道终止器（TT）<br>
+
+              　　●必要时增加一个隧道交换机以增加灵活性<br>
+
+              　<br>
+
+              隧道开通器的任务是在公用网中开出一条隧道。有多种网络设备和软件可完成此项任务，例如：（1）配有模拟式调制解调器PC卡和VPN型拨号软件的最终用户膝上型计算机；（2）分支机构的LAN或家庭办公室LAN中的有VPN功能的Extranet路由器。（3）网络服务提供商站点中的有VPN能力的访问集中器。<br>
+
+              　<br>
+
+              隧道终止器的任务是使隧道到此终止，不再继续向前延伸。也有多种网络设备和软件可完成此项任务，例如：（1）专门的隧道终止器；（2）企业网络中的隧道交换机；（3）网络的Extranet路由器上的VPN网关。<br>
+
+              　<br>
+
+              对于构建 VPN 来说，网络隧道(Tunneling)技术是个关键技术。网络隧道技术指的是利用一种网络协议来传输另一种网络协议，它主要利用网络隧道协议来实现这种功能。网络隧道技术涉及了三种网络协议，网络隧道协议、隧道协议下面的承载协议和隧道协议所承载的被承载协议。现有两种类型的隧道协议，一种是二层隧道协议，用于传输二层网络协议，它主要应用于构建 
+
+              Access VPN；另一种是三层隧道协议，用于传输三层网络协议，它主要应用于构建 Intranet VPN 和 Extranet 
+
+              VPN。 <br>
+
+              　<br>
+
+              二层隧道协议主要有三种。一种是微软、Ascend、3COM 等公司支持的 PPTP（Point to Point Tunneling 
+
+              Protocol，点对点隧道协议），在 Windows NT 4.0以上版本中即有支持。另一种是 Cisco、北方电信等公司支持的 
+
+              L2F（Layer 2 Forwarding，二层转发协议），在 Cisco 路由器中有支持。而由 IETF 起草，微软 Ascend 
+
+              、Cisco、 3COM 等公司参于的 L2TP（Layer 2 Tunneling Protocol，二层隧道协议）结合了上述两个协议的优点，将很快地成为 
+
+              IETF 有关二层隧道协议的工业标准。 L2TP 作为更优更新的标准，已经得到了如：Cisco Systems, Microsoft, 
+
+              Ascend, 3Com 等的支持，以后还必将为更多的网络厂商所支持，将是使用最广泛的 VPN 协议。<br>
+
+              　<br>
+
+              用于传输三层网络协议的隧道协议叫三层隧道协议。三层隧道协议并非是一种很新的技术，早已出现的 RFC 1701 Generic Routing 
+
+              Encapsulation( GRE)协议就是个三层隧道协议。新出来的 IETF 的 IP 层加密标准协议 IPSec 协议也是个三层隧道协议。<br>
+
+              　<br>
+
+              　<br>
+
+              <b><a name="3">VPN网络的安全性</a></b><br>
+
+              　<br>
+
+              在公用网络上构建 VPN 传输私有数据，网络安全性是个很重要的问题。</p>
+
+            <p style="line-height: 130%">下面我们主要对IPSec协议进行简要的介绍。</p>
+
+            <p style="line-height: 130%">IPSec ，即IP 安全协议，不是一个单独的协议，而是一组开放协议的总称，它给出了应用于IP层上网络数据安全的一整套体系结构，它包括网络安全协议 
+
+              Authentication Header (AH) 协议和 Encapsulating Security Payload (ESP)协议、密钥管理协议 
+
+              Internet Key Exchange (IKE)协议和用于网络验证及加密的一些算法等。IPSec 规定了如何在对等层之间选择安全协议、确定安全算法和密钥交换，向上提供了访问控制、数据源验证、数据加密等网络安全服务。<br>
+
+              <br>
+
+              IPSec协议在特定的通信方之间提供数据的私有性、完整性保护，并能对数据源进行验证。IPSec 使用 IKE 进行协议及算法的协商，并采用由 
+
+              IKE 生成的密码来加密和验证。IPSec用来保证数据包在Internet网上传输时的私有性、完整性和真实性。IPSec在IP层提供这些安全服务，对IP及所承载的数据提供保护。这些服务是通过两个安全协议AH和ESP，通过加密等过程实现的。这些机制的实现不会对用户、主机或其它 
+
+              Internet 组件造成影响；用户可以选择不同的加密算法，而不会对实现的其它部分造成影响。<br>
+
+              　<br>
+
+              IPSec提供的网络安全服务具有以下特点：<br>
+
+              　<br>
+
+              　　¨ 私有性：IPsec在传输数据包之前将其加密.以保证数据的私有性；<br>
+
+              　　¨ 完整性：IPsec在目的地要验证数据包，以保证该数据包在传输过程中没有被替换；<br>
+
+              　　¨ 真实性：IPsec 端要验证所有受 IPsec 保护的数据包；<br>
+
+              　　¨ 反重复：IPsec防止了数据包被扑捉并重新投放到网上，即目的地会拒绝老的或重复的数据包；它通过与AH或ESP一起工作的序列号实现。<br>
+
+              　<br>
+
+              IPSec协议本身定义了如何在IP数据包中增加字段来保证IP包的完整性、私有性和真实性，这些协议还规定了如何加密数据包。使用IPsec，数据就可以在公网上传输，而不必担心数据被监视、修改或伪造了。IPsec提供了两个主机之间、两个安全网关之间或主机和安全网关主机之间的保护。<br>
+
+              　<br>
+
+              IPSec定义了两个新的数据包头增加到IP包，这些数据包头用于保证IP数据包的安全性。这两个数据包头由AH(Authentication 
+
+              Header)和 ESP(Encapsulating Security Payload)规定。在网关上实现 IPSec，AH 将插到标准IP包头后面，它保证数据包的完整性和真实性，防止黑客截断数据包或向网络中插入伪造的数据包。AH采用了安全哈希算法来对数据包进行保护。AH没有对用户数据进行加密。ESP将需要保护的用户数据进行加密后再封装到IP包中，ESP可以保证数据的完整性、真实性和私有性。<br>
+
+              　<br>
+
+              IPSec有隧道和传送两种工作方式。在隧道方式中，用户的整个IP数据包被用来计算ESP头，且被加密，ESP头和加密用户数据被封装在一个新的IP数据包中；在传送方式中，只是传输层(如TCP、UDP、ICMP)数据被用来计算ESP头，ESP头和被加密的传输层数据被放置在原IP包头后面。当IPSec通信的一端为安全网关时，必须采用隧道方式。<br>
+
+              　<br>
+
+              Internet 密钥交换协议（IKE）用于在两个通信实体协商和建立安全相关，交换密钥。安全相关(Security Association)是 
+
+              IPSec 中的一个重要概念。一个安全相关表示两个或多个通信实体之间经过了身份认证，且这些通信实体都能支持相同的加密算法，成功地交换了会话密钥，可以开始利用 
+
+              IPSec 进行安全通信。IPSec 协议本身没有提供在通信实体间建立安全相关的方法，利用 IKE 建立安全相关。IKE 定义了通信实体间进行身份认证、协商加密算法以及生成共享的会话密钥的方法。IKE中身份认证采用共享密钥和数字签名两种方式，密钥交换采用 
+
+              Diffie
