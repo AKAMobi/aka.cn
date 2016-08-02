@@ -1,0 +1,25 @@
+{
+  "name": "aka.cn",
+  "version": "1.0.0",
+  "description": "AKA.cn Web Site",
+  "main": "index.html",
+  "scripts": {
+    "install": "gem install bundler",
+    "start": "bundle exec jekyll serve",
+    "test": "echo test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zixia/aka.cn.git"
+  },
+  "keywords": [
+    "aka",
+    "aka.cn"
+  ],
+  "author": "Zhuohuan LI <zixia@zixia.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zixia/aka.cn/issues"
+  },
+  "homepage": "https://github.com/zixia/aka.cn#readme"
+}
